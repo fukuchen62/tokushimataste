@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+/*
+本プロジェクトにおける共通CSS
+以下の共通で使用する属性やデザインパーツなどについて記載してください。
+    コンテンツ幅
+    フォント名及びフォントサイズ
+    カード型
+    パンくずリスト
+    見出し
+    リンクボタン
+    ロゴ
+    ページネーション
+    共通で使用するクラス
+    マージン、パディントン
+    その他共通で使用するもの
+*/
+
+
+html {
+    /* 全体の基本フォント */
+    font-size: 62.5%;
+    font-family: "Open Sans", "Zen Maru Gothic", serif;
+    font-style: normal;
+    color: #463D3B;
+    font-weight: 500;
+    line-height: 1.4;
+}

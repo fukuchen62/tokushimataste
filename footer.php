@@ -13,7 +13,7 @@
             <h3>SHARE ON</h3>
             <?php
             $args = [
-                'menu' => 'footer-sns', //管理画面で作成したメニューの名前
+                'menu' => 'footer-nav', //管理画面で作成したメニューの名前
                 'menu_class' => '', //メニューを構成するulタグのクラス名
                 'container' => false, //<ul>タグを囲んでいる<div>タグを削除
             ];

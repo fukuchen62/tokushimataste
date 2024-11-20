@@ -78,7 +78,7 @@
                     <div class="latest_body">
                         <div class="cardList">
                             <?php while ($latest_query->have_posts()): $latest_query->the_post(); ?>
-                                <?php get_template_part('template-parts/loop', 'news'); ?>
+                                <?php get_template_part('test-template-parts-test/loop', 'news'); ?>
                             <?php
                             endwhile;
                             wp_reset_postdata();

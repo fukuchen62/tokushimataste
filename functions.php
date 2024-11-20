@@ -302,3 +302,69 @@ function my_wpcf7_autop()
 {
     return false;
 }
+
+//-------ここからfood science用追加項目-------
+/**
+ * <title>の区切り文字を変更する
+ */
+add_filter('document_title_separator', 'my_document_title_separator');
+function my_document_title_separator($separator)
+{
+    $separator = "|";
+    return $separator;
+}
+
+
+/**
+ * タイトルの「保護中」の文字を削除する
+ */
+add_filter('protected_title_format', 'my_protected_title');
+function my_protected_title($title)
+{
+    return '%s';
+}
+
+function my_theme_setup()
+{
+    add_theme_support('title-tag');
+    add_theme_support('post-thumbnails');
+    add_theme_support('menus');
+}
+
+add_action('after_setup_theme', 'my_theme_setup');
+
+function add_my_files()
+{
+    // WordPress本体のjQueryを登録解除する
+    wp_deregister_script('jquery');
+
+    wp_enqueue_script(
+        'jquery',
+        "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js",
+        array(),
+        '3.7.1',
+        true
+    );
+
+    wp_enqueue_script(
+        'food-science-main',
+        get_template_directory_uri() . '/assets/js/main.js',
+        array('jquery'),
+        '',
+        true
+    );
+
+    wp_enqueue_style(
+        'font-awesome',
+        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css',
+        array()
+    );
+
+
+    wp_enqueue_style(
+        'google-web-fonts',
+        'https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap',
+        array()
+    );
+}
+add_action('wp_enqueue_scripts', 'add_my_files');

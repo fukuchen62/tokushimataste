@@ -11,8 +11,13 @@
     <link rel="stylesheet" href="../assets/css/reset.css">
     <!-- 共通CSSの読み込み -->
     <link rel="stylesheet" href="../assets/css/common.css">
+
+    <!-- headerCSSの読み込み -->
+    <link rel="stylesheet" href="../assets/css/header.css">
+
     <!-- TOPページCSSの読み込み -->
     <link rel="stylesheet" href="../assets/css/top.css">
+
     <!--Googleフォントの読み込み-->
     <!--Googleフォントの読み込み-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,14 +27,29 @@
 </head>
 <body>
     <header>
-        <div class="inner">
-            <!-- キーワード検索 -->
+        <section class="kv">
+
+
             <div class="contentupper">
                 <form id="form1" action="ご飯のお供サイトURL">
                     <input id="sbox1" name="s" type="text" placeholder="キーワードを入力" />
                     <input id="sbtn1" type="submit" value="検索" />
                 </form>
             </div>
+            <h2 class="kv-copy">
+                                    徳島の味！<br class="tb-none">
+                                    あなたのご飯のお友達<br class="tb-none">
+            </h2>
+
+        </section>
+        <div class="inner">
+            <!-- キーワード検索 -->
+            <!-- <div class="contentupper">
+                <form id="form1" action="ご飯のお供サイトURL">
+                    <input id="sbox1" name="s" type="text" placeholder="キーワードを入力" />
+                    <input id="sbtn1" type="submit" value="検索" />
+                </form>
+            </div> -->
             <!-- トップに飛ぶロゴ-->
             <div class="contentlower">
                 <h1 class="logo">
@@ -64,29 +84,45 @@
         <!-- トップページに戻るボタン -->
         <p id="page-top"><a href="#">↑<br>TOP</a></p>
         <!-- キービジュアル -->
-        <section class="kv">
+        <!-- <section class="kv">
             <div class="inner">
                 <h2 class="kv-copy">
                     徳島の味！<br class="tb-none">
                     あなたのご飯のお友達<br class="tb-none">
                 </h2>
             </div>
-        </section>
+        </section> -->
         <section>
             <div class="inner">
-                <section>
-                    <div class="aboutsite">
-                        <h2>
-                            このサイトについて
-                        </h2>
-                        <p>
-                                「徳島を旅するように味わう」<br>
-                                徳島とユーザーが「つながる」ことを目指す。徳島の名産品を使った「ご飯のおとも」を、あたかも徳島を旅するように味わえる体験として提供。各商品を作った人のインタビューを掲載することで、ご飯のおともを通じて、地元の生産者と消費者をつなぐ架け橋となり、食べるだけでなく、応援や共感を生むようなサイトに。
-                                </p>
-                    </div>
-                </section>
+                <div class="aboutsite">
+                    <h2>このサイトについて</h2>
+                    <p>
+                        「徳島を旅するように味わう」<br>
+                        徳島とユーザーが「つながる」ことを目指す。徳島の名産品を使った「ご飯のおとも」を、あたかも徳島を旅するように味わえる体験として提供。各商品を作った人のインタビューを掲載することで、ご飯のおともを通じて、地元の生産者と消費者をつなぐ架け橋となり、食べるだけでなく、応援や共感を生むようなサイトに。
+                    </p>
+                </div>
             </div>
         </section>
+
+        <section>
+            <div class="inner">
+                <h2>ご飯のお供etc</h2>
+                <div class="scroll-infinity">
+                    <div class="scroll-infinity__wrap">
+                        <ul class="scroll-infinity__list scroll-infinity__list--left">
+                            <li class="scroll-infinity__item"><img src="../uploads/miso.jpeg" /></li>
+                            <li class="scroll-infinity__item"><img src="../uploads/narazuke.jpeg" /></li>
+                            <li class="scroll-infinity__item"><img src="../uploads/nori.jpeg" /></li>
+                            <li class="scroll-infinity__item"><img src="../uploads/saba-misoni.jpg" /></li>
+                            <li class="scroll-infinity__item"><img src="../uploads/furikake.jpeg" /></li>
+                            <li class="scroll-infinity__item"><img src="../uploads/misemae.png" /></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
 
 
 

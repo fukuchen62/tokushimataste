@@ -1,8 +1,11 @@
 @charset "UTF-8";
 
+h2 {
+    margin: 30px auto;
+}
+
 .kv {
     height: calc(100vh - 50px);
-
     background-image: url(../../uploads/header-designkanpu.jpg);
     background-size: cover;
     background-position: center center;
@@ -29,6 +32,59 @@
 .aboutsite {
     background-color: antiquewhite;
     padding: 20px;
-    margin: 30px;
-    border-radius: 15px 0;
+    margin-bottom: 30px;
+    border-radius: 15px;
+}
+
+.scroll-infinity {
+    position: relative;
+    z-index: auto;
+    width: 1024px;
+    height: auto;
+    margin: 10px auto;
+}
+
+.scroll-infinity img {
+    border-radius: 50%;
+    border-width: 5px;
+    transition: 0.7s;
+}
+
+@keyframes infinity-scroll-left {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.scroll-infinity__wrap {
+    display: flex;
+    overflow: hidden;
+}
+
+.scroll-infinity__list {
+    display: flex;
+    list-style: none;
+    padding: 0
+}
+
+.scroll-infinity__list--left {
+    animation: infinity-scroll-left 80s infinite linear 0.5s both;
+}
+
+.scroll-infinity__item {
+    width: calc(100vw / 6);
+}
+
+.scroll-infinity__item>img {
+    width: 100%;
+}
+
+.aboutsite {
+    width: 860px;
+    padding: 20px;
+    background-color: #F7EB99;
 }

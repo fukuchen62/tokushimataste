@@ -4,6 +4,7 @@
     display: none;
     padding: 20px 0;
     border-bottom: 1px solid #000;
+    max-width: 320px;
 }
 
 /* onクラス添付で画面に表示 */
@@ -127,14 +128,6 @@
     gap: 5px 5px;
     padding-left: 0;
     /* ulのユーザーエージェントスタイル打消し */
-}
-
-
-/* onクラス添付で画面に表示 */
-/* もとにもどす */
-.page_list li.on {
-    display: block;
-    max-width: 320px;
 }
 
 body {

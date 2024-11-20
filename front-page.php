@@ -63,9 +63,9 @@
                 <h2 class="heading heading-primary"><span>コンセプト</span>CONCEPT</h2>
             </header>
             <div class="section_pic">
-                <div><img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/concept_img01@2x.png" alt=""></div>
-                <div><img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/concept_img02@2x.png" alt=""></div>
-                <div><img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/concept_img03@2x.png" alt=""></div>
+                <div><img src="<?php echo get_template_directory_uri(); ?>/test-assets-test/img/home/concept_img01@2x.png" alt=""></div>
+                <div><img src="<?php echo get_template_directory_uri(); ?>/test-assets-test/img/home/concept_img02@2x.png" alt=""></div>
+                <div><img src="<?php echo get_template_directory_uri(); ?>/test-assets-test/img/home/concept_img03@2x.png" alt=""></div>
             </div>
         </div>
         <div class="section_body">
@@ -130,7 +130,7 @@
         </div>
 
         <div class="section_pic">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/info_img01@2x.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/test-assets-test/img/home/info_img01@2x.png" alt="">
         </div>
     </div>
 </section>
@@ -150,7 +150,7 @@
             </div>
         </div>
         <div class="section_pic">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/access_img01@2x.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/test-assets-test/img/home/access_img01@2x.png" alt="">
         </div>
     </div>
 </section>

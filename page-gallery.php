@@ -10,16 +10,16 @@ wp_enqueue_script('fotorama', 'https://cdnjs.cloudflare.com/ajax/libs/fotorama/4
                         <h2 class="heading heading-primary"><span>ギャラリー</span>GALLERY</h2>
                     </div>
                     <div class="fotorama">
-                        <img src="<?php echo get_template_directory_uri(); ?>./assets/img/gallery/1.jpg">
-                        <img src="<?php echo get_template_directory_uri(); ?>./assets/img/gallery/2.jpg">
-                        <img src="<?php echo get_template_directory_uri(); ?>./assets/img/gallery/3.jpg">
-                        <img src="<?php echo get_template_directory_uri(); ?>./assets/img/gallery/4.jpg">
-                        <img src="<?php echo get_template_directory_uri(); ?>./assets/img/gallery/5.jpg">
-                        <img src="<?php echo get_template_directory_uri(); ?>./assets/img/gallery/6.jpg">
-                        <img src="<?php echo get_template_directory_uri(); ?>./assets/img/gallery/7.jpg">
-                        <img src="<?php echo get_template_directory_uri(); ?>./assets/img/gallery/8.jpg">
-                        <img src="<?php echo get_template_directory_uri(); ?>./assets/img/gallery/9.jpg">
-                        <img src="<?php echo get_template_directory_uri(); ?>./assets/img/gallery/10.jpg">
+                        <img src="<?php echo get_template_directory_uri(); ?>./test-assets-test/img/gallery/1.jpg">
+                        <img src="<?php echo get_template_directory_uri(); ?>./test-assets-test/img/gallery/2.jpg">
+                        <img src="<?php echo get_template_directory_uri(); ?>./test-assets-test/img/gallery/3.jpg">
+                        <img src="<?php echo get_template_directory_uri(); ?>./test-assets-test/img/gallery/4.jpg">
+                        <img src="<?php echo get_template_directory_uri(); ?>./test-assets-test/img/gallery/5.jpg">
+                        <img src="<?php echo get_template_directory_uri(); ?>./test-assets-test/img/gallery/6.jpg">
+                        <img src="<?php echo get_template_directory_uri(); ?>./test-assets-test/img/gallery/7.jpg">
+                        <img src="<?php echo get_template_directory_uri(); ?>./test-assets-test/img/gallery/8.jpg">
+                        <img src="<?php echo get_template_directory_uri(); ?>./test-assets-test/img/gallery/9.jpg">
+                        <img src="<?php echo get_template_directory_uri(); ?>./test-assets-test/img/gallery/10.jpg">
                     </div>
                 </div>
             </section>

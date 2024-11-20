@@ -1,5 +1,10 @@
 <?php
 
+// 変更しました(香西)
+// test-assets-testを全てtest-test-assets-test-testにしました。2024-11-20
+// 変更内容は以上です。
+
+
 // 福島　追加　消さないでください
 // 開発モードで公開するときは、trueにしてください。
 define('IS_DEV', false);
@@ -52,23 +57,23 @@ function add_style_script()
     //リセットCSS
     wp_enqueue_style(
         'my_reset',
-        get_template_directory_uri() . '/assets/css/reset.css'
+        get_template_directory_uri() . '/test-assets-test/css/reset.css'
     );
 
     // common.css
     wp_enqueue_style(
         'my_common',
-        get_template_directory_uri() . '/assets/css/common.css'
+        get_template_directory_uri() . '/test-assets-test/css/common.css'
     );
     // header.css
     wp_enqueue_style(
         'my_header',
-        get_template_directory_uri() . '/assets/css/header.css'
+        get_template_directory_uri() . '/test-assets-test/css/header.css'
     );
     // footer.css
     wp_enqueue_style(
         'my_footer',
-        get_template_directory_uri() . '/assets/css/footer.css'
+        get_template_directory_uri() . '/test-assets-test/css/footer.css'
     );
 
     // jQueryを読み込む
@@ -89,7 +94,7 @@ function add_style_script()
     //  本サイトの共通のmain.jsをフッターで読み込む
     wp_enqueue_script(
         'my_main_js',
-        get_template_directory_uri() . '/assets/js/main.js',
+        get_template_directory_uri() . '/test-assets-test/js/main.js',
         ['jquery'],
         '',
         true
@@ -112,13 +117,13 @@ function add_style_script()
     if (is_home()) {
         wp_enqueue_style(
             'my_top',
-            get_template_directory_uri() . '/assets/css/top.css'
+            get_template_directory_uri() . '/test-assets-test/css/top.css'
         );
 
         // JSファイルを読み込む
         wp_enqueue_script(
             'my_top',
-            get_template_directory_uri() . '/assets/js/top.js',
+            get_template_directory_uri() . '/test-assets-test/js/top.js',
             ['jquery'],
             '',
             true
@@ -126,16 +131,16 @@ function add_style_script()
     } elseif (is_404()) {
         wp_enqueue_style(
             'my_error404',
-            get_template_directory_uri() . '/assets/css/404.css'
+            get_template_directory_uri() . '/test-assets-test/css/404.css'
         );
     } elseif (is_search() || is_post_type_archive('classroom')) {
         //条件検索CSS
-        wp_enqueue_style('my_search', get_template_directory_uri() . '/assets/css/results.css');
-        wp_enqueue_style('my_searchpopup_css', get_template_directory_uri() . '/assets/css/searchpopup.css');
+        wp_enqueue_style('my_search', get_template_directory_uri() . '/test-assets-test/css/results.css');
+        wp_enqueue_style('my_searchpopup_css', get_template_directory_uri() . '/test-assets-test/css/searchpopup.css');
 
         wp_enqueue_script(
             'my_searchpopup-js',
-            get_template_directory_uri() . '/assets/js/searchpopup.js',
+            get_template_directory_uri() . '/test-assets-test/js/searchpopup.js',
             ['jquery'],
             '',
             true
@@ -144,27 +149,27 @@ function add_style_script()
         //コラムリスト
         wp_enqueue_style(
             'my_column_list_style',
-            get_template_directory_uri() . '/assets/css/column_list.css',
+            get_template_directory_uri() . '/test-assets-test/css/column_list.css',
         );
     } elseif (is_singular('column')) {
         //コラム記事CSS
         wp_enqueue_style(
             'my_column_style',
-            get_template_directory_uri() . '/assets/css/column.css',
+            get_template_directory_uri() . '/test-assets-test/css/column.css',
         );
     } elseif (is_singular('classroom')) {
         wp_enqueue_style(
             'my_classroom_style',
-            get_template_directory_uri() . '/assets/css/details.css',
+            get_template_directory_uri() . '/test-assets-test/css/details.css',
         );
     } elseif (is_page('contact') || is_page('confirm') || is_page('thanks')) {
         wp_enqueue_style(
             'my_input',
-            get_template_directory_uri() . '/assets/css/input.css',
+            get_template_directory_uri() . '/test-assets-test/css/input.css',
         );
         wp_enqueue_script(
             'my_mail_js',
-            get_template_directory_uri() . '/assets/js/mail_form.js',
+            get_template_directory_uri() . '/test-assets-test/js/mail_form.js',
             ['jquery'], // jQuery に依存
             '', // バージョン指定なし
             true // フッターに出力
@@ -173,34 +178,34 @@ function add_style_script()
         // お気に入りリスト
         wp_enqueue_style(
             'my_favorite',
-            get_template_directory_uri() . '/assets/css/favorite.css'
+            get_template_directory_uri() . '/test-assets-test/css/favorite.css'
         );
     } elseif (is_page('about')) {
         // page-about.php
-        wp_enqueue_style('my_about', get_template_directory_uri() . '/assets/css/about.css');
+        wp_enqueue_style('my_about', get_template_directory_uri() . '/test-assets-test/css/about.css');
     } elseif (is_category(['news', 'update', 'events', 'others']) || is_page('infos')) {
         // 新着ニュース一覧
         wp_enqueue_style(
             'my_news_list',
-            get_template_directory_uri() . '/assets/css/news_list.css'
+            get_template_directory_uri() . '/test-assets-test/css/news_list.css'
         );
     } elseif (is_single()) {
         // 新着ニュース詳細
         wp_enqueue_style(
             'my_news',
-            get_template_directory_uri() . '/assets/css/news.css'
+            get_template_directory_uri() . '/test-assets-test/css/news.css'
         );
     } elseif (is_page('service')) {
         // 利用規約
         wp_enqueue_style(
             'my_service',
-            get_template_directory_uri() . '/assets/css/rule.css'
+            get_template_directory_uri() . '/test-assets-test/css/rule.css'
         );
     } elseif (is_page('praivacy')) {
         // プライバシーポリシー
         wp_enqueue_style(
             'my_praivacy',
-            get_template_directory_uri() . '/assets/css/privacy.css'
+            get_template_directory_uri() . '/test-assets-test/css/privacy.css'
         );
     }
 }

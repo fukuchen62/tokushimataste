@@ -1,7 +1,7 @@
 <?php
 
 // 変更しました(香西)
-// test-assets-testを全てtest-test-assets-test-testにしました。2024-11-20
+// assetsを全てtest-assets-testにしました。2024-11-20
 // 変更内容は以上です。
 
 

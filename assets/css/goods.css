@@ -65,6 +65,7 @@
     padding: 10px 0;
 }
 
+/* 画像のサイズ */
 .img-fluid {
     width: 320px;
     height: 240px;
@@ -112,4 +113,17 @@
 .btn-content li:hover {
     box-shadow: 0 0 #fff;
     transform: translateY(1px);
+}
+
+/* onクラス添付で画面に表示 */
+.page_list {
+    display: flex;
+    list-style: none;
+}
+
+.page_list li.on {
+    display: block;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
 }

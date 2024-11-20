@@ -28,6 +28,10 @@
     margin-bottom: 20px;
 }
 
+.page_list p {
+    margin: 0.3em 0;
+}
+
 .pagination {
     width: 70%;
     margin: 0 auto 50px;
@@ -63,7 +67,7 @@
 
 .img-fluid {
     width: 320px;
-    height: auto;
+    height: 240px;
 }
 
 .img-fluid li {
@@ -105,7 +109,7 @@
     background-color: #f7eb99;
 }
 
-.btn-content:hover {
+.btn-content li:hover {
     box-shadow: 0 0 #fff;
     transform: translateY(1px);
 }

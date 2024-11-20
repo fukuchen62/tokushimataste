@@ -42,15 +42,10 @@
 /* ==================== */
 /* base */
 /* ==================== */
-html {
-    /* 全体の基本フォント */
-    font-size: 62.5%;
+.zen-maru-gothic-regular {
     font-family: "Zen Maru Gothic", serif;
+    font-weight: 400;
     font-style: normal;
-    color: #463D3B;
-    font-weight: 500;
-    line-height: 1.4;
-
 }
 
 img {
@@ -430,10 +425,4 @@ footer {
         /*右側の角を少し丸める*/
     }
 
-}
-
-.zen-maru-gothic-regular {
-    font-family: "Zen Maru Gothic", serif;
-    font-weight: 400;
-    font-style: normal;
 }

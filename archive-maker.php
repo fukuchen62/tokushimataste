@@ -28,7 +28,7 @@
                             $args['tax_query'] = $taxquerysp;
                             $the_query = new WP_Query($args);
                             if ($the_query->have_posts()): ?>
-                                <?php while ($the_query->have_posts()): $the_query->he_post() ?>
+                                <?php while ($the_query->have_posts()): $the_query->the_post() ?>
                                     <li class="foodList_item">
                                         <?php get_template_part('test-template-parts-test/loop', 'food'); ?>
                                     </li>

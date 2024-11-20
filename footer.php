@@ -1,5 +1,5 @@
 <footer class="footer">
-    <?php get_template_part('template-parts/breadcrumb'); ?>
+    <?php get_template_part('test-template-parts-test/breadcrumb'); ?>
     <div class="footer_inner">
         <div class="footer_info">
             <div class="footer_logo">

@@ -17,7 +17,7 @@ $menu = get_term_by('slug', $menu_slug, 'menu');
                     <?php if (have_posts()) : ?>
                         <?php while (have_posts()): the_post(); ?>
                             <li class="foodList_item">
-                                <?php get_template_part('template-parts/loop', 'food') ?>
+                                <?php get_template_part('test-template-parts-test/loop', 'food') ?>
                             </li>
                         <?php endwhile ?>
                     <?php endif; ?>

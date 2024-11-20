@@ -18,7 +18,7 @@
                                 <!-- <span class="food_label">オススメ</span> -->
                                 <?php /* endif; */ ?>
                                 <?php
-                                $pic = get_field('pic');
+                                $pic = get_field('pic1');
                                 $pic_url = $pic['sizes']['large'];
                                 ?>
                                 <img src="<?php echo $pic_url; ?>" alt="">
@@ -35,9 +35,22 @@
                                 <span class="food_itemData"><?php the_field('business_hours') ?></span>
                             </li>
                             <li class="food_item">
+                                <span class="food_itemLabel">カロリー</span>
+                                <span class="food_itemData"><?php the_field('business_hours') ?></span>
+                            </li>
+                            <li class="food_item">
+                                <span class="food_itemLabel">カロリー</span>
+                                <span class="food_itemData"><?php the_field('business_hours') ?></span>
+                            </li>
+                            <li class="food_item">
+                                <span class="food_itemLabel">カロリー</span>
+                                <span class="food_itemData"><?php the_field('business_hours') ?></span>
+                            </li>
+                            <li class="food_item">
                                 <span class="food_itemLabel">アレルギー</span>
                                 <span class="food_itemData">
                                     <?php
+                                    /*
                                     $allergies = get_field('allergies');
                                     foreach ($allergies as $key => $allergy) {
                                         echo $allergy;
@@ -45,6 +58,7 @@
                                             echo '、';
                                         }
                                     }
+                                        */
                                     ?>
                                 </span>
                             </li>

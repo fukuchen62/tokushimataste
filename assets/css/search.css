@@ -1,0 +1,259 @@
+@charset "utf-8";
+
+/* ==================== */
+/* base */
+/* ==================== */
+
+html {
+	/* remの基準 */
+	font-size: 10px;
+
+	color: #333;
+	font-family: "Noto Sans JP", sans-serif;
+}
+
+body {
+	font-size: 1.6rem;
+}
+
+img {
+	max-width: 100%;
+}
+
+a {
+	display: block;
+}
+
+.b-shadow {
+	box-shadow: 4px 4px 4px 0 #14354D33;
+}
+
+.sp-none {
+	display: none;
+}
+
+/* おまけ */
+a img:hover {
+	opacity: 0.5;
+}
+
+/* flexかけるところにこのclass名をつけると楽 */
+.flex {
+	display: flex;
+}
+
+/* ---------- */
+/* tablet */
+@media(width>=700px) {
+	.tb-none {
+		display: none;
+	}
+}
+
+/* ---------- */
+/* pc */
+@media(width>=1060px) {
+	.sp-none {
+		display: block;
+	}
+
+	.pc-none {
+		display: none;
+	}
+}
+
+/* ==================== */
+/* header */
+/* ==================== */
+
+header .inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	height: 50px;
+}
+
+.logo {
+	width: 100px;
+}
+
+.hamburger span {
+	display: block;
+
+	background-color: #333;
+	height: 2px;
+	width: 24px;
+}
+
+.hamburger span+span {
+	margin-top: 8px;
+}
+
+/* ----- */
+/* おまけ */
+.hamburger span {
+	transition: 0.6s;
+}
+
+.hamburger:hover span {
+	background-color: #f00;
+}
+
+.hamburger:hover span:nth-child(1) {
+	transform: translateY(10px)rotate(45deg);
+}
+
+.hamburger:hover span:nth-child(2) {
+	opacity: 0;
+}
+
+.hamburger:hover span:nth-child(3) {
+	transform: translateY(-10px)rotate(-45deg);
+}
+
+/* ---------- */
+/* pc */
+@media(width>=1060px) {
+	header .inner {
+		height: 120px;
+	}
+
+	.logo {
+		width: 180px;
+	}
+
+	.h_nav ul {
+		display: flex;
+		gap: 37px;
+	}
+
+	.h_nav a {
+		/* 18px */
+		font-size: 1.8rem;
+		font-weight: 500;
+
+		/* おまけ用 */
+		padding: 5px;
+		border-bottom: 2px solid transparent;
+		transition: 0.6s;
+	}
+
+	/* ----- */
+	/* おまけ */
+	.h_nav a:hover {
+		color: #3FA9F5;
+		border-bottom: 2px solid #3FA9F5;
+	}
+}
+
+/* ==================== */
+/* footer */
+/* ==================== */
+footer {
+	background-color: #ccc;
+
+	padding-bottom: 60px;
+}
+
+.f_nav {
+	margin-bottom: 26px;
+}
+
+.f_nav a {
+	/* 18px */
+	font-size: 1.8rem;
+	font-weight: 500;
+
+	border-bottom: 1px solid #333;
+	padding: 32px 0;
+
+	/* おまけ用 */
+	padding-left: 10px;
+	transition: 0.6s;
+
+	border-bottom: 2px solid #333;
+}
+
+.f-copy {
+	text-align: center;
+}
+
+.f-copy small {
+	/* 14px */
+	font-size: 1.4rem;
+}
+
+/* ----- */
+/* おまけ */
+.f_nav a:hover {
+	background-color: #fff;
+	color: #3FA9F5;
+}
+
+/* ----- */
+/* おまけ */
+.f_nav a {
+	position: relative;
+}
+
+.f_nav a::after {
+	content: "";
+	display: block;
+	width: 0px;
+	height: 2px;
+	background-color: #3FA9F5;
+
+	position: absolute;
+	left: 0;
+	bottom: -2px;
+}
+
+.f_nav a:hover::after {
+	animation: line 1s forwards;
+}
+
+@keyframes line {
+	0% {
+		width: 0px;
+	}
+
+	100% {
+		width: 100%;
+	}
+}
+
+/* ---------- */
+/* pc */
+@media(width>=1060px) {
+	footer {
+		padding: 36px 0 42px;
+	}
+
+	footer .inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+
+		margin-bottom: 40px;
+	}
+
+	.f_nav ul {
+		display: flex;
+		gap: 37px;
+	}
+
+	.f_nav a {
+		border: none;
+
+		/* おまけ用 */
+		padding: 5px;
+	}
+
+	/* ----- */
+	/* おまけ */
+	.f_nav a:hover {
+		background-color: transparent;
+	}
+
+}

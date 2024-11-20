@@ -1,11 +1,10 @@
-@charset "UTF-8";
-
 /* ページングで表示するコンテンツのスタイル
  初期表示は非表示 */
 .page_list li {
     display: none;
     padding: 20px 0;
     border-bottom: 1px solid #000;
+    max-width: 320px;
 }
 
 /* onクラス添付で画面に表示 */
@@ -26,6 +25,10 @@
 .page_list {
     border-top: 1px solid #000;
     margin-bottom: 20px;
+}
+
+.page_list p {
+    margin: 0.3em 0;
 }
 
 .pagination {
@@ -59,4 +62,76 @@
     border: solid 1px #1597CC;
     border-radius: 5px;
     padding: 10px 0;
+}
+
+.img-fluid {
+    width: 320px;
+    height: 240px;
+}
+
+.img-fluid li {
+    letter-spacing: -1em;
+}
+
+.img-fluid li {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    border: 1px solid #FF9900;
+}
+
+/* ジャンル検索ボタン */
+.btn-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 20px 0 80px;
+}
+
+.btn-content li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    text-decoration: none;
+    color: #555555;
+    font-size: 18px;
+    border-radius: 20px;
+    width: 300px;
+    height: 40px;
+    font-weight: bold;
+    border: 2px solid #555555;
+    transition: 0.3s;
+    box-shadow: 0px 6px 0px -2px rgba(67, 145, 209, 1);
+    background-color: #f7eb99;
+}
+
+.btn-content li:hover {
+    box-shadow: 0 0 #fff;
+    transform: translateY(1px);
+}
+
+
+
+/*以下変更 byぎみ
+ ページングで表示するコンテンツのスタイル
+ 初期表示は非表示 */
+
+.page_list {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 5px 5px;
+    padding-left: 0;
+    /* ulのユーザーエージェントスタイル打消し */
+}
+
+body {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 100px 0;
 }

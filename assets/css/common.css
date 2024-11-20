@@ -42,11 +42,34 @@
 /* ==================== */
 /* base */
 /* ==================== */
-.zen-maru-gothic-regular {
+
+html {
+    /* 全体の基本フォント */
+    font-size: 62.5%;
+    font-family: "Zen Maru Gothic", serif, "Open Sans";
+    font-style: normal;
+    color: #463D3B;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+/* .zen-maru-gothic-regular {
     font-family: "Zen Maru Gothic", serif;
     font-weight: 400;
     font-style: normal;
-}
+} */
 
 img {
     max-width: 100%;
@@ -65,105 +88,29 @@ h2 {
 }
 
 /* おまけ */
-/*a img:hover {
+a img:hover {
     opacity: 0.5;
-}*/
+}
 
 /* flexかけるところにこのclass名をつけると楽 */
 .flex {
     display: flex;
 }
 
+/* コンテナーの幅 */
 .inner {
     max-width: 1024px;
-    margin: auto;
+    min-width: 320px;
+    margin: 0 auto;
 }
-
 
 
 /* ---------- */
 /* tablet */
-@media(width>=700px) {
-    .tb-none {
+@media(width>=768px) {
+    /* .tb-none {
         display: none;
-    }
-}
-
-/* ---------- */
-/* パソコン */
-@media(width>=1024px) {
-    .sp-none {
-        display: block;
-    }
-
-    .pc-none {
-        display: none;
-    }
-}
-
-
-
-/* ==================== */
-/* header */
-/* ==================== */
-
-header .inner {
-    /* display: flex; */
-    /* justify-content: space-between; */
-    align-items: center;
-    height: 50px;
-}
-
-.contentlower {
-    display: flex;
-    /* justify-content: center; */
-    vertical-align: center;
-}
-
-/* ハンバーガー */
-
-.hamburger span {
-    display: block;
-
-    background-color: #333;
-    height: 2px;
-    width: 24px;
-}
-
-.hamburger span+span {
-    margin-top: 8px;
-}
-
-/* ----- */
-/* おまけ */
-.hamburger span {
-    transition: 0.6s;
-}
-
-.hamburger:hover span {
-    background-color: #f00;
-}
-
-.hamburger:hover span:nth-child(1) {
-    transform: translateY(10px)rotate(45deg);
-}
-
-.hamburger:hover span:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger:hover span:nth-child(3) {
-    transform: translateY(-10px)rotate(-45deg);
-}
-
-.zentai {
-    border: solid #0f31f1;
-}
-
-.aboutsite {
-    width: 860px;
-    padding: 20px;
-    background-color: #F7EB99;
+    } */
 }
 
 
@@ -197,53 +144,6 @@ header .inner {
     box-shadow: 5px 5px 50px yellow;
 }
 
-/* ---------- */
-/* pc */
-@media(width>=1024px) {
-    header .inner {
-        height: 200px;
-        background-color: aquamarine;
-    }
-
-    .logo {
-        width: 150px;
-    }
-
-    /* 縦並びを横並びにする　タグ間40pxにする */
-    .h_nav ul {
-        display: flex;
-        gap: 15px;
-        justify-content: flex-end;
-        margin: 20px;
-        background-color: #f00;
-
-    }
-
-    .h_nav a {
-        /* 文字を18px、太字 */
-        font-size: 1.6rem;
-        font-weight: 500;
-        text-align: center;
-
-        /* navの内枠と下線の動き設定 */
-        border-bottom: 2px solid transparent;
-        transition: 0.6s;
-    }
-
-    /* nav文字に触れる文字と下線がブルー */
-    .h_nav a:hover {
-        color: #3FA9F5;
-        border-bottom: 2px solid #3FA9F5;
-    }
-
-}
-
-/* ----- */
-/* おまけ */
-/* .h_nav a:hover {
-        color: #3FA9F5;
-        border-bottom: 2px solid #3FA9F5;
-    }*/
 
 
 /* ==================== */
@@ -253,176 +153,4 @@ footer {
     background-color: #ccc;
 
     padding-bottom: 60px;
-}
-
-.f_nav {
-    margin-bottom: 26px;
-}
-
-.f_nav a {
-    /* 18px */
-    font-size: 1.8rem;
-    font-weight: 500;
-
-    border-bottom: 1px solid #333;
-    padding: 32px 0;
-
-    /* おまけ用 */
-    padding-left: 10px;
-    transition: 0.6s;
-
-    border-bottom: 2px solid #333;
-}
-
-.f-copy {
-    text-align: center;
-}
-
-.f-copy small {
-    /* 14px */
-    font-size: 1.4rem;
-}
-
-/* ----- */
-/* おまけ */
-.f_nav a:hover {
-    background-color: #fff;
-    color: #3FA9F5;
-}
-
-/* ----- */
-/* おまけ */
-.f_nav a {
-    position: relative;
-}
-
-.f_nav a::after {
-    content: "";
-    display: block;
-    width: 0px;
-    height: 2px;
-    background-color: #3FA9F5;
-
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-}
-
-.f_nav a:hover::after {
-    animation: line 1s forwards;
-}
-
-@keyframes line {
-    0% {
-        width: 0px;
-    }
-
-    100% {
-        width: 100%;
-    }
-}
-
-/* ---------- */
-/* pc */
-@media(width>=1060px) {
-    footer {
-        padding: 36px 0 42px;
-    }
-
-    footer .inner {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-
-        margin-bottom: 40px;
-    }
-
-    .f_nav ul {
-        display: flex;
-        gap: 37px;
-    }
-
-    .f_nav a {
-        border: none;
-
-        /* おまけ用 */
-        padding: 5px;
-    }
-
-    /* ----- */
-    /* おまけ */
-    .f_nav a:hover {
-        background-color: transparent;
-    }
-
-}
-
-
-/* -------‐-----‐-----‐--- */
-/* キーワード検索 */
-/* -------‐-----‐-----‐--- */
-
-/*フォーム全体を中央へ*/
-#form1 {
-    display: flex;
-    justify-content: right;
-    /*中央へ固定*/
-    height: 30px;
-    /*高さ*/
-}
-
-/*入力フォーム*/
-#sbox1 {
-    width: 100px;
-    /*横幅*/
-    padding: 0 15px;
-    /*プレースホルダーの位置調整*/
-    border-radius: 4px 0 0 4px;
-    /*左側の角を少し丸める*/
-    background: #eee;
-    /*検背景カラー*/
-    border: none;
-    /*枠線を消す*/
-    outline: 0;
-    /*クリック時の青い枠線消す*/
-}
-
-/*検索ボタン*/
-#sbtn1 {
-    width: 40px;
-    /*横幅*/
-    border-radius: 0 15px 15px 0;
-    /*右側の角を少し丸める*/
-    background: #7fbfff;
-    /*背景カラー*/
-    border: none;
-    /*枠線を消す*/
-    color: #fff;
-    /*テキストカラー*/
-    font-size: 16px;
-    /*フォントサイズ指定*/
-    cursor: pointer;
-    /*マウスを乗せると指差しポインターになる*/
-}
-
-/*検索ボタンマウスオーバー時*/
-#sbtn1:hover {
-    background: #92dbff;
-    /*背景カラー変更*/
-}
-
-@media (width>=700px) {
-    #sbox1 {
-        width: 250px;
-        /*横幅*/
-        padding: 0 15px;
-    }
-
-    #sbtn1 {
-        width: 70px;
-        /*横幅*/
-        border-radius: 0 4px 4px 0;
-        /*右側の角を少し丸める*/
-    }
-
 }

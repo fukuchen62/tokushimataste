@@ -60,3 +60,21 @@
     border-radius: 5px;
     padding: 10px 0;
 }
+
+.img-fluid {
+    width: 150px;
+    height: auto;
+}
+
+.img-fluid li {
+    letter-spacing: -1em;
+}
+
+.img-fluid li {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    border: 1px solid #FF9900;
+}

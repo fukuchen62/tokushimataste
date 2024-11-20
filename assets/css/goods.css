@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+/* ページングで表示するコンテンツのスタイル
+ 初期表示は非表示 */
+.page_list li {
+    display: none;
+    padding: 20px 0;
+    border-bottom: 1px solid #000;
+}
+
+/* onクラス添付で画面に表示 */
+.page_list li.on {
+    display: block;
+}
+
+/* ページネーションの現在のページに「.active」クラスを付与して色を変える */
+
+.pagination .number>a.active {
+    background-color: #1597CC;
+    color: #fff;
+}
+
+/* ココから先は見た目のスタイルなのであまり重要ではありません。
+　　自由にデザインなど変更して貰えればと思います。 */
+
+.page_list {
+    border-top: 1px solid #000;
+    margin-bottom: 20px;
+}
+
+.pagination {
+    width: 70%;
+    margin: 0 auto 50px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.pagination .number {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.pagination a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #ffffff;
+    border: solid 1px #1597CC;
+    border-radius: 5px;
+    padding: 10px 0;
+}

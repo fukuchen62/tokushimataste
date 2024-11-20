@@ -1,14 +1,51 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>商品一覧ページ</title>
-    <link href="../assets/css/reset.css" rel="stylesheet">
-    <link href="../assets/css/goods.css" rel="stylesheet">
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>商品一覧ページ</title>
+<link href="../assets/css/reset.css" rel="stylesheet">
+<link href="../assets/css/goods.css" rel="stylesheet">
+<link href="../assets/css/common.css" rel="stylesheet">
 
 <body>
+    <header>
+        <div class="inner">
+            <!-- キーワード検索 -->
+            <div class="contentupper">
+                <form id="form1" action="ご飯のお供サイトURL">
+                    <input id="sbox1" name="s" type="text" placeholder="キーワードを入力" />
+                    <input id="sbtn1" type="submit" value="検索" />
+                </form>
+            </div>
+            <!-- トップに飛ぶロゴ-->
+            <div class="contentlower">
+                <h1 class="logo">
+                            <a href="#">
+                                <img src="../assets/images/cat.jpg" alt="ヘッダーロゴ">
+                            </a>
+                        </h1>
+                <!-- ナビ -->
+                <div class="h_nav sp-none">
+                    <ul>
+                        <li><a href="goods.html">商品一覧</a></li>
+                        <li><a href="area.html.html">エリア検索</a></li>
+                        <li><a href="research.html">詳細検索</a></li>
+                        <li><a href="column.html.html">コラム</a></li>
+                        <li><a href="maker.html">メーカー一覧</a></li>
+                        <li><a href="recipe.html">アレンジレシピ</a></li>
+                        <li><a href="favorite.html">お気に入り</a></li>
+                    </ul>
+                </div>
+
+                <!-- hamberger ボタン -->
+                <div class="hamburger pc-none">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
     <!--test-->
 
     <!-- ジャンル検索 -->
@@ -51,7 +88,7 @@
                 <p>出汁の味が染みこんだソウルフード海苔</p>
             </li>
             <li>
-                <img src="../uploads/tukemono2.jpg" alt="Image" class="img-fluid">
+                <img src="../uploads/tukemono.jpg" alt="Image" class="img-fluid">
                 <a href="#">お漬物</a>
                 <p>漬物</p>
                 <p>阿南</p>
@@ -137,72 +174,74 @@
         </ul>
 
         <ul class="pagination"></ul>
+        <main>
+            <!-- トップページに戻るボタン -->
+            <p id="page-top"><a href="#">↑<br>TOP</a></p>
+            <style>
+                * {
+                    box-sizing: border-box;
+                }
 
-        <style>
-            * {
-                box-sizing: border-box;
-            }
 
+                ul {
+                    list-style: none;
+                }
 
-            ul {
-                list-style: none;
-            }
+                .page_list {
+                    border-top: 1px solid #000;
+                    margin-bottom: 20px;
+                }
 
-            .page_list {
-                border-top: 1px solid #000;
-                margin-bottom: 20px;
-            }
+                .page_list li {
+                    display: none;
+                    padding: 20px 0;
+                    border-bottom: 1px solid #000;
+                }
 
-            .page_list li {
-                display: none;
-                padding: 20px 0;
-                border-bottom: 1px solid #000;
-            }
+                .page_list li.on {
+                    display: block;
+                }
 
-            .page_list li.on {
-                display: block;
-            }
+                .pagination {
+                    width: 70%;
+                    margin: 0 auto 50px;
+                    font-size: 14px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 5px;
+                }
 
-            .pagination {
-                width: 70%;
-                margin: 0 auto 50px;
-                font-size: 14px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 5px;
-            }
+                .pagination .number {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    flex-wrap: wrap;
+                    gap: 5px;
+                }
 
-            .pagination .number {
-                display: flex;
-                align-items: center;
-                justify-content: flex-start;
-                flex-wrap: wrap;
-                gap: 5px;
-            }
+                .pagination a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 40px;
+                    height: 40px;
+                    text-align: center;
+                    text-decoration: none;
+                    cursor: pointer;
+                    background-color: #ffffff;
+                    border: solid 1px #1597CC;
+                    border-radius: 5px;
+                    padding: 10px 0;
+                }
 
-            .pagination a {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 40px;
-                height: 40px;
-                text-align: center;
-                text-decoration: none;
-                cursor: pointer;
-                background-color: #ffffff;
-                border: solid 1px #1597CC;
-                border-radius: 5px;
-                padding: 10px 0;
-            }
+                .pagination .number>a.active {
+                    background-color: #1597CC;
+                    color: #fff;
+                }
+            </style>
 
-            .pagination .number>a.active {
-                background-color: #1597CC;
-                color: #fff;
-            }
-        </style>
-
-        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-        <script src="../assets/js/goods.js"></script>
+            <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+            <script src="../assets/js/goods.js"></script>
 </body>
 </html>

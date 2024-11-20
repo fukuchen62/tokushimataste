@@ -18,6 +18,11 @@
     <!-- TOPページCSSの読み込み -->
     <link rel="stylesheet" href="../assets/css/top.css">
 
+    <!-- footer CSSの読み込み -->
+    <link rel="stylesheet" href="../assets/css/footer.css">
+
+
+
     <!--Googleフォントの読み込み-->
     <!--Googleフォントの読み込み-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,71 +32,55 @@
 </head>
 <body>
     <header>
-        <section class="kv">
 
+        <div class="kv">
+            <!-- <img src="../uploads/header-designkanpu.jpg" alt=""> -->
 
-            <div class="contentupper">
-                <form id="form1" action="ご飯のお供サイトURL">
-                    <input id="sbox1" name="s" type="text" placeholder="キーワードを入力" />
-                    <input id="sbtn1" type="submit" value="検索" />
-                </form>
+            <p class="kv-copy">
+                    徳島の味！<br class="tb-none">
+                    あなたのご飯のお友達<br class="tb-none">
+            </p>
+        </div>
+
+        <div class="header-area pc-none">
+            <div class="title-logo">
+                <h1>
+                    <a href="#" class="logo">
+                        <img src="../uploads/miso.jpeg" alt="">
+                    </a>
+                </h1>
             </div>
-            <h2 class="kv-copy">
-                                    徳島の味！<br class="tb-none">
-                                    あなたのご飯のお友達<br class="tb-none">
-            </h2>
 
-        </section>
-        <div class="inner">
-            <!-- キーワード検索 -->
-            <!-- <div class="contentupper">
+            <div class="hamburger pc-none">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="h_nav sp-none ">
+                <ul class="slide-menu pc-none">
+                    <li><a href="goods.html">商品一覧</a></li>
+                    <li><a href="area.html.html">エリア検索</a></li>
+                    <li><a href="research.html">詳細検索</a></li>
+                    <li><a href="column.html.html">コラム</a></li>
+                    <li><a href="maker.html">メーカー一覧</a></li>
+                    <li><a href="recipe.html">アレンジレシピ</a></li>
+                    <li><a href="favorite.html">お気に入り</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- <div class="contentupper">
                 <form id="form1" action="ご飯のお供サイトURL">
                     <input id="sbox1" name="s" type="text" placeholder="キーワードを入力" />
                     <input id="sbtn1" type="submit" value="検索" />
                 </form>
             </div> -->
-            <!-- トップに飛ぶロゴ-->
-            <div class="contentlower">
-                <h1 class="logo">
-                    <a href="#">
-                        <img src="../assets/images/cat.jpg" alt="ヘッダーロゴ">
-                    </a>
-                </h1>
-                <!-- ナビ -->
-                <div class="h_nav sp-none">
-                    <ul>
-                        <li><a href="goods.html">商品一覧</a></li>
-                        <li><a href="area.html.html">エリア検索</a></li>
-                        <li><a href="research.html">詳細検索</a></li>
-                        <li><a href="column.html.html">コラム</a></li>
-                        <li><a href="maker.html">メーカー一覧</a></li>
-                        <li><a href="recipe.html">アレンジレシピ</a></li>
-                        <li><a href="favorite.html">お気に入り</a></li>
-                    </ul>
-                </div>
 
-                <!-- hamberger ボタン -->
-                <div class="hamburger pc-none">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </div>
-    </header>
 
     <main>
         <!-- トップページに戻るボタン -->
         <p id="page-top"><a href="#">↑<br>TOP</a></p>
-        <!-- キービジュアル -->
-        <!-- <section class="kv">
-            <div class="inner">
-                <h2 class="kv-copy">
-                    徳島の味！<br class="tb-none">
-                    あなたのご飯のお友達<br class="tb-none">
-                </h2>
-            </div>
-        </section> -->
+
         <section>
             <div class="inner">
                 <div class="aboutsite">
@@ -103,37 +92,76 @@
                 </div>
             </div>
         </section>
-
         <section>
-            <div class="inner">
+            <div class="inner ">
                 <h2>ご飯のお供etc</h2>
-                <div class="scroll-infinity">
-                    <div class="scroll-infinity__wrap">
-                        <ul class="scroll-infinity__list scroll-infinity__list--left">
-                            <li class="scroll-infinity__item"><img src="../uploads/miso.jpeg" /></li>
-                            <li class="scroll-infinity__item"><img src="../uploads/narazuke.jpeg" /></li>
-                            <li class="scroll-infinity__item"><img src="../uploads/nori.jpeg" /></li>
-                            <li class="scroll-infinity__item"><img src="../uploads/saba-misoni.jpg" /></li>
-                            <li class="scroll-infinity__item"><img src="../uploads/furikake.jpeg" /></li>
-                            <li class="scroll-infinity__item"><img src="../uploads/misemae.png" /></li>
-                        </ul>
+                <div class="slider-wrap">
+                    <div class="slider">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
                     </div>
+                    <div class="slider">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <a href="" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
+        </section>
+        <section>
+            <div class="inner forcenter">
+                <h2>
+                徳島のご飯の <br class="tb-none">お友達いろいろ！
+                </h2>
+                <div>
+                    <img src="../../tokushimataste/uploads/tokusima-map01.png" alt="">
                 </div>
             </div>
         </section>
 
+        <section>
+            <div class="inner forcenter">
 
+                <h2>
+                ご協力いただきました<br class="tb-none">メーカー様
+                </h2>
+                <div class="slider2-wrap">
+                    <div class="slider2">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="slider2">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
 
+                <a href="" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
 
-
-
+            </div>
+        </section>
     </main>
 
     <footer>
         <div></div>
+
+
     </footer>
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../assets/js/main.js"></script>
 
 </body>
 </html>

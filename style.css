@@ -4,3 +4,21 @@ Description: 「徳島の味！あなたのご飯のお友達」のテーマで�
 Version: 1.0
 Author: QLIP Programming School WEBシステム開発実践科第9期
 */
+
+
+/* -------ここからfood science用追加項目------- */
+
+li.current-cat {
+    a {
+        color: #fff;
+        background-color: #000;
+        border-color: #000;
+
+    }
+}
+
+li a[aria-current] {
+    color: #fff;
+    background-color: #000;
+    border-color: #000;
+}

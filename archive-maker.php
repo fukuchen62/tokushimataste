@@ -6,16 +6,21 @@
                 <h2 class="heading heading-primary"><span>メーカーさん紹介</span>FOOD</h2>
             </div>
             <?php
+            /*
             $menu_terms = get_terms(['taxonomy' => '']);
             if (!empty($menu_terms)):
+                */
             ?>
-                <?php foreach ($menu_terms as $menu): ?>
-                    <section class="section_body">
-                        <h3 class="heading heading-secondary"><a href="<?php echo get_term_link($menu); ?>"><?php echo $menu->name; ?></a><span><?php echo strtoupper($menu->slug); ?></span></h3>
-                        <ul class="foodList">
-                            <?php
-                            // メニューの投稿タイプ
-                            /*
+            <?php /*foreach ($menu_terms as $menu): */ ?>
+            <section class="section_body">
+                <h3 class="heading heading-secondary">
+                    <!-- <a href="<?php /*echo get_term_link($menu);*/ ?>"><?php /*echo $menu->name;*/ ?></a> -->
+                    <span><?php /*echo strtoupper($menu->slug);*/ ?></span>
+                </h3>
+                <ul class="foodList">
+                    <?php
+                    // メニューの投稿タイプ
+                    /*
                             $args = [
                                 'post_type' => 'food',
                                 'post_per_page' => -1,
@@ -29,18 +34,18 @@
                             $args['tax_query'] = $taxquerysp;
                             $the_query = new WP_Query($args);
                             */
-                            if (/*$the_query->*/have_posts()): ?>
-                                <?php while (/*$the_query->*/have_posts()): /*$the_query->*/ the_post() ?>
-                                    <li class="foodList_item">
-                                        <?php get_template_part('test-template-parts-test/loop', 'food'); ?>
-                                    </li>
-                                <?php endwhile; ?>
-                                <?php /*wp_reset_postdata();*/ ?>
-                            <?php endif ?>
-                        </ul>
-                    </section>
-                <?php endforeach; ?>
-            <?php endif; ?>
+                    if (/*$the_query->*/have_posts()): ?>
+                        <?php while (/*$the_query->*/have_posts()): /*$the_query->*/ the_post() ?>
+                            <li class="foodList_item">
+                                <?php get_template_part('test-template-parts-test/loop', 'test'); ?>
+                            </li>
+                        <?php endwhile; ?>
+                        <?php /*wp_reset_postdata();*/ ?>
+                    <?php endif ?>
+                </ul>
+            </section>
+            <?php /*endforeach;*/ ?>
+            <?php /*endif;*/ ?>
         </div>
     </section>
 </main>

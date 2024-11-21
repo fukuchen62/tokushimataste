@@ -135,3 +135,48 @@ body {
     margin: 0 auto;
     padding: 100px 0;
 }
+
+/* リンクテスト */
+#goods1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    text-decoration: none;
+    color: #000000;
+    font-size: 18px;
+    border-radius: 5px;
+    width: 200px;
+    height: 40px;
+    font-weight: bold;
+    border: 2px dashed #000000;
+    transition: 0.3s;
+    background-color: #fbb126;
+    cursor: pointer;
+}
+
+#goods1:hover {
+    opacity: .5;
+}
+
+#goods {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    text-decoration: none;
+    color: #000000;
+    font-size: 18px;
+    border-radius: 5px;
+    width: 200px;
+    height: 40px;
+    font-weight: bold;
+    border: 2px dashed #000000;
+    transition: 0.3s;
+    background-color: #fbb126;
+    cursor: pointer;
+}
+
+#goods:hover {
+    opacity: .5;
+}

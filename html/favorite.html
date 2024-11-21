@@ -75,20 +75,9 @@
 
 
     <main>
-        <div class="p-main" data-pageid="<?php echo esc_attr(get_the_ID()); ?>">
-            <!--
-    現在の投稿やページのIDを取得
-    esc_attr 関数はその値をHTML属性として安全にエスケープします。
-    これは、IDが意図せずにHTMLやJavaScriptに影響を与えないようにするため。
-    -->
-            <div class="p-fav_button">
-                <span class="__icon"></span>
+        <div class="p-main" data-pageid="1234"><!--※data-pageidの値はページごとに変わる-->
+            <div class="p-fav_button"><span class="__icon"></span><span class="__text">お気に入り<span class="__sumi">済</span></span></p>
             </div>
-        </div>
-        <div class="p-fav_button">
-            <span class="__icon"></span>
-        </div>
-        </div>
     </main>
 
     <footer>

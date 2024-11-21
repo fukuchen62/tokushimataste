@@ -1,7 +1,16 @@
 @charset "UTF-8";
 
-main {
+/* main {
     padding: 10px 0;
+} */
+
+h2 {
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+p {
+    margin-left: 10px;
 }
 
 .aboutsite {
@@ -11,8 +20,26 @@ main {
     border-radius: 15px;
 }
 
-h2 {
-    margin-bottom: 30px;
+.aboutsite h2 {
+    margin-bottom: 20px;
+}
+
+.hako {
+    margin-bottom: 50px;
+}
+
+@media (width>=700px) {
+    .tb-none {
+        display: none;
+    }
+
+    .aboutsite {
+        margin: 100px 0 70px;
+    }
+
+    .hako {
+        margin-bottom: 70px;
+    }
 }
 
 .slider-wrap {
@@ -22,16 +49,19 @@ h2 {
     border: solid #FBB126;
     border-radius: 15px;
     margin: 30px 10px 50px 10px;
+    padding: 10px;
 }
 
 .slider {
-    height: 40vh;
+    /* height: 40vh; */
+    height: 320px;
     position: relative;
     margin: auto;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
     animation: slide-loop 40s linear infinite;
+    padding: 10px;
 }
 
 .slider div {
@@ -101,6 +131,7 @@ h2 {
     height: 300px;
     background-position: center;
     background-size: cover;
+    margin: 0 20px;
 }
 
 @keyframes slide-loop {

@@ -14,15 +14,19 @@
             </div>
 
             <div class="section_body">
-                <?php if (have_posts()): ?>
+
+
+
+                <?php if ($the_query->have_posts()): ?>
                     <div class="section_desc">
                         <p><i class="fas fa-search"></i> 検索ワード「<?php the_search_query(); ?>」</p>
                     </div>
 
                     <div class="cardList">
-                        <?php while (have_posts()): the_post(); ?>
-                            <?php get_template_part('test-template-parts-test/loop', 'news'); ?>
+                        <?php while ($the_Query->have_posts()): $the_Query->the_post(); ?>
+                            <?php get_template_part('test-template-parts-test/loop', 'test'); ?>
                         <?php endwhile; ?>
+                        <?php wp_reset_postdata() ?>
                     </div>
                 <?php else: ?>
                     <div class="section_desc">

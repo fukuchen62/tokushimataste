@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <main>
-    <form id="search-box" method="GET" action="<?php get_template_directory_uri() ?>">
+    <form id="search-box" method="GET" action="<?php echo home_url('/') ?>">
         <!-- wp検索フォームに必要 -->
         <input type="hidden" name="s" value="">
 
@@ -19,18 +19,16 @@
                     </tr>
                     <tr class="search-nav">
 
-                        <td class="search-nav__box">
+                        <!-- <td class="search-nav__box">
                             <div class="search-nav__place">
                                 <label class="label-box"><input type="radio" class="place" name="area" value="tokushima" checked="">徳島市</label>
                             </div>
-                        </td>
+                        </td> -->
                         <td class="search-nav__box">
                             <div class="search-nav__place">
                                 <label class="label-box"><input type="radio" class="place" name="area" value="east">東部</label>
                             </div>
                         </td>
-
-
                         <td class="search-nav__box">
                             <div class="search-nav__place">
                                 <label class="label-box"><input type="radio" class="place" name="area" value="south">南部</label>

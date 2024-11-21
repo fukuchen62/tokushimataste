@@ -1,6 +1,13 @@
 <?php get_header(); ?>
 <main>
+
+
     <section class="section">
+
+        <!-- searchform.phpを読み込む -->
+        <?php get_search_form(); ?>
+
+
         <div class="section_inner">
             <div class="section_header">
                 <h1 class="heading heading-primary"><span>サイト内検索</span>SEARCH</h1>

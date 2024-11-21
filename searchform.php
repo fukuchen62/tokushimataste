@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <main>
-    <form id="search-box" method="GET" action="https://arutoku.com/">
+    <form id="search-box" method="GET" action="<?php get_template_directory_uri() ?>">
         <!-- wp検索フォームに必要 -->
         <input type="hidden" name="s" value="">
 
@@ -50,7 +50,7 @@
             <table class="search-item purpose-box">
                 <tbody>
                     <tr>
-                        <th class="nav-title">目的の指定</th>
+                        <th class="nav-title">お供</th>
 
                     </tr>
                     <tr class="nav-item__box">
@@ -76,7 +76,7 @@
             <table class="search-item time-box">
                 <tbody>
                     <tr>
-                        <th class="nav-title">所要時間の指定</th>
+                        <th class="nav-title">味覚</th>
 
                     </tr>
                     <tr class="nav-item__box nav-item-time">
@@ -102,7 +102,7 @@
             <table class="search-item facility-box">
                 <tbody>
                     <tr>
-                        <th class="nav-title">その他の条件</th>
+                        <th class="nav-title">アレルギー</th>
 
                     </tr>
                     <tr class="nav-item__box">

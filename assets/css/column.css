@@ -1,0 +1,328 @@
+@charset "utf-8";
+
+
+/* ==================== */
+/* footer */
+/* ==================== */
+footer {
+	background-color: #ccc;
+
+	padding-bottom: 60px;
+}
+
+.f_nav {
+	margin-bottom: 26px;
+}
+
+.f_nav a {
+	/* 18px */
+	font-size: 1.8rem;
+	font-weight: 500;
+
+	border-bottom: 1px solid #333;
+	padding: 32px 0;
+
+	/* おまけ用 */
+	padding-left: 10px;
+	transition: 0.6s;
+
+	border-bottom: 2px solid #333;
+}
+
+.f-copy {
+	text-align: center;
+}
+
+.f-copy small {
+	/* 14px */
+	font-size: 1.4rem;
+}
+
+/* ----- */
+/* おまけ */
+.f_nav a:hover {
+	background-color: #fff;
+	color: #3FA9F5;
+}
+
+/* ----- */
+/* おまけ */
+.f_nav a {
+	position: relative;
+}
+
+.f_nav a::after {
+	content: "";
+	display: block;
+	width: 0px;
+	height: 2px;
+	background-color: #3FA9F5;
+
+	position: absolute;
+	left: 0;
+	bottom: -2px;
+}
+
+.f_nav a:hover::after {
+	animation: line 1s forwards;
+}
+
+@keyframes line {
+	0% {
+		width: 0px;
+	}
+
+	100% {
+		width: 100%;
+	}
+}
+
+/* ---------- */
+/* pc */
+@media(width>=1060px) {
+	footer {
+		padding: 36px 0 42px;
+	}
+
+	footer .inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+
+		margin-bottom: 40px;
+	}
+
+	.f_nav ul {
+		display: flex;
+		gap: 37px;
+	}
+
+	.f_nav a {
+		border: none;
+
+		/* おまけ用 */
+		padding: 5px;
+	}
+
+	/* ----- */
+	/* おまけ */
+	.f_nav a:hover {
+		background-color: transparent;
+	}
+
+}
+
+/* ==================== */
+/* section-base */
+/* ==================== */
+
+section+section {
+	margin-top: 60px;
+}
+
+.inner {
+	max-width: 350px;
+	margin: 0 auto;
+}
+
+.ttl_box {
+	/* border: 2px solid red; */
+	text-align: center;
+
+	margin-bottom: 32px;
+}
+
+.ttl_box span {
+	display: inline-block;
+}
+
+.ttl_box .ttl {
+	/* 28px */
+	font-size: 2.8rem;
+	font-family: "Oswald", sans-serif;
+	font-weight: 500;
+	letter-spacing: 0.1em;
+
+	margin-bottom: 8px;
+}
+
+.ttl_box .sb-ttl {
+	/* 20px */
+	font-size: 2rem;
+}
+
+/* ---------- */
+/* tablet */
+@media(width>=700px) {
+	.inner {
+		max-width: 680px;
+	}
+}
+
+/* ---------- */
+/* pc */
+@media(width>=1060px) {
+	section {
+		margin-top: 0px;
+		margin-bottom: 120px;
+	}
+
+	.inner {
+		max-width: 1040px;
+	}
+
+	.ttl_box {
+		margin-bottom: 64px;
+	}
+
+	.ttl_box .ttl {
+		/* 48px */
+		font-size: 4.8rem;
+	}
+
+	.ttl_box .sb-ttl {
+		/* 16px */
+		font-size: 1.6rem;
+	}
+}
+
+/
+/* ==================== */
+/* column */
+/* ==================== */
+/*
+.column_list li {
+    padding: 25px;
+    background-color: #ec6f6f;
+    /*margin-bottom: 24px;
+    */
+/*}*/
+
+.column_list img {
+	margin-bottom: 18px;
+	border-radius: 10px;
+
+	/* box-shadow: 4px 4px 4px 0 #14354D33; */
+
+}
+
+
+.column_list h3 {
+	/* 20px */
+	font-size: 2rem;
+	font-weight: 500;
+	margin-bottom: 14px;
+
+}
+
+.column_list p {
+	margin-bottom: 36px;
+}
+
+.column_list a {
+	background-color: #F7EB99;
+	color: black;
+	font-size: 2rem;
+	box-shadow: 5px 5px 0 #FBB126;
+	/* width: 100%; */
+	padding: 16px;
+	text-align: left;
+	border-radius: 8px;
+	letter-spacing: 0.1em;
+
+	/*box-shadow: 4px 4px 4px 0 #14354D33;*/
+
+	/* おまけ用 */
+	border: 2px solid #FBB126;
+	transition: 0.6s;
+}
+
+.column .more {
+	/* 20px */
+	font-size: 2rem;
+	font-weight: 500;
+	border: 2px solid #FBB126;
+	padding: 30px;
+	text-align: center;
+
+	/* おまけ用 */
+	transition: 0.6s;
+}
+
+/* ----- */
+/* おまけ */
+.column_list a:hover {
+	background-color: #FBB126;
+	color: #fff;
+	/* border: 2px solid #3FA9F5; */
+}
+
+.column_list a:hover {
+	background-color: #FBB126;
+	color: #fff;
+}
+
+/* ---------- */
+/* tablet */
+@media(width>=700px) {
+	.column_list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 40px;
+
+		/* border: 2px solid red; */
+	}
+
+	.column_list li {
+		/* border: 2px solid blue; */
+
+		max-width: 320px;
+	}
+
+	.column_list h3 {
+		margin: 0;
+		position: fixed;
+		botttom: 30px;
+
+	}
+
+	/* ---------- */
+	/* pc */
+	@media(width>=1024px) {
+		.column .more {
+			max-width: 400px;
+			margin: 0 auto;
+		}
+	}
+
+	/* 親要素の共通設定 */
+	/*.box {
+    /* 見た目の設定 */
+	/* background-color: skyblue;
+    padding: 5px;
+    margin: 10px auto;
+*/
+
+	/* flexboxの設定 */
+	/* display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+*/
+
+
+	/* 子要素の共通設定 */
+
+	.box__item {
+		/* 見た目の設定 */
+		/* background-color: #FBB126; */
+		width: 300;
+		height: 400px;
+
+
+
+		/* text-align: center;
+    line-height: 200px;
+    color: red;
+    */
+	}

@@ -143,11 +143,12 @@ button.btn {
     letter-spacing: 0.1em;
     color: #212529;
     border-radius: 0.5rem;
+    width: 200px;
+    margin: auto;
 }
 
 a.btn-border-shadow {
     padding: calc(1.5rem - 12px) 3rem 1.5rem;
-
     background: #fff;
 }
 

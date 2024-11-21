@@ -4,7 +4,7 @@
         <div class="section_inner">
             <div class="section_header">
                 <h2 class="heading heading-primary"><span>レシピ紹介</span>FOOD</h2>
-                <h2 class="heading heading-primary"><span>メーカーさん紹介</span>FOOD</h2>
+
             </div>
             <?php
             /*

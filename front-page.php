@@ -2,7 +2,7 @@
 <?php if (is_home()): ?>
     <section class="kv">
         <div class="kv_inner">
-            <h1 class="kv_title">FOOD SCIENCE<br>TOKYO</h1>
+            <h1 class="kv_title"><?php bloginfo('name'); ?></h1>
             <p class="kv_subtitle">FROM JAPAN</p>
         </div>
         <?php
@@ -55,6 +55,154 @@
         </div>
     </section>
 <?php endif; ?>
+
+<section>
+    <div class="inner">
+        <div class="aboutsite">
+            <h2>このサイトについて</h2>
+            <p>
+                「徳島を旅するように味わう」<br>
+                徳島とユーザーが「つながる」ことを目指す。徳島の名産品を使った「ご飯のおとも」を、あたかも徳島を旅するように味わえる体験として提供。各商品を作った人のインタビューを掲載することで、ご飯のおともを通じて、地元の生産者と消費者をつなぐ架け橋となり、食べるだけでなく、応援や共感を生むようなサイトに。
+            </p>
+        </div>
+    </div>
+</section>
+
+
+<h2>商品</h2>
+<?php
+// メニューの投稿タイプ
+
+$args = [
+    'post_type' => 'product',
+    'post_per_page' => 3,
+];
+/*
+                            $taxquerysp = ['relation' => 'AND'];
+                            $taxquerysp[] = [
+                                'taxonomy' => 'menu',
+                                'terms' => $menu->slug,
+                                'field' => 'slug',
+                            ];
+                            */
+$the_query = new WP_Query($args);
+
+if ($the_query->have_posts()): ?>
+    <?php while ($the_query->have_posts()): $the_query->the_post() ?>
+        <?php
+        $pic = get_field('pic1');
+        // $picが存在する場合のみURLを取得
+        $pic_url =  $pic['sizes']['thumbnail'];
+        ?>
+        <img src="<?php echo $pic_url; ?>" alt="">
+        <p><?php the_field('product_name'); ?></p>
+        </li>
+<?php endwhile;
+    wp_reset_postdata(); // リセット
+else :
+    echo '<p>投稿が見つかりませんでした。</p>';
+endif;
+?>
+
+<h2>メーカー</h2>
+<?php
+$args = [
+    'post_type' => 'maker', // メニューの投稿タイプ
+    'post_per_page' => 3,
+];
+/*
+                            $taxquerysp = ['relation' => 'AND'];
+                            $taxquerysp[] = [
+                                'taxonomy' => 'menu',
+                                'terms' => $menu->slug,
+                                'field' => 'slug',
+                            ];
+                            */
+$the_query = new WP_Query($args);
+
+if ($the_query->have_posts()): ?>
+    <?php while ($the_query->have_posts()): $the_query->the_post() ?>
+        <?php
+        $pic = get_field('pic1');
+        // $picが存在する場合のみURLを取得
+        $pic_url =  $pic['sizes']['thumbnail'];
+        ?>
+        <img src="<?php echo $pic_url; ?>" alt="">
+        <p><?php the_field('company'); ?></p>
+        </li>
+<?php endwhile;
+    wp_reset_postdata(); // リセット
+else :
+    echo '<p>投稿が見つかりませんでした。</p>';
+endif;
+?>
+
+<h2>コラム</h2>
+<?php
+$args = [
+    'post_type' => 'column', // メニューの投稿タイプ
+    'post_per_page' => 3,
+];
+/*
+                            $taxquerysp = ['relation' => 'AND'];
+                            $taxquerysp[] = [
+                                'taxonomy' => 'menu',
+                                'terms' => $menu->slug,
+                                'field' => 'slug',
+                            ];
+                            */
+$the_query = new WP_Query($args);
+
+if ($the_query->have_posts()): ?>
+    <?php while ($the_query->have_posts()): $the_query->the_post() ?>
+        <?php
+        $pic = get_field('pic1');
+        // $picが存在する場合のみURLを取得
+        $pic_url =  $pic['sizes']['thumbnail'];
+        ?>
+        <img src="<?php echo $pic_url; ?>" alt="">
+        <p><?php the_content(); ?></p>
+        </li>
+<?php endwhile;
+    wp_reset_postdata(); // リセット
+else :
+    echo '<p>投稿が見つかりませんでした。</p>';
+endif;
+?>
+
+<h2>レシピ</h2>
+<?php
+$args = [
+    'post_type' => 'recipe', // メニューの投稿タイプ
+    'post_per_page' => 3,
+];
+/*
+                            $taxquerysp = ['relation' => 'AND'];
+                            $taxquerysp[] = [
+                                'taxonomy' => 'menu',
+                                'terms' => $menu->slug,
+                                'field' => 'slug',
+                            ];
+                            */
+$the_query = new WP_Query($args);
+
+if ($the_query->have_posts()): ?>
+    <?php while ($the_query->have_posts()): $the_query->the_post() ?>
+        <?php
+        $pic = get_field('pic1');
+        // $picが存在する場合のみURLを取得
+        $pic_url =  $pic['sizes']['thumbnail'];
+        ?>
+        <img src="<?php echo $pic_url; ?>" alt="">
+        <p><?php the_field('recipe_name'); ?></p>
+        </li>
+<?php endwhile;
+    wp_reset_postdata(); // リセット
+else :
+    echo '<p>投稿が見つかりませんでした。</p>';
+endif;
+?>
+
 
 <section class="section section-concept" id="concept">
     <div class="section_inner">

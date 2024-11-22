@@ -5,6 +5,7 @@
             <div class="section_header">
                 <h2 class="heading heading-primary"><span>メーカーさん紹介</span>FOOD</h2>
             </div>
+
             <?php
             /*
             $menu_terms = get_terms(['taxonomy' => '']);

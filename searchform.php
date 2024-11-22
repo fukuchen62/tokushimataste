@@ -54,25 +54,25 @@
                     <tr class="nav-item__box">
 
                         <td class="nav-item">
-                            <label class="label-box"><input type="checkbox" name="scene[]" value="ferment">漬物・発酵食品</label>
+                            <label class="label-box"><input type="checkbox" name="product_type[]" value="ferment">漬物・発酵食品</label>
                         </td>
                         <td class="nav-item">
-                            <label class="label-box"><input type="checkbox" name="scene[]" value="tsukudani">佃煮・海産物</label>
-                        </td>
-
-                        <td class="nav-item">
-                            <label class="label-box"><input type="checkbox" name="scene[]" value="meat">肉・卵・大豆製品</label>
-                        </td>
-                        <td class="nav-item">
-                            <label class="label-box"><input type="checkbox" name="scene[]" value="furikake">ふりかけ・混ぜご飯の素</label>
+                            <label class="label-box"><input type="checkbox" name="product_type[]" value="tsukudani">佃煮・海産物</label>
                         </td>
 
                         <td class="nav-item">
-                            <label class="label-box"><input type="checkbox" name="scene[]" value="spice">薬味・シンプル調味料</label>
+                            <label class="label-box"><input type="checkbox" name="product_type[]" value="meat">肉・卵・大豆製品</label>
+                        </td>
+                        <td class="nav-item">
+                            <label class="label-box"><input type="checkbox" name="product_type[]" value="furikake">ふりかけ・混ぜご飯の素</label>
                         </td>
 
                         <td class="nav-item">
-                            <label class="label-box"><input type="checkbox" name="scene[]" value="others">その他</label>
+                            <label class="label-box"><input type="checkbox" name="product_type[]" value="spice">薬味・シンプル調味料</label>
+                        </td>
+
+                        <td class="nav-item">
+                            <label class="label-box"><input type="checkbox" name="product_type[]" value="others">その他</label>
                         </td>
 
                     </tr>
@@ -88,20 +88,20 @@
                     <tr class="nav-item__box nav-item-time">
 
                         <td class="nav-item">
-                            <label class="label-box"><input type="checkbox" name="time[]" value="sweet">甘い</label>
+                            <label class="label-box"><input type="checkbox" name="taste[]" value="sweet">甘い</label>
                         </td>
                         <td class="nav-item">
-                            <label class="label-box"><input type="checkbox" name="time[]" value="spicy">辛い</label>
+                            <label class="label-box"><input type="checkbox" name="taste[]" value="spicy">辛い</label>
                         </td>
 
                         <td class="nav-item">
-                            <label class="label-box"><input type="checkbox" name="time[]" value="salty">塩辛い</label>
+                            <label class="label-box"><input type="checkbox" name="taste[]" value="salty">塩辛い</label>
                         </td>
                         <td class="nav-item">
-                            <label class="label-box"><input type="checkbox" name="time[]" value="bitter">苦い</label>
+                            <label class="label-box"><input type="checkbox" name="taste[]" value="bitter">苦い</label>
                         </td>
                         <td class="nav-item">
-                            <label class="label-box"><input type="checkbox" name="time[]" value="umami">うま味</label>
+                            <label class="label-box"><input type="checkbox" name="taste[]" value="umami">うま味</label>
                         </td>
 
                     </tr>
@@ -117,33 +117,33 @@
                     <tr class="nav-item__box">
 
                         <td class="nav-item">
-                            <label class="label-box"><input type="checkbox" name="attribute[]" value="shrimp">えび</label>
+                            <label class="label-box"><input type="checkbox" name="allergy[]" value="shrimp">えび</label>
                         </td>
                         <td class="nav-item">
-                            <label class="label-box"><input type="checkbox" name="attribute[]" value="crab">かに</label>
-                        </td>
-
-                        <td class="nav-item">
-                            <label class="label-box"><input type="checkbox" name="attribute[]" value="walnut">くるみ</label>
-                        </td>
-                        <td class="nav-item">
-                            <label class="label-box"><input type="checkbox" name="attribute[]" value="wheat">小麦</label>
+                            <label class="label-box"><input type="checkbox" name="allergy[]" value="crab">かに</label>
                         </td>
 
                         <td class="nav-item">
-                            <label class="label-box"><input type="checkbox" name="attribute[]" value="soba">そば</label>
+                            <label class="label-box"><input type="checkbox" name="allergy[]" value="walnut">くるみ</label>
+                        </td>
+                        <td class="nav-item">
+                            <label class="label-box"><input type="checkbox" name="allergy[]" value="wheat">小麦</label>
                         </td>
 
                         <td class="nav-item">
-                            <label class="label-box"><input type="checkbox" name="attribute[]" value="egg">卵</label>
+                            <label class="label-box"><input type="checkbox" name="allergy[]" value="soba">そば</label>
                         </td>
 
                         <td class="nav-item">
-                            <label class="label-box"><input type="checkbox" name="attribute[]" value="milk">乳</label>
+                            <label class="label-box"><input type="checkbox" name="allergy[]" value="egg">卵</label>
                         </td>
 
                         <td class="nav-item">
-                            <label class="label-box"><input type="checkbox" name="attribute[]" value="peanut">落花生</label>
+                            <label class="label-box"><input type="checkbox" name="allergy[]" value="milk">乳</label>
+                        </td>
+
+                        <td class="nav-item">
+                            <label class="label-box"><input type="checkbox" name="allergy[]" value="peanut">落花生</label>
                         </td>
 
                     </tr>

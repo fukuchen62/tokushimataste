@@ -1,3 +1,13 @@
+<!-- 福島　2024/11/22　追加　消さないでください。開始 -->
+<?php
+// 開発モードで公開の時は、管理画面へのログインが必要です。
+if (!is_user_logged_in() && IS_DEV == true) {
+    header('Location:' . home_url('/') . 'wp-admin');
+    exit;
+}
+?>
+<!-- 福島　2024/11/22　追加　消さないでください。 終了-->
+
 <!DOCTYPE html>
 <html lang="ja">
 

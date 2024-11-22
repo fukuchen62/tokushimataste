@@ -204,3 +204,31 @@ body {
 .breadcrumb li a:hover {
     transform: translateY(-3px);
 }
+
+.img-L {
+    float: left;
+    margin-right: 20px;
+    width: 640px;
+    height: 480px;
+}
+
+ul {
+    padding-left: 0;
+}
+
+li {
+    list-style: none;
+}
+
+/* h2 {
+    background: rgb(231, 208, 174);
+    padding: 15px;
+} */
+
+.last-update {
+    margin: 5px 0 20px;
+}
+
+.conetnt {
+    margin: 20px 0;
+}

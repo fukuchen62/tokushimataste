@@ -134,6 +134,7 @@ a {
 }
 
 .column_list img {
+	text-align: center;
 	margin-bottom: 18px;
 	border-radius: 10px;
 
@@ -166,6 +167,7 @@ a {
 	line-height: 30px;
 	letter-spacing: 0.1em;
 
+	margin-bottom: 14px;
 
 	/* おまけ用 */
 	border: 2px solid #FBB126;
@@ -214,7 +216,7 @@ a {
 		max-width: 320px;
 	}
 
-	.column_box .flex li:nth-child(3) {
+	.column .flex li:nth-child(3) {
 		order: 1;
 	}
 }
@@ -246,10 +248,10 @@ a {
 
 /* 子要素の共通設定 */
 
-.box__item {
+.box_column {
 	/* 見た目の設定 */
 	/* background-color: #FBB126; */
-	width: 300;
+	width: 300px;
 	height: 400px;
 
 

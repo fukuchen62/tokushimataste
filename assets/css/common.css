@@ -187,12 +187,61 @@ a.btn-border-shadow--color:before {
     border-radius: 0;
 }
 
+/* パンくずリストの記述 */
+.breadcrumb {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.breadcrumb li {
+    position: relative;
+    display: inline-block;
+    /*横に並ぶように*/
+    list-style: none;
+    font-weight: bold;
+    /*太字*/
+    margin-right: 0.3em;
+}
+
+.breadcrumb li:after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    right: -19px;
+    border-style: solid;
+    border-color: transparent;
+    border-left-color: #feebcc;
+    border-width: 7px 12px;
+    width: 0;
+    height: 0;
+}
+
+.breadcrumb li a {
+    display: inline-block;
+    padding: 0 7px;
+    height: 28px;
+    line-height: 28px;
+    text-decoration: none;
+    color: #9b9b9b;
+    background: #feebcc;
+    font-size: 13px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.breadcrumb li a:hover {
+    transform: translateY(-3px);
+}
+
+/* お気に入りページで何も無いときの画像 */
 .img-none {
     margin: 0 auto;
     width: 320px;
     height: auto;
 }
 
+/* お気に入りページで何も無いときのテキスト */
 .txt-none {
     text-align: center;
     margin: 20px 0px 0px 0px;

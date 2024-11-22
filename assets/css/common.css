@@ -190,7 +190,7 @@ a.btn-border-shadow--color:before {
 .img-none {
     margin: 0 auto;
     width: 320px;
-    height: 240px;
+    height: auto;
 }
 
 .txt-none {

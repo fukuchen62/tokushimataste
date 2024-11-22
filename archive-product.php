@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>商品一覧ページ</title>
-<link href="../assets/css/reset.css" rel="stylesheet">
-<link href="../assets/css/goods.css" rel="stylesheet">
-<link href="../assets/css/header.css" rel="stylesheet">
-<link href="../assets/css/common.css" rel="stylesheet">
-<link href="../assets/css/footer.css" rel="stylesheet">
+<link href="<?php echo get_template_directory_uri(); ?>/assets/css/reset.css" type="text/css" rel="stylesheet">
+<link href="<?php echo get_template_directory_uri(); ?>/assets/css/goods.css" type="text/css" rel="stylesheet">
+<link href="<?php echo get_template_directory_uri(); ?>/assets/css/header.css" type="text/css" rel="stylesheet">
+<link href="<?php echo get_template_directory_uri(); ?>/assets/css/common.css" type="text/css" rel="stylesheet">
+<link href="<?php echo get_template_directory_uri(); ?>/assets/css/footer.css" type="text/css" rel="stylesheet">
 
 <body>
     <header>
@@ -26,7 +26,7 @@
             <div class="title-logo">
                 <h1>
                     <a href="#" class="logo">
-                        <img src="../uploads/miso.jpeg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/uploads/miso.jpeg" alt="">
                     </a>
                 </h1>
             </div>
@@ -94,14 +94,45 @@
     </section>
     <div class="card-container">
         <ul class="page_list">
-            <li>
-                <img src="../uploads/tsukemono.jpeg" alt="Image" class="img-fluid"><br>
-                <a href="#" id="goods">ふりかけ・混ぜご飯の素</a>
-                <p>グルメ</p>
-                <p>市内</p>
-                <p>ご飯にかけても何にかけてもおいしいよ さあ、おなかいっぱいになるまでお食べ</p>
-            </li>
-            <li>
+            <?php if (have_posts()): ?>
+                <?php while (have_posts()): the_post(); ?>
+                    <li>
+                        <?php
+                        $pic = get_field('pic1');
+                        $pic_url = $pic['sizes']['large'];
+                        ?>
+                        <img src="<?php echo $pic_url; ?>" alt="Image" class="img-fluid"><br>
+                        <a href="<?php the_permalink() ?>>" id="goods">ふりかけ・混ぜご飯の素</a>
+                        <p><?php ?></p>
+
+
+                        <?php
+                        $post_type = get_post_type(get_the_ID());
+                        $taxonomies = get_object_taxonomies($post_type);
+                        $taxonomy_names = wp_get_object_terms(
+                            get_the_ID(),
+                            $taxonomies,
+                            array("fields" => "names", "orderby" => "count")
+                        );
+                        print_r($post_type);
+                        print_r($taxonomies);
+                        print_r($taxonomy_names);
+                        ?>
+                        <!-- タクソノミーを出力 -->
+                        <div class="">
+                            <?php
+                            if (!empty($taxonomy_names)) :
+                                foreach ($taxonomy_names as $tax_name) : ?>
+
+                                    <span class="card__tag"><?php echo $tax_name; ?> </span> ,
+                            <?php endforeach;
+                            endif;  ?>
+                        </div>
+
+
+                        <p><?php the_field('introduction') ?></p>
+                    </li>
+                    <!-- <li>
                 <img src="../uploads/tsukudani.jpeg" alt="Image" class="img-fluid"><br>
                 <a href="#" id="goods">Oh No 海苔</a>
                 <p>海苔</p>
@@ -191,7 +222,9 @@
             <li>
                 <h2>２０のタイトル</h2>
                 <p>２０の記事２０の記事２０の記事２０の記事２０の記事２０の記事２０の記事２０の記事</p>
-            </li>
+            </li> -->
+                <?php endwhile; ?>
+            <?php endif ?>
         </ul>
 
         <ul class="pagination"></ul>
@@ -263,7 +296,7 @@
             </style>
 
             <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-            <script src="../assets/js/goods.js"></script>
+            <script src="<?php echo get_template_directory_uri(); ?>/assets/js/goods.js"></script>
 </body>
 
 </html>

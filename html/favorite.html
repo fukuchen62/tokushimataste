@@ -14,9 +14,8 @@
 
     <!-- headerCSSの読み込み -->
     <link rel="stylesheet" href="../assets/css/header.css">
-
-    <!-- TOPページCSSの読み込み -->
-    <link rel="stylesheet" href="../assets/css/top.css">
+    <link href="../assets/css/top.css" rel="stylesheet">
+    <link href="../assets/css/goods.css" rel="stylesheet">
 
     <!-- footer CSSの読み込み -->
     <link rel="stylesheet" href="../assets/css/footer.css">
@@ -75,11 +74,38 @@
 
 
     <main>
-        <h2>お気に入り</h2>
+        <ul class="breadcrumb">
+            <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="../html/index.html">
+                        <span itemprop="name">ホーム</span>
+                    </a>
+                    <meta itemprop="position" content="1" />
+                </li>
+
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="#">
+                        <span itemprop="name">お気に入り</span>
+                    </a>
+                    <meta itemprop="position" content="2" />
+                </li>
+        </ul>
+        </ol>
+
+        <h2 style="text-align:center">お気に入りリスト</h2>
         <!-- 登録物がないときは下記の文章を使用します -->
-        <p>
-                    <center>ブックマークはありません。</center>
-                </p>
+        <div class="img-none">
+            <img src="../uploads/404_01.jpg" alt="Image" class="img-none" style=" margin-top:14px;">
+        </div>
+        <div class="txt-none">
+            まだお気に入りがありません<br>
+            お気に入りの一品を探しに行きましょう!
+        </div>
+
+        <ul class="btn-content">
+            <li id="tsukemono">
+                <a href="../html/goods.html" class=""><span>商品一覧ページへ</span></a>
+            </li>
     </main>
 
     <footer>
@@ -90,6 +116,5 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="../assets/js/main.js"></script>
-    <script src="../assets/js/favorite.js"></script>
 </body>
 </html>

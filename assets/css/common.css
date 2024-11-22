@@ -186,3 +186,16 @@ a.btn-border-shadow--color {
 a.btn-border-shadow--color:before {
     border-radius: 0;
 }
+
+.img-none {
+    margin: 0 auto;
+    width: 320px;
+    height: auto;
+}
+
+.txt-none {
+    text-align: center;
+    margin: 20px 0px 0px 0px;
+    font-size: 24px;
+    /* 文字サイズ指定 */
+}

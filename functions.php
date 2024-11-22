@@ -241,29 +241,29 @@ function my_pre_get_posts($query)
     }
 
     //トップページの場合
-    if ($query->is_home()) {
-        $query->set('posts_per_page', 3);
-        return;
-    }
+    // if ($query->is_home()) {
+    //     $query->set('posts_per_page', 3);
+    //     return;
+    // }
 
     // 投稿一覧画面
-    if ($query->is_category()) {
-        $query->set('posts_per_page', 5);
-        return;
-    }
+    // if ($query->is_category()) {
+    //     $query->set('posts_per_page', 5);
+    //     return;
+    // }
 
     //search画面で、指定投稿タイプ
-    if ($query->is_search() || is_post_type_archive('classroom')) {
-        $query->set('post_type', 'classroom');
-        $query->set('posts_per_page', 6);
-        return;
-    }
+    // if ($query->is_search() || is_post_type_archive('classroom')) {
+    //     $query->set('post_type', 'classroom');
+    //     $query->set('posts_per_page', 6);
+    //     return;
+    // }
 
     // コラム記事または、コラムのタクソノミーの一覧画面
-    if ($query->is_post_type_archive('column') || $query->is_tax('column_type')) {
-        $query->set('post_type', 'column');
-        $query->set('posts_per_page', 6);
-    }
+    // if ($query->is_post_type_archive('column') || $query->is_tax('column_type')) {
+    //     $query->set('post_type', 'column');
+    //     $query->set('posts_per_page', 6);
+    // }
 }
 add_action('pre_get_posts', 'my_pre_get_posts');
 
@@ -323,8 +323,8 @@ function my_document_title_separator($separator)
 /**
  * タイトルの「保護中」の文字を削除する
  */
-add_filter('protected_title_format', 'my_protected_title');
-function my_protected_title($title)
-{
-    return '%s';
-}
+// add_filter('protected_title_format', 'my_protected_title');
+// function my_protected_title($title)
+// {
+//     return '%s';
+// }

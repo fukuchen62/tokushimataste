@@ -26,6 +26,7 @@
     justify-content: end;
     align-items: center;
     height: 120px;
+    margin: 20px 0 auto;
 }
 
 .logo img {
@@ -44,19 +45,15 @@
     }
 }
 
-header {
-    margin-bottom: 40px;
+/* 画面に出ているはみ出たメニューを隠す */
+body {
+    overflow-x: hidden;
 }
 
 /*---- ---------------------------- */
 /*---- ハンバーガーメニューの指示---- */
 /*---- --------------------------- */
 
-
-/* 画面に出ているはみ出たメニューを隠す */
-body {
-    overflow-x: hidden;
-}
 
 .hamburger {
     width: 20px;

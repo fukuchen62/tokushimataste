@@ -4,7 +4,7 @@
 
 <?php get_header(); ?>
 
-<body>
+<main>
 
 
     <!--パンくずリスト-->
@@ -59,9 +59,9 @@
     </section>
 
 
-    </main>
 
 
-</body>
+
+</main>
 
 <?php get_footer(); ?>

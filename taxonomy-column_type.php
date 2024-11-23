@@ -58,7 +58,8 @@
 
     </section>
 
-
+    <?php get_template_part('test-template-parts-test/columnList');
+    ?>
 
 
 

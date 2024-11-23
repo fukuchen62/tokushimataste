@@ -97,4 +97,5 @@ $menu = get_term_by('slug', $menu_slug, 'menu');
         </div>
     </section>
 </main>
+
 <?php get_footer() ?>

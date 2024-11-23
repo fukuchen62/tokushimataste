@@ -44,8 +44,8 @@
                     // var_dump($column_type);
                     // echo '<pre>';
                 ?>
-                    <?php $new_link = get_term_link($column_type, 'taxonomy'); ?>
-                    <a href="<?php echo $new_link; ?>"><?php echo $column_type->name; ?></a>
+
+                    <a href="<?php echo get_term_link($column_type); ?>"><?php echo $column_type->name; ?></a>
                 <?php endforeach ?>
                 <!-- <a href="#">インタビュー</a>
                 <a href="#">体験談</a>

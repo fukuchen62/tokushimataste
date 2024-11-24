@@ -38,13 +38,17 @@
     transform: translateX(75px);
 }
 
-.title-logo img {
+.title-logo img:hover {
+    opacity: 0.6;
+}
+
+.pc-title-logo {
     width: 120px;
-    height: 76px;
+    /* height: 76px; */
 }
 
 .nav-sp-logo img {
-    width: 120px;
+    width: 80px;
     /* height: 76px; */
 }
 
@@ -52,11 +56,6 @@
     width: 40px;
     height: 40px;
 }
-
-.title-logo img:hover {
-    opacity: 0.6;
-}
-
 
 .pcnav {
     display: none;
@@ -213,7 +212,6 @@ nav.nav-pc {
 
     .header-container {
         max-width: 1024px;
-        height: 150px;
         margin: 0 auto;
         padding: 0 20px;
         background-color: #dbb62e;
@@ -229,12 +227,13 @@ nav.nav-pc {
         position: fixed;
         top: -30px;
         left: 0;
-        /* padding-top: 10px; */
+        padding-top: 10px;
         padding-bottom: 10px;
         margin: 0 auto;
         opacity: 1.0;
         z-index: 900;
         background-color: #fff;
+        align-items: end;
     }
 
     .title-logo {
@@ -253,6 +252,7 @@ nav.nav-pc {
 
     .titile_logo {
         display: inline;
+        width: 80px;
     }
 
     nav.nav-pc ul {

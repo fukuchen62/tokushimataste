@@ -3,6 +3,8 @@
 
 <?php get_header(); ?>
 <main>
+    <?php echo get_search_form(); ?>
+
     <section>
         <div class="column_box">
             <h3>エリア別</h3>

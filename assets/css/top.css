@@ -1,47 +1,46 @@
 @charset "UTF-8";
 
-/* main {
-    padding: 10px 0;
-} */
-
-
-h2 {
-    font-size: 24px;
-    margin-left: 10px;
+section+section {
+    margin-top: 60px;
 }
 
-p {
-    margin-left: 10px;
-}
+/* このサイトについて */
 
 .aboutsite {
     border: solid #FBB126;
     padding: 20px;
-    margin: 30px 0 50px;
     border-radius: 15px;
 }
 
 .aboutsite h2 {
+    font-size: 24px;
     margin-bottom: 20px;
 }
 
-.hako {
-    margin-bottom: 50px;
+.ttl_box {
+    margin-bottom: 20px;
 }
 
+.ttl_box h2 {
+    font-size: 24px;
+}
+
+.ttl_box p {
+    margin-top: 10px;
+}
+
+.container {
+    margin: 30px 0px 50px 0px;
+}
+
+/* spで改行しているものをなくす */
 @media (width>=700px) {
     .tb-none {
         display: none;
     }
-
-    .aboutsite {
-        margin: 100px 0 70px;
-    }
-
-    .hako {
-        margin-bottom: 70px;
-    }
 }
+
+/* バーガーメニュー */
 
 .slider-wrap {
     overflow: hidden;
@@ -49,7 +48,7 @@ p {
     flex-wrap: nowrap;
     border: solid #FBB126;
     border-radius: 15px;
-    margin: 30px 10px 50px 10px;
+    margin: 0 10px;
     padding: 10px;
 }
 
@@ -84,6 +83,9 @@ p {
     }
 }
 
+/* ==================== */
+/* ご飯のお供etc */
+/* ==================== */
 
 /* 1枚目のスライド */
 .slider div:first-of-type {
@@ -109,6 +111,10 @@ p {
 .slider div:nth-of-type(5) {
     background-image: url(../../uploads/tukemono.jpg);
 }
+
+/* ==================== */
+/* メーカー様ご紹介etc */
+/* ==================== */
 
 .slider2-wrap {
     overflow: hidden;
@@ -174,4 +180,42 @@ p {
 /*6枚目のスライド */
 .slider2 div:nth-of-type(5) {
     background-image: url(../../uploads/cat.jpg);
+}
+
+/* ==================== */
+/* インスタグラム */
+/* ==================== */
+.inst_container {
+    text-align: center;
+}
+
+.inst_ttl h3 {
+    background-image: linear-gradient(90deg, rgb(241, 139, 199), rgb(134, 85, 158));
+    padding: 20px auto;
+    font-size: 1.6rem;
+    border-radius: 15px;
+    display: inline-block;
+    width: 300px;
+}
+
+.inst_ttl {
+
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.inst_photo img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: solid blue;
+    padding: 10px;
+}
+
+.inst_photo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: stretch;
+    margin: 30px 0;
 }

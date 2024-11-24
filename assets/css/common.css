@@ -59,7 +59,11 @@ h1 {
 
 h2 {
     font-size: 3rem;
-    margin: 40px 0px 40px 0px;
+    /* margin-top: 40px; */
+}
+
+.ttl_h2 {
+    margin-top: 40px;
 }
 
 p {
@@ -80,11 +84,6 @@ a {
     display: block;
 }
 
-.sp-none {
-    display: none;
-}
-
-
 /* おまけ */
 a img:hover {
     opacity: 0.5;
@@ -101,8 +100,6 @@ a img:hover {
     min-width: 320px;
     margin: 0 auto;
 }
-
-/*もっと見るボタン <a href="" class="btn btn-border-shadow btn-border-shadow--color">PUSH！</a>*/
 
 *,
 *:before,
@@ -122,6 +119,7 @@ body {
     padding: 30px;
 }
 
+/*もっと見るボタン <a href="" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>*/
 .btn,
 a.btn,
 button.btn {

@@ -5,10 +5,120 @@
 
 $(function () {
     $('.hamburger').click(function () {
-        $('.hamburger, .slide-menu').toggleClass('active');
+        $('.hamburger, .nav-sp-drawr').toggleClass('active');
+
     });
 });//scroll_effect
 
+function fixNav() {
+    var windowSize = $(window).width();
+    var nav = $('.nav-pc');
+    var off = nav.offset();
+    var navTop = off.top;
+
+    var logo = $('.title-logo ');
+
+    var navsp = $('.spnav');
+    off = navsp.offset();
+    var navspTop = off.top;
+    // var navspTop = navsp.offset().top;
+
+    //スクロールするたびに実行
+    $(window).scroll(function () {
+
+        var winTop = $(this).scrollTop();
+
+        console.log("windowSize:" + windowSize);
+        console.log("winTop:" + winTop);
+        console.log("navTop:" + navTop);
+        console.log("navspTop:" + navspTop);
+
+        if (windowSize >= 1024) {
+            //スクロール位置がnavの位置より下だったらクラスfixedを追加
+            if (winTop >= navTop) {
+                nav.addClass('fixed');
+                logo.addClass('fixed-logo');
+            } else {
+                nav.removeClass('fixed');
+                logo.removeClass('fixed-logo');
+            }
+
+        } else {
+            // SP
+            // //スクロール位置がnavの位置より下だったらクラスfixedを追加
+            if (winTop >= navspTop) {
+                navsp.addClass('fix-nav-sp');
+            } else {
+                navsp.removeClass('fix-nav-sp');
+            }
+        }
+    });
+
+}
+
+// -----------------------
+// ナビゲーション固定
+// -----------------------
+
+$(window).on('load', function () {
+    var windowSize = $(window).width();
+    var nav = $('.nav-pc');
+    var logo = $('.title-logo ');
+    var navsp = $('.spnav');
+    var navTop = nav.offset().top;
+    var navspTop = navsp.offset().top;
+
+    //スクロールするたびに実行
+    $(window).scroll(function () {
+
+        let winTop = $(this).scrollTop();
+
+        // console.log("windowSize:" + windowSize);
+        // console.log("winTop:" + winTop);
+        // console.log("navTop:" + navTop);
+        // console.log("navspTop:" + navspTop);
+
+        if (windowSize >= 1024) {
+            //スクロール位置がnavの位置より下だったらクラスfixedを追加
+            if (winTop >= navTop) {
+                nav.addClass('fixed');
+                logo.addClass('fixed-logo');
+            } else {
+                nav.removeClass('fixed');
+                logo.removeClass('fixed-logo');
+            }
+
+        } else {
+            // SP
+            // //スクロール位置がnavの位置より下だったらクラスfixedを追加
+            if (winTop >= navspTop) {
+                navsp.addClass('fix-nav-sp');
+            } else {
+                navsp.removeClass('fix-nav-sp');
+            }
+        }
+    });
+
+    $(function () {
+        $(".nav-sp-drawr").on("click", function () {
+
+            $(".nav-sp-drawr").toggleClass("is-active");
+            $(".nav-sp").toggleClass("is-active");
+            if ($(".nav-sp-drawr").hasClass("is-active")) {
+                $(".nav-sp-drawr").addClass('fix-hamburger');
+            } else {
+                $(".nav-sp-drawr").removeClass('fix-hamburger');
+            }
+        });
+    });
+
+});
+
+$(window).resize(function () {
+    // windowSize = $(window).width();
+    // navTop = nav.offset().top;
+    // navspTop = navsp.offset().top;
+});
 
 // topにいくボタン
 

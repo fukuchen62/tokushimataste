@@ -1,6 +1,47 @@
 @charset "UTF-8";
 
-/* トップに戻る     */
+footer {
+    background-color: #93b4df;
+    margin-top: 100px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.footer_nav {
+    text-align: left;
+    line-height: 200%;
+}
+
+.footer_container {
+    padding: 20px 0;
+    display: inline-block;
+}
+
+.footer_nav a {
+    font-size: 1rem;
+}
+
+@media(width>=700px) {
+    .footer_container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer_nav {
+        padding: 20px 50px;
+    }
+}
+
+.f-copy {
+    text-align: center;
+    background-color: #171B39;
+    color: white;
+    padding: 10px 0;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* トップに戻る */
 #page-top {
     position: fixed;
     bottom: 20px;
@@ -11,7 +52,7 @@
 
 }
 
-/* トップに戻る　文字 */
+/* トップに戻る文字 */
 #page-top a {
     background: #0f31f1;
     text-decoration: none;

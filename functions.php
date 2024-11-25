@@ -301,11 +301,11 @@ function my_pre_get_posts($query)
         return;
     }
 
-    //トップページの場合
-    // if ($query->is_home()) {
-    //     $query->set('posts_per_page', 3);
-    //     return;
-    // }
+    // トップページの場合
+    if ($query->is_home()) {
+        $query->set('posts_per_page', 3);
+        return;
+    }
 
     // 投稿一覧画面
     // if ($query->is_category()) {

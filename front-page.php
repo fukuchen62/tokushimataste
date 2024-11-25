@@ -61,7 +61,7 @@
                     <p>エリア別検索ができます。</p>
                 </div>
                 <div>
-                    <img src="../uploads/tokusima-map01.png" alt="エリア検索map">
+                    <img src="<?php echo get_template_directory_uri(); ?>/uploads/tokusima-map01.png" alt="エリア検索map">
                 </div>
             </div>
             <a href="" class="btn btn-border-shadow btn-border-shadow--color">詳細検索は<br>こちらから！</a>
@@ -106,16 +106,43 @@
                     <p>インタビューや取材日記など紹介します。</p>
                 </div>
                 <ul class="column_list">
-                    <li>
-                        <a href="../html/column_detail.html">
-                            <div class="box_column">
-                                <img src="../uploads/tennin (1).png" alt="コラムの写真">
-                                <h3>サブタイトルサブタイトル</h3>
-                                <p>徳島とユーザーが「つながる」ことを目指す。徳島の名産品を使った「ご飯のおとも」を、あたかも徳島を旅するように味わえる体験として提供。各商品を作った人のインタビューを掲載することで、ご飯のおともを通じて</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
+                    <?php
+                    $args = [
+                        'post_type' => 'column', // メニューの投稿タイプ
+                        'post_per_page' => 2,
+                        'orderby'       => 'rand',   // ランダム表示
+                    ];
+                    /*
+                            $taxquerysp = ['relation' => 'AND'];
+                            $taxquerysp[] = [
+                                'taxonomy' => 'menu',
+                                'terms' => $menu->slug,
+                                'field' => 'slug',
+                            ];
+                            */
+                    $the_query = new WP_Query($args);
+
+                    if ($the_query->have_posts()): ?>
+                        <?php while ($the_query->have_posts()): $the_query->the_post() ?>
+                            <li>
+                                <a href="../html/column_detail.html">
+                                    <div class="box_column">
+                                        <img src="../uploads/tennin (1).png" alt="コラムの写真">
+                                        <h3>サブタイトルサブタイトル</h3>
+                                        <p>徳島とユーザーが「つながる」ことを目指す。徳島の名産品を使った「ご飯のおとも」を、あたかも徳島を旅するように味わえる体験として提供。各商品を作った人のインタビューを掲載することで、ご飯のおともを通じて</p>
+                                    </div>
+                                </a>
+                            </li>
+                    <?php endwhile;
+                        wp_reset_postdata(); // リセット
+                    else :
+                        echo '<p>投稿が見つかりませんでした。</p>';
+                    endif;
+                    ?>
+
+
+
+                    <!-- <li>
                         <a href="../html/column_detail.html">
                             <div class="box_column">
                                 <img src="../uploads/nikumisoitame.jpg" alt="コラムの写真">
@@ -123,7 +150,7 @@
                                 <p>徳島とユーザーが「つながる」ことを目指す。徳島の名産品を使った「ご飯のおとも」を、あたかも徳島を旅するように味わえる体験として提供。各商品を作った人の</p>
                             </div>
                         </a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
             <a href="column.html" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>

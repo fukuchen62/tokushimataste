@@ -31,20 +31,24 @@
                     <h2>ご飯のお供etc</h2>
                     <p>5種類の項目に分けてご案内します。</p>
                 </div>
-                <div class="slider-wrap">
-                    <div class="slider">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div class="slider">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
+                <div class="scroll-infinity1">
+                    <div class="scroll-infinity__wrap1">
+                        <ul class="scroll-infinity__list scroll-infinity__list--left1">
+                            <li class="scroll-infinity__item1"><img src="../uploads/furikake.jpeg" /></li>
+                            <li class="scroll-infinity__item1"><img src="../uploads/miso.jpeg" /></li>
+                            <li class="scroll-infinity__item1"><img src="../uploads/tukemono.jpg" /></li>
+                            <li class="scroll-infinity__item1"><img src="../uploads/narazuke.jpeg" /></li>
+                            <li class="scroll-infinity__item1"><img src="../uploads/tsukudani.jpeg" /></li>
+                            <li class="scroll-infinity__item1"><img src="../uploads/saba-misoni.jpg" /></li>
+                        </ul>
+                        <ul class="scroll-infinity__list scroll-infinity__list--left1">
+                            <li class="scroll-infinity__item1"><img src="../uploads/nikumisoitame.jpg" /></li>
+                            <li class="scroll-infinity__item1"><img src="../uploads/miso.jpeg" /></li>
+                            <li class="scroll-infinity__item1"><img src="../uploads/tukemono.jpg" /></li>
+                            <li class="scroll-infinity__item1"><img src="../uploads/narazuke.jpeg" /></li>
+                            <li class="scroll-infinity__item1"><img src="../uploads/tsukudani.jpeg" /></li>
+                            <li class="scroll-infinity__item1"><img src="../uploads/saba-misoni.jpg" /></li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -55,13 +59,28 @@
     <!-- 検索 -->
     <section>
         <div class="inner">
-            <div class="container">
+            <div class="container areamap">
                 <div class="ttl_box">
                     <h2>徳島のご飯 お友達いろいろ！</h2>
                     <p>エリア別検索ができます。</p>
                 </div>
                 <div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/uploads/tokusima-map01.png" alt="エリア検索map">
+                    <img src="../assets/images/tokusima-map02.png" alt="エリア検索map">
+                </div>
+                <div class="kumo nisi">
+                    <a href="area.html">
+                        <img src="../assets/images/kumo_nishi.png" alt="県西部">
+                    </a>
+                </div>
+                <div class="kumo higashi">
+                    <a href="area.html">
+                        <img src="../assets/images/kumo_higashi.png" alt="県東部">
+                    </a>
+                </div>
+                <div class="kumo minami">
+                    <a href="area.html">
+                        <img src="../assets/images/kumo_minami.png" alt="県南部">
+                    </a>
                 </div>
             </div>
             <a href="" class="btn btn-border-shadow btn-border-shadow--color">詳細検索は<br>こちらから！</a>
@@ -73,27 +92,76 @@
         <div class="inner">
             <div class="container">
                 <div class="ttl_box">
-                    <h2>メーカー様ご紹介</h2>
-                    <p>取材させていただきましたメーカー様をご紹介します。</p>
+                    <h2>メーカーさんご紹介</h2>
+                    <p>徳島県内のメーカーさんです。</p>
                 </div>
-                <div class="slider2-wrap">
-                    <div class="slider2">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div class="slider2">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
+                <div class="scroll-infinity">
+                    <div class="scroll-infinity__wrap">
+                        <ul class="scroll-infinity__list scroll-infinity__list--left">
+
+                            <?php
+                            $args = [
+                                'post_type'      => 'maker', // カスタム投稿タイプ
+                                'posts_per_page' => 6,            // 表示する投稿数
+                                'orderby'        => 'rand',       // ランダム順
+                            ];
+
+                            // WP_Queryのインスタンスを作成
+                            $the_query = new WP_Query($args);
+
+                            if ($the_query->have_posts()): ?>
+                                <?php while ($the_query->have_posts()): $the_query->the_post() ?>
+                                    <li class="scroll-infinity__item">
+                                        <?php
+                                        $pic = get_field('pic1');
+                                        // $picが存在する場合のみURLを取得
+                                        $pic_url =  $pic['sizes']['thumbnail'];
+                                        ?>
+                                        <img src="<?php echo $pic_url; ?>" alt="">
+                                        <!-- <p><?php //the_field('company');
+                                                ?></p> -->
+                                    </li>
+                            <?php
+                                endwhile;
+                                wp_reset_postdata(); // クエリをリセット
+                            endif;
+                            ?>
+                        </ul>
                     </div>
                 </div>
+
+
+
+
+                <!-- <li class="scroll-infinity__item"><img src="../uploads/cat.jpg" /></li>
+                            <li class="scroll-infinity__item"><img src="../uploads/cat.jpg" /></li>
+                            <li class="scroll-infinity__item"><img src="../uploads/cat.jpg" /></li>
+                            <li class="scroll-infinity__item"><img src="../uploads/cat.jpg" /></li>
+                            <li class="scroll-infinity__item"><img src="../uploads/cat.jpg" /></li>
+                            <li class="scroll-infinity__item"><img src="../uploads/cat.jpg" /></li> -->
+                <!-- </ul> -->
+                <!-- <ul class="scroll-infinity__list scroll-infinity__list--left">
+                    <li class="scroll-infinity__item"><img src="<?php //echo get_template_directory_uri();
+                                                                ?>/uploa<?php //echo get_template_directory_uri();
+                                                                        ?>ds/cat.jpg" /></li>
+                    <?php //echo get_template_directory_uri();
+                    ?>
+                    <li class="scroll-infinity__item"><img src="<?php //echo get_template_directory_uri();
+                                                                ?>
+                            uploads/cat.jpg" /></li>
+                    <li class="scroll-infinity__item"><img src="<?php //echo get_template_directory_uri();
+                                                                ?>/uploads/cat.jpg" /></li>
+                    <li class="scroll-infinity__item"><img src="<?php //echo get_template_directory_uri();
+                                                                ?>/uploads/cat.jpg" /></li>
+                    <li class="scroll-infinity__item"><img src="<?php //echo get_template_directory_uri();
+                                                                ?>/uploads/cat.jpg" /></li>
+                    <li class="scroll-infinity__item"><img src="<?php //echo get_template_directory_uri();
+                                                                ?>/uploads/cat.jpg" /></li>
+                </ul> -->
             </div>
-            <a href="maker.html" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
+        </div>
+        </div>
+        <a href="maker.html" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
         </div>
     </section>
 
@@ -108,7 +176,7 @@
                 <ul class="column_list">
                     <?php
                     $args = [
-                        'post_type' => 'column', // メニューの投稿タイプ
+                        'post_type' => 'column_type', // メニューの投稿タイプ
                         'post_per_page' => 2,
                         'orderby'       => 'rand',   // ランダム表示
                     ];
@@ -127,9 +195,14 @@
                             <li>
                                 <a href="../html/column_detail.html">
                                     <div class="box_column">
-                                        <img src="../uploads/tennin (1).png" alt="コラムの写真">
-                                        <h3>サブタイトルサブタイトル</h3>
-                                        <p>徳島とユーザーが「つながる」ことを目指す。徳島の名産品を使った「ご飯のおとも」を、あたかも徳島を旅するように味わえる体験として提供。各商品を作った人のインタビューを掲載することで、ご飯のおともを通じて</p>
+                                        <img src="<?php echo get_template_directory_uri(); ?>/uploads/tennin (1).png" alt="コラムの写真">
+                                        <h3>サブタイトルサブタイト</h3>
+                                        <!-- ↑get_the_titleでも読みこめない -->
+                                        <?php
+                                        $trimmed_excerpt = wp_trim_words(get_the_excerpt(), 50, '...');
+                                        echo '<p>' . esc_html($trimmed_excerpt) . '</p>';
+                                        ?>
+                                        <!-- <p>徳島とユーザーが「つながる」ことを目指す。徳島の名産品を使った「ご飯のおとも」を、あたかも徳島を旅するように味わえる体験として提供。</p> -->
                                     </div>
                                 </a>
                             </li>
@@ -168,24 +241,44 @@
                     </div>
                 </div>
                 <ul class="page_list">
-                    <li>
-                        <div class="recipe">
-                            <img src="../uploads/furikake.jpeg" alt="Image" class="img-fluid">
-                            <p>無限おつまみ！たたききゅうりの梅ナムル</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="recipe">
-                            <img src="../uploads/miso.jpeg" alt="Image" class="img-fluid">
-                            <p>トロたく丼2行目のイメージ</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="recipe">
-                            <img src="../uploads/saba-misoni.jpg" alt="Image" class="img-fluid">
-                            <p>海苔の佃煮パスタ</p>
-                        </div>
-                    </li>
+                    <?php
+                    $args = [
+                        'post_type' => 'recipe_type', // メニューの投稿タイプ
+                        'post_per_page' => 3,
+                        'orderby'        => 'rand',   // ランダム表示
+                    ];
+                    /*
+                            $taxquerysp = ['relation' => 'AND'];
+                            $taxquerysp[] = [
+                                'taxonomy' => 'menu',
+                                'terms' => $menu->slug,
+                                'field' => 'slug',
+                            ];
+                            */
+                    $the_query = new WP_Query($args);
+
+                    if ($the_query->have_posts()): ?>
+                        <?php while ($the_query->have_posts()): $the_query->the_post() ?>
+                            <li>
+                                <div class="recipe">
+                                    <?php
+                                    $pic = get_field('pic1');
+                                    // $picが存在する場合のみURLを取得
+                                    $pic_url =  $pic['sizes']['medium'];
+                                    ?>
+                                    <img src="<?php echo $pic_url; ?>" alt="">
+                                    <!-- <img src="../uploads/furikake.jpeg" alt="Image" class="img-fluid"> -->
+                                    <p><?php the_field('recipe_name'); ?></p>
+
+                                </div>
+                            </li>
+                    <?php endwhile;
+                        wp_reset_postdata(); // リセット
+                    else :
+                        echo '<p>投稿が見つかりませんでした。</p>';
+                    endif;
+                    ?>
+
             </div>
             <a href="recipe.html" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
     </section>

@@ -142,6 +142,17 @@ section+section {
 /* ==================== */
 /* column */
 /* ==================== */
+.column_flex {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+/* .column_list {
+	display: flex;
+	justify-content: space-around;
+
+} */
 
 a {
 	text-decoration: none;

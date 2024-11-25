@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <!-- とりあえず現時点のgoods.htmlをコピーしました　香西　11-22 12:00 -->
 <html lang="ja">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>商品一覧ページ</title>
-<link href="<?php echo get_template_directory_uri(); ?>/assets/css/reset.css" type="text/css" rel="stylesheet">
-<link href="<?php echo get_template_directory_uri(); ?>/assets/css/goods.css" type="text/css" rel="stylesheet">
-<link href="<?php echo get_template_directory_uri(); ?>/assets/css/header.css" type="text/css" rel="stylesheet">
-<link href="<?php echo get_template_directory_uri(); ?>/assets/css/common.css" type="text/css" rel="stylesheet">
-<link href="<?php echo get_template_directory_uri(); ?>/assets/css/footer.css" type="text/css" rel="stylesheet">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>商品一覧ページ</title>
+    <link href="<?php echo get_template_directory_uri(); ?>/assets/css/reset.css" type="text/css" rel="stylesheet">
+    <link href="<?php echo get_template_directory_uri(); ?>/assets/css/goods.css" type="text/css" rel="stylesheet">
+    <link href="<?php echo get_template_directory_uri(); ?>/assets/css/header.css" type="text/css" rel="stylesheet">
+    <link href="<?php echo get_template_directory_uri(); ?>/assets/css/common.css" type="text/css" rel="stylesheet">
+    <link href="<?php echo get_template_directory_uri(); ?>/assets/css/footer.css" type="text/css" rel="stylesheet">
+    <?php wp_head() ?>
+</head>
 
 <body>
     <header>
@@ -102,32 +106,50 @@
                         $pic_url = $pic['sizes']['large'];
                         ?>
                         <img src="<?php echo $pic_url; ?>" alt="Image" class="img-fluid"><br>
-                        <a href="<?php the_permalink() ?>>" id="goods">ふりかけ・混ぜご飯の素</a>
-                        <p><?php ?></p>
-
-
+                        <a href="<?php the_permalink(); ?>" id="goods"><?php the_title() ?></a>
                         <?php
+                        $area_term = wp_get_object_terms(
+                            get_the_ID(),
+                            'area',
+                            array("fields" => "names")
+                        );
+                        $product_type_term = wp_get_object_terms(
+                            get_the_ID(),
+                            'product_type',
+                            array("fields" => "names")
+                        );
+                        ?>
+                        <p><?php echo $area_term[0];  ?></p>
+                        <p><?php echo $product_type_term[0];  ?></p>
+                        <?php print_r($area_term); ?>
+                        <?php print_r($product_type_term); ?>
+
+                        <?php /*
                         $post_type = get_post_type(get_the_ID());
-                        $taxonomies = get_object_taxonomies($post_type);
+                        $taxonomies = get_object_taxonomies('product');
                         $taxonomy_names = wp_get_object_terms(
                             get_the_ID(),
-                            $taxonomies,
-                            array("fields" => "names", "orderby" => "count")
+                            'area',
+                            array("fields" => "names")
+                            // "orderby" => "count"
                         );
                         print_r($post_type);
                         print_r($taxonomies);
                         print_r($taxonomy_names);
+                        */
                         ?>
                         <!-- タクソノミーを出力 -->
-                        <div class="">
-                            <?php
+                        <!-- <div class=""> -->
+                        <?php
+                        /*
                             if (!empty($taxonomy_names)) :
                                 foreach ($taxonomy_names as $tax_name) : ?>
 
                                     <span class="card__tag"><?php echo $tax_name; ?> </span> ,
                             <?php endforeach;
-                            endif;  ?>
-                        </div>
+                            endif;
+                            */ ?>
+                        <!-- </div> -->
 
 
                         <p><?php the_field('introduction') ?></p>

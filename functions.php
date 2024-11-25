@@ -7,8 +7,8 @@ define('IS_DEV', true);
 // add_filter('show_admin_bar', '__return_false');
 
 // assetsのパス
-define('PATH', '/test_assets_test/');
-// define('PATH', '/assets/');
+// define('PATH', '/test_assets_test/');
+define('PATH', '/assets/');
 
 /**
  * 「after_setup_theme」アクションフックを使用する関数をまとめる
@@ -123,20 +123,20 @@ function add_style_script()
         );
 
         // JSファイルを読み込む
-        wp_enqueue_script(
+        /*wp_enqueue_script(
             'my_top',
             get_template_directory_uri() .
                 PATH . 'js/top.js',
             ['jquery'],
             '',
             true
-        );
-    } elseif (is_404()) {
+        );*/
+        /* } elseif (is_404()) {
         wp_enqueue_style(
             'my_error404',
             get_template_directory_uri() .
                 PATH . 'css/404.css'
-        );
+        );*/
     } elseif (is_search() || is_post_type_archive('classroom')) {
         //条件検索CSS
         wp_enqueue_style('my_search', get_template_directory_uri() . PATH . 'css/results.css');
@@ -279,6 +279,12 @@ function my_pre_get_posts($query)
     //     $query->set('post_type', 'column');
     //     $query->set('posts_per_page', 6);
     // }
+
+    // 自作ページネーション用に全件を表示する
+    if ($query->is_post_type_archive('product') || $query->is_tax('product_type')) {
+        $query->set('post_type', 'product');
+        $query->set('posts_per_page', -1);
+    }
 }
 add_action('pre_get_posts', 'my_pre_get_posts');
 

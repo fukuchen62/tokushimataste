@@ -1,22 +1,26 @@
-		<!-- サイドバー -->
-		<div class="side-bar">
+<div>
+	<section>
+		<div class="column_box">
+			<h3>コラム　一覧</h3>
+			<?php
+			$column_type_terms = get_terms(['taxonomy' => 'column_type']);
+			// if (!empty($column_type_terms)):
 
-			<!-- カテゴリー一覧 -->
-			<div class="category-list">
-				<h3>コラム一覧</h3>
-			</div>
+			// echo '<pre>';
+			// var_dump($column_type_terms);
+			// echo '<pre>';
+			?>
+			<?php foreach ($column_type_terms as $column_type):
+				// echo '<pre>';
+				// var_dump($column_type);
+				// echo '<pre>';
+			?>
 
-			<!-- サイドバーメニュー -->
-			<aside class="side-menu">
-				<!-- <h2 class="archive_title">カテゴリ 一覧</h2> -->
-				<ul class="side-menu-li">
-					<li class="cat-item cat-item-33"><a href="../html/column_more.html">インタビュー</a>
-					</li>
-					<li class="cat-item cat-item-34"><a href="../html/column_more.html">体験談</a>
-					</li>
-					<li class="cat-item cat-item-35"><a href=" ../html/column_more.html">取材日記</a>
-					</li>
-				</ul>
-			</aside>
+				<a href="<?php echo get_term_link($column_type); ?>"><?php echo $column_type->name; ?></a>
+			<?php endforeach ?>
+			<!-- <a href="#">インタビュー</a>
+                <a href="#">体験談</a>
+                <a href="#">取材日記</a> -->
 		</div>
-		</div>
+	</section>
+</div>

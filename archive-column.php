@@ -27,7 +27,8 @@
         </div>
 
     </section>
-    <?php get_template_part('template-parts/columnList');
+    <?php get_template_part //('template-parts/columnList');
+    ('sidebar');
     ?>
 
 </main>

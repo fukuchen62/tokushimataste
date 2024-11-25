@@ -74,13 +74,19 @@ section+section {
 	}
 }
 
-/*ウィンドウ背景色の設定
+/*Tableの設定
 body {
 	background: #fbf9cc url(img/bg.png) repeat-x;
 } */
 
 .inner_search {
-	background: #F7EB99
+	background: #F7EB99;
+	margin: auto;
+
+}
+
+.entryTable {
+	margin: auto;
 }
 
 /*リンク色の設定*/
@@ -100,23 +106,7 @@ footer {
 	text-align: center;
 }
 
-/*ページタイトルの設定*/
-h1 {
-	width: 300px;
-	margin: 40px auto;
-	padding: 30px;
-	border: 5px solid #95dbbd;
-	background-color: #6fbb9a;
-	color: #fff;
-	font-size: 300%;
-	text-align: center;
-	line-height: 1;
-	border-radius: 50%;
-	text-shadow: 1px 1px 2px #307657;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-	background-image: linear-gradient(to bottom, #6fbb9a, #4a9d79);
-	font-family: 'Limelight', cursive;
-}
+
 
 /*チェックボックスの設定*/
 input[type="checkbox"] {
@@ -124,6 +114,7 @@ input[type="checkbox"] {
 	height: 10px;
 	border: 1px solid;
 	background-color: #fff;
+	margin-left: 20px;
 }
 
 /*コンテンツ枠の設定*/
@@ -138,7 +129,7 @@ input[type="checkbox"] {
 
 /*表組みの設定*/
 .entryTable {
-	width: 100%;
+	width: 70%;
 	margin-bottom: 30px;
 	border: 2px solid #f6bb9e;
 	border-collapse: collapse;
@@ -207,7 +198,7 @@ select {
 	background: #fff;
 	border: 2px solid #f6bb9e;
 	border-radius: 10px;
-	font-size: 1em;
+	font-size: 2rem;
 	-webkit-appearance: none;
 }
 

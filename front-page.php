@@ -1,158 +1,7 @@
-<body>
-    <header>
+<?php get_header(); ?>
 
-        <div class="kv">
-            <p class="kv-copy">
-                徳島の味！<br class="tb-none">
-                あなたのご飯の<br class="tb-none">
-                お友達<br class="tb-none">
-            </p>
-        </div>
 
-        <div id="spnav-box" class="header-inner spnav">
-            <div class="title pc-none">
-                <h1>
-                    <a href="#" class="logo">
-                        <img src="../uploads/cat.jpg" alt="ご飯のお供">
-                    </a>
-                </h1>
-            </div>
-            <!-- spハンバーガー三本 -->
-            <div id="js-hamburger" class="hamburger nav-sp-drawr">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <!-- SP メニュー -->
-            <nav class="nav-sp header-container">
-                <ul class="nav-sp-menu">
-                    <li>
-                        <a href="#">
-                            <div class="nav-sp-logo">
-                                <img src="../uploads/cat.jpg" alt="ご飯のお供">
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="goods.html">
-                            <div class="nav-sp-icon">
-                                <img src="../uploads/gohan_sample.png" alt="icon01">
-                            </div>
-                            商品一覧
-                        </a>
-                    </li>
-                    <li>
-                        <a href="area.html.html">
-                            <div class="nav-sp-icon">
-                                <img src="../uploads/gohan_sample.png" alt="icon02">
-                            </div>
-                            エリア検索
-                        </a>
-                    </li>
-                    <li>
-                        <a href="research.html">
-                            <div class="nav-sp-icon">
-                                <img src="../uploads/gohan_sample.png" alt="icon03">
-                            </div>
-                            詳細検索
-                        </a>
-                    </li>
-                    <li>
-                        <a href="column.html.html">
-                            <div class="nav-sp-icon">
-                                <img src="../uploads/gohan_sample.png" alt="icon04">
-                            </div>
-                            コラム
-                        </a>
-                    </li>
-                    <li>
-                        <a href="maker.html">
-                            <div class="nav-sp-icon">
-                                <img src="../uploads/gohan_sample.png" alt="icon05">
-                            </div>
-                            メーカー紹介
-                        </a>
-                    </li>
-                    <li>
-                        <a href="recipe.html">
-                            <div class="nav-sp-icon">
-                                <img src="../uploads/gohan_sample.png" alt="icon06">
-                            </div>
-                            アレンジレシピ
-                        </a>
-                    </li>
-                    <li>
-                        <a href="favorite.html">
-                            <div class="nav-sp-icon">
-                                <img src="../uploads/gohan_sample.png" alt="icon07">
-                            </div>
-                            お気に入り
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <div id="pcnav-box" class="header-inner pcnav">
-            <nav class="nav-pc sp-none">
-                <ul class="header-container sp-none">
-                    <li>
-                        <div class="nav-pc_logo">
-                            <h1>
-                                <a href="#" class="pc-title-logo">
-                                    <img src="../uploads/cat.jpg" alt="トップに飛ぶ">
-                                </a>
-                            </h1>
-                        </div>
-                    </li>
-
-                    <li>
-                        <a href="goods.html">
-                            <img src="../uploads/gohan_sample.png" alt="">
-                            <span>商品一覧</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="area.html.html">
-                            <img src="../uploads/gohan_sample.png" alt="">
-                            <span>エリア検索</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="research.html">
-                            <img src="../uploads/gohan_sample.png" alt="">
-                            <span>詳細検索</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="column.html.html">
-                            <img src="../uploads/gohan_sample.png" alt="">
-                            <span>コラム</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="maker.html">
-                            <img src="../uploads/gohan_sample.png" alt="icon01">
-                            <span>メーカー紹介</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="recipe.html">
-                            <img src="../uploads/gohan_sample.png" alt="">
-                            <span>アレンジレシピ</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="favorite.html">
-                            <img src="../uploads/gohan_sample.png" alt="">
-                            <span>お気に入り</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-
-        </div>
-    </header>
-    <!-- <div class="contentupper">
+<!-- <div class="contentupper">
                 <form id="form1" action="ご飯のお供サイトURL">
                     <input id="sbox1" name="s" type="text" placeholder="キーワードを入力" />
                     <input id="sbtn1" type="submit" value="検索" />
@@ -160,240 +9,205 @@
             </div> -->
 
 
-    <main>
-        <!-- このサイトについて -->
-        <section>
-            <div class="inner">
-                <div class="aboutsite">
-                    <h2>このサイトについて</h2>
-                    <p>
-                        「徳島を旅するように味わう」<br>
-                        徳島とユーザーが「つながる」ことを目指す。徳島の名産品を使った「ご飯のおとも」を、あたかも徳島を旅するように味わえる体験として提供。各商品を作った人のインタビューを掲載することで、ご飯のおともを通じて、地元の生産者と消費者をつなぐ架け橋となり、食べるだけでなく、応援や共感を生むようなサイトに。
-                    </p>
-                </div>
+<main>
+    <!-- このサイトについて -->
+    <section>
+        <div class="inner">
+            <div class="aboutsite">
+                <h2>このサイトについて</h2>
+                <p>
+                    「徳島を旅するように味わう」<br>
+                    徳島とユーザーが「つながる」ことを目指す。徳島の名産品を使った「ご飯のおとも」を、あたかも徳島を旅するように味わえる体験として提供。各商品を作った人のインタビューを掲載することで、ご飯のおともを通じて、地元の生産者と消費者をつなぐ架け橋となり、食べるだけでなく、応援や共感を生むようなサイトに。
+                </p>
             </div>
-        </section>
-
-        <!-- 商品一覧 -->
-        <section>
-            <div class="inner">
-                <div class="container">
-                    <div class="ttl_box">
-                        <h2>ご飯のお供etc</h2>
-                        <p>5種類の項目に分けてご案内します。</p>
-                    </div>
-                    <div class="slider-wrap">
-                        <div class="slider">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="slider">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </div>
-                </div>
-                <a href="goods.html" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
-            </div>
-        </section>
-
-        <!-- 検索 -->
-        <section>
-            <div class="inner">
-                <div class="container">
-                    <div class="ttl_box">
-                        <h2>徳島のご飯 お友達いろいろ！</h2>
-                        <p>エリア別検索ができます。</p>
-                    </div>
-                    <div>
-                        <img src="../uploads/tokusima-map01.png" alt="エリア検索map">
-                    </div>
-                </div>
-                <a href="" class="btn btn-border-shadow btn-border-shadow--color">詳細検索は<br>こちらから！</a>
-            </div>
-        </section>
-
-        <!-- メーカー -->
-        <section>
-            <div class="inner">
-                <div class="container">
-                    <div class="ttl_box">
-                        <h2>メーカー様ご紹介</h2>
-                        <p>取材させていただきましたメーカー様をご紹介します。</p>
-                    </div>
-                    <div class="slider2-wrap">
-                        <div class="slider2">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="slider2">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </div>
-                </div>
-                <a href="maker.html" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
-            </div>
-        </section>
-
-        <!-- コラム -->
-        <section>
-            <div class="inner">
-                <div class="container">
-                    <div class="ttl_box">
-                        <h2>コラム特集</h2>
-                        <p>インタビューや取材日記など紹介します。</p>
-                    </div>
-                    <ul class="column_list">
-                        <li>
-                            <a href="../html/column_detail.html">
-                                <div class="box_column">
-                                    <img src="../uploads/tennin (1).png" alt="コラムの写真">
-                                    <h3>サブタイトルサブタイトル</h3>
-                                    <p>徳島とユーザーが「つながる」ことを目指す。徳島の名産品を使った「ご飯のおとも」を、あたかも徳島を旅するように味わえる体験として提供。各商品を作った人のインタビューを掲載することで、ご飯のおともを通じて</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../html/column_detail.html">
-                                <div class="box_column">
-                                    <img src="../uploads/nikumisoitame.jpg" alt="コラムの写真">
-                                    <h3>サブタイトルサブタイトル</h3>
-                                    <p>徳島とユーザーが「つながる」ことを目指す。徳島の名産品を使った「ご飯のおとも」を、あたかも徳島を旅するように味わえる体験として提供。各商品を作った人の</p>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <a href="column.html" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
-            </div>
-        </section>
-
-        <!-- アレンジレシピ -->
-        <section>
-            <div class="inner">
-                <div class="container">
-                    <div class="ttl_box">
-                        <div class="ttl_box">
-                            <h2>アレンジレシピ</h2>
-                            <p>ご飯のお供を利用したレシピです！</p>
-                        </div>
-                    </div>
-                    <ul class="page_list">
-                        <li>
-                            <div class="recipe">
-                                <img src="../uploads/furikake.jpeg" alt="Image" class="img-fluid">
-                                <p>無限おつまみ！たたききゅうりの梅ナムル</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="recipe">
-                                <img src="../uploads/miso.jpeg" alt="Image" class="img-fluid">
-                                <p>トロたく丼2行目のイメージ</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="recipe">
-                                <img src="../uploads/saba-misoni.jpg" alt="Image" class="img-fluid">
-                                <p>海苔の佃煮パスタ</p>
-                            </div>
-                        </li>
-                </div>
-                <a href="recipe.html" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
-        </section>
-        <section>
-            <div class="inner">
-                <div class="inst_container">
-                    <div class="inst_ttl">
-                        <h3>instagram</h3>
-                    </div>
-                    <ul class="inst_photo">
-                        <li>
-                            <a href=""><img src="../uploads/footer-designkanpu.png" alt="instagram">
-                            </a>
-                        </li>
-                        <li>
-                            <a href=""><img src="../uploads/tukemono.jpg" alt="instagram"></a>
-                        </li>
-                        <li>
-                            <a href="">x<img src="../uploads/footer-designkanpu.png" alt="instagram"></a>
-                        </li>
-                        <li>
-                            <a href=""><img src="../uploads/misemae.png" alt="instagram"></a>
-                        </li>
-                        <li>
-                            <a href=""><img src="../uploads/furikake.jpeg" alt="instagram"></a>
-                        </li>
-                        <li>
-                            <a href=""><img src="../uploads/narazuke.jpeg" alt="instagram"></a>
-                        </li>
-                        <li>
-                            <a href=""><img src="../uploads/tennin (1).png" alt="instagram"></a>
-                        </li>
-                        <li>
-                            <a href=""><img src="../uploads/otomo.png" alt="Iinstagram"></a>
-                        </li>
-                    </ul>
-                    <div class="inst_ttl">
-                        <h3>インスタグラムでフォロー</h3>
-                    </div>
-                </div>
-        </section>
-    </main>
-
-    <footer>
-        <!-- トップページに戻るボタン -->
-        <p id="page-top"><a href="#">↑<br>TOP</a></p>
-
-        <div class="footer_container">
-            <ul class="footer_nav">
-                <li>
-                    <a href="">お問い合わせ</a>
-                </li>
-                <li>
-                    <a href="">このサイトについて</a>
-                </li>
-            </ul>
-            <ul class="footer_nav">
-                <li>
-                    <a href="">Ｑ＆Ａ</a>
-                </li>
-                <li>
-                    <a href="">プライバシーポリシー・免責事項</a>
-                </li>
-                <li>
-                    <a href="">サイト制作にあたって</a>
-                </li>
-            </ul>
         </div>
-        <!-- コピーライト -->
-        <p class="f-copy">
-            <small>
-                Copyright © :******* All Rights Reserved.
-            </small>
-        </p>
-    </footer>
+    </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="../assets/js/main.js"></script>
+    <!-- 商品一覧 -->
+    <section>
+        <div class="inner">
+            <div class="container">
+                <div class="ttl_box">
+                    <h2>ご飯のお供etc</h2>
+                    <p>5種類の項目に分けてご案内します。</p>
+                </div>
+                <div class="slider-wrap">
+                    <div class="slider">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="slider">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <a href="goods.html" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
+        </div>
+    </section>
 
-</body>
+    <!-- 検索 -->
+    <section>
+        <div class="inner">
+            <div class="container">
+                <div class="ttl_box">
+                    <h2>徳島のご飯 お友達いろいろ！</h2>
+                    <p>エリア別検索ができます。</p>
+                </div>
+                <div>
+                    <img src="../uploads/tokusima-map01.png" alt="エリア検索map">
+                </div>
+            </div>
+            <a href="" class="btn btn-border-shadow btn-border-shadow--color">詳細検索は<br>こちらから！</a>
+        </div>
+    </section>
 
-</html>
+    <!-- メーカー -->
+    <section>
+        <div class="inner">
+            <div class="container">
+                <div class="ttl_box">
+                    <h2>メーカー様ご紹介</h2>
+                    <p>取材させていただきましたメーカー様をご紹介します。</p>
+                </div>
+                <div class="slider2-wrap">
+                    <div class="slider2">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="slider2">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <a href="maker.html" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
+        </div>
+    </section>
+
+    <!-- コラム -->
+    <section>
+        <div class="inner">
+            <div class="container">
+                <div class="ttl_box">
+                    <h2>コラム特集</h2>
+                    <p>インタビューや取材日記など紹介します。</p>
+                </div>
+                <ul class="column_list">
+                    <li>
+                        <a href="../html/column_detail.html">
+                            <div class="box_column">
+                                <img src="../uploads/tennin (1).png" alt="コラムの写真">
+                                <h3>サブタイトルサブタイトル</h3>
+                                <p>徳島とユーザーが「つながる」ことを目指す。徳島の名産品を使った「ご飯のおとも」を、あたかも徳島を旅するように味わえる体験として提供。各商品を作った人のインタビューを掲載することで、ご飯のおともを通じて</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../html/column_detail.html">
+                            <div class="box_column">
+                                <img src="../uploads/nikumisoitame.jpg" alt="コラムの写真">
+                                <h3>サブタイトルサブタイトル</h3>
+                                <p>徳島とユーザーが「つながる」ことを目指す。徳島の名産品を使った「ご飯のおとも」を、あたかも徳島を旅するように味わえる体験として提供。各商品を作った人の</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <a href="column.html" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
+        </div>
+    </section>
+
+    <!-- アレンジレシピ -->
+    <section>
+        <div class="inner">
+            <div class="container">
+                <div class="ttl_box">
+                    <div class="ttl_box">
+                        <h2>アレンジレシピ</h2>
+                        <p>ご飯のお供を利用したレシピです！</p>
+                    </div>
+                </div>
+                <ul class="page_list">
+                    <li>
+                        <div class="recipe">
+                            <img src="../uploads/furikake.jpeg" alt="Image" class="img-fluid">
+                            <p>無限おつまみ！たたききゅうりの梅ナムル</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="recipe">
+                            <img src="../uploads/miso.jpeg" alt="Image" class="img-fluid">
+                            <p>トロたく丼2行目のイメージ</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="recipe">
+                            <img src="../uploads/saba-misoni.jpg" alt="Image" class="img-fluid">
+                            <p>海苔の佃煮パスタ</p>
+                        </div>
+                    </li>
+            </div>
+            <a href="recipe.html" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
+    </section>
+    <section>
+        <div class="inner">
+            <div class="inst_container">
+                <div class="inst_ttl">
+                    <h3>instagram</h3>
+                </div>
+                <ul class="inst_photo">
+                    <li>
+                        <a href=""><img src="../uploads/footer-designkanpu.png" alt="instagram">
+                        </a>
+                    </li>
+                    <li>
+                        <a href=""><img src="../uploads/tukemono.jpg" alt="instagram"></a>
+                    </li>
+                    <li>
+                        <a href="">x<img src="../uploads/footer-designkanpu.png" alt="instagram"></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="../uploads/misemae.png" alt="instagram"></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="../uploads/furikake.jpeg" alt="instagram"></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="../uploads/narazuke.jpeg" alt="instagram"></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="../uploads/tennin (1).png" alt="instagram"></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="../uploads/otomo.png" alt="Iinstagram"></a>
+                    </li>
+                </ul>
+                <div class="inst_ttl">
+                    <h3>インスタグラムでフォロー</h3>
+                </div>
+            </div>
+    </section>
+</main>
+
+<?php echo do_shortcode('[instagram-feed feed=1]'); ?>
+<?php get_footer(); ?>
 
 
+
+<!-- フードサイエンス -->
 
 <?php get_header() ?>
 <?php if (is_home()): ?>

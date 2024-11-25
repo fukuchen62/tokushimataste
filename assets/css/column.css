@@ -122,12 +122,20 @@ section+section {
 	.column_flex {
 		display: flex;
 		justify-content: space-around;
-		width: 900px;
-		/* margin: 0 auto; */
+		/* width: 900px; */
+		margin: 0 auto;
+		gap: 60px;
 	}
 
 	.side_bar {
-		width: 250px;
+		width: 300px;
+	}
+
+	.side_bar {
+		position: sticky;
+		/* width: 100%; */
+		top: 100px;
+		z-index: 10000;
 	}
 }
 

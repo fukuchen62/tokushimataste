@@ -23,6 +23,9 @@
 	<!-- 個別CSSの読み込み -->
 	<link rel="stylesheet" href="../assets/css/column.css" media="all">
 
+	<!-- 個別CSSの読み込み -->
+	<link rel="stylesheet" href="../assets/css/column_detail.css" media="all">
+
 
 	<!--Googleフォントの読み込み-->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -69,13 +72,8 @@
 			</div>
 		</div>
 	</header>
-	<!-- <div class="contentupper">
-                <form id="form1" action="ご飯のお供サイトURL">
-                    <input id="sbox1" name="s" type="text" placeholder="キーワードを入力" />
-                    <input id="sbtn1" type="submit" value="検索" />
-                </form>
 
-<!--パンくずリスト-->
+	<!--パンくずリスト-->
 	<ul class="breadcrumb">
 		<ol itemscope itemtype="https://schema.org/BreadcrumbList">
 			<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -86,22 +84,22 @@
 			</li>
 
 			<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-				<a itemprop="item" href="../html/column.html"">
+				<a itemprop="item" href="../html/column.html">
 					<span itemprop=" name">コラム</span>
 				</a>
 				<meta itemprop="position" content="2" />
 			</li>
 
 			<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-				<a itemprop="item" href="../html/column_more.html"">
+				<a itemprop="item" href="../html/column_more.html">
 					<span itemprop=" name">インタビュー</span>
 				</a>
 				<meta itemprop="position" content="3" />
 			</li>
 
 			<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-				<a itemprop="item" href="../html/column_detail.html"">
-								<span itemprop=" name">インタビュー詳細</span>
+				<a itemprop="item" href="../html/column_detail.html">
+					<span itemprop=" name">インタビュー詳細</span>
 				</a>
 				<meta itemprop="position" content="4" />
 			</li>
@@ -112,9 +110,7 @@
 	<section class="column">
 		<div class="inner">
 			<!-- 見出し -->
-			<h2 class="ttl_box">
-					<span class="ttl">インタビュー</span><br>
-
+			<h2 class="ttl_cd">インタビュー
 				</h2>
 
 			<!-- コラム一覧 -->
@@ -135,7 +131,7 @@
 					</article>
 				</li>
 
-				<li>
+				<!-- <li>
 					<section>
 						<div class="column_box">
 							<h3>コラム　一覧</h3>
@@ -144,6 +140,31 @@
 							<a href="../html/column_more.html">取材日記</a>
 						</div>
 					</section>
+				</li> -->
+
+				<li>
+					<div class="side_bar">
+
+						<!-- カテゴリー一覧 -->
+						<div class="category-list-outer">
+							<div class="category-list">
+								<h3>コラム一覧</h3>
+							</div>
+						</div>
+
+						<!-- サイドバーメニュー -->
+						<aside class="side-menu">
+							<!-- <h2 class="archive_title">カテゴリ 一覧</h2> -->
+							<ul class="side-menu-li">
+								<li class="cat-item cat-item-33"><a href="../html/column_more.html">インタビュー</a>
+								</li>
+								<li class="cat-item cat-item-34"><a href="../html/column_more.html">体験談</a>
+								</li>
+								<li class="cat-item cat-item-35"><a href=" ../html/column_more.html">取材日記</a>
+								</li>
+							</ul>
+						</aside>
+					</div>
 				</li>
 
 			</ul>

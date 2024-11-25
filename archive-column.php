@@ -27,10 +27,11 @@
         </div>
 
     </section>
-    <?php get_template_part('template-parts/columnList');
+    <?php //get_template_part('template-parts/columnList');
     ?>
 
 </main>
 
-<?php get_sidebar(); ?>
+<?php get_sidebar();
+?>
 <?php get_footer(); ?>

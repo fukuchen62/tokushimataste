@@ -17,7 +17,7 @@ section+section {
 .ttl_box {
 	/* border: 2px solid red; */
 	text-align: center;
-
+	/* font-size: 4rem; */
 	margin-bottom: 32px;
 }
 
@@ -25,20 +25,8 @@ section+section {
 	display: inline-block;
 }
 
-.ttl_box .ttl {
-	/* 28px */
-	font-size: 3rem;
 
-	font-weight: 500;
-	letter-spacing: 0.1em;
 
-	margin-bottom: 8px;
-}
-
-.ttl_box .sb-ttl {
-	/* 20px */
-	font-size: 2rem;
-}
 
 /* ---------- */
 /* tablet */
@@ -58,20 +46,6 @@ section+section {
 
 	.inner {
 		max-width: 1040px;
-	}
-
-	.ttl_box {
-		margin-bottom: 64px;
-	}
-
-	.ttl_box .ttl {
-		/* 48px */
-		font-size: 4.8rem;
-	}
-
-	.ttl_box .sb-ttl {
-		/* 16px */
-		font-size: 1.6rem;
 	}
 }
 
@@ -142,18 +116,26 @@ section+section {
 /* ==================== */
 /* column */
 /* ==================== */
-.column_flex {
-	display: flex;
-	justify-content: space-around;
-	flex-wrap: wrap;
+
+/* サイドバー対策 */
+@media screen and (min-width: 1060px) {
+	.column_flex {
+		display: flex;
+		justify-content: space-around;
+		width: 900px;
+	}
+
+	.side_bar {
+		width: 250px;
+	}
 }
 
-/* .column_list {
-	display: flex;
-	justify-content: space-around;
-
-} */
-
+@media screen and (max-width: 1059px) {
+	.side_bar {
+		margin-top: 50px;
+		margin-bottom: 80px;
+	}
+}
 
 /* ---------- */
 /* tablet */
@@ -162,13 +144,9 @@ section+section {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 40px;
-
-		/* border: 2px solid red; */
 	}
 
 	.column_list li {
-		/* border: 2px solid blue; */
-
 		max-width: 320px;
 	}
 
@@ -183,22 +161,6 @@ section+section {
 	}
 }
 
-/* 親要素の共通設定 */
-/*.box {
-    /* 見た目の設定 */
-/* background-color: skyblue;
-    padding: 5px;
-    margin: 10px auto;
-*/
-
-/* flexboxの設定 */
-/* display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-}
-*/
-
-
 /* 子要素の共通設定 */
 
 .box_column {
@@ -206,13 +168,6 @@ section+section {
 	/* background-color: #FBB126; */
 	width: 300px;
 	height: 400px;
-
-
-
-	/* text-align: center;
-    line-height: 200px;
-    color: red;
-    */
 }
 
 /* p_list_categories */
@@ -248,54 +203,31 @@ li.cat-item a::after {
 	margin-bottom: 14px;
 }
 
-/* 繝ｬ繧ｹ繝昴Φ繧ｷ繝門ｯｾ蠢�(TB迚�) */
-@media screen and (min-width:340px) {
-	.card-container {
-		display: grid;
-		grid-template-columns: 1fr;
-	}
-
-	.card-wrap {
-		margin: 0 30px 30px 0;
-	}
-
-	.card-wrap:nth-child(2n) {
-		margin-right: 0;
-	}
-
-	.contet-sidebar {
-		display: wrap;
-	}
+.card-wrap {
+	margin: 0 30px 30px 0;
 }
 
-/* 繝ｬ繧ｹ繝昴Φ繧ｷ繝門ｯｾ蠢�(TB迚�) */
-@media screen and (min-width:770px) {
-	.card-container {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-	}
-
-	.card-wrap {
-		margin: 0 30px 30px 0;
-	}
-
-	.card-wrap:nth-child(2n) {
-		margin-right: 0;
-	}
-
-	.contet-sidebar {
-		display: wrap;
-	}
+.card-wrap:nth-child(2n) {
+	margin-right: 0;
 }
 
-/* 繝ｬ繧ｹ繝昴Φ繧ｷ繝門ｯｾ蠢�(PC迚�) */
-@media screen and (min-width:1024px) {
-	.contet-sidebar {
-		display: flex;
-	}
+.category-list-outer {
+	height: 50px;
+	background-color: beige;
+	padding: 5px;
+	border-radius: 3px;
 }
 
-/* 繝励Λ繧ｰ繧､繝ｳ縲指p-pagenavi縲� */
+.category-list {
+	background-color: beige;
+	border: dashed 2px white;
+	border-radius: 3px;
+	height: 40px;
+	text-align: center;
+	font-size: 2.3rem;
+
+}
+
 .wp-pagenavi {
 	clear: both;
 	text-align: center;

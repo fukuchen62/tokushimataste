@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div>
 	<section>
 		<div class="column_box">
@@ -5,6 +6,14 @@
 			<?php
 			$column_type_terms = get_terms(['taxonomy' => 'column_type']);
 			// if (!empty($column_type_terms)):
+=======
+		<?php
+		// ウィジェットエリアの呼び出し
+		dynamic_sidebar('my-widget');
+		?>
+		<!-- サイドバー -->
+		<div class="side-bar">
+>>>>>>> 9cf6131abb5655a9b6ce916ad2e2e17277e03645
 
 			// echo '<pre>';
 			// var_dump($column_type_terms);

@@ -1,59 +1,81 @@
 <?php get_header(); ?>
+<!-- goods_detail.htmlを追加　11/25　香西 -->
+<ul class="breadcrumb">
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="../html/index.html">
+                <span itemprop="name">ホーム</span>
+            </a>
+            <meta itemprop="position" content="1" />
+        </li>
+
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="../html/goods.html">
+                <span itemprop="name">商品一覧</span>
+            </a>
+            <meta itemprop="position" content="2" />
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="#">
+                <span itemprop="name">Oh No 海苔</span>
+            </a>
+            <meta itemprop="position" content="3" />
+        </li>
+    </ol>
+</ul>
+
+
 <main>
-    <?php if (have_posts()): ?>
-        <?php while (have_posts()): the_post(); ?>
-            <section class="section">
-                <div class="section_inner">
+    <h1 style="text-align: center; margin-bottom: 20px;"><?php the_title() ?></h1>
+    <li>
+        <img src="../uploads/nori.jpeg" alt="Image" class="img-L" style=" margin-top:14px;"><br>
+        <h2 style="padding:15px ;  margin-top:0px; background:#e7d0ae">概要</h2>
+        <p><?php the_field('introduction') ?></p>
+        <h2>価格</h2>
+        <p><?php the_field('price') ?></p>
+        <h2>アレルギー表示</h2>
+        <?php
+        $allergy_term = wp_get_object_terms(
+            get_the_ID(),
+            'allergy',
+            array("fields" => "names")
+        ); ?>
+        <p><?php if (is_null($allergy_term)): ?>
+                <?php echo implode(',', $allergy_term); ?>
+            <?php else: ?>
+                <?php print 'なし'; ?>
+            <?php endif; ?></p>
+        <h2>エリア</h2>
+        <?php
+        $area_term = wp_get_object_terms(
+            get_the_ID(),
+            'area',
+            array("fields" => "names")
+        ); ?>
+        <p>
+            <?php echo $area_term[0]; ?>
+        </p>
+        <h2>容量</h2>
+        <p><?php the_field('net_weight') ?>
+        </p>
+        <h2>原材料名</h2>
+        <p>
+            <?php the_field('raw_ｍaterials') ?>
+        </p>
+        <h2>味</h2>
+        <p><?php
+            $taste_term = wp_get_object_terms(
+                get_the_ID(),
+                'taste',
+                array("fields" => "names")
+            ); ?>
+        <p>
+            <?php echo $taste_term[0]; ?>
+        </p>
+        </p>
+    </li>
 
-                    <div class="food">
-                        <div class="food_body">
-                            <div class="food_text">
-                                <h2 class="heading heading-primary"><?php the_title() ?></h2>
-                                <div class="food_content">
-                                    <?php the_content() ?>
-                                </div>
-                            </div>
-                            <div class="food_pic">
-                                <?php if (get_field('recommend')): ?>
-                                    <span class="food_label">オススメ</span>
-                                <?php endif; ?>
-                                <?php
-                                $pic = get_field('pic');
-                                $pic_url = $pic['sizes']['large'];
-                                ?>
-                                <img src="<?php echo $pic_url; ?>" alt="">
-                            </div>
-                        </div>
-
-                        <ul class="food_list">
-                            <li class="food_item">
-                                <span class="food_itemLabel">価格</span>
-                                <span class="food_itemData"><?php the_field('price') ?></span>
-                            </li>
-                            <li class="food_item">
-                                <span class="food_itemLabel">カロリー</span>
-                                <span class="food_itemData"><?php echo number_format(get_field('calorie')) ?>kcal</span>
-                            </li>
-                            <li class="food_item">
-                                <span class="food_itemLabel">アレルギー</span>
-                                <span class="food_itemData">
-                                    <?php
-                                    $allergies = get_field('allergies');
-                                    foreach ($allergies as $key => $allergy) {
-                                        echo $allergy;
-                                        if ($allergy !== end($allergies)) {
-                                            echo '、';
-                                        }
-                                    }
-                                    ?>
-                                </span>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-            </section>
-        <?php endwhile; ?>
-    <?php endif ?>
+    <!-- トップページに戻るボタン -->
+    <div id="page_top"><a href="#"></a></div>
 </main>
 <?php get_footer(); ?>

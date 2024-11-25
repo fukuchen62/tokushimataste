@@ -319,19 +319,6 @@ a {
     justify-content: center;
 }
 
-/* tablet */
-
-@media(width>=700px) {
-    .column_list {
-        gap: 100px;
-        margin-bottom: 0px;
-    }
-
-    .box_column {
-        max-width: 320px;
-    }
-
-}
 
 /* ==================== */
 /* レシピ */

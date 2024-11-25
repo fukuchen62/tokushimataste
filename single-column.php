@@ -134,7 +134,7 @@
             <?php endif; ?>
 
     </section>
-    <?php get_template_part('test-template-parts-test/columnList');
+    <?php get_template_part('template-parts/columnList');
     ?>
 
     <div><?php the_field('product_id'); ?></div>

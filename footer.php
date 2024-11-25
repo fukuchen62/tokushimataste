@@ -1,5 +1,5 @@
 <footer class="footer">
-    <?php get_template_part('test-template-parts-test/breadcrumb'); ?>
+    <?php get_template_part('template-parts/breadcrumb'); ?>
     <div class="footer_inner">
         <div class="footer_info">
             <div class="footer_logo">
@@ -33,7 +33,7 @@
 if (is_home()) {
     wp_enqueue_style('slick-caroisel', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
     wp_enqueue_script('slick-caroisel', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js');
-    wp_enqueue_script('food-science-home', get_template_directory_uri() . '/test-assets-test/js/home.js');
+    wp_enqueue_script('food-science-home', get_template_directory_uri() . '/assets/js/home.js');
 } ?>
 <?php wp_footer(); ?>
 </body>

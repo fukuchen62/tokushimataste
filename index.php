@@ -37,7 +37,7 @@
                     <div class="cardList">
                         <?php while (have_posts()): the_post(); ?>
 
-                            <?php get_template_part('test-template-parts-test/loop', 'news'); ?>
+                            <?php get_template_part('template-parts/loop', 'news'); ?>
 
                         <?php endwhile; ?>
                     </div>

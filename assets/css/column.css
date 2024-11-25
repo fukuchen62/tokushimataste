@@ -307,6 +307,26 @@ a {
 	}
 
 	/* 繝ｬ繧ｹ繝昴Φ繧ｷ繝門ｯｾ蠢�(TB迚�) */
+	@media screen and (min-width:340px) {
+		.card-container {
+			display: grid;
+			grid-template-columns: 1fr;
+		}
+
+		.card-wrap {
+			margin: 0 30px 30px 0;
+		}
+
+		.card-wrap:nth-child(2n) {
+			margin-right: 0;
+		}
+
+		.contet-sidebar {
+			display: wrap;
+		}
+	}
+
+	/* 繝ｬ繧ｹ繝昴Φ繧ｷ繝門ｯｾ蠢�(TB迚�) */
 	@media screen and (min-width:770px) {
 		.card-container {
 			display: grid;

@@ -8,8 +8,6 @@
     margin-bottom: 32px;
 }
 
-
-
 /* .img-fluid li {
     letter-spacing: -1em;
 } */
@@ -39,7 +37,6 @@
     /* ulのユーザーエージェントスタイル打消し */
 }
 
-
 /* onクラス添付で画面に表示 */
 /* もとにもどす */
 .page_list li.on {
@@ -53,6 +50,7 @@ body {
     padding: 100px 0;
 }
 
+/* もっと見る */
 
 .container {
     width: 100%;
@@ -104,6 +102,9 @@ btn {
     width: 160px;
     border-radius: 20px;
 }
+
+
+/* レシピ詳細 */
 
 .recipe_name img {
     width: 1024px;

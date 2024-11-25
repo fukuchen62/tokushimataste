@@ -4,8 +4,17 @@ section+section {
     margin-top: 60px;
 }
 
-/* ジャンル検索ボタン */
+.ttl_box {
+    text-decoration: underline dotted 5px DarkOrange;
+    text-align: center;
+    margin-bottom: 32px;
+}
 
+.ttl_box span {
+    display: inline-block;
+}
+
+/* ジャンル検索ボタン */
 
 .btn-content {
     display: flex;
@@ -45,6 +54,8 @@ a {
     text-decoration: none;
 }
 
+/* h2タイトル */
+
 .maker_title {
     margin: 50px 0;
     background-color: #AD2628;
@@ -60,49 +71,45 @@ a {
     width: 100%;
     height: 140px;
     text-align: center;
-
+    margin-bottom: 15px;
     border-radius: 10px;
     object-fit: cover;
+
 }
 
 /* タイトル */
 .maker_list h3 {
-    font-size: 2rem;
 
-    border-bottom: dashed 2px #171B39;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    border-bottom: dashed 2px blue;
+    /* border-bottom: dashed 2px #171B39; */
 }
 
 /* メーカー枠 */
 .box_maker {
     background-color: #EEEEF1;
-    color: rgb(61, 67, 99);
-
+    color: black;
+    font-size: 2rem;
     box-shadow: 5px 5px 0 #9e9d9c;
-    width: 300px;
-    height: 400px;
+    /* width: 100%; */
     padding: 20px 16px;
     text-align: centert;
     border-radius: 8px;
-
+    line-height: 30px;
     letter-spacing: 0.05em;
-
-
+    margin-bottom: 30px;
+    /* おまけ用 */
+    border: 2px solid #342201;
+    transition: 0.6s;
+    width: 300px;
+    height: 400px;
 }
 
-
-/* おまけ */
-
-/* .maker_list a:hover {
-    background-color: #F7EB99;
-    color: #fff;
-    border: 2px solid #3FA9F5;
+.maker_contents {
+    margin-bottom: 30px;
 }
-
-.column_list a:hover {
-    background-color: #FBB126;
-    color: #fff;
-
-} */
 
 /* ---------- */
 /* tablet */
@@ -110,20 +117,12 @@ a {
     .maker_list {
         display: flex;
         flex-wrap: wrap;
-        gap: 10px;
+        /* gap: 10px; */
+        gap: 50px;
     }
 
     .maker_list li {
         max-width: 320px;
     }
 
-}
-
-/* ---------- */
-/* pc */
-@media(width>=1024px) {
-    .column .more {
-        max-width: 400px;
-        margin: 0 auto;
-    }
 }

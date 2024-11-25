@@ -137,25 +137,26 @@ function add_style_script()
             get_template_directory_uri() .
                 PATH . 'css/404.css'
         );*/
-    } elseif (is_search() || is_post_type_archive('classroom')) {
+    } elseif (is_search()
+        /*|| is_post_type_archive('classroom')*/) {
         //条件検索CSS
-        wp_enqueue_style('my_search', get_template_directory_uri() . PATH . 'css/results.css');
-        wp_enqueue_style('my_searchpopup_css', get_template_directory_uri() . PATH . 'css/searchpopup.css');
+        wp_enqueue_style('my_search', get_template_directory_uri() . PATH . 'css/search.css');
+        // wp_enqueue_style('my_searchpopup_css', get_template_directory_uri() . PATH . 'css/searchpopup.css');
 
-        wp_enqueue_script(
-            'my_searchpopup-js',
-            get_template_directory_uri() .
-                PATH . 'js/searchpopup.js',
-            ['jquery'],
-            '',
-            true
-        );
+        // wp_enqueue_script(
+        //     'my_searchpopup-js',
+        //     get_template_directory_uri() .
+        //         PATH . 'js/searchpopup.js',
+        //     ['jquery'],
+        //     '',
+        //     true
+        // );
     } elseif (is_post_type_archive('column') || is_tax('column_type')) {
         //コラムリスト
         wp_enqueue_style(
             'my_column_list_style',
             get_template_directory_uri() .
-                PATH . 'css/column_list.css',
+                PATH . 'css/column.css',
         );
     } elseif (is_singular('column')) {
         //コラム記事CSS
@@ -164,11 +165,42 @@ function add_style_script()
             get_template_directory_uri() .
                 PATH . 'css/column.css',
         );
-    } elseif (is_singular('classroom')) {
+    } elseif (is_post_type_archive('maker') || is_tax('maker_type')) {
+        //コラムリスト
         wp_enqueue_style(
-            'my_classroom_style',
+            'my_maker_list_style',
             get_template_directory_uri() .
-                PATH . 'css/details.css',
+                PATH . 'css/maker.css',
+        );
+    } elseif (is_singular('maker')) {
+        wp_enqueue_style(
+            'my_maker_style',
+            get_template_directory_uri() .
+                PATH . 'css/maker.css',
+        );
+    } elseif (is_post_type_archive('recipe') || is_tax('recipe_type')) {
+        wp_enqueue_style(
+            'my_recipe_list_style',
+            get_template_directory_uri() .
+                PATH . 'css/recipe.css',
+        );
+    } elseif (is_singular('recipe')) {
+        wp_enqueue_style(
+            'my_recipe_style',
+            get_template_directory_uri() .
+                PATH . 'css/recipe.css',
+        );
+    } elseif (is_post_type_archive('product') || is_tax('product_type')) {
+        wp_enqueue_style(
+            'my_product_list_style',
+            get_template_directory_uri() .
+                PATH . 'css/product.css',
+        );
+    } elseif (is_singular('product')) {
+        wp_enqueue_style(
+            'my_product_style',
+            get_template_directory_uri() .
+                PATH . 'css/product.css',
         );
     } elseif (is_page('contact') || is_page('confirm') || is_page('thanks')) {
         wp_enqueue_style(

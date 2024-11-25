@@ -31,13 +31,6 @@
     margin: 20px auto 0;
 }
 
-.nav-pc_logo {
-    width: 10%;
-    max-width: 100px;
-    display: flex;
-    align-items: center;
-}
-
 .title-logo {
     position: absolute;
     margin-top: 20px;
@@ -122,12 +115,11 @@ nav.nav-sp {
 }
 
 .nav-sp-menu {
-    width: 95%;
+    width: 100%;
     height: 100vh;
     margin: 0 auto;
     display: block;
     background-color: #f8f3e0;
-    box-sizing: border-box;
 }
 
 .nav-sp-menu a {
@@ -138,7 +130,7 @@ nav.nav-sp {
 
 .nav-sp-logo {
     display: block;
-    margin: 0;
+    margin: 0 auto;
 }
 
 .nav-sp-icon {
@@ -203,20 +195,6 @@ nav.nav-sp {
 nav.nav-pc {
     display: none;
 }
-
-.header-container {
-    max-width: 1024px;
-    margin: 0 auto;
-    padding: 0 20px;
-    background-color: #dbb62e;
-
-}
-
-.header-container img {
-    /* width: 60px;
-    gap: 15px; */
-}
-
 
 @media screen and (min-width:700px) {
 
@@ -285,70 +263,75 @@ nav.nav-pc {
     }
 
 
-    nav.nav-pc li span {
-        display: block;
-        font-size: 12px;
-        margin-top: 0.1rem;
+
+    nav.nav-pc .nav01 a::before {
+        content: "";
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-image: url(../../uploads/gohan_sample.png);
+        background-size: contain;
+        vertical-align: middle;
     }
 
-    nav.nav-pc li a:hover:before {
-        margin-bottom: 5px;
+    nav.nav-pc .nav02 a::before {
+        content: "";
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-image: url(../../uploads/gohan_sample.png);
+        background-size: contain;
+        vertical-align: middle;
     }
 
-    nav.nav-pc li a:hover {
-        opacity: 0.7;
-    }
-}
-
-@media screen and (min-width:900px) {
-
-
-    nav.nav-pc {
-        display: block;
-        width: 100%;
-        text-align: center;
-        margin-top: 30px;
+    nav.nav-pc .nav03 a::before {
+        content: "";
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-image: url(../../uploads/gohan_sample.png);
+        background-size: contain;
+        vertical-align: middle;
     }
 
-
-
-    .fixed {
-        position: fixed;
-        top: -30px;
-        left: 0;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        margin: 0 auto;
-        opacity: 1.0;
-        z-index: 900;
-        background-color: #fff;
-        align-items: end;
+    nav.nav-pc .nav04 a::before {
+        content: "";
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-image: url(../../uploads/gohan_sample.png);
+        background-size: contain;
+        vertical-align: middle;
     }
 
-    .title-logo {
-        width: 70px;
-        position: absolute;
-        z-index: 9999;
-        right: 50%;
-        margin-top: 10px;
-        transform: translateX(75px);
+    nav.nav-pc .nav05 a::before {
+        content: "";
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-image: url(../../uploads/gohan_sample.png);
+        background-size: contain;
+        vertical-align: middle;
     }
 
-    .fixed-logo {
-        position: fixed;
-        top: 3px;
+    nav.nav-pc .nav06 a::before {
+        content: "";
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-image: url(../../uploads/gohan_sample.png);
+        background-size: contain;
+        vertical-align: middle;
     }
 
-    .titile_logo {
-        display: inline;
-        width: 80px;
-    }
-
-    nav.nav-pc ul {
-        display: flex;
-        /* align-items: flex-end; */
-        justify-content: space-between;
-        margin-bottom: 0;
+    nav.nav-pc .nav07 a::before {
+        content: "";
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-image: url(../../uploads/gohan_sample.png);
+        background-size: contain;
+        vertical-align: middle;
     }
 
 

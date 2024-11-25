@@ -228,9 +228,19 @@ section+section {
     width: 70px;
 }
 
+.areamap {
+    position: relative;
+}
+
 .kumo {}
 
+.higashi {
+    position: absolute;
+    top: 20%;
+    left: 57%;
+}
 
+.aboutsite
 /* ==================== */
 /* コラム */
 /* ==================== */

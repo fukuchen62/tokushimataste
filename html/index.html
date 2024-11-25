@@ -8,7 +8,7 @@
     <title>徳島の味！あなたのご飯のお友達</title>
 
     <!--リセットCSS-->
-    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/reset.csss">
     <!-- 共通CSSの読み込み -->
     <link rel="stylesheet" href="../assets/css/common.css">
 
@@ -23,8 +23,8 @@
 
     <!-- カード型の読み込み -->
     <link rel="stylesheet" href="../assets/css/box.css">
-
-
+    <!-- スライドの読み込み -->
+    <link rel="stylesheet" href="../assets/css/slide.css">
 
     <!--Googleフォントの読み込み-->
     <!--Googleフォントの読み込み-->
@@ -217,20 +217,24 @@
                         <h2>ご飯のお供etc</h2>
                         <p>5種類の項目に分けてご案内します。</p>
                     </div>
-                    <div class="slider-wrap">
-                        <div class="slider">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="slider">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
+                    <div class="scroll-infinity1">
+                        <div class="scroll-infinity__wrap1">
+                            <ul class="scroll-infinity__list scroll-infinity__list--left1">
+                                <li class="scroll-infinity__item1"><img src="../uploads/furikake.jpeg" /></li>
+                                <li class="scroll-infinity__item1"><img src="../uploads/miso.jpeg" /></li>
+                                <li class="scroll-infinity__item1"><img src="../uploads/tukemono.jpg" /></li>
+                                <li class="scroll-infinity__item1"><img src="../uploads/narazuke.jpeg" /></li>
+                                <li class="scroll-infinity__item1"><img src="../uploads/tsukudani.jpeg" /></li>
+                                <li class="scroll-infinity__item1"><img src="../uploads/saba-misoni.jpg" /></li>
+                            </ul>
+                            <ul class="scroll-infinity__list scroll-infinity__list--left1">
+                                <li class="scroll-infinity__item1"><img src="../uploads/nikumisoitame.jpg" /></li>
+                                <li class="scroll-infinity__item1"><img src="../uploads/miso.jpeg" /></li>
+                                <li class="scroll-infinity__item1"><img src="../uploads/tukemono.jpg" /></li>
+                                <li class="scroll-infinity__item1"><img src="../uploads/narazuke.jpeg" /></li>
+                                <li class="scroll-infinity__item1"><img src="../uploads/tsukudani.jpeg" /></li>
+                                <li class="scroll-infinity__item1"><img src="../uploads/saba-misoni.jpg" /></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -241,13 +245,28 @@
         <!-- 検索 -->
         <section>
             <div class="inner">
-                <div class="container">
+                <div class="container areamap">
                     <div class="ttl_box">
                         <h2>徳島のご飯 お友達いろいろ！</h2>
                         <p>エリア別検索ができます。</p>
                     </div>
                     <div>
-                        <img src="../uploads/tokusima-map01.png" alt="エリア検索map">
+                        <img src="../assets/images/tokusima-map02.png" alt="エリア検索map">
+                    </div>
+                    <div class="kumo nisi">
+                        <a href="area.html">
+                            <img src="../assets/images/kumo_nishi.png" alt="県西部">
+                        </a>
+                    </div>
+                    <div class="kumo higashi">
+                        <a href="area.html">
+                            <img src="../assets/images/kumo_higashi.png" alt="県東部">
+                        </a>
+                    </div>
+                    <div class="kumo minami">
+                        <a href="area.html">
+                            <img src="../assets/images/kumo_minami.png" alt="県南部">
+                        </a>
                     </div>
                 </div>
                 <a href="" class="btn btn-border-shadow btn-border-shadow--color">詳細検索は<br>こちらから！</a>
@@ -259,23 +278,27 @@
             <div class="inner">
                 <div class="container">
                     <div class="ttl_box">
-                        <h2>メーカー様ご紹介</h2>
-                        <p>取材させていただきましたメーカー様をご紹介します。</p>
+                        <h2>メーカーさんご紹介</h2>
+                        <p>徳島県内のメーカーさんです。</p>
                     </div>
-                    <div class="slider2-wrap">
-                        <div class="slider2">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="slider2">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
+                    <div class="scroll-infinity">
+                        <div class="scroll-infinity__wrap">
+                            <ul class="scroll-infinity__list scroll-infinity__list--left">
+                                <li class="scroll-infinity__item"><img src="../uploads/cat.jpg" /></li>
+                                <li class="scroll-infinity__item"><img src="../uploads/cat.jpg" /></li>
+                                <li class="scroll-infinity__item"><img src="../uploads/cat.jpg" /></li>
+                                <li class="scroll-infinity__item"><img src="../uploads/cat.jpg" /></li>
+                                <li class="scroll-infinity__item"><img src="../uploads/cat.jpg" /></li>
+                                <li class="scroll-infinity__item"><img src="../uploads/cat.jpg" /></li>
+                            </ul>
+                            <ul class="scroll-infinity__list scroll-infinity__list--left">
+                                <li class="scroll-infinity__item"><img src="../uploads/cat.jpg" /></li>
+                                <li class="scroll-infinity__item"><img src="../uploads/cat.jpg" /></li>
+                                <li class="scroll-infinity__item"><img src="../uploads/cat.jpg" /></li>
+                                <li class="scroll-infinity__item"><img src="../uploads/cat.jpg" /></li>
+                                <li class="scroll-infinity__item"><img src="../uploads/cat.jpg" /></li>
+                                <li class="scroll-infinity__item"><img src="../uploads/cat.jpg" /></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -297,7 +320,7 @@
                                 <div class="box_column">
                                     <img src="../uploads/tennin (1).png" alt="コラムの写真">
                                     <h3>サブタイトルサブタイトル</h3>
-                                    <p>徳島とユーザーが「つながる」ことを目指す。徳島の名産品を使った「ご飯のおとも」を、あたかも徳島を旅するように味わえる体験として提供。各商品を作った人のインタビューを掲載することで、ご飯のおともを通じて</p>
+                                    <p>徳島とユーザーが「つながる」ことを目指す。徳島の名産品を使った「ご飯のおとも」を、あたかも徳島を旅するように味わえる体験として提供。</p>
                                 </div>
                             </a>
                         </li>
@@ -367,18 +390,6 @@
                         </li>
                         <li>
                             <a href=""><img src="../uploads/misemae.png" alt="instagram"></a>
-                        </li>
-                        <li>
-                            <a href=""><img src="../uploads/furikake.jpeg" alt="instagram"></a>
-                        </li>
-                        <li>
-                            <a href=""><img src="../uploads/narazuke.jpeg" alt="instagram"></a>
-                        </li>
-                        <li>
-                            <a href=""><img src="../uploads/tennin (1).png" alt="instagram"></a>
-                        </li>
-                        <li>
-                            <a href=""><img src="../uploads/otomo.png" alt="Iinstagram"></a>
                         </li>
                     </ul>
                     <div class="inst_ttl">

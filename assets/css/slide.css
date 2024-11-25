@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+/*==================================================
+スライダーのためのcss
+===================================*/
+/* .slider img {
+    width: 100%;
+    height: auto;
+} */
+
+/*slickのJSで書かれるタグ内、スライド左右の余白調整 初期値は10px*/
+/*
+.slider .slick-slide {
+    margin: 0 20px;
+} */
+
+/* 別パターンのCSS上の方 */
+
+@keyframes infinity-scroll-left1 {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.scroll-infinity__wrap1 {
+    display: flex;
+    overflow: hidden;
+}
+
+.scroll-infinity__list1 {
+    display: flex;
+    list-style: none;
+    padding: 0
+}
+
+.scroll-infinity__list--left1 {
+    animation: infinity-scroll-left 80s infinite linear 0.5s both;
+}
+
+.scroll-infinity__item1 {
+    width: calc(100vw / 6);
+}
+
+.scroll-infinity__item1>img {
+    border-radius: 50%;
+    width: 100%;
+}
+
+/* 別パターンのCSS下の方 */
+@keyframes infinity-scroll-left {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.scroll-infinity__wrap {
+    display: flex;
+    overflow: hidden;
+}
+
+.scroll-infinity__list {
+    display: flex;
+    list-style: none;
+    padding: 0
+}
+
+.scroll-infinity__list--left {
+    animation: infinity-scroll-left 80s infinite linear 0.5s both;
+}
+
+.scroll-infinity__item {
+    width: calc(100vw / 6);
+}
+
+.scroll-infinity__item>img {
+    width: 150%;
+}

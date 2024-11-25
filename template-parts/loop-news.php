@@ -14,7 +14,7 @@
             <?php if (has_post_thumbnail()): ?>
                 <?php the_post_thumbnail('medium'); ?>
             <?php else: ?>
-                <img src="<?php echo get_template_directory_uri(); ?>/test-assets-test/img/common/noimage.png" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/noimage.png" alt="">
             <?php endif; ?>
         </div>
         <div class="card_body">

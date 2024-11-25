@@ -27,12 +27,9 @@
         </div>
 
     </section>
-<<<<<<< HEAD
     <?php get_template_part //('template-parts/columnList');
     ('sidebar');
-=======
-    <?php //get_template_part('template-parts/columnList');
->>>>>>> 9cf6131abb5655a9b6ce916ad2e2e17277e03645
+
     ?>
 
 </main>

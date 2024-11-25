@@ -46,4 +46,5 @@ if (!is_user_logged_in() && IS_DEV == true) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Kiwi+Maru&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
 
+    <?php wp_head(); ?>
 </head>

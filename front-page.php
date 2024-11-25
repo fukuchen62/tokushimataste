@@ -189,6 +189,8 @@
             </div>
             <a href="recipe.html" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
     </section>
+
+    <!-- インスタ -->
     <section>
         <div class="inner">
             <div class="inst_container">
@@ -196,7 +198,7 @@
                     <h3>instagram</h3>
                 </div>
                 <ul class="inst_photo">
-                    <li>
+                    <!-- <li>
                         <a href=""><img src="../uploads/footer-designkanpu.png" alt="instagram">
                         </a>
                     </li>
@@ -226,10 +228,10 @@
                     <h3>インスタグラムでフォロー</h3>
                 </div>
             </div>
-    </section>
+    </section> -->
+                    <?php echo do_shortcode("[instagram-feed feed=2]"); ?>
 </main>
 
-<?php echo do_shortcode("[instagram-feed feed=2]"); ?>
 <?php get_footer(); ?>
 
 

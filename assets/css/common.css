@@ -281,10 +281,10 @@ a {
 
 /* コラムの枠 */
 .box_column {
-    background-color: #F7EB99;
+    background-color: #EEEEF1;
     color: black;
     font-size: 2rem;
-    box-shadow: 5px 5px 0 #FBB126;
+    box-shadow: 5px 5px 0 #9e9d9c;
     /* width: 100%; */
     padding: 20px 16px;
     text-align: centert;

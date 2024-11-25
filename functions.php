@@ -349,3 +349,8 @@ function my_document_title_separator($separator)
 // {
 //     return '%s';
 // }
+
+// サイドバー追加山口
+add_action('widgets_init', function () {
+    register_sidebar();
+});

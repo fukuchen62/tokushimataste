@@ -38,7 +38,7 @@
                     if (/*$the_query->*/have_posts()): ?>
                         <?php while (/*$the_query->*/have_posts()): /*$the_query->*/ the_post() ?>
                             <li class="foodList_item">
-                                <?php get_template_part('test-template-parts-test/loop', 'test'); ?>
+                                <?php get_template_part('template-parts/loop', 'test'); ?>
                             </li>
                         <?php endwhile; ?>
                         <?php /*wp_reset_postdata();*/ ?>

@@ -36,7 +36,7 @@
 
                         <div class="cardList">
                             <?php while ($the_Query->have_posts()): $the_Query->the_post(); ?>
-                                <?php get_template_part('test-template-parts-test/loop', 'test'); ?>
+                                <?php get_template_part('template-parts/loop', 'test'); ?>
                             <?php endwhile; ?>
                             <?php wp_reset_postdata() ?>
                         </div>

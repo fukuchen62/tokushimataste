@@ -159,7 +159,7 @@ if (!is_user_logged_in() && IS_DEV == true) {
                         <div class="nav-pc_logo">
                             <h1>
                                 <a href="#" class="pc-title-logo">
-                                    <img src="../uploads/cat.jpg" alt="トップに飛ぶ">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/uploads/cat.jpg" alt="トップに飛ぶ">
                                 </a>
                             </h1>
                         </div>
@@ -167,43 +167,43 @@ if (!is_user_logged_in() && IS_DEV == true) {
 
                     <li>
                         <a href="/tokuaji-otomo/product/">
-                            <img src="../uploads/gohan_sample.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/uploads/gohan_sample.png" alt="">
                             <span>商品一覧</span>
                         </a>
                     </li>
                     <li>
                         <a href="/tokuaji-otomo/area/east/">
-                            <img src="../uploads/gohan_sample.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/uploads/gohan_sample.png" alt="">
                             <span>エリア検索</span>
                         </a>
                     </li>
                     <li>
                         <a href="/tokuaji-otomo/?s= ">
-                            <img src="../uploads/gohan_sample.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/uploads/gohan_sample.png" alt="">
                             <span>詳細検索</span>
                         </a>
                     </li>
                     <li>
                         <a href="/tokuaji-otomo/column/">
-                            <img src="../uploads/gohan_sample.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/uploads/gohan_sample.png" alt="">
                             <span>コラム</span>
                         </a>
                     </li>
                     <li>
                         <a href="/tokuaji-otomo/maker/">
-                            <img src="../uploads/gohan_sample.png" alt="icon01">
+                            <img src="<?php echo get_template_directory_uri(); ?>/uploads/gohan_sample.png" alt="icon01">
                             <span>メーカー紹介</span>
                         </a>
                     </li>
                     <li>
                         <a href="/tokuaji-otomo/recipe/">
-                            <img src="echo get_template_directory_uri();/uploads/gohan_sample.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/uploads/gohan_sample.png" alt="">
                             <span>アレンジレシピ</span>
                         </a>
                     </li>
                     <li>
                         <a href="/tokuaji-otomo/mypage/">
-                            <img src="echo get_template_directory_uri();/uploads/gohan_sample.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/uploads/gohan_sample.png" alt="">
                             <span>お気に入り</span>
                         </a>
                     </li>

@@ -1,3 +1,7 @@
+		<?php
+		// ウィジェットエリアの呼び出し
+		dynamic_sidebar('my-widget');
+		?>
 		<!-- サイドバー -->
 		<div class="side-bar">
 

@@ -1,11 +1,157 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>エリア検索ページ</title>
+<link href="../assets/css/reset.css" rel="stylesheet">
+<link href="../assets/css/goods.css" rel="stylesheet">
+<link href="../assets/css/header.css" rel="stylesheet">
+<link href="../assets/css/common.css" rel="stylesheet">
+<link href="../assets/css/footer.css" rel="stylesheet">
 
+<body>
+    <header>
+
+        <div class="kv">
+            <!-- <img src="../uploads/header-designkanpu.jpg" alt=""> -->
+
+            <p class="kv-copy">
+                        徳島の味！<br class="tb-none">
+                        あなたのご飯のお友達<br class="tb-none">
+                </p>
+        </div>
+
+        <div class="header-area pc-none">
+            <div class="title-logo">
+                <h1>
+                        <a href="#" class="logo">
+                            <img src="../uploads/miso.jpeg" alt="">
+                        </a>
+                    </h1>
+            </div>
+
+            <div class="hamburger pc-none">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="h_nav sp-none ">
+                <ul class="slide-menu pc-none">
+                    <li><a href="goods.html">商品一覧</a></li>
+                    <li><a href="area.html.html">エリア検索</a></li>
+                    <li><a href="research.html">詳細検索</a></li>
+                    <li><a href="column.html.html">コラム</a></li>
+                    <li><a href="maker.html">メーカー一覧</a></li>
+                    <li><a href="recipe.html">アレンジレシピ</a></li>
+                    <li><a href="favorite.html">お気に入り</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="inner">
+            <ul class="breadcrumb">
+                <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="../html/index.html">
+                            <span itemprop="name">ホーム</span>
+                        </a>
+                        <meta itemprop="position" content="1" />
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="#">
+                            <span itemprop="name">エリア検索</span>
+                        </a>
+                        <meta itemprop="position" content="2" />
+                    </li>
+                </ol>
+            </ul>
+
+            <h2 style="text-align: center;">メーカーさんご紹介</h2>
+
+            <div id="btn-area" class="wrap">
+                <!-- エリア検索ボタン -->
+                <ul class="btn-content">
+                    <li id="east">
+                        <a href="#" class=""><span>県東</span></a>
+                    </li>
+                    <li id="west"><a href="#" class=""><span>県西</span></a>
+                    </li>
+                    <li id="south"><a href="#" class=""><span>県南</span></a>
+                    </li>
+                </ul>
+            </div>
+
+            <section>
+                <h3>県東部</h3>
+
+                <div class="l-wrapper_01">
+                    <article class="card_01">
+                        <div class="card__header_01">
+                            <p class="card__title_01">サムネイルのタイトル</p>
+                            <figure class="card__thumbnail_01">
+                                <img src="../uploads/tennin (1).png" alt="メーカー写真" class="card__image_01">
+                            </figure>
+                        </div>
+                        <div class="card__body_01">
+                            <p class="card__text2_01">これはカード型のデザインです。これはカード型のデザインです。これはカード型のデザインです。これはカード型のデザインです。</p>
+                        </div>
+                        <div class="card__footer_01">
+                            <p class="card__text_01"><a href="#" class="button_01 -compact">この記事を詳しく見る</a></p>
+                        </div>
+                    </article>
+                </div>
+
+
+
+
+
+
+
+            </section>
+
+
+
+
+
+
+            <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+            <script src="../assets/js/goods.js"></script>
+        </div>
+    </main>
+    <footer>
+        <!-- トップページに戻るボタン -->
+        <p id="page-top"><a href="#">↑<br>TOP</a></p>
+
+        <div class="footer_container">
+            <ul class="footer_nav">
+                <li>
+                    <a href="">お問い合わせ</a>
+                </li>
+                <li>
+                    <a href="">このサイトについて</a>
+                </li>
+            </ul>
+            <ul class="footer_nav">
+                <li>
+                    <a href="">Q&A</a>
+                </li>
+                <li>
+                    <a href="">プライバシーポリシー・免責事項</a>
+                </li>
+                <li>
+                    <a href="">サイト制作にあたって</a>
+                </li>
+            </ul>
+        </div>
+        <!-- コピーライト -->
+        <p class="f-copy">
+            <small>
+                Copyright © :******* All Rights Reserved.
+            </small>
+        </p>
+    </footer>
 </body>
+
+
 </html>

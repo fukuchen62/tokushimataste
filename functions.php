@@ -131,12 +131,12 @@ function add_style_script()
             '',
             true
         );*/
-        /* } elseif (is_404()) {
+    } elseif (is_404()) {
         wp_enqueue_style(
             'my_error404',
             get_template_directory_uri() .
-                PATH . 'css/404.css'
-        );*/
+                PATH . 'css/error.css'
+        );
     } elseif (is_search()
         /*|| is_post_type_archive('classroom')*/) {
         //条件検索CSS
@@ -206,48 +206,62 @@ function add_style_script()
         wp_enqueue_style(
             'my_input',
             get_template_directory_uri() .
-                PATH . 'css/input.css',
+                PATH . 'css/contact.css',
         );
-        wp_enqueue_script(
-            'my_mail_js',
-            get_template_directory_uri() .
-                PATH . 'js/mail_form.js',
-            ['jquery'], // jQuery に依存
-            '', // バージョン指定なし
-            true // フッターに出力
-        );
-    } elseif (is_page('favorite')) {
+        // wp_enqueue_script(
+        //     'my_mail_js',
+        //     get_template_directory_uri() .
+        //         PATH . 'js/mail_form.js',
+        //     ['jquery'], // jQuery に依存
+        //     '', // バージョン指定なし
+        //     true // フッターに出力
+        // );
+    } elseif (is_page('mypage')) {
         // お気に入りリスト
         wp_enqueue_style(
-            'my_favorite',
+            'my_mypage',
             get_template_directory_uri() .
-                PATH . 'css/favorite.css'
+                PATH . 'css/goods.css'
         );
     } elseif (is_page('about')) {
         // page-about.php
         wp_enqueue_style('my_about', get_template_directory_uri() . PATH . 'css/about.css');
-    } elseif (is_category(['news', 'update', 'events', 'others']) || is_page('infos')) {
-        // 新着ニュース一覧
-        wp_enqueue_style(
-            'my_news_list',
-            get_template_directory_uri() .
-                PATH . 'css/news_list.css'
-        );
-    } elseif (is_single()) {
-        // 新着ニュース詳細
-        wp_enqueue_style(
-            'my_news',
-            get_template_directory_uri() .
-                PATH . 'css/news.css'
-        );
-    } elseif (is_page('service')) {
+        // } elseif (is_category(['news', 'update', 'events', 'others']) || is_page('infos')) {
+        //     // 新着ニュース一覧
+        //     wp_enqueue_style(
+        //         'my_news_list',
+        //         get_template_directory_uri() .
+        //             PATH . 'css/news_list.css'
+        //     );
+        // } elseif (is_single()) {
+        //     // 新着ニュース詳細
+        //     wp_enqueue_style(
+        //         'my_news',
+        //         get_template_directory_uri() .
+        //             PATH . 'css/news.css'
+        // );
+    } elseif (is_page('about')) {
         // 利用規約
         wp_enqueue_style(
-            'my_service',
+            'my_about',
             get_template_directory_uri() .
-                PATH . 'css/rule.css'
+                PATH . 'css/about.css'
         );
-    } elseif (is_page('praivacy')) {
+    } elseif (is_page('aboutsite')) {
+        // 利用規約
+        wp_enqueue_style(
+            'my_aboutsite',
+            get_template_directory_uri() .
+                PATH . 'css/aboutsite.css'
+        );
+    } elseif (is_page('qa')) {
+        // 利用規約
+        wp_enqueue_style(
+            'my_qa',
+            get_template_directory_uri() .
+                PATH . 'css/qa.css'
+        );
+    } elseif (is_page('privacy')) {
         // プライバシーポリシー
         wp_enqueue_style(
             'my_praivacy',
@@ -360,27 +374,6 @@ function my_wpcf7_autop()
 {
     return false;
 }
-
-//-------ここからfood science用追加項目-------
-/**
- * <title>の区切り文字を変更する
- */
-add_filter('document_title_separator', 'my_document_title_separator');
-function my_document_title_separator($separator)
-{
-    $separator = "|";
-    return $separator;
-}
-
-
-/**
- * タイトルの「保護中」の文字を削除する
- */
-// add_filter('protected_title_format', 'my_protected_title');
-// function my_protected_title($title)
-// {
-//     return '%s';
-// }
 
 // サイドバー追加山口
 add_action('widgets_init', function () {

@@ -2,7 +2,16 @@
 <?php if (is_home()): ?>
     <section class="kv">
         <div class="kv_inner">
-            <h1 class="kv_title"><?php bloginfo('name'); ?></h1>
+            <!-- ブログインフォを改行するコード -->
+            <?php
+            // bloginfo('name') の内容を取得
+            $site_name = get_bloginfo('name');
+
+            // 改行を動的に挿入（任意のキーワードで分割する例）
+            $site_name = str_replace('の味！', 'の味！<br class="tb-none">', $site_name);
+            $site_name = str_replace('ご飯の', 'ご飯の<br class="tb-none">', $site_name);
+            $site_name = str_replace('お友達', 'お友達<br class="tb-none">', $site_name);
+            ?>
             <p class="kv_subtitle">FROM JAPAN</p>
         </div>
         <?php

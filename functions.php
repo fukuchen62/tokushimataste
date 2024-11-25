@@ -279,6 +279,12 @@ function my_pre_get_posts($query)
     //     $query->set('post_type', 'column');
     //     $query->set('posts_per_page', 6);
     // }
+
+    // 自作ページネーション用に全件を表示する
+    if ($query->is_post_type_archive('product') || $query->is_tax('product_type')) {
+        $query->set('post_type', 'product');
+        $query->set('posts_per_page', -1);
+    }
 }
 add_action('pre_get_posts', 'my_pre_get_posts');
 

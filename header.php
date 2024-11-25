@@ -172,7 +172,7 @@ if (!is_user_logged_in() && IS_DEV == true) {
                         </a>
                     </li>
                     <li>
-                        <a href="/tokuaji-otomo/area/east">
+                        <a href="/tokuaji-otomo/area/east/">
                             <img src="../uploads/gohan_sample.png" alt="">
                             <span>エリア検索</span>
                         </a>

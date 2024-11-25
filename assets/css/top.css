@@ -219,3 +219,33 @@ section+section {
     align-content: stretch;
     margin: 30px 0;
 }
+
+/* マップの雲 */
+
+
+.kumo {
+    width: 70px;
+}
+
+.kumo {}
+
+
+/* ==================== */
+/* コラム */
+/* ==================== */
+
+
+
+/* tablet */
+
+@media(width>=700px) {
+    .column_list {
+        gap: 100px;
+        margin-bottom: 0px;
+    }
+
+    .box_column {
+        max-width: 320px;
+    }
+
+}

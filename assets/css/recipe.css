@@ -1,11 +1,20 @@
-.morebtn {
+/* .morebtn {
     display: block;
     margin: 30px auto 0 auto;
+} */
+.ttl_box {
+    /* border: 2px solid red; */
+    text-align: center;
+
+    margin-bottom: 32px;
 }
+
+
 
 .recipe {
     position: relative;
     /*親要素にrelative*/
+    letter-spacing: -1em;
 }
 
 .recipe p {
@@ -32,9 +41,9 @@
     height: 240px;
 }
 
-.img-fluid li {
+/* .img-fluid li {
     letter-spacing: -1em;
-}
+} */
 
 .img-fluid li {
     display: inline-block;
@@ -73,4 +82,82 @@ body {
     max-width: 1024px;
     margin: 0 auto;
     padding: 100px 0;
+}
+
+
+.container {
+    width: 100%;
+    /* max-width: 480px; */
+    margin: 0 auto;
+}
+
+.list {
+    flex-wrap: wrap;
+    margin: 40px -20px 0;
+    display: flex;
+}
+
+.list li {
+    box-sizing: border-box;
+    margin: 0 10px 20px;
+    text-align: center;
+    /* background: #C5CAE9; */
+    padding: 10px;
+    opacity: 1;
+    height: auto;
+    flex-basis: calc(33.33333% - 20px);
+    max-width: calc(33.33333% - 20px);
+    transition: all .4s ease 0s;
+    overfllow: hidden;
+}
+
+.list li.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    margin: 0 10px;
+    padding: 0;
+}
+
+.more {
+    text-align: center;
+    margin-top: 20px;
+}
+
+btn {
+    background-color: #5C6BC0;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    padding: 0;
+    line-height: 40px;
+    width: 160px;
+    border-radius: 20px;
+}
+
+.recipe_name img {
+    width: 1024px;
+    height: 480px;
+}
+
+.flex .recipe .ingredient-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*
+border-bottom に「dotted」を指定して点線にする
+*/
+.flex .recipe .ingredient-list dt {
+    width: 85%;
+    border-bottom: dotted 1px #ccc;
+    padding: 6px 0;
+}
+
+.flex .recipe .ingredient-list dd {
+    width: 15%;
+    border-bottom: dotted 1px #ccc;
+    padding: 6px 0;
+    text-align: right;
 }

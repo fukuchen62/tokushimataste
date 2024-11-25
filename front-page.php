@@ -12,12 +12,15 @@
             $site_name = str_replace('ご飯の', 'ご飯の<br class="tb-none">', $site_name);
             $site_name = str_replace('お友達', 'お友達<br class="tb-none">', $site_name);
             ?>
+            <h1 class="kv_title"><?php echo wp_kses_post($site_name); ?></h1>
             <p class="kv_subtitle">FROM JAPAN</p>
         </div>
+
         <?php
         $args = [
             'post_type' => 'main-visual',
             'post_per_page' => -1,
+            'orderby'        => 'rand',   // ランダム表示
         ];
         $meta_query = ['relation' => 'OR'];
         // 公開終了日が未来のもの
@@ -85,6 +88,7 @@
 $args = [
     'post_type' => 'product',
     'post_per_page' => 3,
+    'orderby'       => 'rand',   // ランダム表示
 ];
 /*
                             $taxquerysp = ['relation' => 'AND'];
@@ -118,6 +122,7 @@ endif;
 $args = [
     'post_type' => 'maker', // メニューの投稿タイプ
     'post_per_page' => 3,
+    'orderby'       => 'rand',   // ランダム表示
 ];
 /*
                             $taxquerysp = ['relation' => 'AND'];
@@ -151,6 +156,7 @@ endif;
 $args = [
     'post_type' => 'column', // メニューの投稿タイプ
     'post_per_page' => 3,
+    'orderby'       => 'rand',   // ランダム表示
 ];
 /*
                             $taxquerysp = ['relation' => 'AND'];
@@ -184,6 +190,7 @@ endif;
 $args = [
     'post_type' => 'recipe', // メニューの投稿タイプ
     'post_per_page' => 3,
+    'orderby'        => 'rand',   // ランダム表示
 ];
 /*
                             $taxquerysp = ['relation' => 'AND'];

@@ -22,29 +22,29 @@ if (!is_user_logged_in() && IS_DEV == true) {
     <title>徳島の味！あなたのご飯のお友達</title>
 
     <!--リセットCSS-->
-    <link rel="stylesheet" href="../assets/css/reset.css">
+    <!-- <link rel="stylesheet" href="../assets/css/reset.css"> -->
     <!-- 共通CSSの読み込み -->
-    <link rel="stylesheet" href="../assets/css/common.css">
+    <!-- <link rel="stylesheet" href="../assets/css/common.css"> -->
 
     <!-- headerCSSの読み込み -->
-    <link rel="stylesheet" href="../assets/css/header.css">
+    <!-- <link rel="stylesheet" href="../assets/css/header.css"> -->
 
     <!-- TOPページCSSの読み込み -->
-    <link rel="stylesheet" href="../assets/css/top.css">
+    <!-- <link rel="stylesheet" href="../assets/css/top.css"> -->
 
     <!-- footer CSSの読み込み -->
-    <link rel="stylesheet" href="../assets/css/footer.css">
+    <!-- <link rel="stylesheet" href="../assets/css/footer.css"> -->
 
     <!-- カード型の読み込み -->
-    <link rel="stylesheet" href="../assets/css/box.css">
+    <!-- <link rel="stylesheet" href="../assets/css/box.css"> -->
 
 
 
     <!--Googleフォントの読み込み-->
     <!--Googleフォントの読み込み-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Kiwi+Maru&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Kiwi+Maru&family=Zen+Maru+Gothic&display=swap" rel="stylesheet"> -->
 
     <?php wp_head(); ?>
 </head>

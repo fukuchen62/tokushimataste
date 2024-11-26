@@ -19,6 +19,7 @@ section+section {
 
 .ttl_box {
     margin-bottom: 20px;
+
 }
 
 .ttl_box h2 {
@@ -201,7 +202,10 @@ section+section {
     margin: 30px 0;
 }
 
-/* マップの雲 */
+/* エリア検索＆マップの雲 */
+.area {
+    text-align: center;
+}
 
 .area_map {
     position: relative;
@@ -231,7 +235,6 @@ section+section {
 /* コラム */
 /* ==================== */
 .column_list {
-
     margin: 0 auto;
 }
 
@@ -255,6 +258,8 @@ section+section {
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
+        gap: 30px;
+
 
     }
 

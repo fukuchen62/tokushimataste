@@ -1,4 +1,268 @@
 <?php get_header(); ?>
+
+
+<main>
+    <!-- パンくずリスト -->
+    <ul class="breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="../html/index.html">
+                    <span itemprop="name">ホーム</span>
+                </a>
+                <meta itemprop="position" content="1" />
+            </li>
+
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="#">
+                    <span itemprop="name">アレンジレシピ</span>
+                </a>
+                <meta itemprop="position" content="2" />
+            </li>
+        </ol>
+    </ul>
+
+
+    <h2 class="ttl_box">アレン ジレシピ</h2>
+
+    <h2>副菜</h2>
+
+    <div class="container">
+        <ul class="list">
+
+            <!-- <ul class="page_list"> -->
+            <?php
+            $recipe_type_terms = get_terms(['taxonomy' => 'recipe_type']);
+            if (!empty($recipe_type_terms)): ?>
+                <?php foreach ($recipe_type_terms as $recipe_type): ?>
+                    <p><a href="<?php echo get_term_link($recipe_type); ?>"><?php echo $recipe_type->name; ?></a></p>
+
+                    <?php
+                    $args = [
+                        'post_type' => 'recipe', // メニューの投稿タイプ
+                        'posts_per_page' => 3,
+                        'orderby'        => 'rand',   // ランダム表示
+                    ];
+
+                    $taxquerysp = ['relation' => 'AND'];
+                    $taxquerysp[] = [
+                        'taxonomy' => 'recipe_type',
+                        'terms' => $recipe_type->slug,
+                        'field' => 'slug',
+                    ];
+                    $args['tax_query'] = $taxquerysp;
+                    $the_query = new WP_Query($args);
+
+                    if ($the_query->have_posts()): ?>
+                        <?php while ($the_query->have_posts()): $the_query->the_post() ?>
+                            <li>
+                                <div class="recipe">
+                                    <?php
+                                    $pic = get_field('pic1');
+                                    // $picが存在する場合のみURLを取得
+                                    $pic_url =  $pic['sizes']['medium'];
+                                    ?>
+                                    <img src="<?php echo $pic_url; ?>" alt="">
+
+                                    <p>トロたく丼2行目のイメージ</p>
+                                </div>
+                            </li>
+                    <?php endwhile;
+                        wp_reset_postdata(); // リセット
+                    else :
+                        echo '<p>投稿が見つかりませんでした。</p>';
+                    endif;
+                    ?>
+                <?php endforeach; ?>
+            <?php endif; ?>
+
+
+            <li>
+                <div class="recipe">
+                    <img src="../uploads/tsukudani.jpeg" alt="Image" class="img-fluid">
+                    <p>海苔の佃煮パスタ</p>
+                </div>
+            </li>
+            <li>
+                <div class="recipe">
+                    <img src="../uploads/tsukudani.jpeg" alt="Image" class="img-fluid">
+                    <p>レシピ名</p>
+                </div>
+            </li>
+            <li>
+                <div class="recipe">
+                    <img src="../uploads/tsukemono.jpeg" alt="Image" class="img-fluid">
+                    <p>無限おつまみ！たたききゅうりの梅ナムル</p>
+                </div>
+            </li>
+            <li>
+                <div class="recipe">
+                    <img src="../uploads/tsukudani.jpeg" alt="Image" class="img-fluid">
+                    <p>レシピ名</p>
+                </div>
+            </li>
+            <li>
+                <div class="recipe">
+                    <img src="../uploads/tsukudani.jpeg" alt="Image" class="img-fluid">
+                    <p>レシピ名</p>
+                </div>
+            </li>
+        </ul>
+
+        <div class="more">
+            <a class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
+        </div>
+    </div>
+
+    <h2>メインディッシュ</h2>
+    <div class="container">
+        <ul class="list">
+            <li>
+                <div class="recipe">
+                    <img src="../uploads/tsukemono.jpeg" alt="Image" class="img-fluid">
+                    <p>レシピ名</p>
+                </div>
+            </li>
+            <li>
+                <div class="recipe">
+                    <img src="../uploads/tsukudani.jpeg" alt="Image" class="img-fluid">
+                    <p>レシピ名</p>
+                </div>
+            </li>
+            <li>
+                <div class="recipe">
+                    <img src="../uploads/tsukudani.jpeg" alt="Image" class="img-fluid">
+                    <p>レシピ名</p>
+                </div>
+            </li>
+            <li>
+                <div class="recipe">
+                    <img src="../uploads/tsukemono.jpeg" alt="Image" class="img-fluid">
+                    <p>レシピ名</p>
+                </div>
+            </li>
+            <li>
+                <div class="recipe">
+                    <img src="../uploads/tsukudani.jpeg" alt="Image" class="img-fluid">
+                    <p>レシピ名</p>
+                </div>
+            </li>
+            <li>
+                <div class="recipe">
+                    <img src="../uploads/tsukudani.jpeg" alt="Image" class="img-fluid">
+                    <p>レシピ名</p>
+                </div>
+            </li>
+        </ul>
+
+        <div class="more">
+            <a class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
+        </div>
+    </div>
+
+    <h2>軽食</h2>
+    <div class="container">
+        <ul class="list">
+            <li>
+                <div class="recipe">
+                    <img src="../uploads/tsukemono.jpeg" alt="Image" class="img-fluid">
+                    <p>レシピ名</p>
+                </div>
+
+            </li>
+            <li>
+                <div class="recipe">
+                    <img src="../uploads/tsukudani.jpeg" alt="Image" class="img-fluid">
+                    <p>レシピ名</p>
+                </div>
+            </li>
+            <li>
+                <div class="recipe">
+                    <img src="../uploads/tsukudani.jpeg" alt="Image" class="img-fluid">
+                    <p>レシピ名</p>
+                </div>
+            </li>
+            <li>
+                <div class="recipe">
+                    <img src="../uploads/tsukemono.jpeg" alt="Image" class="img-fluid">
+                    <p>レシピ名</p>
+                </div>
+            </li>
+            <li>
+                <div class="recipe">
+                    <img src="../uploads/tsukudani.jpeg" alt="Image" class="img-fluid">
+                    <p>レシピ名</p>
+                </div>
+            </li>
+            <li>
+                <div class="recipe">
+                    <img src="../uploads/tsukudani.jpeg" alt="Image" class="img-fluid">
+                    <p>レシピ名</p>
+                </div>
+            </li>
+        </ul>
+
+        <div class="more">
+            <a class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
+
+        </div>
+    </div>
+
+
+    <h2>その他</h2>
+
+    <div class="container">
+        <ul class="list">
+            <li>
+                <div class="recipe">
+                    <img src="../uploads/tsukemono.jpeg" alt="Image" class="img-fluid">
+                    <p>レシピ名</p>
+                </div>
+            </li>
+            <li>
+                <div class="recipe">
+                    <img src="../uploads/tsukudani.jpeg" alt="Image" class="img-fluid">
+                    <p>レシピ名</p>
+                </div>
+            </li>
+            <li>
+                <div class="recipe">
+                    <img src="../uploads/tsukudani.jpeg" alt="Image" class="img-fluid">
+                    <p>レシピ名</p>
+                </div>
+            </li>
+            <li>
+                <div class="recipe">
+                    <img src="../uploads/tsukemono.jpeg" alt="Image" class="img-fluid">
+                    <p>レシピ名</p>
+                </div>
+            </li>
+            <li>
+                <div class="recipe">
+                    <img src="../uploads/tsukudani.jpeg" alt="Image" class="img-fluid">
+                    <p>レシピ名</p>
+                </div>
+            </li>
+            <li>
+                <div class="recipe">
+                    <img src="../uploads/tsukudani.jpeg" alt="Image" class="img-fluid">
+                    <p>レシピ名</p>
+                </div>
+            </li>
+        </ul>
+        <div class="more">
+            <a class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
+        </div>
+    </div>
+
+</main>
+
+
+
+
+
+
+
+
 <main>
     <section class="section section-foodList">
         <div class="section_inner">

@@ -16,7 +16,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin: 40px 0 30px;
+    margin: 20px 0 80px;
 }
 
 .btn-content li {
@@ -64,7 +64,7 @@ a {
 
 /* 写真 */
 
-.maker_list img {
+.list img {
     width: 100%;
     height: 140px;
     text-align: center;
@@ -73,8 +73,8 @@ a {
     object-fit: cover;
 }
 
-/* コラムタイトル */
-.maker_list h3 {
+/* タイトル */
+.list h3 {
     /* 20px */
     font-size: 2rem;
     font-weight: 500;
@@ -82,7 +82,7 @@ a {
     border-bottom: dashed 2px blue;
 }
 
-/* コラムの枠 */
+/* 枠 */
 .box_maker {
     background-color: #EEEEF1;
     color: black;
@@ -102,63 +102,25 @@ a {
     height: 400px;
 }
 
+.box_maker p {
+    text-align: left;
+}
 
 /* おまけ */
 
-.maker_list a:hover {
+/* .maker_list a:hover {
     background-color: #F7EB99;
     color: #fff;
-    /* border: 2px solid #3FA9F5; */
 }
 
 .maker_list a:hover {
     background-color: #FBB126;
     color: #fff;
-}
+} */
 
-.maker_list {
+.list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
-
-/* もっと見るボタンで隠れていたカードが１行出る */
-
-.container {
-    width: 100%;
-    /* max-width: 480px; */
-    margin: 0 auto;
-}
-
-.list {
-    flex-wrap: wrap;
-    margin: 40px -20px 0;
-    display: flex;
-}
-
-.list li {
-    box-sizing: border-box;
-    margin: 0 10px 20px;
-    text-align: center;
-    /* background: #C5CAE9; */
-    padding: 10px;
-    opacity: 1;
-    height: auto;
-    flex-basis: calc(33.33333% - 20px);
-    max-width: calc(33.33333% - 20px);
-    transition: all .4s ease 0s;
-    overflow: hidden;
-}
-
-.list li.is-hidden {
-    visibility: hidden;
-    opacity: 0;
-    height: 0;
-    margin: 0 10px;
-    padding: 0;
-}
-
-.more {
-    text-align: center;
-    margin-top: 20px;
+    gap: 40px;
 }

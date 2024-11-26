@@ -21,7 +21,7 @@
         </ol>
     </ul>
 
-    <h2 class="ttl_box">アレン ジレシピ</h2>
+    <!-- <h2 class="ttl_box">アレン ジレシピ</h2> -->
 
 
     <?php

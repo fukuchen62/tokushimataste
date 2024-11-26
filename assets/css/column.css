@@ -5,9 +5,9 @@
 /* section-base */
 /* ==================== */
 
-section+section {
+/* section+section {
 	margin-top: 60px;
-}
+} */
 
 .inner {
 	max-width: 350px;
@@ -41,7 +41,6 @@ section+section {
 @media(width>=1060px) {
 	section {
 		margin-top: 0px;
-		margin-bottom: 120px;
 	}
 
 	.inner {
@@ -288,4 +287,50 @@ li.cat-item a::after {
 	background-color: #FFC24B;
 	border-color: #FFC24B;
 	font-weight: bold;
+}
+
+
+/* ============================= */
+/* ここからコラムの個別投稿ページ */
+
+.ttl_cd {
+	font-weight: 700;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+@media screen and (min-width: 1060px) {
+	.single_col_flex {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		gap: 60px;
+	}
+}
+
+.section_col {
+	margin-top: 0;
+	margin-bottom: 50px;
+}
+
+.section_ttl {
+	font-size: 2.3rem;
+	font-weight: 700;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	border-left: 10px solid DarkOrange;
+	padding-left: 8px;
+}
+
+.article_col p {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	font-weight: 500;
+	line-height: 2.0;
+}
+
+.contact_col p {
+	margin-top: 0;
+	margin-bottom: 0;
+	line-height: normal;
 }

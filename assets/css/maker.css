@@ -25,11 +25,8 @@
     justify-content: center;
     line-height: 1;
     text-decoration: none;
-
     color: #171B39;
-
     color: #555555;
-
     font-size: 18px;
     border-radius: 20px;
     width: 300px;
@@ -54,7 +51,7 @@
     padding: 5px;
     border-radius: 20px;
     color: #EEEEF1;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     font-size: 24px;
 }
 
@@ -96,7 +93,7 @@ a {
     border-radius: 8px;
     line-height: 30px;
     letter-spacing: 0.05em;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     /* おまけ用 */
     border: 2px solid #342201;
     transition: 0.6s;
@@ -108,21 +105,64 @@ a {
     text-align: left;
 }
 
-/* おまけ */
+/* tablet,pc */
 
-/* .maker_list a:hover {
-    background-color: #F7EB99;
-    color: #fff;
+@media(width>=700px) {
+    .btn-content {
+        margin: 50px 0 80px;
+    }
+
+    .area_box {
+        margin-bottom: 50px;
+    }
+
 }
-
-.maker_list a:hover {
-    background-color: #FBB126;
-    color: #fff;
-} */
 
 .maker_list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
+}
+
+/* ==================== */
+/* ページネーション代用/
+/* ==================== */
+
+.page_example li {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    width: 40px;
+    text-align: center;
+    border: 1px #ccc solid;
+    border-radius: 5px / 5px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.page_example {
+    text-align: center;
+}
+
+.page_example .pre {
+    background-color: #ccc;
+    color: #333;
+}
+
+.page_example .this {
+    background-color: #777;
+    color: #fff;
+}
+
+.page_example li a {
+    display: block;
+    text-decoration: none;
+}
+
+.page_example li a:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #1597CC;
+    border-radius: 5px;
 }

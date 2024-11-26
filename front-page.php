@@ -31,23 +31,34 @@
                     <h2>ご飯のお供etc</h2>
                     <p>5種類の項目に分けてご案内します。</p>
                 </div>
+
                 <div class="scroll-infinity1">
                     <div class="scroll-infinity__wrap1">
                         <ul class="scroll-infinity__list scroll-infinity__list--left1">
-                            <li class="scroll-infinity__item1"><img src="../uploads/furikake.jpeg" /></li>
-                            <li class="scroll-infinity__item1"><img src="../uploads/miso.jpeg" /></li>
-                            <li class="scroll-infinity__item1"><img src="../uploads/tukemono.jpg" /></li>
-                            <li class="scroll-infinity__item1"><img src="../uploads/narazuke.jpeg" /></li>
-                            <li class="scroll-infinity__item1"><img src="../uploads/tsukudani.jpeg" /></li>
-                            <li class="scroll-infinity__item1"><img src="../uploads/saba-misoni.jpg" /></li>
-                        </ul>
-                        <ul class="scroll-infinity__list scroll-infinity__list--left1">
-                            <li class="scroll-infinity__item1"><img src="../uploads/nikumisoitame.jpg" /></li>
-                            <li class="scroll-infinity__item1"><img src="../uploads/miso.jpeg" /></li>
-                            <li class="scroll-infinity__item1"><img src="../uploads/tukemono.jpg" /></li>
-                            <li class="scroll-infinity__item1"><img src="../uploads/narazuke.jpeg" /></li>
-                            <li class="scroll-infinity__item1"><img src="../uploads/tsukudani.jpeg" /></li>
-                            <li class="scroll-infinity__item1"><img src="../uploads/saba-misoni.jpg" /></li>
+                            <?php
+                            $args = [
+                                'post_type'      => 'product_type', // カスタム投稿タイプ
+                                'posts_per_page' => 6,            // 表示する投稿数
+                                'orderby'        => 'rand',       // ランダム順
+                            ];
+                            // WP_Queryのインスタンスを作成
+                            $the_query = new WP_Query($args);
+                            if ($the_query->have_posts()): ?>
+                                <?php while ($the_query->have_posts()): $the_query->the_post() ?>
+
+                                    <li class="scroll-infinity__item1">
+                                        <?php
+                                        $pic = get_field('pic1');
+                                        // $picが存在する場合のみURLを取得
+                                        $pic_url =  $pic['sizes']['thumbnail'];
+                                        ?>
+                                        <img src="<?php echo $pic_url; ?>" alt="">
+                                    </li>
+                            <?php
+                                endwhile;
+                                wp_reset_postdata(); // クエリをリセット
+                            endif;
+                            ?>
                         </ul>
                     </div>
                 </div>
@@ -65,21 +76,21 @@
                     <p>エリア別検索ができます。</p>
                 </div>
                 <div>
-                    <img src="../assets/images/tokusima-map02.png" alt="エリア検索map">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/tokusima-map02.png" alt="エリア検索map">
                 </div>
                 <div class="kumo nisi">
                     <a href="area.html">
-                        <img src="../assets/images/kumo_nishi.png" alt="県西部">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kumo_nishi.png" alt="県西部">
                     </a>
                 </div>
                 <div class="kumo higashi">
                     <a href="area.html">
-                        <img src="../assets/images/kumo_higashi.png" alt="県東部">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kumo_higashi.png" alt="県東部">
                     </a>
                 </div>
                 <div class="kumo minami">
                     <a href="area.html">
-                        <img src="../assets/images/kumo_minami.png" alt="県南部">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kumo_minami.png" alt="県南部">
                     </a>
                 </div>
             </div>
@@ -130,34 +141,6 @@
                     </div>
                 </div>
 
-
-
-
-                <!-- <li class="scroll-infinity__item"><img src="../uploads/cat.jpg" /></li>
-                            <li class="scroll-infinity__item"><img src="../uploads/cat.jpg" /></li>
-                            <li class="scroll-infinity__item"><img src="../uploads/cat.jpg" /></li>
-                            <li class="scroll-infinity__item"><img src="../uploads/cat.jpg" /></li>
-                            <li class="scroll-infinity__item"><img src="../uploads/cat.jpg" /></li>
-                            <li class="scroll-infinity__item"><img src="../uploads/cat.jpg" /></li> -->
-                <!-- </ul> -->
-                <!-- <ul class="scroll-infinity__list scroll-infinity__list--left">
-                    <li class="scroll-infinity__item"><img src="<?php //echo get_template_directory_uri();
-                                                                ?>/uploa<?php //echo get_template_directory_uri();
-                                                                        ?>ds/cat.jpg" /></li>
-                    <?php //echo get_template_directory_uri();
-                    ?>
-                    <li class="scroll-infinity__item"><img src="<?php //echo get_template_directory_uri();
-                                                                ?>
-                            uploads/cat.jpg" /></li>
-                    <li class="scroll-infinity__item"><img src="<?php //echo get_template_directory_uri();
-                                                                ?>/uploads/cat.jpg" /></li>
-                    <li class="scroll-infinity__item"><img src="<?php //echo get_template_directory_uri();
-                                                                ?>/uploads/cat.jpg" /></li>
-                    <li class="scroll-infinity__item"><img src="<?php //echo get_template_directory_uri();
-                                                                ?>/uploads/cat.jpg" /></li>
-                    <li class="scroll-infinity__item"><img src="<?php //echo get_template_directory_uri();
-                                                                ?>/uploads/cat.jpg" /></li>
-                </ul> -->
             </div>
         </div>
         </div>
@@ -331,141 +314,3 @@
 
 
 <!-- フードサイエンス -->
-
-<h2>商品</h2>
-<?php
-// メニューの投稿タイプ
-
-$args = [
-    'post_type' => 'product',
-    'post_per_page' => 3,
-    'orderby'       => 'rand',   // ランダム表示
-];
-/*
-                            $taxquerysp = ['relation' => 'AND'];
-                            $taxquerysp[] = [
-                                'taxonomy' => 'menu',
-                                'terms' => $menu->slug,
-                                'field' => 'slug',
-                            ];
-                            */
-$the_query = new WP_Query($args);
-
-if ($the_query->have_posts()): ?>
-    <?php while ($the_query->have_posts()): $the_query->the_post() ?>
-        <?php
-        $pic = get_field('pic1');
-        // $picが存在する場合のみURLを取得
-        $pic_url =  $pic['sizes']['thumbnail'];
-        ?>
-        <img src="<?php echo $pic_url; ?>" alt="">
-        <p><?php the_field('product_name'); ?></p>
-        </li>
-<?php endwhile;
-    wp_reset_postdata(); // リセット
-else :
-    echo '<p>投稿が見つかりませんでした。</p>';
-endif;
-?>
-
-<h2>メーカー</h2>
-<?php
-$args = [
-    'post_type' => 'maker', // メニューの投稿タイプ
-    'post_per_page' => 3,
-    'orderby'       => 'rand',   // ランダム表示
-];
-/*
-                            $taxquerysp = ['relation' => 'AND'];
-                            $taxquerysp[] = [
-                                'taxonomy' => 'menu',
-                                'terms' => $menu->slug,
-                                'field' => 'slug',
-                            ];
-                            */
-$the_query = new WP_Query($args);
-
-if ($the_query->have_posts()): ?>
-    <?php while ($the_query->have_posts()): $the_query->the_post() ?>
-        <?php
-        $pic = get_field('pic1');
-        // $picが存在する場合のみURLを取得
-        $pic_url =  $pic['sizes']['thumbnail'];
-        ?>
-        <img src="<?php echo $pic_url; ?>" alt="">
-        <p><?php the_field('company'); ?></p>
-        </li>
-<?php endwhile;
-    wp_reset_postdata(); // リセット
-else :
-    echo '<p>投稿が見つかりませんでした。</p>';
-endif;
-?>
-
-<h2>コラム</h2>
-<?php
-$args = [
-    'post_type' => 'column', // メニューの投稿タイプ
-    'post_per_page' => 3,
-    'orderby'       => 'rand',   // ランダム表示
-];
-/*
-                            $taxquerysp = ['relation' => 'AND'];
-                            $taxquerysp[] = [
-                                'taxonomy' => 'menu',
-                                'terms' => $menu->slug,
-                                'field' => 'slug',
-                            ];
-                            */
-$the_query = new WP_Query($args);
-
-if ($the_query->have_posts()): ?>
-    <?php while ($the_query->have_posts()): $the_query->the_post() ?>
-        <?php
-        $pic = get_field('pic1');
-        // $picが存在する場合のみURLを取得
-        $pic_url =  $pic['sizes']['thumbnail'];
-        ?>
-        <img src="<?php echo $pic_url; ?>" alt="">
-        <p><?php the_content(); ?></p>
-        </li>
-<?php endwhile;
-    wp_reset_postdata(); // リセット
-else :
-    echo '<p>投稿が見つかりませんでした。</p>';
-endif;
-?>
-
-<h2>レシピ</h2>
-<?php
-$args = [
-    'post_type' => 'recipe', // メニューの投稿タイプ
-    'post_per_page' => 3,
-    'orderby'        => 'rand',   // ランダム表示
-];
-/*
-                            $taxquerysp = ['relation' => 'AND'];
-                            $taxquerysp[] = [
-                                'taxonomy' => 'menu',
-                                'terms' => $menu->slug,
-                                'field' => 'slug',
-                            ];
-                            */
-$the_query = new WP_Query($args);
-
-if ($the_query->have_posts()): ?>
-    <?php while ($the_query->have_posts()): $the_query->the_post() ?>
-        <?php
-        $pic = get_field('pic1');
-        // $picが存在する場合のみURLを取得
-        $pic_url =  $pic['sizes']['thumbnail'];
-        ?>
-        <img src="<?php echo $pic_url; ?>" alt="">
-        <p><?php the_field('recipe_name'); ?></p>
-        </li>
-<?php endwhile;
-    wp_reset_postdata(); // リセット
-else :
-    echo '<p>投稿が見つかりませんでした。</p>';
-endif;
-?>

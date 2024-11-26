@@ -122,6 +122,11 @@ function add_style_script()
                 PATH . 'css/top.css'
         );
 
+        wp_enqueue_style(
+            'my_slide',
+            get_template_directory_uri() .
+                PATH . 'css/slide.css'
+        );
         // JSファイルを読み込む
         /*wp_enqueue_script(
             'my_top',

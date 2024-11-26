@@ -92,45 +92,38 @@ body {
 /* ご飯のお供etc */
 /* ==================== */
 
-/* 1枚目のスライド */
+/*
 .slider div:first-of-type {
     background-image: url(../../uploads/narazuke.jpeg);
 }
-
-/* 2枚目のスライド */
 .slider div:nth-of-type(2) {
     background-image: url(../../uploads/saba-misoni.jpg);
 }
-
-/* 3枚目のスライド */
 .slider div:nth-of-type(3) {
     background-image: url(../../uploads/tsukemono.jpeg);
 }
-
-/* 4枚目のスライド */
 .slider div:nth-of-type(4) {
     background-image: url(../../uploads/nori.jpeg);
 }
 
-/*5枚目のスライド */
 .slider div:nth-of-type(5) {
     background-image: url(../../uploads/tukemono.jpg);
-}
+} */
 
 /* ==================== */
 /* メーカー様ご紹介etc */
 /* ==================== */
 
-.slider2-wrap {
+/* .slider2-wrap {
     overflow: hidden;
     display: flex;
     flex-wrap: nowrap;
     margin: 30px 10px 50px 10px;
 }
 
-.slider2 {
-    /* height: 60vh; */
-    position: relative;
+.slider2 { */
+/* height: 60vh; */
+/* position: relative;
     margin: auto;
     display: flex;
     flex-wrap: nowrap;
@@ -155,37 +148,25 @@ body {
         transform: translateX(-100%);
     }
 }
-
-
-/* 1枚目のスライド */
-.slider2 div:first-of-type {
+ */
+/* .slider2 div:first-of-type {
     background-image: url(../../uploads/cat.jpg);
 }
-
-/* 2枚目のスライド */
 .slider2 div:nth-of-type(2) {
     background-image: url(../../uploads/tennin\ \(1\).png);
 }
-
-/* 3枚目のスライド */
 .slider2 div:nth-of-type(3) {
     background-image: url(../../uploads/misemae.png);
 }
-
-/* 4枚目のスライド */
 .slider2 div:nth-of-type(4) {
     background-image: url(../../uploads/tennin\ \(1\));
 }
-
-/*5枚目のスライド */
 .slider2 div:nth-of-type(5) {
     background-image: url(../../uploads/misemae.png);
 }
-
-/*6枚目のスライド */
 .slider2 div:nth-of-type(5) {
     background-image: url(../../uploads/cat.jpg);
-}
+} */
 
 /* ==================== */
 /* インスタグラム */
@@ -245,22 +226,39 @@ body {
     left: 57%;
 }
 
-.aboutsite
+
 /* ==================== */
 /* コラム */
 /* ==================== */
+.column_list {
 
+    margin: 0 auto;
+}
 
+/* ---------- */
+/* pc */
+/* @media(width>=1060px) {
+    .column .more {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+} */
+/*
+.column_list {
+    text-align: center;
+} */
 
 /* tablet */
-
 @media(width>=700px) {
     .column_list {
-        gap: 100px;
-        margin-bottom: 0px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
     }
 
-    .box_column {
+    .column_list li {
         max-width: 320px;
     }
 

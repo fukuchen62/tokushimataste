@@ -119,6 +119,11 @@ body {
     padding: 30px;
 }
 
+
+header {
+    margin-bottom: 100px;
+}
+
 /*もっと見るボタン <a href="" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>*/
 .btn,
 a.btn,

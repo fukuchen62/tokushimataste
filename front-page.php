@@ -38,7 +38,7 @@
                             <?php
                             $args = [
                                 'post_type'      => 'product_type', // カスタム投稿タイプ
-                                'posts_per_page' => 6,            // 表示する投稿数
+                                'posts_per_page' => 3,            // 表示する投稿数
                                 'orderby'        => 'rand',       // ランダム順
                             ];
                             // WP_Queryのインスタンスを作成
@@ -63,7 +63,7 @@
                     </div>
                 </div>
             </div>
-            <a href="/tokuaji-otomo/product/" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
+            <a href="<?php echo home_url('/product/') ?>" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
         </div>
     </section>
 
@@ -94,7 +94,7 @@
                     </a>
                 </div>
             </div>
-            <a href="/tokuaji-otomo/area/east/" class="btn btn-border-shadow btn-border-shadow--color">詳細検索は<br>こちらから！</a>
+            <a href="<?php echo home_url('/area/east/') ?>" class="btn btn-border-shadow btn-border-shadow--color">詳細検索は<br>こちらから！</a>
         </div>
     </section>
 
@@ -144,7 +144,7 @@
             </div>
         </div>
         </div>
-        <a href="/tokuaji-otomo/maker/" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
+        <a href="<?php echo home_url('/maker/') ?>" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
         </div>
     </section>
 
@@ -197,7 +197,7 @@
                     ?>
                 </ul>
             </div>
-            <a href="/tokuaji-otomo/column/" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
+            <a href="<?php echo home_url('/column/') ?>" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
         </div>
     </section>
 
@@ -252,7 +252,7 @@
                     ?>
 
             </div>
-            <a href="/tokuaji-otomo/recipe/" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
+            <a href="<?php echo home_url('/recipe/') ?>" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
     </section>
 
     <!-- インスタ -->

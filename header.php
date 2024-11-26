@@ -133,14 +133,14 @@ if (is_post_type_archive('product') || is_tax('product_type')) {
             <nav class="nav-sp header-container">
                 <ul class="nav-sp-menu">
                     <li>
-                        <a href="<?php echo home_url('/product/'); ?>">
+                        <a href="<?php echo home_url('/'); ?>">
                             <div class="nav-sp-logo">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="logo.png">
                             </div>
                         </a>
                     </li>
                     <li>
-                        <a href="<?php echo home_url('/product/'); ?>">
+                        <a href="<?php echo home_url('/product_type/') . '/ferment/'; ?>">
                             <div class="nav-sp-icon">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gohan_sample.png" alt="icon01">
                             </div>
@@ -214,14 +214,14 @@ if (is_post_type_archive('product') || is_tax('product_type')) {
                     </li>
 
                     <li>
-                        <a href="<?php echo home_url('/product/'); ?>">
+                        <a href="<?php echo home_url('/product_type/') . '/ferment/'; ?>">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gohan_sample.png" alt="">
                             <span>商品一覧</span>
                         </a>
                     </li>
                     <li>
                         <a href="<?php echo home_url('/area/east/'); ?>">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gohan_sample.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gohan_sample.png" . '/ferment/' alt="">
                             <span>エリア検索</span>
                         </a>
                     </li>

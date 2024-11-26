@@ -42,8 +42,7 @@
 /* ==================== */
 /* base */
 /* ==================== */
-
-body {
+html {
     /* 全体の基本フォント */
     font-size: 62.5%;
     font-family: "Zen Maru Gothic", serif, "Open Sans";
@@ -51,6 +50,8 @@ body {
     color: #463D3B;
     font-weight: 500;
     line-height: 1.4;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -69,12 +70,6 @@ h2 {
 p {
     font-size: 1.6rem;
 }
-
-/* .zen-maru-gothic-regular {
-    font-family: "Zen Maru Gothic", serif;
-    font-weight: 400;
-    font-style: normal;
-} */
 
 img {
     max-width: 100%;
@@ -108,16 +103,6 @@ a img:hover {
     box-sizing: inherit;
 }
 
-html {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    font-size: 62.5%;
-}
-
-/* 背景用*/
-body {
-    padding: 30px;
-}
 
 
 header {

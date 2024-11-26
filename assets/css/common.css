@@ -42,7 +42,8 @@
 /* ==================== */
 /* base */
 /* ==================== */
-html {
+
+body {
     /* 全体の基本フォント */
     font-size: 62.5%;
     font-family: "Zen Maru Gothic", serif, "Open Sans";
@@ -50,15 +51,6 @@ html {
     color: #463D3B;
     font-weight: 500;
     line-height: 1.4;
-
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-
-}
-
-/* 背景用*/
-body {
-    /* padding: 30px; */
 }
 
 h1 {
@@ -70,7 +62,7 @@ h2 {
     /* margin-top: 40px; */
 }
 
-.h2 {
+.ttl_h2 {
     margin-top: 40px;
 }
 
@@ -114,6 +106,22 @@ a img:hover {
 *:after {
     -webkit-box-sizing: inherit;
     box-sizing: inherit;
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+/* 背景用*/
+body {
+    padding: 30px;
+}
+
+
+header {
+    margin-bottom: 100px;
 }
 
 /*もっと見るボタン <a href="" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>*/
@@ -358,3 +366,68 @@ a {
     justify-content: center;
     gap: 30px;
 }
+
+/* ページネーション */
+
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+.page_list {
+    border-top: 1px solid #000;
+    margin-bottom: 20px;
+}
+
+.page_list li {
+    display: none;
+    padding: 20px 0;
+    border-bottom: 1px solid #000;
+}
+
+.page_list li.on {
+    display: block;
+}
+
+.pagination {
+    width: 70%;
+    margin: 0 auto 50px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.pagination .number {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.pagination a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #ffffff;
+    border: solid 1px #1597CC;
+    border-radius: 5px;
+    padding: 10px 0;
+}
+
+.pagination .number>a.active {
+    background-color: #1597CC;
+    color: #fff;
+}
+
+</style>-->

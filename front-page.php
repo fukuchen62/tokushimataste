@@ -37,8 +37,8 @@
                         <ul class="scroll-infinity__list scroll-infinity__list--left1">
                             <?php
                             $args = [
-                                'post_type'      => 'product_type', // カスタム投稿タイプ
-                                'posts_per_page' => 6,            // 表示する投稿数
+                                'post_type'      => 'product', // カスタム投稿タイプ
+                                'posts_per_page' => 3,            // 表示する投稿数
                                 'orderby'        => 'rand',       // ランダム順
                             ];
                             // WP_Queryのインスタンスを作成
@@ -63,7 +63,7 @@
                     </div>
                 </div>
             </div>
-            <a href="goods.html" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
+            <a href="<?php echo home_url('/product/') ?>" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
         </div>
     </section>
 
@@ -94,7 +94,7 @@
                     </a>
                 </div>
             </div>
-            <a href="" class="btn btn-border-shadow btn-border-shadow--color">詳細検索は<br>こちらから！</a>
+            <a href="<?php echo home_url('/area/east/') ?>" class="btn btn-border-shadow btn-border-shadow--color">詳細検索は<br>こちらから！</a>
         </div>
     </section>
 
@@ -144,7 +144,7 @@
             </div>
         </div>
         </div>
-        <a href="maker.html" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
+        <a href="<?php echo home_url('/maker/') ?>" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
         </div>
     </section>
 
@@ -159,8 +159,8 @@
                 <ul class="column_list">
                     <?php
                     $args = [
-                        'post_type' => 'column_type', // メニューの投稿タイプ
-                        'post_per_page' => 2,
+                        'post_type' => 'column', // メニューの投稿タイプ
+                        'posts_per_page' => 2,
                         'orderby'       => 'rand',   // ランダム表示
                     ];
                     /*
@@ -185,7 +185,7 @@
                                         $trimmed_excerpt = wp_trim_words(get_the_excerpt(), 50, '...');
                                         echo '<p>' . esc_html($trimmed_excerpt) . '</p>';
                                         ?>
-                                        <!-- <p>徳島とユーザーが「つながる」ことを目指す。徳島の名産品を使った「ご飯のおとも」を、あたかも徳島を旅するように味わえる体験として提供。</p> -->
+
                                     </div>
                                 </a>
                             </li>
@@ -195,21 +195,9 @@
                         echo '<p>投稿が見つかりませんでした。</p>';
                     endif;
                     ?>
-
-
-
-                    <!-- <li>
-                        <a href="../html/column_detail.html">
-                            <div class="box_column">
-                                <img src="../uploads/nikumisoitame.jpg" alt="コラムの写真">
-                                <h3>サブタイトルサブタイトル</h3>
-                                <p>徳島とユーザーが「つながる」ことを目指す。徳島の名産品を使った「ご飯のおとも」を、あたかも徳島を旅するように味わえる体験として提供。各商品を作った人の</p>
-                            </div>
-                        </a>
-                    </li> -->
                 </ul>
             </div>
-            <a href="column.html" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
+            <a href="<?php echo home_url('/column/') ?>" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
         </div>
     </section>
 
@@ -226,8 +214,8 @@
                 <ul class="page_list">
                     <?php
                     $args = [
-                        'post_type' => 'recipe_type', // メニューの投稿タイプ
-                        'post_per_page' => 3,
+                        'post_type' => 'recipe', // メニューの投稿タイプ
+                        'posts_per_page' => 3,
                         'orderby'        => 'rand',   // ランダム表示
                     ];
                     /*
@@ -264,7 +252,7 @@
                     ?>
 
             </div>
-            <a href="recipe.html" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
+            <a href="<?php echo home_url('/recipe/') ?>" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
     </section>
 
     <!-- インスタ -->
@@ -310,7 +298,3 @@
 </main>
 
 <?php get_footer(); ?>
-
-
-
-<!-- フードサイエンス -->

@@ -68,89 +68,90 @@
     </header>
     <body>
         <main>
-            <!--パンくずリスト-->
-            <ul class="breadcrumb">
-                <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                        <a itemprop="item" href="../html/index.html">
-                            <span itemprop="name">ホーム</span>
-                        </a>
-                        <meta itemprop="position" content="1" />
-                    </li>
+            <section>
+                <div>
+                    <!--パンくずリスト-->
+                    <ul class="breadcrumb">
+                        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                <a itemprop="item" href="../html/index.html">
+                                    <span itemprop="name">ホーム</span>
+                                </a>
+                                <meta itemprop="position" content="1" />
+                            </li>
 
-                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                        <a itemprop="item" href="#">
-                            <span itemprop="name">アレンジレシピ</span>
-                        </a>
-                        <meta itemprop="position" content="2" />
-                    </li>
-                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                        <a itemprop="item" href="#">
-                            <span itemprop="name">アレンジレシピ詳細</span>
-                        </a>
-                        <meta itemprop="position" content="3" />
-                    </li>
-                </ol>
-            </ul>
+                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                <a itemprop="item" href="#">
+                                    <span itemprop="name">アレンジレシピ</span>
+                                </a>
+                                <meta itemprop="position" content="2" />
+                            </li>
+                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                <a itemprop="item" href="#">
+                                    <span itemprop="name">アレンジレシピ詳細</span>
+                                </a>
+                                <meta itemprop="position" content="3" />
+                            </li>
+                        </ol>
+                    </ul>
 
-            <h2 class="ttl_box"><span class="ttl">レシピ名</span></h2>
+                    <h2 class="ttl_box"><span class="ttl">レシピ名</span></h2>
 
-            <button type="button" class="btn btn-primary" id="gallery-btn">副菜</button>
+                    <h2>副菜</h2>
 
-            <div class="recipe_name">
-                <img src="../uploads/tsukemono.jpeg" alt="Image" class="img-fluid">
-                <!-- <p>レシピ名</p> -->
-            </div>
-            <h2>材料　〇人分</h2>
+                    <div class="recipe_name">
+                        <img src="../uploads/tsukemono.jpeg" alt="Image" class="img-fluid">
+                        <!-- <p>レシピ名</p> -->
+                    </div>
+                    <h3>材料　〇人分</h3>
+                    <div class="flex">
+                        <div class="recipe">
+                            <dl class="ingredient-list">
+                                <dt>テキストテキスト</dt>
+                                <dd>1個</dd>
+                                <dt>テキストテキスト</dt>
+                                <dd>1個</dd>
+                                <dt>テキストテキスト</dt>
+                                <dd>1個</dd>
+                                <dt>テキストテキスト</dt>
+                                <dd>1個</dd>
+                                <dt>テキストテキスト</dt>
+                                <dd>1個</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <h3>作り方</h3>
+                    <ol>
+                        <li>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</li>
+                        <li>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</li>
+                        <li>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</li>
+                        <li>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</li>
+                        <li>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</li>
+                    </ol>
 
-            <div class="flex">
-                <div class="recipe">
-                    <dl class="ingredient-list">
-                        <dt>テキストテキスト</dt>
-                        <dd>1個</dd>
-                        <dt>テキストテキスト</dt>
-                        <dd>1個</dd>
-                        <dt>テキストテキスト</dt>
-                        <dd>1個</dd>
-                        <dt>テキストテキスト</dt>
-                        <dd>1個</dd>
-                        <dt>テキストテキスト</dt>
-                        <dd>1個</dd>
-                    </dl>
+                    <h3>使ったお供</h3>
+                    <ul class="page_list">
+                        <li>
+                            <div class="recipe">
+                                <img src="../uploads/tsukemono.jpeg" alt="Image" class="img-fluid">
+                                <p>使ったお供</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="recipe">
+                                <img src="../uploads/tsukudani.jpeg" alt="Image" class="img-fluid">
+                                <p>使ったお供</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="recipe">
+                                <img src="../uploads/tsukemono.jpeg" alt="Image" class="img-fluid">
+                                <p>使ったお供</p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-
-            <h2>作り方</h2>
-            <ol>
-                <li>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</li>
-                <li>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</li>
-                <li>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</li>
-                <li>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</li>
-                <li>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</li>
-            </ol>
-
-            <h2>使ったお供</h2>
-            <ul class="page_list">
-                <li>
-                    <div class="recipe">
-                        <img src="../uploads/tsukemono.jpeg" alt="Image" class="img-fluid">
-                        <p>使ったお供</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="recipe">
-                        <img src="../uploads/tsukudani.jpeg" alt="Image" class="img-fluid">
-                        <p>使ったお供</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="recipe">
-                        <img src="../uploads/tsukemono.jpeg" alt="Image" class="img-fluid">
-                        <p>使ったお供</p>
-                    </div>
-                </li>
-            </ul>
-
+            </section>
         </main>
         <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="../assets/js/recipe.js"></script> -->

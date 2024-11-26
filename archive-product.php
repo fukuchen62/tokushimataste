@@ -23,21 +23,36 @@
     <section id="btn-area" class="wrap">
         <!-- ジャンル検索ボタン -->
         <?php
-        $args = [
+        $args_names = [
             'taxonomy' => 'product_type',
-            'title_li' => ''
+            'fields' => 'names',
         ];
-        print_r(wp_list_categories($args)) ?>
+        $args_slugs = [
+            'taxonomy' => 'product_type',
+            'fields' => 'slugs',
+        ];
+        $term_names = get_terms($args_names);
+        $term_slugs = get_terms($args_slugs);
+        $args = [];
+        for ($i = 0; $i < count($term_names); $i++) {
+            $args = array_merge($args, array($term_names[$i] => $term_slugs[$i]));
+        }  ?>
+        <?php print_r($args) ?>
+
         <ul class="btn-content">
-            <li id="tsukemono">
-                <a href="#" class=""><span>漬物・発酵食品</span></a>
-            </li>
-            <li id="daizu">
+            <?php foreach ($args as $name => $slug): ?>
+                <li id="<?php $slug ?>">
+                    <a href="#" class=""><span><?php $name ?></span></a>
+                </li>
+            <?php endforeach ?>
+            <!-- <li id="daizu">
                 <a href="#" class=""><span>肉・卵・大豆製品</span></a>
             </li>
             </li>
             <li id="furikake">
                 <a href="#" class=""><span>ふりかけ・混ぜご飯の素</span></a>
+            </li>
+            <li id="other"><a href="#" class=""><span>分類</span></a>
             </li>
             </li>
             <li id="yakumi">
@@ -46,7 +61,7 @@
             </li>
             <li id="other">
                 <a href="#" class=""><span>その他</span></a>
-            </li>
+            </li> -->
         </ul>
     </section>
     <div class="card-container">

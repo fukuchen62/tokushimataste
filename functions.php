@@ -4,7 +4,7 @@
 define('IS_DEV', true);
 
 // 管理バーを非表示させる
-// add_filter('show_admin_bar', '__return_false');
+add_filter('show_admin_bar', '__return_false');
 
 // assetsのパス
 // define('PATH', '/test_assets_test/');
@@ -84,7 +84,7 @@ function add_style_script()
 
     // 指定jqueryを読み込む
     wp_enqueue_script(
-        'jquery-3.7.1',
+        'jquery',
         'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js',
         '',
         '',
@@ -122,6 +122,11 @@ function add_style_script()
                 PATH . 'css/top.css'
         );
 
+        wp_enqueue_style(
+            'my_slide',
+            get_template_directory_uri() .
+                PATH . 'css/slide.css'
+        );
         // JSファイルを読み込む
         /*wp_enqueue_script(
             'my_top',

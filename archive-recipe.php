@@ -39,8 +39,10 @@
                     <?php
                     $args = [
                         'post_type' => 'recipe', // メニューの投稿タイプ
-                        'posts_per_page' => 3,
-                        'orderby'        => 'rand',   // ランダム表示
+                        'posts_per_page' => 5,
+                        'order'        => 'asc',
+                        'orderby'        => 'mita_value',
+                        'meta_key'        => 'phonetic',
                     ];
 
                     $taxquerysp = ['relation' => 'AND'];

@@ -215,7 +215,7 @@
                     <?php
                     $args = [
                         'post_type' => 'recipe', // メニューの投稿タイプ
-                        'posts_per_page' => 3,
+                        'post_per_page' => 3,
                         'orderby'        => 'rand',   // ランダム表示
                     ];
                     /*

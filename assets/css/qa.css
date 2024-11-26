@@ -1,0 +1,116 @@
+.cp_qa01 dt {
+    font-size: 16px;
+    position: relative;
+    margin: 0 0 1.5em 30px;
+}
+
+.cp_qa01 dd {
+    font-size: 16px;
+    position: relative;
+    margin: 0 0 2em 0;
+    padding: 0 0 22px 60px;
+    border-bottom: 1px dotted #0097a7;
+}
+
+.cp_qa01 dt::before,
+.cp_qa01 dd::before {
+    position: absolute;
+    margin: 0 0.5em 0 -30px;
+    color: #ffffff;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    clip-path: circle(50% at 50% 50%);
+}
+
+.cp_qa01 dt::before {
+    content: '？';
+    background: #f57c00;
+}
+
+.cp_qa01 dd::before {
+    content: '！';
+    background: #0097a7;
+}
+
+.cp_qa01 dt::after,
+.cp_qa01 dd::after {
+    position: absolute;
+    top: 7px;
+    width: 10px;
+    height: 10px;
+    content: '';
+    clip-path: polygon(100% 53%, 0 0, 0 100%);
+}
+
+.cp_qa01 dt::after {
+    left: -10px;
+    background: #f57c00;
+}
+
+.cp_qa01 dd::after {
+    left: 50px;
+    background: #0097a7;
+}
+
+p {
+    /* 水平方向の中央揃え */
+    text-align: center;
+}
+
+.original-button3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    border-radius: 5px;
+    width: 200px;
+    height: 40px;
+    font-weight: bold;
+    border-bottom: 4px solid #c9ccca;
+    transition: 0.3s;
+    box-shadow: 0px 3px 5px 0px rgba(16, 14, 14, 0.4);
+    background-color: #9b9e9c;
+}
+
+.original-button3:hover {
+    box-shadow: 0 0 rgba(0, 0, 0, 0.4);
+    border-bottom-width: 2px;
+    transform: translateY(2px);
+}
+
+.flex {
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.heading10 {
+    text-align: center;
+    position: relative;
+    padding-top: 30px;
+    font-size: 26px;
+    border-bottom: 1px solid rgba(5, 62, 98, 1);
+}
+
+.heading10 span {
+    position: relative;
+    z-index: 2;
+}
+
+.heading10::before {
+    content: attr(data-en);
+    position: absolute;
+    top: 0px;
+    left: 0;
+    color: rgba(5, 62, 98, 0.2);
+    font-size: 40px;
+    text-transform: uppercase;
+    z-index: 1;
+}

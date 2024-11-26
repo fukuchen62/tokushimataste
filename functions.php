@@ -201,6 +201,14 @@ function add_style_script()
             get_template_directory_uri() .
                 PATH . 'css/goods.css',
         );
+        wp_enqueue_script(
+            'my_product',
+            get_template_directory_uri() .
+                PATH . 'js/goods.js',
+            ['jquery'],
+            '',
+            true
+        );
     } elseif (is_singular('product')) {
         wp_enqueue_style(
             'my_product_style',

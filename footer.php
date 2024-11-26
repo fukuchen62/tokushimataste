@@ -1,6 +1,6 @@
 <footer>
     <!-- トップページに戻るボタン -->
-    <!-- <p id="page-top"><a href="#">↑<br>TOP</a></p> -->
+    <p id="page-top"><a href="#">↑<br>TOP</a></p>
 
     <div class="footer_container">
         <ul class="footer_nav">

@@ -196,8 +196,8 @@
                                 <a href="../html/column_detail.html">
                                     <div class="box_column">
                                         <img src="<?php echo get_template_directory_uri(); ?>/uploads/tennin (1).png" alt="コラムの写真">
-                                        <h3>サブタイトルサブタイト</h3>
-                                        <!-- ↑get_the_titleでも読みこめない -->
+                                        <h3><?php the_title(); ?></h3>
+                                        <!-- 長すぎて改行される問題 -->
                                         <?php
                                         $trimmed_excerpt = wp_trim_words(get_the_excerpt(), 50, '...');
                                         echo '<p>' . esc_html($trimmed_excerpt) . '</p>';
@@ -268,7 +268,8 @@
                                     ?>
                                     <img src="<?php echo $pic_url; ?>" alt="">
                                     <!-- <img src="../uploads/furikake.jpeg" alt="Image" class="img-fluid"> -->
-                                    <p><?php the_field('recipe_name'); ?></p>
+
+                                    <p><?php the_title(); ?></p>
 
                                 </div>
                             </li>

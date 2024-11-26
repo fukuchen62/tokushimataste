@@ -42,7 +42,8 @@
 /* ==================== */
 /* base */
 /* ==================== */
-html {
+
+body {
     /* 全体の基本フォント */
     font-size: 62.5%;
     font-family: "Zen Maru Gothic", serif, "Open Sans";
@@ -50,15 +51,6 @@ html {
     color: #463D3B;
     font-weight: 500;
     line-height: 1.4;
-
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-
-}
-
-/* 背景用*/
-body {
-    /* padding: 30px; */
 }
 
 h1 {
@@ -70,7 +62,7 @@ h2 {
     /* margin-top: 40px; */
 }
 
-.h2 {
+.ttl_h2 {
     margin-top: 40px;
 }
 
@@ -114,6 +106,22 @@ a img:hover {
 *:after {
     -webkit-box-sizing: inherit;
     box-sizing: inherit;
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+/* 背景用*/
+body {
+    padding: 30px;
+}
+
+
+header {
+    margin-bottom: 100px;
 }
 
 /*もっと見るボタン <a href="" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>*/

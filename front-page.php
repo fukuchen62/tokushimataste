@@ -37,7 +37,7 @@
                         <ul class="scroll-infinity__list scroll-infinity__list--left1">
                             <?php
                             $args = [
-                                'post_type'      => 'product_type', // カスタム投稿タイプ
+                                'post_type'      => 'product', // カスタム投稿タイプ
                                 'posts_per_page' => 3,            // 表示する投稿数
                                 'orderby'        => 'rand',       // ランダム順
                             ];
@@ -159,8 +159,8 @@
                 <ul class="column_list">
                     <?php
                     $args = [
-                        'post_type' => 'column_type', // メニューの投稿タイプ
-                        'post_per_page' => 2,
+                        'post_type' => 'column', // メニューの投稿タイプ
+                        'posts_per_page' => 2,
                         'orderby'       => 'rand',   // ランダム表示
                     ];
                     /*
@@ -214,8 +214,8 @@
                 <ul class="page_list">
                     <?php
                     $args = [
-                        'post_type' => 'recipe_type', // メニューの投稿タイプ
-                        'post_per_page' => 3,
+                        'post_type' => 'recipe', // メニューの投稿タイプ
+                        'posts_per_page' => 3,
                         'orderby'        => 'rand',   // ランダム表示
                     ];
                     /*

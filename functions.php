@@ -4,7 +4,7 @@
 define('IS_DEV', true);
 
 // 管理バーを非表示させる
-add_filter('show_admin_bar', '__return_false');
+// add_filter('show_admin_bar', '__return_false');
 
 // assetsのパス
 // define('PATH', '/test_assets_test/');

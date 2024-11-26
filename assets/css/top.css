@@ -4,11 +4,6 @@ section+section {
     margin-top: 60px;
 }
 
-
-body {
-    background-color: #131D3B;
-}
-
 /* このサイトについて */
 
 .aboutsite {
@@ -208,23 +203,28 @@ body {
 
 /* マップの雲 */
 
-
-
-.kumo {
-    width: 70px;
-}
-
-.areamap {
+.area_map {
     position: relative;
+    align-items: center;
 }
 
-.kumo {}
+.area_map a {
+    height: 150px;
+}
 
-.higashi {
+.kumo_higashi {
     position: absolute;
-    top: 20%;
+    top: 10%;
     left: 57%;
 }
+
+.kumo_minami {
+    position: absolute;
+    top: 40%;
+    left: 25%;
+}
+
+.kumo_nishi {}
 
 
 /* ==================== */

@@ -9,8 +9,6 @@ if (!is_user_logged_in() && IS_DEV == true) {
 <!-- 福島　2024/11/22　追加　消さないでください。 終了-->
 
 
-
-
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -19,61 +17,35 @@ if (!is_user_logged_in() && IS_DEV == true) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="徳島を旅するように味わう">
     <meta name="keywords" content="徳島,おとも,ご飯のおとも,徳島の味">
-    <title>徳島の味！あなたのご飯のお友達</title>
-
-    <!--リセットCSS-->
-    <!-- <link rel="stylesheet" href="../assets/css/reset.css"> -->
-    <!-- 共通CSSの読み込み -->
-    <!-- <link rel="stylesheet" href="../assets/css/common.css"> -->
-
-    <!-- headerCSSの読み込み -->
-    <!-- <link rel="stylesheet" href="../assets/css/header.css"> -->
-
-    <!-- TOPページCSSの読み込み -->
-    <!-- <link rel="stylesheet" href="../assets/css/top.css"> -->
-
-    <!-- footer CSSの読み込み -->
-    <!-- <link rel="stylesheet" href="../assets/css/footer.css"> -->
-
-    <!-- カード型の読み込み -->
-    <!-- <link rel="stylesheet" href="../assets/css/box.css"> -->
-
-
-
-    <!--Googleフォントの読み込み-->
-    <!--Googleフォントの読み込み-->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Kiwi+Maru&family=Zen+Maru+Gothic&display=swap" rel="stylesheet"> -->
 
     <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php echo body_class(); ?>>
+    <?php wp_body_open(); ?>
     <header>
-
+        <?php if (is_home()): ?>
         <div class="kv">
-            <p class="kv-copy">
-                <!-- ブログインフォを改行するコード -->
-                <?php
-                // bloginfo('name') の内容を取得
+            <!-- ブログインフォを改行するコード -->
+            <?php
                 $site_name = get_bloginfo('name');
-
                 // 改行を動的に挿入（任意のキーワードで分割する）
                 $site_name = str_replace('の味！', 'の味！<br class="tb-none">', $site_name);
                 $site_name = str_replace('ご飯の', 'ご飯の<br class="tb-none">', $site_name);
                 $site_name = str_replace('お友達', 'お友達<br class="tb-none">', $site_name);
                 ?>
-                <?php echo wp_kses_post($site_name);
-                ?>
-            </p>
+            <p class="kv-copy">
+                    <?php echo wp_kses_post($site_name); ?>
+                </p>
         </div>
+        <?php endif; ?>
 
+        <!-- spnav -->
         <div id="spnav-box" class="header-inner spnav">
-            <div class="title pc-none">
+            <div class="title">
                 <h1>
                     <a href="#" class="logo">
-                        <img src="../uploads/cat.jpg" alt="ご飯のお供">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="logo.png">
                     </a>
                 </h1>
             </div>
@@ -87,24 +59,24 @@ if (!is_user_logged_in() && IS_DEV == true) {
             <nav class="nav-sp header-container">
                 <ul class="nav-sp-menu">
                     <li>
-                        <a href="#">
+                        <a href="">
                             <div class="nav-sp-logo">
-                                <img src="../uploads/cat.jpg" alt="ご飯のお供">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="logo.png">
                             </div>
                         </a>
                     </li>
                     <li>
                         <a href="goods.html">
                             <div class="nav-sp-icon">
-                                <img src="../uploads/gohan_sample.png" alt="icon01">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gohan_sample.png" alt="icon01">
                             </div>
                             商品一覧
                         </a>
                     </li>
                     <li>
-                        <a href="area.html.html">
+                        <a href="area.html">
                             <div class="nav-sp-icon">
-                                <img src="../uploads/gohan_sample.png" alt="icon02">
+                                <img src="<img src=" <?php echo get_template_directory_uri(); ?>/assets/images/gohan_sample.png" alt=" icon02">
                             </div>
                             エリア検索
                         </a>
@@ -112,7 +84,7 @@ if (!is_user_logged_in() && IS_DEV == true) {
                     <li>
                         <a href="research.html">
                             <div class="nav-sp-icon">
-                                <img src="../uploads/gohan_sample.png" alt="icon03">
+                                <img src="<img src=" <?php echo get_template_directory_uri(); ?>/assets/images/gohan_sample.png" alt=" icon03">
                             </div>
                             詳細検索
                         </a>
@@ -120,7 +92,7 @@ if (!is_user_logged_in() && IS_DEV == true) {
                     <li>
                         <a href="column.html.html">
                             <div class="nav-sp-icon">
-                                <img src="../uploads/gohan_sample.png" alt="icon04">
+                                <img src="<img src=" <?php echo get_template_directory_uri(); ?>/assets/images/gohan_sample.png" alt="icon04">
                             </div>
                             コラム
                         </a>
@@ -128,7 +100,7 @@ if (!is_user_logged_in() && IS_DEV == true) {
                     <li>
                         <a href="maker.html">
                             <div class="nav-sp-icon">
-                                <img src="../uploads/gohan_sample.png" alt="icon05">
+                                <img src="<img src=" <?php echo get_template_directory_uri(); ?>/assets/images/gohan_sample.png" alt="icon05">
                             </div>
                             メーカー紹介
                         </a>
@@ -136,7 +108,7 @@ if (!is_user_logged_in() && IS_DEV == true) {
                     <li>
                         <a href="recipe.html">
                             <div class="nav-sp-icon">
-                                <img src="../uploads/gohan_sample.png" alt="icon06">
+                                <img src="<img src=" <?php echo get_template_directory_uri(); ?>/assets/images/gohan_sample.png" alt="icon06">
                             </div>
                             アレンジレシピ
                         </a>
@@ -144,7 +116,7 @@ if (!is_user_logged_in() && IS_DEV == true) {
                     <li>
                         <a href="favorite.html">
                             <div class="nav-sp-icon">
-                                <img src="../uploads/gohan_sample.png" alt="icon07">
+                                <img src="<img src=" <?php echo get_template_directory_uri(); ?>/assets/images/gohan_sample.png" alt="icon07">
                             </div>
                             お気に入り
                         </a>
@@ -152,14 +124,16 @@ if (!is_user_logged_in() && IS_DEV == true) {
                 </ul>
             </nav>
         </div>
+
+        <!-- pc-nav -->
         <div id="pcnav-box" class="header-inner pcnav">
-            <nav class="nav-pc sp-none">
-                <ul class="header-container sp-none">
+            <nav class="nav-pc">
+                <ul class="header-container">
                     <li>
                         <div class="nav-pc_logo">
                             <h1>
-                                <a href="#" class="pc-title-logo">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/uploads/cat.jpg" alt="トップに飛ぶ">
+                                <a href="<?php echo home_url('/'); ?>" class="pc-title-logo">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="logo.png">
                                 </a>
                             </h1>
                         </div>

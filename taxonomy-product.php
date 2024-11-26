@@ -22,12 +22,6 @@
     <!-- ジャンル検索 -->
     <section id="btn-area" class="wrap">
         <!-- ジャンル検索ボタン -->
-        <?php
-        $args = [
-            'taxonomy' => 'product_type',
-            'title_li' => ''
-        ];
-        print_r(wp_list_categories($args)) ?>
         <ul class="btn-content">
             <li id="tsukemono">
                 <a href="#" class=""><span>漬物・発酵食品</span></a>
@@ -54,7 +48,27 @@
             <?php if (have_posts()): ?>
                 <?php while (have_posts()): the_post(); ?>
                     <li>
-                        <?php get_template_part('template-parts/loop', 'product'); ?>
+                        <?php
+                        $pic = get_field('pic1');
+                        $pic_url = $pic['sizes']['large'];
+                        ?>
+                        <img src="<?php echo $pic_url; ?>" alt="Image" class="img-fluid"><br>
+                        <a href="<?php the_permalink(); ?>" id="goods"><?php the_title() ?></a>
+                        <?php
+                        $area_term = wp_get_object_terms(
+                            get_the_ID(),
+                            'area',
+                            array("fields" => "names")
+                        );
+                        $product_type_term = wp_get_object_terms(
+                            get_the_ID(),
+                            'product_type',
+                            array("fields" => "names")
+                        );
+                        ?>
+                        <p><?php echo $area_term[0];  ?></p>
+                        <p><?php echo $product_type_term[0];  ?></p>
+                        <p><?php the_field('introduction') ?></p>
                     </li>
                 <?php endwhile; ?>
             <?php endif ?>

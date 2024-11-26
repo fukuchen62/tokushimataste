@@ -63,7 +63,7 @@
                     </div>
                 </div>
             </div>
-            <a href="<?php echo home_url('/product/') ?>" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
+            <a href="<?php echo home_url('/product_type/ferment') ?>" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
         </div>
     </section>
 

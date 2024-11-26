@@ -23,6 +23,9 @@
 	<!-- 個別CSSの読み込み -->
 	<link rel="stylesheet" href="../assets/css/column.css" media="all">
 
+	<!-- 個別CSSの読み込み -->
+	<link rel="stylesheet" href="../assets/css/column_detail.css" media="all">
+
 
 	<!--Googleフォントの読み込み-->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -69,117 +72,126 @@
 			</div>
 		</div>
 	</header>
-	<!-- <div class="contentupper">
-                <form id="form1" action="ご飯のお供サイトURL">
-                    <input id="sbox1" name="s" type="text" placeholder="キーワードを入力" />
-                    <input id="sbtn1" type="submit" value="検索" />
-                </form>
 
-<!--パンくずリスト-->
-	<ul class="breadcrumb">
-		<ol itemscope itemtype="https://schema.org/BreadcrumbList">
-			<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-				<a itemprop="item" href="../html/index.html">
-					<span itemprop="name">ホーム</span>
-				</a>
-				<meta itemprop="position" content="1" />
-			</li>
+	<main>
+		<!--パンくずリスト-->
+		<ul class="breadcrumb">
+			<ol itemscope itemtype="https://schema.org/BreadcrumbList">
+				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+					<a itemprop="item" href="../html/index.html">
+						<span itemprop="name">ホーム</span>
+					</a>
+					<meta itemprop="position" content="1" />
+				</li>
 
-			<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-				<a itemprop="item" href="../html/column.html"">
-					<span itemprop=" name">コラム</span>
-				</a>
-				<meta itemprop="position" content="2" />
-			</li>
+				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+					<a itemprop="item" href="../html/column.html">
+						<span itemprop=" name">コラム</span>
+					</a>
+					<meta itemprop="position" content="2" />
+				</li>
 
-			<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-				<a itemprop="item" href="../html/column_more.html"">
-					<span itemprop=" name">インタビュー</span>
-				</a>
-				<meta itemprop="position" content="3" />
-			</li>
+				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+					<a itemprop="item" href="../html/column_more.html">
+						<span itemprop=" name">インタビュー</span>
+					</a>
+					<meta itemprop="position" content="3" />
+				</li>
 
-			<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-				<a itemprop="item" href="../html/column_detail.html"">
-								<span itemprop=" name">インタビュー詳細</span>
-				</a>
-				<meta itemprop="position" content="4" />
-			</li>
-	</ul>
-	</ol>
+				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+					<a itemprop="item" href="../html/column_detail.html">
+						<span itemprop=" name">インタビュー詳細</span>
+					</a>
+					<meta itemprop="position" content="4" />
+				</li>
+			</ol>
+		</ul>
 
-	<!-- コラム -->
-	<section class="column">
-		<div class="inner">
-			<!-- 見出し -->
-			<h2 class="ttl_box">
-					<span class="ttl">インタビュー</span><br>
 
+		<!-- コラム -->
+		<section class="column">
+			<div class="inner">
+				<!-- 見出し -->
+				<h2 class="ttl_box">インタビュー
 				</h2>
 
-			<!-- コラム一覧 -->
-			<ul class="column_detail_list">
-				<li>
-					<article>
-						<div class="box_column">
-							<a href="../html/column_detail.html">
-								<div class=" box__item">
-									<img src="../uploads/nikumisoitame.jpg" alt="コラムの写真">
-									<h3>サブタイトルサブタイトル</h3>
-									<p>
+				<!-- コラム一覧 -->
+				<ul class="column_detail_list">
+					<li>
+						<article>
+							<div class="box_column">
+								<a href="../html/column_detail.html">
+									<div class=" box__item">
+										<img src="../uploads/nikumisoitame.jpg" alt="コラムの写真">
+										<h3>サブタイトルサブタイトル</h3>
+										<p>
 								テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。
 							</p>
-								</div>
-							</a>
+									</div>
+								</a>
+							</div>
+						</article>
+					</li>
+
+
+					<li class="side_bar">
+
+						<!-- カテゴリー一覧 -->
+						<div class="category-list-outer">
+							<div class="category-list">
+								<h3>コラム一覧</h3>
+							</div>
 						</div>
-					</article>
-				</li>
 
-				<li>
-					<section>
-						<div class="column_box">
-							<h3>コラム　一覧</h3>
-							<a href="../html/column_more.html">インタビュー</a>
-							<a href=" ../html/column_more.html">体験談</a>
-							<a href="../html/column_more.html">取材日記</a>
-						</div>
-					</section>
-				</li>
+						<!-- サイドバーメニュー -->
+						<aside class="side-menu">
+							<!-- <h2 class="archive_title">カテゴリ 一覧</h2> -->
+							<ul class="side-menu-li">
+								<li class="cat-item cat-item-33"><a href="../html/column_more.html">インタビュー</a>
+								</li>
+								<li class="cat-item cat-item-34"><a href="../html/column_more.html">体験談</a>
+								</li>
+								<li class="cat-item cat-item-35"><a href=" ../html/column_more.html">取材日記</a>
+								</li>
+							</ul>
+						</aside>
 
-			</ul>
+					</li>
+
+				</ul>
 
 
-			</main>
+	</main>
 
-			<footer>
-				<div class=" inner">
-					<!-- ロゴ画像 -->
-					<div class="logo sp-none">
-						<a href="#">
-							<img src="img/logo.png" alt="サイトロゴ">
-						</a>
-					</div>
+	<footer>
+		<div class=" inner">
+			<!-- ロゴ画像 -->
+			<div class="logo sp-none">
+				<a href="#">
+					<img src="img/logo.png" alt="サイトロゴ">
+				</a>
+			</div>
 
-					<!-- ナビゲーション -->
-					<nav class="f_nav">
-						<ul>
-							<li><a href="#">HOME</a></li>
-							<li><a href="#">企業理念</a></li>
-							<li><a href="#">サービス紹介</a></li>
-							<li><a href="#">リクルート</a></li>
-							<li><a href="#">アクセス</a></li>
-						</ul>
-					</nav>
-				</div>
+			<!-- ナビゲーション -->
+			<nav class="f_nav">
+				<ul>
+					<li><a href="#">HOME</a></li>
+					<li><a href="#">企業理念</a></li>
+					<li><a href="#">サービス紹介</a></li>
+					<li><a href="#">リクルート</a></li>
+					<li><a href="#">アクセス</a></li>
+				</ul>
+			</nav>
+		</div>
 
-				<!-- コピーライト -->
-				<p class="f-copy">
+		<!-- コピーライト -->
+		<p class="f-copy">
 			<small>
 				Copyright © QLIP All Rights Reserved.
 			</small>
 		</p>
 
-			</footer>
+	</footer>
 </body>
 
 </html>

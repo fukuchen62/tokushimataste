@@ -15,9 +15,9 @@ section+section {
 }
 
 .ttl_box {
-	/* border: 2px solid red; */
+	text-decoration: underline dotted 5px DarkOrange;
 	text-align: center;
-	/* font-size: 4rem; */
+
 	margin-bottom: 32px;
 }
 
@@ -122,19 +122,32 @@ section+section {
 	.column_flex {
 		display: flex;
 		justify-content: space-around;
-		width: 900px;
-		/* margin: 0 auto; */
+		align-items: flex-start;
+		margin: 0 auto;
+		gap: 60px;
 	}
 
-	.side_bar {
-		width: 250px;
+	.article_col {
+		width: 70%;
 	}
 }
 
+
+.side_bar {
+	width: 300px;
+	position: sticky;
+	top: 20px;
+	margin: 0 auto;
+}
+
+
 @media screen and (max-width: 1059px) {
 	.side_bar {
+		/* 下に降りた時の上下の隙間 */
 		margin-top: 50px;
 		margin-bottom: 80px;
+
+		width: auto;
 	}
 }
 
@@ -212,6 +225,7 @@ li.cat-item a::after {
 	margin-right: 0;
 }
 
+/* borderの外側 */
 .category-list-outer {
 	height: 50px;
 	background-color: beige;
@@ -226,6 +240,10 @@ li.cat-item a::after {
 	height: 40px;
 	text-align: center;
 	font-size: 2.3rem;
+	border-top-left-radius: 10% 1vw;
+	border-top-right-radius: 10% 1vw;
+	border-bottom-right-radius: 10% 1vw;
+	border-bottom-left-radius: 10% 1vw;
 
 }
 

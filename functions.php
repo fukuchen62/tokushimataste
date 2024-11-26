@@ -4,7 +4,7 @@
 define('IS_DEV', true);
 
 // 管理バーを非表示させる
-// add_filter('show_admin_bar', '__return_false');
+add_filter('show_admin_bar', '__return_false');
 
 // assetsのパス
 // define('PATH', '/test_assets_test/');
@@ -194,13 +194,13 @@ function add_style_script()
         wp_enqueue_style(
             'my_product_list_style',
             get_template_directory_uri() .
-                PATH . 'css/product.css',
+                PATH . 'css/goods.css',
         );
     } elseif (is_singular('product')) {
         wp_enqueue_style(
             'my_product_style',
             get_template_directory_uri() .
-                PATH . 'css/product.css',
+                PATH . 'css/goods.css',
         );
     } elseif (is_page('contact') || is_page('confirm') || is_page('thanks')) {
         wp_enqueue_style(

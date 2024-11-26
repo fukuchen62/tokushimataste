@@ -63,7 +63,7 @@
                                     ?>
                                     <img src="<?php echo $pic_url; ?>" alt="">
 
-                                    <p>トロたく丼2行目のイメージ</p>
+                                    <p><?php the_title(); ?></p>
                                 </div>
                             </li>
                     <?php endwhile;

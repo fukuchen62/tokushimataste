@@ -1,9 +1,6 @@
 @charset "utf-8";
 
-section+section {
-    margin-top: 60px;
-}
-
+/* タイトル枠 */
 .ttl_box {
     text-decoration: underline dotted 5px DarkOrange;
     text-align: center;
@@ -15,11 +12,11 @@ section+section {
 }
 
 /* ジャンル検索ボタン */
-
 .btn-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    margin: 40px 0 30px;
 }
 
 .btn-content li {
@@ -28,7 +25,11 @@ section+section {
     justify-content: center;
     line-height: 1;
     text-decoration: none;
+
     color: #171B39;
+
+    color: #555555;
+
     font-size: 18px;
     border-radius: 20px;
     width: 300px;
@@ -45,27 +46,23 @@ section+section {
     transform: translateY(1px);
 }
 
+/* エリア名 */
+.area_box {
+    text-align: center;
+    background-color: #AD2628;
+    padding: 5px;
+    border-radius: 20px;
+    color: #EEEEF1;
+    margin-bottom: 30px;
+}
 
-/* ==================== */
-/* 一覧カード */
-/* ==================== */
+/* カード */
 
 a {
     text-decoration: none;
 }
 
-/* h2タイトル */
-
-.maker_title {
-    margin: 50px 0;
-    background-color: #AD2628;
-    color: #fff;
-    text-align: center;
-    font-size: 18px;
-    border-radius: 20px;
-    height: 40px;
-    align-items: center;
-}
+/* 写真 */
 
 .maker_list img {
     width: 100%;
@@ -74,20 +71,18 @@ a {
     margin-bottom: 15px;
     border-radius: 10px;
     object-fit: cover;
-
 }
 
-/* タイトル */
+/* コラムタイトル */
 .maker_list h3 {
-
+    /* 20px */
     font-size: 2rem;
     font-weight: 500;
     margin-bottom: 20px;
     border-bottom: dashed 2px blue;
-    /* border-bottom: dashed 2px #171B39; */
 }
 
-/* メーカー枠 */
+/* コラムの枠 */
 .box_maker {
     background-color: #EEEEF1;
     color: black;
@@ -107,22 +102,22 @@ a {
     height: 400px;
 }
 
-.maker_contents {
-    margin-bottom: 30px;
+
+/* おまけ */
+
+.maker_list a:hover {
+    background-color: #F7EB99;
+    color: #fff;
+    /* border: 2px solid #3FA9F5; */
 }
 
-/* ---------- */
-/* tablet */
-@media(width>=700px) {
-    .maker_list {
-        display: flex;
-        flex-wrap: wrap;
-        /* gap: 10px; */
-        gap: 50px;
-    }
+.maker_list a:hover {
+    background-color: #FBB126;
+    color: #fff;
+}
 
-    .maker_list li {
-        max-width: 320px;
-    }
-
+.maker_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }

@@ -84,7 +84,7 @@ function add_style_script()
 
     // 指定jqueryを読み込む
     wp_enqueue_script(
-        'jquery-3.7.1',
+        'jquery',
         'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js',
         '',
         '',

@@ -37,31 +37,14 @@
         for ($i = 0; $i < count($term_names); $i++) {
             $args = array_merge($args, array($term_names[$i] => $term_slugs[$i]));
         }  ?>
-        <?php print_r($args) ?>
+        <?php $args = array_merge($args, array('その他' => 'others')) ?>
 
         <ul class="btn-content">
             <?php foreach ($args as $name => $slug): ?>
-                <li id="<?php $slug ?>">
-                    <a href="#" class=""><span><?php $name ?></span></a>
+                <li id="<?php print $slug ?>">
+                    <a href="<?php home_url('/product_type/') ?><?php print $slug ?>" class=""><span><?php print $name ?></span></a>
                 </li>
             <?php endforeach ?>
-            <!-- <li id="daizu">
-                <a href="#" class=""><span>肉・卵・大豆製品</span></a>
-            </li>
-            </li>
-            <li id="furikake">
-                <a href="#" class=""><span>ふりかけ・混ぜご飯の素</span></a>
-            </li>
-            <li id="other"><a href="#" class=""><span>分類</span></a>
-            </li>
-            </li>
-            <li id="yakumi">
-                <a href="#" class=""><span>薬味・シンプル調味料</span></a>
-            </li>
-            </li>
-            <li id="other">
-                <a href="#" class=""><span>その他</span></a>
-            </li> -->
         </ul>
     </section>
     <div class="card-container">

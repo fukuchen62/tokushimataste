@@ -6,25 +6,25 @@
     margin-bottom: 32px;
 }
 
-/* .img-fluid li {
+.img-fluid li {
     letter-spacing: -1em;
-} */
+}
 
-/* .img-fluid li {
+.img-fluid li {
     display: inline-block;
     width: 35px;
     height: 35px;
     text-align: center;
     line-height: 35px;
     border: 1px solid #0a26dd;
-} */
+}
 
 
 /*以下変更 byぎみ
 ページングで表示するコンテンツのスタイル
  初期表示は非表示 */
 
-.page_list {
+.page_recipelist {
     display: flex;
     list-style: none;
     flex-wrap: wrap;
@@ -37,7 +37,7 @@
 
 /* onクラス添付で画面に表示 */
 /* もとにもどす */
-.page_list li.on {
+.page_recipelist li.on {
     display: block;
     max-width: 320px;
 }
@@ -100,21 +100,38 @@ body {
 /*
 border-bottom に「dotted」を指定して点線にする
 */
-.flex .recipe .ingredient-list dt {
-    /* width: 85%; */
+/* .ingredient-list dt {
+    width: 85%;
     border-bottom: dotted 1px #ccc;
     padding: 6px 0;
 }
 
-.flex .recipe .ingredient-list dd {
-    /* width: 15%; */
+.ingredient-list dd {
+    width: 15%;
     border-bottom: dotted 1px #ccc;
     padding: 6px 0;
     text-align: center;
-}
+} */
 
-.flex .recipe .step-list li {
+/* .flex .recipe .step-list li {
     border-bottom: dotted 1px #ccc;
     padding: 6px 0;
-    /* margin-left: 20px; */
+    margin-left: 20px;
+} */
+
+p {
+    text-align: right;
+}
+
+dt {
+    float: left;
+}
+
+dd {
+    margin-left: 300px;
+}
+
+ol {
+    font-size: 20px;
+
 }

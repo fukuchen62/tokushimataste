@@ -33,7 +33,7 @@ function fixNav() {
         console.log("navTop:" + navTop);
         console.log("navspTop:" + navspTop);
 
-        if (windowSize >= 1024) {
+        if (windowSize >= 900) {
             //スクロール位置がnavの位置より下だったらクラスfixedを追加
             if (winTop >= navTop) {
                 nav.addClass('fixed');
@@ -78,7 +78,7 @@ $(window).on('load', function () {
         // console.log("navTop:" + navTop);
         // console.log("navspTop:" + navspTop);
 
-        if (windowSize >= 1024) {
+        if (windowSize >= 900) {
             //スクロール位置がnavの位置より下だったらクラスfixedを追加
             if (winTop >= navTop) {
                 nav.addClass('fixed');

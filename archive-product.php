@@ -23,30 +23,28 @@
     <section id="btn-area" class="wrap">
         <!-- ジャンル検索ボタン -->
         <?php
-        $args = [
+        $args_names = [
             'taxonomy' => 'product_type',
-            'title_li' => ''
+            'fields' => 'names',
         ];
-        print_r(wp_list_categories($args)) ?>
+        $args_slugs = [
+            'taxonomy' => 'product_type',
+            'fields' => 'slugs',
+        ];
+        $term_names = get_terms($args_names);
+        $term_slugs = get_terms($args_slugs);
+        $args = [];
+        for ($i = 0; $i < count($term_names); $i++) {
+            $args = array_merge($args, array($term_names[$i] => $term_slugs[$i]));
+        }  ?>
+        <?php $args = array_merge($args, array('その他' => 'others')) ?>
+
         <ul class="btn-content">
-            <li id="tsukemono">
-                <a href="#" class=""><span>漬物・発酵食品</span></a>
-            </li>
-            <li id="daizu">
-                <a href="#" class=""><span>肉・卵・大豆製品</span></a>
-            </li>
-            </li>
-            <li id="furikake">
-                <a href="#" class=""><span>ふりかけ・混ぜご飯の素</span></a>
-            </li>
-            </li>
-            <li id="yakumi">
-                <a href="#" class=""><span>薬味・シンプル調味料</span></a>
-            </li>
-            </li>
-            <li id="other">
-                <a href="#" class=""><span>その他</span></a>
-            </li>
+            <?php foreach ($args as $name => $slug): ?>
+                <li id="<?php print $slug ?>">
+                    <a href="<?php home_url('/product_type/') ?><?php print $slug ?>" class=""><span><?php print $name ?></span></a>
+                </li>
+            <?php endforeach ?>
         </ul>
     </section>
     <div class="card-container">

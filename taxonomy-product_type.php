@@ -23,9 +23,24 @@
     <section id="btn-area" class="wrap">
         <!-- ジャンル検索ボタン -->
         <ul class="btn-content">
-            <li id="tsukemono">
-                <a href="#" class=""><span>漬物・発酵食品</span></a>
-            </li>
+            <?php $args = get_terms(['taxonomy' => 'product_type']);
+            print_r($args);
+            ?>
+            <?php $name_slug = []; ?>
+            <?php foreach ($args as $arg): ?>
+                <?php ['name' => $name[]] = $arg; ?>
+            <?php endforeach ?>
+            <?php foreach ($name_slug as ['name' => $name, 'slug' => $slug]) : ?>
+
+
+
+
+                <?php ?>
+                <li id="<?php echo $slug ?>">
+                    <a href="<?php echo home_url('/') ?>" class=""><span><?php echo $name ?></span></a>
+                </li>
+            <?php endforeach ?>
+
             <li id="daizu">
                 <a href="#" class=""><span>肉・卵・大豆製品</span></a>
             </li>

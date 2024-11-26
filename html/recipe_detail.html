@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="徳島を旅するように味わう">
     <meta name="keywords" content="徳島,おとも,ご飯のおとも,徳島の味">
-    <title>アレンジレシピ</title>
+    <title>アレンジレシピ詳細</title>
 
     <!-- リセットCSS -->
     <link href="./css/reset.css" rel="stylesheet">
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="../assets/css/top.css">
     <!-- footer CSSの読み込み -->
     <link href="../assets/css/footer.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="../assets/css/box.css">
     <!-- 個別CSSの読み込み -->
     <link href="../assets/css/recipe.css" rel="stylesheet">
 
@@ -27,132 +27,103 @@
     <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Kiwi+Maru&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <main>
 
-            <div class="kv">
-                <!-- <img src="../uploads/header-designkanpu.jpg" alt=""> -->
+    <main>
+        <!--パンくずリスト-->
+        <ul class="breadcrumb">
+            <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="../html/index.html">
+                        <span itemprop="name">ホーム</span>
+                    </a>
+                    <meta itemprop="position" content="1" />
+                </li>
 
-                <p class="kv-copy">
-                                徳島の味！<br class="tb-none">
-                                あなたのご飯のお友達<br class="tb-none">
-                        </p>
-            </div>
-
-            <div class="header-area pc-none">
-                <div class="title-logo">
-                    <h1>
-                                <a href="#" class="logo">
-                                    <img src="../uploads/miso.jpeg" alt="">
-                                </a>
-                            </h1>
-                </div>
-
-                <div class="hamburger pc-none">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="h_nav sp-none ">
-                    <ul class="slide-menu pc-none">
-                        <li><a href="goods.html">商品一覧</a></li>
-                        <li><a href="area.html.html">エリア検索</a></li>
-                        <li><a href="research.html">詳細検索</a></li>
-                        <li><a href="column.html.html">コラム</a></li>
-                        <li><a href="maker.html">メーカー一覧</a></li>
-                        <li><a href="recipe.html">アレンジレシピ</a></li>
-                        <li><a href="favorite.html">お気に入り</a></li>
-                    </ul>
-                </div>
-            </div>
-    </header>
-    <body>
-        <main>
-            <!--パンくずリスト-->
-            <ul class="breadcrumb">
-                <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                        <a itemprop="item" href="../html/index.html">
-                            <span itemprop="name">ホーム</span>
-                        </a>
-                        <meta itemprop="position" content="1" />
-                    </li>
-
-                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                        <a itemprop="item" href="#">
-                            <span itemprop="name">アレンジレシピ</span>
-                        </a>
-                        <meta itemprop="position" content="2" />
-                    </li>
-                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                        <a itemprop="item" href="#">
-                            <span itemprop="name">アレンジレシピ詳細</span>
-                        </a>
-                        <meta itemprop="position" content="3" />
-                    </li>
-                </ol>
-            </ul>
-
-            <h2 class="ttl_box"><span class="ttl">レシピ名</span></h2>
-
-            <button type="button" class="btn btn-primary" id="gallery-btn">副菜</button>
-
-            <div class="recipe_name">
-                <img src="../uploads/tsukemono.jpeg" alt="Image" class="img-fluid">
-                <!-- <p>レシピ名</p> -->
-            </div>
-            <h2>材料　〇人分</h2>
-
-            <div class="flex">
-                <div class="recipe">
-                    <dl class="ingredient-list">
-                        <dt>テキストテキスト</dt>
-                        <dd>1個</dd>
-                        <dt>テキストテキスト</dt>
-                        <dd>1個</dd>
-                        <dt>テキストテキスト</dt>
-                        <dd>1個</dd>
-                        <dt>テキストテキスト</dt>
-                        <dd>1個</dd>
-                        <dt>テキストテキスト</dt>
-                        <dd>1個</dd>
-                    </dl>
-                </div>
-            </div>
-
-            <h2>作り方</h2>
-            <ol>
-                <li>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</li>
-                <li>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</li>
-                <li>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</li>
-                <li>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</li>
-                <li>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="#">
+                        <span itemprop="name">アレンジレシピ</span>
+                    </a>
+                    <meta itemprop="position" content="2" />
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="#">
+                        <span itemprop="name">アレンジレシピ詳細</span>
+                    </a>
+                    <meta itemprop="position" content="3" />
+                </li>
             </ol>
+        </ul>
 
-            <h2>使ったお供</h2>
-            <ul class="page_list">
-                <li>
-                    <div class="recipe">
-                        <img src="../uploads/tsukemono.jpeg" alt="Image" class="img-fluid">
-                        <p>使ったお供</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="recipe">
-                        <img src="../uploads/tsukudani.jpeg" alt="Image" class="img-fluid">
-                        <p>使ったお供</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="recipe">
-                        <img src="../uploads/tsukemono.jpeg" alt="Image" class="img-fluid">
-                        <p>使ったお供</p>
-                    </div>
-                </li>
-            </ul>
+        <h2>副菜</h2>
 
-        </main>
-        <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <h2 class="ttl_box">レシピ名</h2>
+
+        <div class="recipe_name">
+            <img src="../uploads/tsukemono.jpeg" alt="Image" class="img-fluid">
+            <!-- <p>レシピ名</p> -->
+        </div>
+        <p>１人分　〇〇〇kcal</p>
+
+        <h2>材料　〇人分</h2>
+        <!-- <div class="flex">
+                        <div class="recipe"> -->
+        <ol>
+            <dl>
+                <dt>じゃがいも</dt>
+                <dd>１個</dd>
+                <dt>にんじん</dt>
+                <dd>１本</dd>
+                <dt>玉ねぎ</dt>
+                <dd>１個</dd>
+                <dt>牛肉</dt>
+                <dd>200ｇ</dd>
+                <dt>カレー粉</dt>
+                <dd>１個</dd>
+            </dl>
+        </ol>
+
+
+        <h2>作り方</h2>
+        <ol>
+            <li>材料を準備。<br>今回カレー粉<br>ジャワカレー辛口×こくまろカレー中辛</li>
+            <li>☆を2回に分けてフードプロセッサーにかけます。<br>(人参だけだと、水分が出ないので必ず玉ねぎと一緒に)</li>
+            <li>ジャガイモは角をとっておきます。(省略可能)</li>
+            <li>油をしいた鍋で豚肉を炒めます。<br>少し白くなってきたら、塩コショウをして炒め、更にお酒を加えて水気がなくなるまで炒めます。</li>
+            <li>鍋に<em>2.</em>を加え少し色が変わってきたら塩コショウします。</li>
+            <li>水分がある程度飛ぶまで炒めます。(結構時間がかかります)</li>
+            <li>そこに3.のジャガイモを取った角ごと入れ、簡単に火を通します。</li>
+            <li>水を加えます。ついでに、フードプロセッサーもキレイに！</li>
+            <li>鍋に水とローリエを加え焦げないよう、たまにかき混ぜながら20〜30分中火→弱火で煮ます。</li>
+            <li>火を止めてカレールウを入れて混ぜ、再度火をつけます。<br>(底が焦げ易いので、マメにかき混ぜて下さい)</li>
+            <li>１０分位煮立て、更に●を入れて１０分位煮込みます。<br><span>※こしょうは最初少なめに入れ、辛さ調整しながら徐々に足していきます。</span></li>
+            <li>味が整ったら火を消し完成。<br><span>※この時点で多少スパイスがキツくても、置いておけばマイルドになっているので大丈夫です！</span></li>
+            <li>食べる前に再度火を通せばOK！<br>スパイスの効いた辛さの中に甘みのあるカレーです！</li>
+            <li>残った具は肉と小さなジャガイモのみ。<br>野菜嫌いでも快く食べられます！</li>
+        </ol>
+
+        <h2>使ったお供</h2>
+        <ul class="page_recipelist">
+            <li>
+                <div class="recipe">
+                    <img src="../uploads/tsukemono.jpeg" alt="Image" class="img-fluid">
+                    <p>使ったお供</p>
+                </div>
+            </li>
+            <li>
+                <div class="recipe">
+                    <img src="../uploads/tsukudani.jpeg" alt="Image" class="img-fluid">
+                    <p>使ったお供</p>
+                </div>
+            </li>
+            <li>
+                <div class="recipe">
+                    <img src="../uploads/tsukemono.jpeg" alt="Image" class="img-fluid">
+                    <p>使ったお供</p>
+                </div>
+            </li>
+        </ul>
+    </main>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="../assets/js/recipe.js"></script> -->
-    </body>
+</body>
 </html>

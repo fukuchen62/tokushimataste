@@ -1,9 +1,12 @@
 @charset "utf-8";
 
+/* slick画像 */
 .container_ms {
-    margin: 30px auto 0;
-    max-width: 300px;
     width: 100%;
+}
+
+.slider_ms {
+    margin-bottom: 10px;
 }
 
 img {
@@ -23,12 +26,62 @@ img {
     cursor: pointer;
 }
 
+.slick-prev:before,
+.slick-next:before {
+    color: DimGray;
+}
+
 .thumbnail-img {
-    opacity: 0.5;
+    opacity: 0.3;
     transition: opacity 0.3s linear;
     cursor: pointer;
 }
 
 .thumbnail .slick-current {
     opacity: 1;
+}
+
+/* テーブル */
+table {
+    font-size: 1.6rem;
+}
+
+tr {
+    border-bottom: solid 1px black;
+}
+
+th,
+td {
+    padding: 10px;
+}
+
+th {
+    font-size: 1.8rem;
+}
+
+td {
+    font-weight: 600;
+}
+
+td p small {
+    color: tomato;
+    font-weight: normal;
+}
+
+@media screen and (min-width: 1060px) {
+    .flex_ms {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        gap: 30px;
+
+        .container_ms {
+            width: 45%;
+        }
+
+        table {
+            width: 45%;
+        }
+    }
 }

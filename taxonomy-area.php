@@ -20,9 +20,12 @@
         </section>
 
 
-        <?php $area_slug = get_query_var('area'); ?>
-        <?php var_dump($area_slug); ?>
-        <?php $area = get_term_by('slug', $area_slug, 'area'); ?>
+        <?php //$area_slug = get_query_var('area'); 
+        ?>
+        <?php //var_dump($area_slug); 
+        ?>
+        <?php //$area = get_term_by('slug', $area_slug, 'area'); 
+        ?>
 
         <div class="card-container">
             <ul class="page_list">

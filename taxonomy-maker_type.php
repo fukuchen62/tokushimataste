@@ -28,36 +28,43 @@
 
         <h2 class="area_box"><span class="ttl">県東部</span></h2>
 
+        <?php //$area_slug = get_query_var('area');
+        ?>
+        <?php //var_dump($area_slug);
+        ?>
+        <?php //$area = get_term_by('slug', $area_slug, 'area');
+        ?>
+
         <div class="container">
             <ul class="maker_list">
-                <li>
-                    <a href="">
-                        <div class="box_maker">
-                            <img src="../uploads/tennin (1).png" alt="メーカー写真">
-                            <h3>サブタイトルサブタイトル</h3>
-                            <p>テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。</p>
+                <?php if (have_posts()): ?>
+                    <?php while (have_posts()) : the_post(); ?>
 
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <div class="box_maker">
-                            <img src="../uploads/tennin (1).png" alt="メーカー写真">
-                            <h3>サブタイトルサブタイトル</h3>
-                            <p>テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。</p>
+                        <?php get_template_part('template-parts/loop', 'maker'); ?>
 
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <div class="box_maker">
-                            <img src="../uploads/tennin (1).png" alt="メーカー写真">
-                            <h3>サブタイトルサブタイトル</h3>
-                            <p>テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。テキストは入ります。。。
-                    </a>
-                </li>
+                    <?php endwhile; ?>
+                <?php endif; ?>
+            </ul>
+
+
+            <li>
+                <a href="">
+                    <div class="box_maker">
+                        <img src="../uploads/tennin (1).png" alt="メーカー写真">
+                        <h3>サブタイトルサブタイトル</h3>
+                        <p>テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。</p>
+
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <div class="box_maker">
+                        <img src="../uploads/tennin (1).png" alt="メーカー写真">
+                        <h3>サブタイトルサブタイトル</h3>
+                        <p>テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。テキストは入ります。。。
+                </a>
+            </li>
             </ul>
         </div>
         <!-- ページネーション代用 -->

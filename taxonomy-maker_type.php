@@ -37,34 +37,40 @@
 
         <div class="container">
             <ul class="maker_list">
-                <li>
-                    <a href="">
-                        <div class="box_maker">
-                            <img src="../uploads/tennin (1).png" alt="メーカー写真">
-                            <h3>サブタイトルサブタイトル</h3>
-                            <p>テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。</p>
+                <?php if (have_posts()): ?>
+                    <?php while (have_posts()) : the_post(); ?>
+                        <li>
+                            <a href="">
+                                <div class="box_maker">
+                                    <img src="../uploads/tennin (1).png" alt="メーカー写真">
+                                    <h3>サブタイトルサブタイトル</h3>
+                                    <p>テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。</p>
+                                </div>
+                            </a>
+                        </li>
+                    <?php endwhile; ?>
+                <?php endif; ?>
+            </ul>
 
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <div class="box_maker">
-                            <img src="../uploads/tennin (1).png" alt="メーカー写真">
-                            <h3>サブタイトルサブタイトル</h3>
-                            <p>テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。</p>
 
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <div class="box_maker">
-                            <img src="../uploads/tennin (1).png" alt="メーカー写真">
-                            <h3>サブタイトルサブタイトル</h3>
-                            <p>テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。テキストは入ります。。。
-                    </a>
-                </li>
+            <li>
+                <a href="">
+                    <div class="box_maker">
+                        <img src="../uploads/tennin (1).png" alt="メーカー写真">
+                        <h3>サブタイトルサブタイトル</h3>
+                        <p>テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。</p>
+
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <div class="box_maker">
+                        <img src="../uploads/tennin (1).png" alt="メーカー写真">
+                        <h3>サブタイトルサブタイトル</h3>
+                        <p>テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。テキストは入ります。。。
+                </a>
+            </li>
             </ul>
         </div>
         <!-- ページネーション代用 -->

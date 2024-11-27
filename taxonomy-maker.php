@@ -5,88 +5,89 @@
 
 <?php get_header(); ?>
 <main>
-    <!-- パンくずリスト -->
-    <?php get_template_part('template-parts/breadcrumb'); ?>
+    <div class="inner">
+        <!-- パンくず -->
+        <ol class="breadcrumb">
+            <ul itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="../html/index.html">
+                        <span itemprop="name">ホーム</span>
+                    </a>
+                    <meta itemprop="position" content="1" />
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="#">
+                        <span itemprop="name">メーカーさん</span>
+                    </a>
+                    <meta itemprop="position" content="2" />
+                </li>
+            </ul>
+        </ol>
 
-    <?php echo get_search_form(); ?>
+        <h2 class="ttl_box"><span class="ttl">メーカーさん紹介</span></h2>
 
-    <section>
-        <div class="column_box">
-            <h3>エリア別</h3>
-            <?php
-            $area_terms = get_terms(['taxonomy' => 'area']);
-            // if (!empty($area_terms)):
-
-            // echo '<pre>';
-            // var_dump($area_terms);
-            // echo '<pre>';
-            ?>
-            <?php foreach ($area_terms as $area):
-                // echo '<pre>';
-                // var_dump($area);
-                // echo '<pre>';
-            ?>
-
-                <a href="#<?php echo $area->slug; ?>_btn"><?php echo $area->name; ?></a>
-            <?php endforeach ?>
-
+        <!-- エリア検索ボタン -->
+        <div id="btn-area" class="wrap">
+            <ul class="btn-content">
+                <li id="east">
+                    <a href="#" class=""><span>県東</span></a>
+                </li>
+                <li id="west"><a href="#" class=""><span>県西</span></a>
+                </li>
+                <li id="south"><a href="#" class=""><span>県南</span></a>
+                </li>
+            </ul>
         </div>
-    </section>
 
-    <section class="section section-foodList">
-        <div class="section_inner">
-            <div class="section_header">
+        <h2 class="area_box"><span class="ttl">県東部</span></h2>
 
-                <h2 class="heading heading-primary">メーカーさん紹介</h2>
-            </div>
+        <div class="container">
+            <ul class="maker_list">
+                <li>
+                    <a href="">
+                        <div class="box_maker">
+                            <img src="../uploads/tennin (1).png" alt="メーカー写真">
+                            <h3>サブタイトルサブタイトル</h3>
+                            <p>テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。</p>
 
-            <?php
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="box_maker">
+                            <img src="../uploads/tennin (1).png" alt="メーカー写真">
+                            <h3>サブタイトルサブタイトル</h3>
+                            <p>テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。</p>
 
-            $area_terms = get_terms(['taxonomy' => 'area']);
-            if (!empty($area_terms)):
-                // echo '<pre>';
-                // var_dump($area_terms);
-                // echo '<pre>';
-
-            ?>
-                <?php foreach ($area_terms as $area):  ?>
-                    <section class="section_body">
-                        <h3 class="heading heading-secondary" id="<?php echo $area->slug; ?>_btn">
-
-                            <?php echo $area->name; ?>
-
-                        </h3>
-                        <ul class="foodList">
-                            <?php
-                            // メニューの投稿タイプ
-
-                            $args = [
-                                'post_type' => 'maker',
-                                'post_per_page' => -1,
-                            ];
-                            $taxquerysp = ['relation' => 'AND'];
-                            $taxquerysp[] = [
-                                'taxonomy' => 'area',
-                                'terms' => $area->slug,
-                                'field' => 'slug',
-                            ];
-                            $args['tax_query'] = $taxquerysp;
-                            $the_query = new WP_Query($args);
-
-                            if ($the_query->have_posts()): ?>
-                                <?php while ($the_query->have_posts()): $the_query->the_post() ?>
-                                    <li class="foodList_item">
-                                        <?php get_template_part('template-parts/loop', 'test'); ?>
-                                    </li>
-                                <?php endwhile; ?>
-                                <?php wp_reset_postdata(); ?>
-                            <?php endif ?>
-                        </ul>
-                    </section>
-                <?php endforeach; ?>
-            <?php endif; ?>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="box_maker">
+                            <img src="../uploads/tennin (1).png" alt="メーカー写真">
+                            <h3>サブタイトルサブタイトル</h3>
+                            <p>テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。テキストは入ります。。。
+                    </a>
+                </li>
+            </ul>
         </div>
-    </section>
+        <!-- ページネーション代用 -->
+        <ul class="page_example">
+            <li class="pre">前へ</li>
+            <li class="this">1</li>
+            <li><a href="">2</a></li>
+            <li><a href="">3</a></li>
+            <li><a href="">4</a></li>
+            <li><a href="">次へ</a></li>
+        </ul>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="../assets/js/main.js"></script>
+
+
+    </div>
 </main>
 
 <!-- ページナビ -->

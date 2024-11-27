@@ -3,26 +3,8 @@
 
 <main>
     <!-- パンくずリスト -->
-    <!-- <ul class="breadcrumb">
-        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="../html/index.html">
-                    <span itemprop="name">ホーム</span>
-                </a>
-                <meta itemprop="position" content="1" />
-            </li>
 
-            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="#">
-                    <span itemprop="name">アレンジレシピ</span>
-                </a>
-                <meta itemprop="position" content="2" />
-            </li>
-        </ol>
-    </ul> -->
     <?php get_template_part('template-parts/breadcrumb'); ?>
-
-    <!-- <h2 class="ttl_box">アレン ジレシピ</h2> -->
 
 
     <?php

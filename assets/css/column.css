@@ -13,11 +13,19 @@
 	margin: 0 auto;
 }
 
-.ttl_box {
-	text-decoration: underline dotted 5px DarkOrange;
-	text-align: center;
+/* タイトルのアンダー.....設定 */
 
+.ttl_box {
+	border-bottom: dotted 5px DarkOrange;
+	;
+	text-align: center;
+	width: fit-content;
+	margin: 0 auto;
 	margin-bottom: 32px;
+}
+
+.ttl_box span {
+	margin-bottom: 5px;
 }
 
 .ttl_box span {

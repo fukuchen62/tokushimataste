@@ -2,17 +2,17 @@
 
 $(function () {
     // メイン画像のオプション
-    $(".slider").slick({
+    $(".slider_ms").slick({
         autoplay: false, // 自動再生ON
         arrows: false, // 矢印非表示
-        asNavFor: ".thumbnail", // サムネイルと同期
+        asNavFor: ".thumbnail_ms", // サムネイルと同期
 
     });
     // サムネイルのオプション
-    $(".thumbnail").slick({
+    $(".thumbnail_ms").slick({
         slidesToShow: 3.5, // サムネイルの表示数
         arrows: true, // 矢印表示
-        asNavFor: ".slider", // メイン画像と同期
+        asNavFor: ".slider_ms", // メイン画像と同期
         focusOnSelect: true, // サムネイルクリックを有効化
     });
 });

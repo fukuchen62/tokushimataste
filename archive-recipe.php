@@ -3,7 +3,7 @@
 
 <main>
     <!-- パンくずリスト -->
-    <ul class="breadcrumb">
+    <!-- <ul class="breadcrumb">
         <ol itemscope itemtype="https://schema.org/BreadcrumbList">
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                 <a itemprop="item" href="../html/index.html">
@@ -19,7 +19,8 @@
                 <meta itemprop="position" content="2" />
             </li>
         </ol>
-    </ul>
+    </ul> -->
+    <?php get_template_part('template-parts/breadcrumb'); ?>
 
     <!-- <h2 class="ttl_box">アレン ジレシピ</h2> -->
 

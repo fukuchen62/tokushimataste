@@ -1,0 +1,117 @@
+h3 {
+    font-size: 30px;
+}
+
+
+h2 {
+    position: relative;
+    padding: 5px 40px 5px 40px;
+    background: #DEEBF7;
+    border-bottom: solid 3px #9DC3E6;
+    text-align: center;
+}
+
+h2::before {
+    position: absolute;
+    content: '';
+    left: -2px;
+    top: -2px;
+    width: 0;
+    height: 0;
+    border: none;
+    border-left: solid 40px white;
+    border-bottom: solid 80px transparent;
+}
+
+h2::after {
+    position: absolute;
+    content: '';
+    right: -2px;
+    top: -7px;
+    width: 0;
+    height: 0;
+    border: none;
+    border-left: solid 40px transparent;
+    border-bottom: solid 80px white;
+}
+
+
+.ttl_line2 {
+    font-weight: bold;
+    border-bottom: 2px solid #4c9ac0;
+    padding: 0.3em;
+    margin-bottom: 0.3em;
+}
+
+.ttl_line2:first-letter {
+    font-size: 1.5em;
+    color: #4c9ac0;
+}
+
+.ttl_line4 {
+    font-weight: bold;
+    border-bottom: 3px solid #4c9ac0;
+    padding: 0.3em;
+    margin-bottom: 0.3em;
+    transform: skewX(-15deg);
+    position: relative;
+}
+
+.ttl_line4::before,
+.ttl_line4::after {
+    content: '';
+    background-color: #4c9ac0;
+    width: 3px;
+    height: 20px;
+    transform: rotate(30deg);
+    position: absolute;
+    bottom: -10px;
+}
+
+.ttl_line4::before {
+    right: 2.5em;
+}
+
+.ttl_line4::after {
+    right: 2em;
+}
+
+/*セロテープ風*/
+.box5-6 {
+    background-color: #E6ECF2;
+    /* ボックス背景色 */
+    padding: 2.5em 2em 2em;
+    /* ボックス内側余白 */
+    position: relative;
+    /* 配置(ここを基準に) */
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.box5-6 .box-title {
+    background-color: rgba(255, 255, 255, .1);
+    /* テープ背景色と透過*/
+    border-left: 2px dotted rgba(0, 0, 0, .1);
+    /* ギザギザ左*/
+    border-right: 2px dotted rgba(0, 0, 0, .1);
+    /* ギザギザ右*/
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    /*テープ影*/
+    transform: rotate(-2deg);
+    /*テープの傾き*/
+    font-size: 20px;
+    /*タイトル文字の大きさ*/
+    color: #666;
+    /*タイトル文字色 */
+    padding: 10px 20px;
+    /*タイトルの余白*/
+    line-height: 1;
+    /*タイトルの行の高さ*/
+    position: absolute;
+    /*配置(ここを動かす)*/
+    top: -15px;
+    /*上からの距離*/
+    left: 20px;
+    /*左からの距離*/
+}

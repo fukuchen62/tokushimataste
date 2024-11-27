@@ -16,18 +16,18 @@
             <!-- <img src="../uploads/header-designkanpu.jpg" alt=""> -->
 
             <p class="kv-copy">
-                        徳島の味！<br class="tb-none">
-                        あなたのご飯のお友達<br class="tb-none">
-                </p>
+                徳島の味！<br class="tb-none">
+                あなたのご飯のお友達<br class="tb-none">
+            </p>
         </div>
 
         <div class="header-area pc-none">
             <div class="title-logo">
                 <h1>
-                        <a href="#" class="logo">
-                            <img src="../uploads/miso.jpeg" alt="">
-                        </a>
-                    </h1>
+                    <a href="#" class="logo">
+                        <img src="../uploads/miso.jpeg" alt="">
+                    </a>
+                </h1>
             </div>
 
             <div class="hamburger pc-none">
@@ -48,7 +48,9 @@
             </div>
         </div>
     </header>
-    <ul class="breadcrumb">
+
+    <!-- パンくずあとで消す -->
+    <!-- <ul class="breadcrumb">
         <ol itemscope itemtype="https://schema.org/BreadcrumbList">
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                 <a itemprop="item" href="../html/index.html">
@@ -63,7 +65,10 @@
                 <meta itemprop="position" content="2" />
             </li>
     </ul>
-    </ol>
+    </ol> -->
+
+    <!-- パンくずリスト -->
+    <?php get_template_part('template-parts/breadcrumb'); ?>
 
     <!-- エリア検索 -->
     <h2 style="text-align: center;">お供の一覧表示</h2>
@@ -253,4 +258,5 @@
             <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
             <script src="../assets/js/goods.js"></script>
 </body>
+
 </html>

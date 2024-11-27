@@ -1,9 +1,16 @@
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/reset.css" media="all">
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/common.css" media="all">
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/column.css" media="all">
+<!-- <link rel="stylesheet" href="<?php //echo get_template_directory_uri();
+                                    ?>/assets/css/reset.css" media="all">
+<link rel="stylesheet" href="<?php //echo get_template_directory_uri();
+                                ?>/assets/css/common.css" media="all">
+<link rel="stylesheet" href="<?php //echo get_template_directory_uri();
+                                ?>/assets/css/column.css" media="all"> -->
 
 <?php get_header(); ?>
+
 <main>
+    <!-- パンくずリスト -->
+    <?php get_template_part('template-parts/breadcrumb'); ?>
+
     <!-- コラム -->
     <section class="column">
         <div class="inner">
@@ -23,13 +30,9 @@
                     <?php endwhile; ?>
                 </ul>
             <?php endif; ?>
-
         </div>
-
     </section>
-
     ?>
-
 </main>
 
 <?php get_sidebar();

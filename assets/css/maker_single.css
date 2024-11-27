@@ -1,5 +1,11 @@
 @charset "utf-8";
 
+.tittle_ms {
+    text-align: center;
+    margin: 50px;
+    font-weight: 600;
+}
+
 /* slick画像 */
 .container_ms {
     width: 100%;
@@ -31,39 +37,39 @@ img {
     color: DimGray;
 }
 
-.thumbnail-img {
+.thumbnail_img {
     opacity: 0.3;
     transition: opacity 0.3s linear;
     cursor: pointer;
 }
 
-.thumbnail .slick-current {
+.thumbnail_ms .slick-current {
     opacity: 1;
 }
 
 /* テーブル */
-table {
+.table_ms {
     font-size: 1.6rem;
 }
 
-tr {
+.table_ms tr {
     border-bottom: solid 1px black;
 }
 
-th,
-td {
+.table_ms th,
+.table_ms td {
     padding: 10px;
 }
 
-th {
+.table_ms th {
     font-size: 1.8rem;
 }
 
-td {
+.table_ms td {
     font-weight: 600;
 }
 
-td p small {
+.table_ms td p small {
     color: tomato;
     font-weight: normal;
 }
@@ -80,7 +86,7 @@ td p small {
             width: 45%;
         }
 
-        table {
+        .table_ms {
             width: 45%;
         }
     }

@@ -17,6 +17,8 @@
             </li>
         </ul>
     </section>
+
+
     <div class="card-container">
         <ul class="page_list">
             <li>
@@ -27,6 +29,8 @@
                 <p>市内</p>
                 <p>ご飯にかけても何にかけてもおいしいよ さあ、おなかいっぱいになるまでお食べ</p>
             </li>
+
+
             <li>
                 <img src="../uploads/tsukudani.jpeg" alt="Image" class="img-fluid"><br>
                 <a href="#" id="goods">Oh No 海苔</a>
@@ -125,7 +129,7 @@
 
         <!-- トップページに戻るボタン -->
         <p id="page-top"><a href="#">↑<br>TOP</a></p>
-        <style>
+        <!-- <style>
             * {
                 box-sizing: border-box;
             }
@@ -187,10 +191,15 @@
                 background-color: #1597CC;
                 color: #fff;
             }
-        </style>
+        </style> -->
 
-        <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</main>
+<?php
+get_template_part('template-parts/pagination');
+?>
+<?php get_footer(); ?>
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
             <script src="../assets/js/goods.js"></script> -->
-        </body>
+</body>
 
-        </html>
+</html>

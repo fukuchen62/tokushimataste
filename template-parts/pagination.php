@@ -5,3 +5,8 @@
     </div>
 
 <?php endif; ?>
+
+<!-- ページナビ --必要なところに>
+<?php
+//get_template_part('template-parts/pagination');
+?>

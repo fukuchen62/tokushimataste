@@ -3,7 +3,8 @@
 <!-- <link rel="stylesheet" href="<?php //echo get_template_directory_uri();
                                     ?>/assets/css/common.css" media="all"> -->
 
-<?php get_header(); ?>
+<?php get_header() ?>
+
 <main>
     <div class="inner">
         <!-- パンくずリスト -->

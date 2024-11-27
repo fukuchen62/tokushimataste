@@ -56,56 +56,65 @@
 
         </div>
     </section>
+
 </main>
 <?php /*implode('||', $_POST['area']);
 implode('||', $_POST['product_type']);
 implode('||', $_POST['taste']);
 implode('||', $_POST['allergy']); */
 ?>
-<?php $args = [
+<?php
+print_r($_GET['allergy']);
+$args = [
     'post_type' => 'product',
     'post_per_page' => -1,
 ];
-if ($_POST['allergy']) :
-    foreach ($_POST['allergy'] as $allergy):
+$omission_allergy = [];
+if ($_GET['allergy']) :
+    foreach ($_GET['allergy'] as $allergy):
+        $omission_allergy = array_merge(get_terms([
+            'taxonomy' => 'allergy',
+            'fields' => 'ids',
+            'slug' => $allergy,
+        ]));
     endforeach;
     $args = [
-        'post__not_in' => ''
+        'post__not_in' => array_unique($omission_allergy)
     ];
 endif;
 $taxquerysp = [
     'relation' => 'AND',
     [
         'taxonomy' => 'area',
-        'terms' => $_POST['area'],
+        'terms' => $_GET['area'],
         'field' => 'slug'
     ],
     [
-        'taxonomy' => 'area',
-        'terms' => $_POST['area'],
+        'taxonomy' => 'product_type',
+        'terms' => $_GET['product_type'],
         'field' => 'slug',
     ],
     [
-        'taxonomy' => 'area',
-        'terms' => $_POST['area'],
+        'taxonomy' => 'taste',
+        'terms' => $_GET['taste'],
         'field' => 'slug'
     ],
 ];
 // $taxquerysp[] = [
 //     'taxonomy' => 'area',
-//     'terms' => $_POST['area'],
+//     'terms' => $_GET['area'],
 //     'field' => 'slug'],
 
 //     ['taxonomy' => 'area',
-//     'terms' => $_POST['area'],
+//     'terms' => $_GET['area'],
 //     'field' => 'slug',];
-$args['tax_query'] = $taxqerysp;
-print_r($args);
-$the_query = new WP_Query($args);
-if ($the_query->have_posts()):
-    while ($the_Query->have_posts()): $the_Query->the_post(); ?>
-        <?php the_post_thumbnail('medium'); ?>
-<?php endwhile;
-    wp_reset_postdata();
-endif; ?>
+$args['tax_query'] = $taxqerysp;;
+// $the_query = new WP_Query($args);
+// if ($the_query->have_posts()):
+//     while ($the_Query->have_posts()): $the_Query->the_post();
+?>
+<?php /*the_post_thumbnail('medium'); */ ?>
+<?php /* endwhile;*/
+wp_reset_postdata();
+/*endif;*/ ?>
 <?php get_footer(); ?>

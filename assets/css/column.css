@@ -9,7 +9,7 @@
 } */
 
 .inner {
-	max-width: 350px;
+	max-width: 300px;
 	margin: 0 auto;
 }
 
@@ -25,12 +25,11 @@
 }
 
 .ttl_box span {
+	display: inline-block;
 	margin-bottom: 5px;
 }
 
-.ttl_box span {
-	display: inline-block;
-}
+
 
 
 
@@ -340,4 +339,11 @@ li.cat-item a::after {
 	margin-top: 0;
 	margin-bottom: 0;
 	line-height: normal;
+}
+
+/* コラム幅寄せ */
+.column_list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
 }

@@ -89,5 +89,7 @@
     </section>
 </main>
 
+<!-- ページナビ -->
+<?php get_template_part('template-parts/pagination'); ?>
 
 <?php get_footer(); ?>

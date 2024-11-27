@@ -255,8 +255,8 @@
                 }
             </style>
 
-            <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-            <script src="../assets/js/goods.js"></script>
+            <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+            <script src="../assets/js/goods.js"></script> -->
 </body>
 
 </html>

@@ -1,72 +1,5 @@
-<!DOCTYPE html>
-<html lang="ja">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>エリア検索ページ</title>
-<link href="../assets/css/reset.css" rel="stylesheet">
-<link href="../assets/css/goods.css" rel="stylesheet">
-<link href="../assets/css/header.css" rel="stylesheet">
-<link href="../assets/css/common.css" rel="stylesheet">
-<link href="../assets/css/footer.css" rel="stylesheet">
-
-<body>
-    <header>
-
-        <div class="kv">
-            <!-- <img src="../uploads/header-designkanpu.jpg" alt=""> -->
-
-            <p class="kv-copy">
-                徳島の味！<br class="tb-none">
-                あなたのご飯のお友達<br class="tb-none">
-            </p>
-        </div>
-
-        <div class="header-area pc-none">
-            <div class="title-logo">
-                <h1>
-                    <a href="#" class="logo">
-                        <img src="../uploads/miso.jpeg" alt="">
-                    </a>
-                </h1>
-            </div>
-
-            <div class="hamburger pc-none">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="h_nav sp-none ">
-                <ul class="slide-menu pc-none">
-                    <li><a href="goods.html">商品一覧</a></li>
-                    <li><a href="area.html.html">エリア検索</a></li>
-                    <li><a href="research.html">詳細検索</a></li>
-                    <li><a href="column.html.html">コラム</a></li>
-                    <li><a href="maker.html">メーカー一覧</a></li>
-                    <li><a href="recipe.html">アレンジレシピ</a></li>
-                    <li><a href="favorite.html">お気に入り</a></li>
-                </ul>
-            </div>
-        </div>
-    </header>
-
-    <!-- パンくずあとで消す -->
-    <!-- <ul class="breadcrumb">
-        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="../html/index.html">
-                    <span itemprop="name">ホーム</span>
-                </a>
-                <meta itemprop="position" content="1" />
-            </li>
-            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="#">
-                    <span itemprop="name">エリア検索</span>
-                </a>
-                <meta itemprop="position" content="2" />
-            </li>
-    </ul>
-    </ol> -->
-
+<?php get_header() ?>
+<main>
     <!-- パンくずリスト -->
     <?php get_template_part('template-parts/breadcrumb'); ?>
 
@@ -187,76 +120,77 @@
             </li>
         </ul>
 
-        <ul class="pagination"></ul>
-        <main>
-            <!-- トップページに戻るボタン -->
-            <p id="page-top"><a href="#">↑<br>TOP</a></p>
-            <style>
-                * {
-                    box-sizing: border-box;
-                }
+        <!-- <ul class="pagination"></ul> -->
 
 
-                ul {
-                    list-style: none;
-                }
+        <!-- トップページに戻るボタン -->
+        <p id="page-top"><a href="#">↑<br>TOP</a></p>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
 
-                .page_list {
-                    border-top: 1px solid #000;
-                    margin-bottom: 20px;
-                }
 
-                .page_list li {
-                    display: none;
-                    padding: 20px 0;
-                    border-bottom: 1px solid #000;
-                }
+            ul {
+                list-style: none;
+            }
 
-                .page_list li.on {
-                    display: block;
-                }
+            .page_list {
+                border-top: 1px solid #000;
+                margin-bottom: 20px;
+            }
 
-                .pagination {
-                    width: 70%;
-                    margin: 0 auto 50px;
-                    font-size: 14px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    gap: 5px;
-                }
+            .page_list li {
+                display: none;
+                padding: 20px 0;
+                border-bottom: 1px solid #000;
+            }
 
-                .pagination .number {
-                    display: flex;
-                    align-items: center;
-                    justify-content: flex-start;
-                    flex-wrap: wrap;
-                    gap: 5px;
-                }
+            .page_list li.on {
+                display: block;
+            }
 
-                .pagination a {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 40px;
-                    height: 40px;
-                    text-align: center;
-                    text-decoration: none;
-                    cursor: pointer;
-                    background-color: #ffffff;
-                    border: solid 1px #1597CC;
-                    border-radius: 5px;
-                    padding: 10px 0;
-                }
+            .pagination {
+                width: 70%;
+                margin: 0 auto 50px;
+                font-size: 14px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 5px;
+            }
 
-                .pagination .number>a.active {
-                    background-color: #1597CC;
-                    color: #fff;
-                }
-            </style>
+            .pagination .number {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                gap: 5px;
+            }
 
-            <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+            .pagination a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 40px;
+                height: 40px;
+                text-align: center;
+                text-decoration: none;
+                cursor: pointer;
+                background-color: #ffffff;
+                border: solid 1px #1597CC;
+                border-radius: 5px;
+                padding: 10px 0;
+            }
+
+            .pagination .number>a.active {
+                background-color: #1597CC;
+                color: #fff;
+            }
+        </style>
+
+        <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
             <script src="../assets/js/goods.js"></script> -->
-</body>
+        </body>
 
-</html>
+        </html>

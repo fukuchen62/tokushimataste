@@ -25,12 +25,11 @@
 }
 
 .ttl_box span {
+	display: inline-block;
 	margin-bottom: 5px;
 }
 
-.ttl_box span {
-	display: inline-block;
-}
+
 
 
 

@@ -48,31 +48,6 @@ section+section {
 }
 
 /* ---------- */
-/* pc */
-@media(width>=1060px) {
-	section {
-		margin-top: 0px;
-		margin-bottom: 120px;
-	}
-
-	.inner {
-		max-width: 1040px;
-	}
-
-	.ttl_box {
-		margin-bottom: 40px;
-	}
-
-	.ttl_box .ttl {
-		/* 48px */
-		font-size: 3rem;
-	}
-
-	.ttl_box .sb-ttl {
-		/* 16px */
-		font-size: 1.6rem;
-	}
-}
 
 /*Tableの設定
 body {
@@ -99,15 +74,6 @@ a:hover {
 	text-decoration: none;
 }
 
-/*ヘッダー,ナビ,フッターの共通設定*/
-header,
-nav,
-footer {
-	text-align: center;
-}
-
-
-
 /*チェックボックスの設定*/
 input[type="checkbox"] {
 	width: 10px;
@@ -131,32 +97,34 @@ input[type="checkbox"] {
 
 .check_box {
 	background: #F7EB99;
-	width: 80%;
 	margin: 0 auto;
-	padding: 50px;
-
+	padding: 20px;
 }
-
 
 .search h3 {
 	font-size: 1.6rem;
 }
 
 .search li {
-	flex-direction: row;
+	/* flex-direction: row; */
 	font-size: 1.6rem;
 	display: inline-block;
-	padding: auto;
+	padding-right: 30px;
+	line-height: 50px;
 }
 
-.inner_search _flex {
+.inner_search {
 	display: flex;
-	justify-content: space-around;
-	align-items: flex-start;
-	margin: 0 auto;
-	gap: 60px;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 
+
+
+
+/* .check_box:nth-child(2n) {
+	margin-right: 0;
+} */
 
 
 /*カーソル形状*/

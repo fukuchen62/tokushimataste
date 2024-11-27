@@ -39,15 +39,9 @@
             <ul class="maker_list">
                 <?php if (have_posts()): ?>
                     <?php while (have_posts()) : the_post(); ?>
-                        <li>
-                            <a href="">
-                                <div class="box_maker">
-                                    <img src="../uploads/tennin (1).png" alt="メーカー写真">
-                                    <h3>サブタイトルサブタイトル</h3>
-                                    <p>テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。</p>
-                                </div>
-                            </a>
-                        </li>
+
+                        <?php get_template_part('template-parts/loop', 'maker'); ?>
+
                     <?php endwhile; ?>
                 <?php endif; ?>
             </ul>

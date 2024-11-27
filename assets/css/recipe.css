@@ -24,7 +24,7 @@
 ページングで表示するコンテンツのスタイル
  初期表示は非表示 */
 
-.page_recipelist {
+.list {
     display: flex;
     list-style: none;
     flex-wrap: wrap;
@@ -37,7 +37,7 @@
 
 /* onクラス添付で画面に表示 */
 /* もとにもどす */
-.page_recipelist li.on {
+.list li.on {
     display: block;
     max-width: 320px;
 }
@@ -49,31 +49,32 @@ body {
 }
 
 /* もっと見る */
-
-.container {
+.recipe_container {
     width: 100%;
-    /* max-width: 480px; */
-    margin: 0 auto;
+    margin: 0 auto 80px;
+    padding: 10px;
 }
 
 .list {
-    flex-wrap: wrap;
-    margin: 40px -20px 0;
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
 }
 
 .list li {
-    box-sizing: border-box;
-    margin: 0 10px 20px;
-    text-align: center;
-    /* background: #C5CAE9; */
-    padding: 10px;
-    opacity: 1;
+    width: 100%;
+    max-width: calc(33.33333% - 10px);
+    /* max-width: 320px; */
+    min-width: 300px;
     height: auto;
-    flex-basis: calc(33.33333% - 20px);
-    max-width: calc(33.33333% - 20px);
+    margin: 0 auto;
+    opacity: 1;
     transition: all .4s ease 0s;
     overflow: hidden;
+    margin-bottom: 40px;
+    border-radius: 10px;
 }
 
 .list li.is-hidden {
@@ -82,6 +83,25 @@ body {
     height: 0;
     margin: 0 10px;
     padding: 0;
+}
+
+.recipe_box {
+    width: 100%;
+    margin: 0 auto;
+    /* max-width: 320px;
+    min-width: 300px; */
+    height: auto;
+    border: 2px darkorange solid;
+    border-radius: 10px;
+}
+
+.recipe_box p {
+    width: 98%;
+    height: 6rem;
+    margin: 0 auto;
+    margin: 10px;
+    padding: 5px;
+    text-align: left;
 }
 
 .more {

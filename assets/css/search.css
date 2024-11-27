@@ -108,7 +108,7 @@ input[type="checkbox"] {
 .search li {
 	/* flex-direction: row; */
 	font-size: 1.6rem;
-	display: inline-block;
+	/* display: inline-block; */
 	padding-right: 30px;
 	line-height: 50px;
 }
@@ -118,13 +118,6 @@ input[type="checkbox"] {
 	justify-content: center;
 	flex-wrap: wrap;
 }
-
-
-
-
-/* .check_box:nth-child(2n) {
-	margin-right: 0;
-} */
 
 
 /*カーソル形状*/

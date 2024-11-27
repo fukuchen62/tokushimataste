@@ -19,7 +19,6 @@ section+section {
 
 .ttl_box {
     margin-bottom: 20px;
-
 }
 
 .ttl_box h2 {
@@ -84,106 +83,46 @@ section+section {
     }
 }
 
-/* ==================== */
-/* ご飯のお供etc */
-/* ==================== */
-
-/*
-.slider div:first-of-type {
-    background-image: url(../../uploads/narazuke.jpeg);
-}
-.slider div:nth-of-type(2) {
-    background-image: url(../../uploads/saba-misoni.jpg);
-}
-.slider div:nth-of-type(3) {
-    background-image: url(../../uploads/tsukemono.jpeg);
-}
-.slider div:nth-of-type(4) {
-    background-image: url(../../uploads/nori.jpeg);
-}
-
-.slider div:nth-of-type(5) {
-    background-image: url(../../uploads/tukemono.jpg);
-} */
-
-/* ==================== */
-/* メーカー様ご紹介etc */
-/* ==================== */
-
-/* .slider2-wrap {
-    overflow: hidden;
+.column_list {
+    padding-inline-start: 0px;
+    flex-wrap: wrap;
     display: flex;
-    flex-wrap: nowrap;
-    margin: 30px 10px 50px 10px;
+    gap: 20px;
+    justify-content: center;
+    /* margin: 0 auto; */
 }
 
-.slider2 { */
-/* height: 60vh; */
-/* position: relative;
-    margin: auto;
+.page_list {
+    padding-inline-start: 0px;
+    flex-wrap: wrap;
     display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    animation: slide-loop 40s linear infinite;
+    gap: 20px;
+    justify-content: center;
+    /* margin: 0 auto; */
 }
 
-.slider2 div {
-    width: 300px;
-    height: 300px;
-    background-position: center;
-    background-size: cover;
-    margin: 0 20px;
-}
-
-@keyframes slide-loop {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-100%);
-    }
-}
- */
-/* .slider2 div:first-of-type {
-    background-image: url(../../uploads/cat.jpg);
-}
-.slider2 div:nth-of-type(2) {
-    background-image: url(../../uploads/tennin\ \(1\).png);
-}
-.slider2 div:nth-of-type(3) {
-    background-image: url(../../uploads/misemae.png);
-}
-.slider2 div:nth-of-type(4) {
-    background-image: url(../../uploads/tennin\ \(1\));
-}
-.slider2 div:nth-of-type(5) {
-    background-image: url(../../uploads/misemae.png);
-}
-.slider2 div:nth-of-type(5) {
-    background-image: url(../../uploads/cat.jpg);
-} */
 
 /* ==================== */
 /* インスタグラム */
 /* ==================== */
+
 .inst_container {
     text-align: center;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .inst_ttl h3 {
     background-image: linear-gradient(90deg, rgb(241, 139, 199), rgb(134, 85, 158));
-    padding: 20px auto;
+    width: 300px;
     font-size: 1.6rem;
     border-radius: 15px;
     display: inline-block;
-    width: 300px;
 }
 
 .inst_ttl {
-
     text-align: center;
-    margin-bottom: 40px;
+    margin: 20px 0;
 }
 
 .inst_photo img {
@@ -197,74 +136,50 @@ section+section {
 .inst_photo {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: stretch;
-    margin: 30px 0;
+    padding-inline-start: 0px;
+    justify-content: center;
+    gap: 20px;
 }
 
-/* エリア検索＆マップの雲 */
-.area {
-    text-align: center;
-}
+/* マップの雲 */
 
 .area_map {
     position: relative;
-    align-items: center;
 }
 
-.area_map a {
-    height: 150px;
+.area_btn {
+    margin-top: 40px;
 }
 
-.kumo_higashi {
+.kumo {
+    width: 30%;
+    animation: floating-y 1.8s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes floating-y {
+    0% {
+        transform: translateY(-5%);
+    }
+
+    100% {
+        transform: translateY(5%);
+    }
+}
+
+.higashi {
     position: absolute;
-    top: 10%;
-    left: 57%;
+    top: 20%;
+    left: 50%;
 }
 
-.kumo_minami {
+.nishi {
     position: absolute;
-    top: 40%;
-    left: 25%;
+    top: 30%;
+    right: 60%;
 }
 
-.kumo_nishi {}
-
-
-/* ==================== */
-/* コラム */
-/* ==================== */
-.column_list {
-    margin: 0 auto;
-}
-
-/* ---------- */
-/* pc */
-/* @media(width>=1060px) {
-    .column .more {
-        max-width: 400px;
-        margin: 0 auto;
-    }
-} */
-/*
-.column_list {
-    text-align: center;
-} */
-
-/* tablet */
-@media(width>=700px) {
-    .column_list {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        gap: 30px;
-
-
-    }
-
-    .column_list li {
-        max-width: 320px;
-    }
-
+.minami {
+    position: absolute;
+    top: 70%;
+    right: 25%;
 }

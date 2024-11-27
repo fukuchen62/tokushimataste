@@ -9,3 +9,7 @@ if (function_exists('bcn_display')):
     </div>
 
 <?php endif; ?>
+
+<!-- パンくずリスト必要なところに -->
+<?php //get_template_part('template-parts/breadcrumb'); 
+?>

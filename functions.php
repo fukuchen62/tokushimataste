@@ -195,7 +195,7 @@ function add_style_script()
             get_template_directory_uri() .
                 PATH . 'css/recipe.css',
         );
-    } elseif (is_post_type_archive('product') || is_tax('product_type')) {
+    } elseif (is_post_type_archive('product') || is_tax('product_type') || is_tax('area')) {
         wp_enqueue_style(
             'my_product_list_style',
             get_template_directory_uri() .

@@ -15,8 +15,9 @@
                 </a>
                 <meta itemprop="position" content="2" />
             </li>
+        </ol>
     </ul>
-    </ol>
+
 
     <h1 style="font-size: 20px; font-weight: 600; text-align: center; margin-bottom: 20px;">お供の一覧表示</h1>
     <!-- ジャンル検索 -->

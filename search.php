@@ -66,12 +66,39 @@ implode('||', $_POST['allergy']); */
     'post_type' => 'product',
     'post_per_page' => -1,
 ];
-$taxquerysp = ['relation' => 'AND'];
-$taxquerysp[] = [
-    'taxonomy' => 'area',
-    'terms' => $_POST['area'],
-    'field' => 'slug',
+if ($_POST['allergy']) :
+    foreach ($_POST['allergy'] as $allergy):
+    endforeach;
+    $args = [
+        'post__not_in' => ''
+    ];
+endif;
+$taxquerysp = [
+    'relation' => 'AND',
+    [
+        'taxonomy' => 'area',
+        'terms' => $_POST['area'],
+        'field' => 'slug'
+    ],
+    [
+        'taxonomy' => 'area',
+        'terms' => $_POST['area'],
+        'field' => 'slug',
+    ],
+    [
+        'taxonomy' => 'area',
+        'terms' => $_POST['area'],
+        'field' => 'slug'
+    ],
 ];
+// $taxquerysp[] = [
+//     'taxonomy' => 'area',
+//     'terms' => $_POST['area'],
+//     'field' => 'slug'],
+
+//     ['taxonomy' => 'area',
+//     'terms' => $_POST['area'],
+//     'field' => 'slug',];
 $args['tax_query'] = $taxqerysp;
 print_r($args);
 $the_query = new WP_Query($args);

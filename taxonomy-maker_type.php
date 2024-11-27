@@ -3,7 +3,7 @@
 <!-- <link rel="stylesheet" href="<?php //echo get_template_directory_uri();
                                     ?>/assets/css/common.css" media="all"> -->
 
-<?php get_header() ?>
+<?php get_header(); ?>
 
 <main>
     <div class="inner">
@@ -26,7 +26,7 @@
             </ul>
         </div>
 
-        <h2 class="area_box"><span class="ttl">県東部</span></h2>
+        <!-- <h2 class="area_box"><span class="ttl">県東部</span></h2> -->
 
         <?php //$area_slug = get_query_var('area');
         ?>
@@ -45,43 +45,7 @@
                     <?php endwhile; ?>
                 <?php endif; ?>
             </ul>
-
-
-            <li>
-                <a href="">
-                    <div class="box_maker">
-                        <img src="../uploads/tennin (1).png" alt="メーカー写真">
-                        <h3>サブタイトルサブタイトル</h3>
-                        <p>テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。</p>
-
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <div class="box_maker">
-                        <img src="../uploads/tennin (1).png" alt="メーカー写真">
-                        <h3>サブタイトルサブタイトル</h3>
-                        <p>テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。テキストは入ります。。。
-                </a>
-            </li>
-            </ul>
         </div>
-        <!-- ページネーション代用 -->
-        <!-- <ul class="page_example">
-            <li class="pre">前へ</li>
-            <li class="this">1</li>
-            <li><a href="">2</a></li>
-            <li><a href="">3</a></li>
-            <li><a href="">4</a></li>
-            <li><a href="">次へ</a></li>
-        </ul> -->
-
-        <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-        <script src="../assets/js/main.js"></script> -->
-
-
-    </div>
 </main>
 
 <!-- ページナビ -->

@@ -218,27 +218,17 @@ section+section {
 
 .kumo_higashi {
     position: absolute;
-    top: 15%;
+    top: 10%;
     left: 57%;
-    width: 320px;
-    height: auto;
 }
 
 .kumo_minami {
     position: absolute;
-    top: 70%;
-    left: 40%;
-    width: 320px;
-    height: auto;
+    top: 40%;
+    left: 25%;
 }
 
-.kumo_nishi {
-    position: absolute;
-    top: 40%;
-    left: 10%;
-    width: 320px;
-    height: auto;
-}
+.kumo_nishi {}
 
 
 /* ==================== */

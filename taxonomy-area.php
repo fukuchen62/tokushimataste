@@ -26,13 +26,7 @@
 
         <div class="card-container">
             <ul class="page_list">
-                <?php
-                // $args = ['post_type' => 'product'];
 
-                ?>
-                <?php
-                // $the_query = new WP_Query($args)
-                ?>
                 <?php if (have_posts()): ?>
                     <?php while (have_posts()) : the_post(); ?>
                         <li>
@@ -42,12 +36,6 @@
                 <?php endif; ?>
             </ul>
         </div>
-
-
-
-
-        <!-- <ul class="pagination"></ul> -->
-
 
         <!-- トップページに戻るボタン -->
         <p id="page-top"><a href="#">↑<br>TOP</a></p>

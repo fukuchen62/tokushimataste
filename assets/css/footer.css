@@ -4,7 +4,6 @@ footer {
     background-color: #93b4df;
     margin-top: 100px;
     text-align: center;
-    margin: 0 auto;
 }
 
 .footer_nav {
@@ -46,14 +45,19 @@ footer {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    font-size: 14px;
-    line-height: 1;
+    /* font-size: 14px; */
+    /* line-height: 1; */
     z-index: 99;
+}
 
+/* トップに戻るボタン */
+#page-top img {
+    width: 100px;
+    border-radius: 50%;
 }
 
 /* トップに戻る文字 */
-#page-top a {
+/* #page-top a {
     background: #0f31f1;
     text-decoration: none;
     color: #fff;
@@ -65,12 +69,12 @@ footer {
     border-radius: 50%;
     opacity: 0.9;
     transition: all .6s ease;
-}
-
+} */
+/*
 #page-top a:hover {
     letter-spacing: .3rem;
     box-shadow: 5px 5px 50px yellow;
-}
+} */
 
 /*＝＝＝豆知識＝＝＝ */
 

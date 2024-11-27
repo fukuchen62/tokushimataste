@@ -101,46 +101,6 @@ section+section {
     /* margin: 0 auto; */
 }
 
-
-/* ==================== */
-/* インスタグラム */
-/* ==================== */
-
-.inst_container {
-    text-align: center;
-    width: 80%;
-    margin: 0 auto;
-}
-
-.inst_ttl h3 {
-    background-image: linear-gradient(90deg, rgb(241, 139, 199), rgb(134, 85, 158));
-    width: 300px;
-    font-size: 1.6rem;
-    border-radius: 15px;
-    display: inline-block;
-}
-
-.inst_ttl {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.inst_photo img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border: solid blue;
-    padding: 10px;
-}
-
-.inst_photo {
-    display: flex;
-    flex-wrap: wrap;
-    padding-inline-start: 0px;
-    justify-content: center;
-    gap: 20px;
-}
-
 /* マップの雲 */
 
 .area_map {
@@ -182,4 +142,60 @@ section+section {
     position: absolute;
     top: 70%;
     right: 25%;
+}
+
+/* ==================== */
+/* インスタグラム */
+/* ==================== */
+
+.inst_container {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.inst_ttl h3 {
+    background-image: linear-gradient(90deg, rgb(241, 139, 199), rgb(134, 85, 158));
+    width: 300px;
+    font-size: 1.6rem;
+    border-radius: 15px;
+    display: inline-block;
+}
+
+.inst_ttl {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.inst_photo img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: solid blue;
+    padding: 10px;
+}
+
+.inst_photo {
+    display: flex;
+    flex-wrap: wrap;
+    padding-inline-start: 0px;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+/* バナー */
+
+.banner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0;
+    padding-inline-start: 0px
+}
+
+.banner img {
+    max-width: 200px;
 }

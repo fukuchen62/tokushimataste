@@ -6,23 +6,9 @@
 <?php get_header(); ?>
 <main>
     <div class="inner">
-        <!-- パンくず -->
-        <ol class="breadcrumb">
-            <ul itemscope itemtype="https://schema.org/BreadcrumbList">
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <a itemprop="item" href="../html/index.html">
-                        <span itemprop="name">ホーム</span>
-                    </a>
-                    <meta itemprop="position" content="1" />
-                </li>
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <a itemprop="item" href="#">
-                        <span itemprop="name">メーカーさん</span>
-                    </a>
-                    <meta itemprop="position" content="2" />
-                </li>
-            </ul>
-        </ol>
+        <!-- パンくずリスト -->
+        <?php get_template_part('template-parts/breadcrumb'); ?>
+
 
         <h2 class="ttl_box"><span class="ttl">メーカーさん紹介</span></h2>
 
@@ -30,11 +16,11 @@
         <div id="btn-area" class="wrap">
             <ul class="btn-content">
                 <li id="east">
-                    <a href="#" class=""><span>県東</span></a>
+                    <a href="<?php echo home_url('/area/east/'); ?>" class=""><span>県東</span></a>
                 </li>
-                <li id="west"><a href="#" class=""><span>県西</span></a>
+                <li id="west"><a href="<?php echo home_url('/area/west/'); ?>" class=""><span>県西</span></a>
                 </li>
-                <li id="south"><a href="#" class=""><span>県南</span></a>
+                <li id="south"><a href="<?php echo home_url('/area/south/'); ?>" class=""><span>県南</span></a>
                 </li>
             </ul>
         </div>
@@ -74,17 +60,17 @@
             </ul>
         </div>
         <!-- ページネーション代用 -->
-        <ul class="page_example">
+        <!-- <ul class="page_example">
             <li class="pre">前へ</li>
             <li class="this">1</li>
             <li><a href="">2</a></li>
             <li><a href="">3</a></li>
             <li><a href="">4</a></li>
             <li><a href="">次へ</a></li>
-        </ul>
+        </ul> -->
 
-        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-        <script src="../assets/js/main.js"></script>
+        <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="../assets/js/main.js"></script> -->
 
 
     </div>

@@ -23,38 +23,24 @@
     <section id="btn-area" class="wrap">
         <!-- ジャンル検索ボタン -->
         <ul class="btn-content">
-            <?php $args = get_terms(['taxonomy' => 'product_type']);
-            print_r($args);
-            ?>
-            <?php $name_slug = []; ?>
-            <?php foreach ($args as $arg): ?>
-                <?php ['name' => $name[]] = $arg; ?>
-            <?php endforeach ?>
-            <?php foreach ($name_slug as ['name' => $name, 'slug' => $slug]) : ?>
-
-
-
-
-                <?php ?>
-                <li id="<?php echo $slug ?>">
-                    <a href="<?php echo home_url('/') ?>" class=""><span><?php echo $name ?></span></a>
+            <?php $args = get_terms([
+                'taxonomy' => 'product_type',
+                'fields' => 'slugs'
+            ]); ?>
+            <?php foreach ($args as $key => $value): ?>
+                <li id="<?php print $value ?>">
+                    <a href="<?php echo get_term_link(get_term_by('slug', $value, 'product_type'), 'product_type') ?>" class="">
+                        <span><?php echo implode((get_terms([
+                                    'taxonomy' => 'product_type',
+                                    'fields' => 'names',
+                                    'slug' => $value,
+                                ])
+                                )) ?></span></a>
                 </li>
-            <?php endforeach ?>
-
-            <li id="daizu">
-                <a href="#" class=""><span>肉・卵・大豆製品</span></a>
-            </li>
-            </li>
-            <li id="furikake">
-                <a href="#" class=""><span>ふりかけ・混ぜご飯の素</span></a>
-            </li>
-            </li>
-            <li id="yakumi">
-                <a href="#" class=""><span>薬味・シンプル調味料</span></a>
-            </li>
+            <?php endforeach; ?>
             </li>
             <li id="other">
-                <a href="#" class=""><span>その他</span></a>
+                <a href="<?php echo get_term_link(get_term_by('slug', 'others', 'product_type'), 'product_type') ?>" class=""><span>その他</span></a>
             </li>
         </ul>
     </section>

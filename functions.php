@@ -170,7 +170,7 @@ function add_style_script()
             get_template_directory_uri() .
                 PATH . 'css/column.css',
         );
-    } elseif (is_post_type_archive('maker') || is_tax('maker_type')) {
+    } elseif (is_post_type_archive('maker') || is_tax('area')) {
         //コラムリスト
         wp_enqueue_style(
             'my_maker_list_style',

@@ -1,7 +1,11 @@
+<?php
+// ページのヘッダーを読み込む Start
+?>
 <?php get_header(); ?>
+<?php
+// ページのヘッダーを読み込む End
+?>
 <main>
-
-
     <section class="section">
 
         <!-- searchform.phpを読み込む -->
@@ -58,57 +62,65 @@
     </section>
 
 </main>
-<?php /*implode('||', $_POST['area']);
-implode('||', $_POST['product_type']);
-implode('||', $_POST['taste']);
-implode('||', $_POST['allergy']); */
+<?php
+$area_slug = get_query_var('area');                // エリアを取得
+$product_type_slug = get_query_var('product_type');    // 商品種別取得
+$taste_slug = get_query_var('taste');              // 味覚取得
+$allergy_type_slug = get_query_var('allergy');      // アレルギー取得
+
 ?>
 <?php
-print_r($_GET['allergy']);
+if (!empty($vege_type_slug)) {
+    print_r($vege_type_slug);
+}
 $args = [
     'post_type' => 'product',
     'post_per_page' => -1,
 ];
+//選択されたアレルギーを除外するための配列を用意する
 $omission_allergy = [];
-if ($_GET['allergy']) :
-    foreach ($_GET['allergy'] as $allergy):
-        $omission_allergy = array_merge(get_terms([
-            'taxonomy' => 'allergy',
-            'fields' => 'ids',
-            'slug' => $allergy,
-        ]));
-    endforeach;
-    $args = [
-        'post__not_in' => array_unique($omission_allergy)
-    ];
-endif;
-$taxquerysp = [
-    'relation' => 'AND',
-    [
-        'taxonomy' => 'area',
-        'terms' => $_GET['area'],
-        'field' => 'slug'
-    ],
-    [
-        'taxonomy' => 'product_type',
-        'terms' => $_GET['product_type'],
-        'field' => 'slug',
-    ],
-    [
-        'taxonomy' => 'taste',
-        'terms' => $_GET['taste'],
-        'field' => 'slug'
-    ],
-];
-// $taxquerysp[] = [
-//     'taxonomy' => 'area',
-//     'terms' => $_GET['area'],
-//     'field' => 'slug'],
 
-//     ['taxonomy' => 'area',
-//     'terms' => $_GET['area'],
-//     'field' => 'slug',];
-$args['tax_query'] = $taxqerysp;;
+// アレルギーにデータがあるなら、繰り返す
+if (!empty($allergy_type_slug)) :
+    foreach ($allergy_type_slug as $allergy):
+        //
+        $omission_allergy = array_merge(get_terms(
+            [
+                'taxonomy' => 'allergy',
+                'fields' => 'ids',
+                'slug' => $allergy,
+            ]
+        ));
+    endforeach;
+    $args[] = "'post__not_in' => array_unique($omission_allergy)";
+endif;
+$taxquerysp = ['relation' => 'AND'];
+
+if (!empty($area_slug)) {
+    $taxquerysp[] = [
+        'taxonomy' => 'area',           //タクソノミー：『エリア』
+        'terms' => $area_slug,          //スラッグ名
+        'field' => 'slug',              //スラッグ指定
+    ];
+}
+
+if (!empty($product_type_slug)) {
+    $taxquerysp[] = [
+        'taxonomy' => 'product_type',     //タクソノミー：『イベントタイプ』
+        'terms' => $product_type_slug,    //スラッグ名
+        'field' => 'slug',              //スラッグ指定
+    ];
+}
+
+if (!empty($taste_slug)) {
+    $taxquerysp[] = [
+        'taxonomy' => 'taste',         //タクソノミー：『シーズン』
+        'terms' => $taste_slug,        //スラッグ名
+        'field' => 'slug',              //スラッグ指定
+    ];
+}
+$args['tax_query'] = $taxqerysp;
+$the_query = new WP_Query($args);
 // $the_query = new WP_Query($args);
 // if ($the_query->have_posts()):
 //     while ($the_Query->have_posts()): $the_Query->the_post();

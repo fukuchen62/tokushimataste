@@ -28,7 +28,16 @@
 
 </main>
 
-<?php get_sidebar(); ?>
-<?php get_template_part('template-parts/pagination'); ?>
+<!-- サイドバーメニュー -->
+<li class="side_bar side_bar_col">
+    <div class="category-list-outer">
+        <div class="category-list">
+            <h3>コラム一覧</h3>
+        </div>
+    </div>
+    <aside class="side-menu">
+        <ul class="side-menu-li">
+            <?php get_sidebar(); ?>
+            <?php get_template_part('template-parts/pagination'); ?>
 
-<?php get_footer(); ?>
+            <?php get_footer(); ?>

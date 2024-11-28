@@ -1,6 +1,12 @@
 @charset "utf-8";
 
 /* タイトル */
+.inner {
+	padding-top: 60px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
 .ttl_box {
 	text-align: center;
 	margin-bottom: 32px;
@@ -51,7 +57,8 @@ input[type="checkbox"] {
 /*詳細検索の背景の設定*/
 
 .check_box {
-	padding: 20px;
+	/* padding: 20px; */
+	padding-bottom: 0;
 }
 
 form {
@@ -159,5 +166,35 @@ input {
 	color: aliceblue;
 	font-weight: bold;
 	box-shadow: 0px 7px 3px rgba(25, 25, 112, 1);
-	-webkit-appearance: none;
+	appearance: none;
+}
+
+
+.triangle_sc {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-right: 75px solid transparent;
+	border-left: 75px solid transparent;
+	border-bottom: 0;
+	border-top: 60px solid beige;
+	margin: 0 auto;
+	margin-bottom: 30px;
+	margin-top: 2px;
+}
+
+.result_flex {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	gap: 30px;
+}
+
+.result_flex li {
+	width: 300px;
+	margin: 0 auto;
+}
+
+.result_box {
+	margin-bottom: 50px;
 }

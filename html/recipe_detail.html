@@ -29,30 +29,34 @@
 <body>
 
     <main>
-        <!--パンくずリスト-->
-        <ul class="breadcrumb">
-            <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <a itemprop="item" href="../html/index.html">
-                        <span itemprop="name">ホーム</span>
-                    </a>
-                    <meta itemprop="position" content="1" />
-                </li>
+        <section>
+            <div class="inner">
+                <!--パンくずリスト-->
+                <ul class="breadcrumb">
+                    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <a itemprop="item" href="../html/index.html">
+                                <span itemprop="name">ホーム</span>
+                            </a>
+                            <meta itemprop="position" content="1" />
+                        </li>
 
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <a itemprop="item" href="#">
-                        <span itemprop="name">アレンジレシピ</span>
-                    </a>
-                    <meta itemprop="position" content="2" />
-                </li>
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <a itemprop="item" href="#">
-                        <span itemprop="name">アレンジレシピ詳細</span>
-                    </a>
-                    <meta itemprop="position" content="3" />
-                </li>
-            </ol>
-        </ul>
+                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <a itemprop="item" href="#">
+                                <span itemprop="name">アレンジレシピ</span>
+                            </a>
+                            <meta itemprop="position" content="2" />
+                        </li>
+                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <a itemprop="item" href="#">
+                                <span itemprop="name">アレンジレシピ詳細</span>
+                            </a>
+                            <meta itemprop="position" content="3" />
+                        </li>
+                    </ol>
+                </ul>
+            </div>
+        </section>
 
         <h2>副菜</h2>
 
@@ -69,23 +73,52 @@
                         <div class="recipe"> -->
         <ol>
             <dl>
-                <dt>じゃがいも</dt>
+                <!-- <dt>じゃがいも</dt>
                 <dd>１個</dd>
                 <dt>にんじん</dt>
                 <dd>１本</dd>
                 <dt>玉ねぎ</dt>
                 <dd>１個</dd>
                 <dt>牛肉</dt>
-                <dd>200ｇ</dd>
+                <dd>100g</dd>
                 <dt>カレー粉</dt>
-                <dd>１個</dd>
+                <dd>１個</dd> -->
+                <li class="recipe_material__item">
+                    <span class="recipe_material__item_name">大根の葉</span>
+
+                    <span class="recipe_material__item_serving">２本分</span>
+
+
+                </li>
+
+                <li class="recipe_material__item">
+                    <span class="recipe_material__item_name">鶏がらスープの素</span>
+
+                    <span class="recipe_material__item_serving">大１</span>
+                </li>
+                <li class="recipe_material__item">
+                    <span class="recipe_material__item_name">鶏がらスープの素</span>
+
+                    <span class="recipe_material__item_serving">大１</span>
+                </li>
+                <li class="recipe_material__item">
+                    <span class="recipe_material__item_name">しょうゆ</span>
+
+                    <span class="recipe_material__item_serving">大１</span>
+                </li>
+                <li class="recipe_material__item">
+                    <span class="recipe_material__item_name">ごま油</span>
+
+                    <span class="recipe_material__item_serving">大１</span>
+                </li>
+
             </dl>
         </ol>
 
 
         <h2>作り方</h2>
         <ol>
-            <li>材料を準備。<br>今回カレー粉<br>ジャワカレー辛口×こくまろカレー中辛</li>
+            <!-- <li>材料を準備。<br>今回カレー粉<br>ジャワカレー辛口×こくまろカレー中辛</li>
             <li>☆を2回に分けてフードプロセッサーにかけます。<br>(人参だけだと、水分が出ないので必ず玉ねぎと一緒に)</li>
             <li>ジャガイモは角をとっておきます。(省略可能)</li>
             <li>油をしいた鍋で豚肉を炒めます。<br>少し白くなってきたら、塩コショウをして炒め、更にお酒を加えて水気がなくなるまで炒めます。</li>
@@ -98,11 +131,34 @@
             <li>１０分位煮立て、更に●を入れて１０分位煮込みます。<br><span>※こしょうは最初少なめに入れ、辛さ調整しながら徐々に足していきます。</span></li>
             <li>味が整ったら火を消し完成。<br><span>※この時点で多少スパイスがキツくても、置いておけばマイルドになっているので大丈夫です！</span></li>
             <li>食べる前に再度火を通せばOK！<br>スパイスの効いた辛さの中に甘みのあるカレーです！</li>
-            <li>残った具は肉と小さなジャガイモのみ。<br>野菜嫌いでも快く食べられます！</li>
+            <li>残った具は肉と小さなジャガイモのみ。<br>野菜嫌いでも快く食べられます！</li> -->
+            <li class="recipe_howto__item">
+                <span class="ico_recipe_howto_order">１</span>
+                <span class="recipe_howto__text">大根の葉はみじん切りにする。</span>
+            </li>
+            <li class="recipe_howto__item">
+                <span class="ico_recipe_howto_order">２</span>
+                <span class="recipe_howto__text">フライパンにごま油をひき火にかけ、大根の葉を炒める。</span>
+            </li>
+            <li class="recipe_howto__item">
+                <span class="ico_recipe_howto_order">３</span>
+                <span class="recipe_howto__text">2に鶏ガラスープの素としょうゆを加え、大根の葉がしんなりするまで炒める。</span>
+            </li>
+            <li class="recipe_howto__item">
+                <span class="ico_recipe_howto_order">４</span>
+                <span class="recipe_howto__text">3に白ごまを加え、全体を軽く炒める。</span>
+            </li>
+
+
+
+
+
+
+
         </ol>
 
         <h2>使ったお供</h2>
-        <ul class="page_recipelist">
+        <ul class="list">
             <li>
                 <div class="recipe">
                     <img src="../uploads/tsukemono.jpeg" alt="Image" class="img-fluid">
@@ -122,6 +178,38 @@
                 </div>
             </li>
         </ul>
+
+        </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </main>
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="../assets/js/recipe.js"></script> -->

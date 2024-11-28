@@ -4,14 +4,14 @@
 /* section-base */
 /* ==================== */
 
-section+section {
+/* section+section {
 	margin-top: 60px;
-}
+} */
 
-.inner {
+/* .inner {
 	max-width: 350px;
 	margin: 0 auto;
-}
+} */
 
 .ttl_box {
 	/* border: 2px solid red; */
@@ -54,84 +54,83 @@ body {
 	background: #fbf9cc url(img/bg.png) repeat-x;
 } */
 
-.inner_search {
+/* .inner_search {
 	background: #F7EB99;
 	margin: auto;
 
-}
+} */
 
-.entryTable {
+/* .entryTable {
 	margin: auto;
-}
+} */
 
 /*リンク色の設定*/
-a {
+/* a {
 	color: #df4839;
 }
 
 a:hover {
 	color: #ff705b;
 	text-decoration: none;
-}
+} */
 
 /*チェックボックスの設定*/
 input[type="checkbox"] {
-	width: 10px;
-	height: 10px;
-	border: 1px solid;
+	width: 15px;
+	height: 15px;
+	border: 2px solid;
+	border-radius: 2px;
 	background-color: #fff;
 	margin-left: 20px;
 }
 
 /*コンテンツ枠の設定*/
-#contents {
+/* #contents {
 	display: block;
 	width: 798px;
 	margin: 40px auto;
 	padding: 40px 80px;
 	border: 1px solid #f6bb9a;
 	background-color: #fff;
-}
+} */
 
 /*詳細検索の背景の設定*/
 
 .check_box {
 	background: #F7EB99;
-	margin: 0 auto;
+	/* margin: 0 auto; */
 	padding: 20px;
 }
 
-.search h3 {
+/* .search h3 {
 	font-size: 1.6rem;
-}
+} */
 
-.search li {
-	/* flex-direction: row; */
+/* .search li {
+	flex-direction: row;
 	font-size: 1.6rem;
 	/* display: inline-block; */
 	padding-right: 30px;
 	line-height: 50px;
-}
+} */
 
-.inner_search {
+/* .inner_search {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-}
+} */
 
 
 /*カーソル形状*/
 label,
-input,
-textarea,
-select {
+input {
 	cursor: pointer;
 }
 
 /*ボタンの設定*/
-.entryBtns {
+/* .entryBtns {
 	text-align: center;
-}
+} */
 
 /*
 .entryBtns input {
@@ -140,7 +139,7 @@ select {
 */
 
 /*ボタンの基本スタイル*/
-.entryBtns input {
+/* .entryBtns input {
 	width: 200px;
 	margin: 0 10px;
 	padding: 10px;
@@ -150,14 +149,48 @@ select {
 	font-size: 2rem;
 	-webkit-appearance: none;
 	margin: 0 auto;
-}
+} */
 
 /*送信ボタン用のスタイル*/
-.entryBtns input[type="submit"] {
+/* .entryBtns input[type="submit"] {
 	background: #fadccc;
-}
+} */
 
 /*ボタンにマウスが乗った時*/
-.entryBtns input:hover {
+/* .entryBtns input:hover {
 	opacity: 0.7;
+} */
+
+.inner_search {
+	/* width: 290px; */
+	margin: 0 auto;
+	font-size: 2rem;
+}
+
+.inner_search h3 {
+	/* padding-left: 20px; */
+	/* チェックボックスに合わせる */
+	font-weight: 600;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.inner_search li {
+	background-color: #fff;
+	padding: 10px;
+	text-align: center;
+	border-radius: 15px;
+	/* margin-bottom: 10px; */
+}
+
+.check_box section {
+	margin-bottom: 60px;
+}
+
+
+.inner_search ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	gap: 20px;
 }

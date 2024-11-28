@@ -11,11 +11,12 @@
 
                 </div>
                 <h3><?php the_title(); ?></h3>
-                <p>
-                    <!-- <?php //the_content();
-                            ?> -->
-                    <?php the_excerpt() ?>
-                </p>
+
+                <?php
+                $trimmed_excerpt = wp_trim_words(get_the_excerpt(), 50, '...');
+                echo '<p>' . esc_html($trimmed_excerpt) . '</p>';
+                ?>
+
             </div>
         </a>
     </div>

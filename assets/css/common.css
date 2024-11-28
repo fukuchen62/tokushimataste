@@ -338,6 +338,30 @@ a {
     background-color: rgba(250, 217, 241, 0.5);
 }
 
+.recipe_box {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 320px;
+    min-width: 300px;
+    height: auto;
+    border: 2px darkorange solid;
+    border-radius: 10px;
+}
+
+.recipe_box p {
+    width: 98%;
+    height: 6rem;
+    margin: 0 auto;
+    margin: 10px;
+    padding: 5px;
+    text-align: left;
+}
+
+.recipe_box img {
+    height: 250px;
+    object-fit: fill;
+}
+
 .img-fluid {
     width: 100%;
     height: auto;
@@ -433,20 +457,6 @@ ul {
     list-style: none;
 }
 
-.page_list {
-    border-top: 1px solid #000;
-    margin-bottom: 20px;
-}
-
-.page_list li {
-    display: none;
-    padding: 20px 0;
-    border-bottom: 1px solid #000;
-}
-
-.page_list li.on {
-    display: block;
-}
 
 .pagination {
     width: 70%;
@@ -491,7 +501,7 @@ ul {
 .page_list li {
     display: none;
     padding: 20px 0;
-    border-bottom: 1px solid #000;
+    /* border-bottom: 1px solid #000; */
     max-width: 320px;
 }
 
@@ -511,7 +521,7 @@ ul {
 　　自由にデザインなど変更して貰えればと思います。 */
 
 .page_list {
-    border-top: 1px solid #000;
+    /* border-top: 1px solid #000; */
     margin-bottom: 20px;
 }
 
@@ -583,4 +593,19 @@ ul {
     gap: 5px 5px;
     padding-left: 0;
     /* ulのユーザーエージェントスタイル打消し */
+}
+
+.page_list {
+    /* border-top: 1px solid #000; */
+    margin-bottom: 20px;
+}
+
+.page_list li {
+    display: none;
+    padding: 20px 0;
+    /* border-bottom: 1px solid #000; */
+}
+
+.page_list li.on {
+    display: block;
 }

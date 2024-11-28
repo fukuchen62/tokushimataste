@@ -67,18 +67,18 @@
         </div>
     </section>
 
-    <!-- 検索 -->
+    <!-- マップ検索 -->
     <section>
-        <div class="inner">
-            <div class="container areamap">
-                <div class="ttl_box">
-                    <h2>徳島のご飯 お友達いろいろ！</h2>
-                    <p>エリア別検索ができます。</p>
-                </div>
-                <div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/tokusima-map02.png" alt="エリア検索map">
-                </div>
-                <div class="kumo nisi">
+        <div class="inner area">
+            <!-- <div class="container areamap"> -->
+            <div class="ttl_box">
+                <h2>徳島のご飯 お友達いろいろ！</h2>
+                <p>エリア別検索ができます。</p>
+            </div>
+            <div class="area_map">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/tokusima-map02.png" alt="エリア検索map">
+
+                <div class="kumo nishi">
                     <a href="area.html">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kumo_nishi.png" alt="県西部">
                     </a>
@@ -94,11 +94,14 @@
                     </a>
                 </div>
             </div>
-            <a href="<?php echo home_url('/area/east/') ?>" class="btn btn-border-shadow btn-border-shadow--color">詳細検索は<br>こちらから！</a>
+            <div class="area_btn">
+                <a href="<?php echo home_url('/area/east/') ?>" class="btn btn-border-shadow btn-border-shadow--color">詳細検索は<br>こちらから！</a>
+            </div>
         </div>
     </section>
 
     <!-- メーカー -->
+
     <section>
         <div class="inner">
             <div class="container">
@@ -238,7 +241,7 @@
                     if ($the_query->have_posts()): ?>
                         <?php while ($the_query->have_posts()): $the_query->the_post() ?>
                             <li>
-                                <div class="recipe">
+                                <div class="recipe_box">
                                     <?php
                                     $pic = get_field('pic1');
                                     // $picが存在する場合のみURLを取得

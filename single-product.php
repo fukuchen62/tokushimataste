@@ -37,8 +37,11 @@
     <div class="inner">
         <?php //innerを入れておきました。
         ?>
+        <?php $img = get_field('pic1');
+        $img_url = $img['sizes']['large']; ?>
         <li>
-            <img src="../uploads/nori.jpeg" alt="Image" class="img-L" style=" margin-top:14px;"><br>
+            <img src="<?php echo $img_url; ?>" alt="Image" class="img-L" style=" margin-top:14px;">
+            <br>
             <h2 style="padding:15px ;  margin-top:0px; background:#e7d0ae">概要</h2>
             <p><?php the_field('introduction') ?></p>
             <h2>価格</h2>
@@ -73,15 +76,14 @@
                 <?php the_field('raw_ｍaterials') ?>
             </p>
             <h2>味</h2>
-            <p><?php
-                $taste_term = wp_get_object_terms(
-                    get_the_ID(),
-                    'taste',
-                    array("fields" => "names")
-                ); ?>
+            <?php
+            $taste_term = wp_get_object_terms(
+                get_the_ID(),
+                'taste',
+                array("fields" => "names")
+            ); ?>
             <p>
                 <?php echo $taste_term[0]; ?>
-            </p>
             </p>
         </li>
     </div>

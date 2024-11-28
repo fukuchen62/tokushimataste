@@ -95,9 +95,10 @@
 
 
     <h2>材料　〇人分</h2>
-
-
+    <!-- 必要ならコピペして増やす -->
+    <!-- コピペはここに挿入する -->
     <ul>
+
         <li class="recipe_material__item">
             <span class="recipe_material__item_name">大根の葉</span>
 
@@ -130,24 +131,28 @@
 
 
     <h2>作り方</h2>
-    <ol>
+
+    <ul>
         <li class="recipe_howto__item">
             <span class="ico_recipe_howto_order">１．</span>
             <span class="recipe_howto__text">大根の葉はみじん切りにする。</span>
         </li>
-        <li class="recipe_howto__item">
-            <span class="ico_recipe_howto_order">２．</span>
-            <span class="recipe_howto__text">フライパンにごま油をひき火にかけ、大根の葉を炒める。</span>
-        </li>
-        <li class="recipe_howto__item">
-            <span class="ico_recipe_howto_order">３．</span>
-            <span class="recipe_howto__text">2に鶏ガラスープの素としょうゆを加え、大根の葉がしんなりするまで炒める。</span>
-        </li>
-        <li class="recipe_howto__item">
-            <span class="ico_recipe_howto_order">４．</span>
-            <span class="recipe_howto__text">3に白ごまを加え、全体を軽く炒める。</span>
-        </li>
-    </ol>
+        <!-- 必要ならコピペして増やす -->
+    </ul>
+    ol
+    <li class="recipe_howto__item">
+        <span class="ico_recipe_howto_order">２．</span>
+        <span class="recipe_howto__text">フライパンにごま油をひき火にかけ、大根の葉を炒める。</span>
+    </li>
+    <li class="recipe_howto__item">
+        <span class="ico_recipe_howto_order">３．</span>
+        <span class="recipe_howto__text">2に鶏ガラスープの素としょうゆを加え、大根の葉がしんなりするまで炒める。</span>
+    </li>
+    <li class="recipe_howto__item">
+        <span class="ico_recipe_howto_order">４．</span>
+        <span class="recipe_howto__text">3に白ごまを加え、全体を軽く炒める。</span>
+    </li>
+    </ul>
 
     <h2>使ったお供</h2>
     <ul class="list">

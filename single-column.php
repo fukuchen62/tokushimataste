@@ -1,152 +1,148 @@
 <?php get_header(); ?>
-<!-- <main>
-    <?php if (have_posts()): ?>
-        <?php while (have_posts()): the_post(); ?>
-            <section class="section">
-                <div class="section_inner">
+<main>
+    <div class="inner">
+        <!--パンくずリスト-->
+        <?php get_template_part('template-parts/breadcrumb');
+        ?>
 
-                    <div class="food">
-                        <div class="food_body">
-                            <div class="food_text">
-                                <h2 class="heading heading-primary"><?php the_title() ?></h2>
-                                <div class="food_content">
-                                    <?php the_content() ?>
-                                </div>
+
+        <!-- コラム -->
+        <section class="column">
+            <div class="inner">
+                <!-- 見出し -->
+                <h2 class="ttl_box ttl_cd"><span><?php the_title(); ?></span></h2>
+
+                <!-- コラム一覧 -->
+                <ul class="single_col_flex">
+
+                    <li class="article_col">
+
+                        <img src="../uploads/miso.jpeg">
+                        <section class="section_col">
+                            <h3 class="section_ttl">「収穫できるものは作物だけじゃない」半農らいふ</h3>
+                            <p>
+                                大阪府阪南市出身 「ムーさん」こと田中宗豊さん<br>
+
+                                プロサーファーからサーフボード生産販売、Patagoniaサーフィンアンバサダー、木こりもこなすクロスファーマー。<br>
+                                幼少期から色々なスポーツをやってみて唯一続いたサーフィン。そしてプロサーファーになるために、17才で海陽町に移住。<br>
+                                プロサーファーとして国内外へのプロツアー参戦後、海から学んだ「大地との自然の摂理」を考えるきっかけを経て、現在のスタイルに至る。
+
+                                大阪市高槻市出身 「ミコちゃん」こと田中美子さん<br>
+
+                                25才の時に、海のそばでサーフィンしながら暮らせる場所を探して海陽町に移住。 ホーリーバジルの栽培・加工・販売から、徳島県認定森林づくりリーダーをこなす三児のスーパーママファーマー<br>
+
+                                2人がサーフィンを通じて出会い結婚し家族となり、2人が描く理想のナチュラルな流れある暮らしを求め、農収穫のある暮らしからゲストハウス、サーフィン、農業体験、作物生産加工、サーフボード製造など、季節感のある仕事で年中活動。<br>
+                                「流れる波のように、今も昔も変わらないクラシックの旋律のように」と流浪クラシック ールロクラシックーと名付け、「先人の知恵と文化を、未来の子供たちに伝えたい」との想いで、2013年にプロジェクトを立ち上げて現在に至る。<br>
+                            </p>
+                        </section>
+
+                        <section class="section_col">
+                            <h3 class="section_ttl">なぜ？今のスタイル？兼業農家</h3>
+                            <img src="../uploads/miso.jpeg">
+                            <p>田中さん：2人の趣味のサーフィンやランニングをしながら、ミコちゃんの家庭菜園から始まり、2人で農薬や除草剤に頼らない昔ながらの農法でお米作りを始め、近所の方に頂いたハーブのホーリーバジルの苗をきっかけにホーリーバジルの栽培から焙煎加工までするようになりました。<br>
+                                サーフボードもひょんなきっかけで作るようになったそうです。<br>
+                                全て2人がやりたいことを目指してやっている流れの中で、海陽町の人たちとの交流が更に流れを作り、今のライフスタイルになっていると感じます。<br>
+                                2人にとって数あるわらじを履くのは、全て自然なフローなのです。</p>
+                        </section>
+
+                        <section class="section_col">
+                            <h3 class="section_ttl">自然と共存する農家の子育て</h3>
+                            <p>田中さん：畑の方を指さし「あそこの小屋ね、長女を妊娠中に廃材で作ってもらったんです。その日陰で赤ちゃんをベビーカーに寝かせた合間に農作業をしていました。」と当時の大変さを感じさせない笑顔のミコちゃん。
+                                最近の夏の朝は畑に出て収穫、その間、子供たちは周りで好きなことして遊んでいて、汗をかいたら子供たちと合流して「海行く？川行く？」と聞いて「よし！行こう」と海や川に行き、汗を流して暑さと気分をリセット。
+                                私も浄化されて気分が満たされるし、子供たちも運動して満たされて家に帰ります。 帰ったら、朝に収穫したハーブを天日干しする作業などを子供たちと一緒にしたりもします。
+                                子供たちとのふれあいと農業と自然と付き合いながら試行錯誤の流れで出来た、子育てスタイルです。</p>
+                            <img src="../uploads/miso.jpeg">
+                        </section>
+
+                        <section class="section_col">
+                            <h3 class="section_ttl">現在の生活までの苦労</h3>
+                            <p>田中さん：苦労なんて山ほどありますよ。<br>
+                                始めたころは周りの農家さんからも「無理」だとか「収穫少ないな」など、色々言われました（笑）とムーさん。<br>
+                                目指している昔ながらの農法は、土地の毒抜きをして理想の農作物が育つ土地になるまで5年ほどかかります。雑草も除草剤を使わないので手で抜いたり、道具も昔ながらの道具を使ったりしています。<br>
+                                疲れた時は海に行ってリラックスして、子供の笑顔でモチベーションを保っています。 辛い時程、「本当にこれがやりたいことなのか？」「これが自分の好きなことなのか？」と再確認して、それがやりたいことだったら、苦しいことも辛いことも乗り越えられるもんです。</p>
+                        </section>
+
+                        <section class="section_col">
+                            <h3 class="section_ttl">やってて良かったこと</h3>
+                            <p>田中さん：生産者の皆さんも同じだと思いますが、やっぱり食べた人、届けた人からの「美味しかった！」と喜んでもらえることが本当に嬉しいです。お陰様でリピート率は高いです</p>
+                            <img src="../uploads/miso.jpeg">
+                        </section>
+
+                        <section class="section_col">
+                            <h3 class="section_ttl">海陽町について</h3>
+                            <p>田中さん：海陽町は「海・山・川」という美しい自然が全て揃っている豊かな場所です。県内の人ほど「何もない」と言うけど、全部当たり前に整っているからこそ言えることなんです。インフラも整っていてトラブルもほとんどないから「何もない」と言えるんです。町は不自由のない生活ができるようにきちんと整備されています。<br>
+                                あと海陽町の人は人が良いです。<br>
+                                農作業などを遅くまでやりこんでいると、通りかかった人から「やりすぎたらあかん、7割にしとけ、身体がもたんぞ」とアドバイスをくれたり、続けていると海陽町の人からの応援をうけて、色々と声をかけてもらえるようになりました。</p>
+                        </section>
+
+                        <section class="section_col">
+                            <h3 class="section_ttl">これからのやりたいこと</h3>
+                            <p>田中さん：自然から学ぶ教育プログラムを考えています。こちらから事細かに教えてしまうと詰め込み教育になってしまうから、そうじゃなくて、導く、学習するきっかけを与えることを心掛けています。 子供向けのラーニングプログラムでは、「できる、できない」より、「実際にフィールドにいることの大切さ」を重視しています。子供は難しい説明をし始めたら5秒で飽きるからね。理屈が好きなのは大人だけ。子供たちには自分の興味あることを好きに楽しんでもらいます。その記憶が原体験となって、大人になっても活かされるんですよ。子供は教えなくても自分で考えて色々行動するから、その感覚と発想を子供から教えてもらうことも多々あります。<br>
+                                農業体験から自然を感じ取って欲しい、けっして収穫出来るものは作物だけではないのです。</p>
+                        </section>
+
+                        <section class="section_col">
+                            <h3 class="section_ttl">今新しくやっていること</h3>
+                            <P>田中さん：大阪府阪南市で「お米を育ててみよう」という農業体験を素人集団でやり始めました。今では「ラーニングフィールド大阪」という約120名のコミュニティにまで育ちました。新しいチャレンジは柔軟な発想から生まれます。<br>
+                                今年の除草体験では大雨で大変だったけど「うわーっ！」て言いながらもナチュラルハイでマイナス要素を取り除き、皆でやると、笑って楽しんで出来ます。そういう時はバイブレーションが良い！<br>
+                                「気の世界」とも言える、良い雰囲気の場所には良い気が満ちて、良い土地になって作物が良く育つように思います。科学的な根拠はないけどそう感じるのです。</P>
+                            <img src="../uploads/miso.jpeg">
+                        </section>
+
+                        <section class="section_col">
+                            <h3 class="section_ttl">これから始める方へのメッセージ</h3>
+                            <p>田中さん：今までの教育の基本は詰め込み教育で、「こうしなさい」って言われてから、その通りに行動する教育で育ってきました。<br>
+                                今は、柔軟な思考で、自分で考えて、感じて行動し、たくましく、流れるようにしなやかに生きることが大切だと思います。<br>
+                                農業を通じて「山・川・海・空が織りなす大きな自然循環システム」の輪を感じ、手探りでも良いから、肌で実感しながら「決して無理をせず、自分に出来ることを自分に出来る範囲で、コツコツと楽しんでやること」が大切だと思います。</p>
+                            <img src="../uploads/miso.jpeg">
+                        </section>
+
+                        <section class="section_col ">
+                            <h3 class="section_ttl">Ruloclassic ルロクラシック</h3>
+                            <div class="contact_col">
+                                <p>〒775-0502</p>
+                                <p>徳島県海部郡海陽町久保字板取113番地</p>
+                                <p><a href="">担当者直通 TEL:090-4785-9510（田中）</a></p>
+                                <p><a href="">問い合わせフォーム:https://ruloclassic.com/contact/</a></p>
                             </div>
-                            <div class="food_pic">
-                                <?php if (get_field('recommend')): ?>
-                                    <span class="food_label">オススメ</span>
-                                <?php endif; ?>
-                                <?php
-                                $pic = get_field('pic');
-                                $pic_url = $pic['sizes']['large'];
-                                ?>
-                                <img src="<?php echo $pic_url; ?>" alt="">
+                        </section>
+
+
+                    </li>
+
+
+
+                    <li class="side_bar side_bar_col">
+
+                        <!-- カテゴリー一覧 -->
+                        <div class="category-list-outer">
+                            <div class="category-list">
+                                <h3>コラム一覧</h3>
                             </div>
                         </div>
 
-                        <ul class="food_list">
-                            <li class="food_item">
-                                <span class="food_itemLabel">価格</span>
-                                <span class="food_itemData"><?php the_field('price') ?></span>
-                            </li>
-                            <li class="food_item">
-                                <span class="food_itemLabel">カロリー</span>
-                                <span class="food_itemData"><?php echo number_format(get_field('calorie')) ?>kcal</span>
-                            </li>
-                            <li class="food_item">
-                                <span class="food_itemLabel">アレルギー</span>
-                                <span class="food_itemData">
-                                    <?php
-                                    $allergies = get_field('allergies');
-                                    foreach ($allergies as $key => $allergy) {
-                                        echo $allergy;
-                                        if ($allergy !== end($allergies)) {
-                                            echo '、';
-                                        }
-                                    }
-                                    ?>
-                                </span>
-                            </li>
-                        </ul>
-                    </div>
+                        <!-- サイドバーメニュー -->
+                        <aside class="side-menu">
+                            <!-- <h2 class="archive_title">カテゴリ 一覧</h2> -->
+                            <ul class="side-menu-li">
+                                <?php get_sidebar(); ?>
+                                <li class="cat-item cat-item-33"><a href="../html/column_more.html">インタビュー</a>
+                                </li>
+                                <li class="cat-item cat-item-34"><a href="../html/column_more.html">体験談</a>
+                                </li>
+                                <li class="cat-item cat-item-35"><a href=" ../html/column_more.html">取材日記</a>
+                                </li>
+                            </ul>
+                        </aside>
 
-                </div>
-            </section>
-        <?php endwhile; ?>
-    <?php endif ?>
-</main> -->
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/reset.css" media="all">
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/common.css" media="all">
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/column.css" media="all">
-<main>
+                    </li>
 
-    <!-- <div class="contentupper">
-                <form id="form1" action="ご飯のお供サイトURL">
-                    <input id="sbox1" name="s" type="text" placeholder="キーワードを入力" />
-                    <input id="sbtn1" type="submit" value="検索" />
-                </form>
-
-<!--パンくずリスト-->
-    <ul class="breadcrumb">
-        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="../html/index.html">
-                    <span itemprop="name">ホーム</span>
-                </a>
-                <meta itemprop="position" content="1" />
-            </li>
-
-            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="../html/column.html">
-                    <span itemprop=" name">コラム</span>
-                </a>
-                <meta itemprop="position" content="2" />
-            </li>
-
-            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="../html/column_more.html">
-                    <span itemprop=" name">インタビュー</span>
-                </a>
-                <meta itemprop="position" content="3" />
-            </li>
-
-            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="../html/column_detail.html">
-                    <span itemprop=" name">インタビュー詳細</span>
-                </a>
-                <meta itemprop="position" content="4" />
-            </li>
-        </ol>
-    </ul>
-
-
-    <!-- コラム -->
-    <section class="column">
-        <div class="inner">
-            <!-- 見出し -->
-            <h2 class="ttl_box">
-                <span class="ttl"><?php single_term_title('') ?></span><br>
-
-            </h2>
-
-            <!-- コラム一覧 -->
-            <?php if (have_posts()) : ?>
-                <ul class="column_detail_list">
-                    <?php while (have_posts()) : the_post(); ?>
-                        <li>
-                            <article>
-                                <div class="box_column">
-                                    <a href="../html/column_detail.html">
-                                        <div class=" box__item">
-                                            <img src="../uploads/nikumisoitame.jpg" alt="コラムの写真">
-                                            <h3><?php the_title(); ?></h3>
-                                            <p><?php the_content();
-                                                ?>
-                                            </p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </article>
-                        </li>
-                    <?php endwhile; ?>
                 </ul>
-            <?php endif; ?>
 
-    </section>
-    <?php //get_template_part('template-parts/columnList');
-    ?>
 
-    <?php get_sidebar();
-    ?>
 
-    <div><?php the_field('product_id'); ?></div>
-    <div><?php the_field('maker_id'); ?></div>
-    <div><?php the_field('recipe_id'); ?></div>
-    <a href="<?php the_field('url'); ?>"><?php the_field('url'); ?></a>
-
+            </div>
 </main>
-
 
 
 

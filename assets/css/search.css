@@ -41,11 +41,11 @@
 
 /* ---------- */
 /* tablet */
-@media(width>=700px) {
+/* @media(width>=700px) {
 	.inner {
 		max-width: 680px;
 	}
-}
+} */
 
 /* ---------- */
 
@@ -110,10 +110,11 @@ input[type="checkbox"] {
 	flex-direction: row;
 	font-size: 1.6rem;
 	/* display: inline-block; */
-	padding-right: 30px;
-	line-height: 50px;
-} */
+padding-right: 30px;
+line-height: 50px;
+}
 
+*/
 /* .inner_search {
 	display: flex;
 	justify-content: center;

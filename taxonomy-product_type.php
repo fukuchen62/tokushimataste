@@ -56,11 +56,11 @@
             <?php endif ?>
         </ul>
     </div>
-    <ul class="pagination"></ul>
+    <!-- <ul class="pagination"></ul> -->
     <!-- トップページに戻るボタン -->
     <p id="page-top"><a href="#">↑<br>TOP</a></p>
 </main>
-<style>
+<!-- <style>
     * {
         box-sizing: border-box;
     }
@@ -122,10 +122,11 @@
         background-color: #1597CC;
         color: #fff;
     }
-</style>
-
-<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/assets/js/goods.js"></script>
+</style> -->
+<?php get_template_part('template-parts/pagination'); ?>
+<?php get_footer(); ?>
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="<?php /* echo get_template_directory_uri();*/ ?>/assets/js/goods.js"></script>
 </body>
 
-</html>
+</html> -->

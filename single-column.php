@@ -17,7 +17,13 @@
 
                     <li class="article_col">
 
-                        <img src="../uploads/miso.jpeg">
+                        <div>
+                            <?php if (has_post_thumbnail()): ?>
+                                <?php the_post_thumbnail('medium'); ?>
+                            <?php else: ?>
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/noimage.png" alt="">
+                            <?php endif; ?>
+                        </div>
                         <section class="section_col">
                             <h3 class="section_ttl">「収穫できるものは作物だけじゃない」半農らいふ</h3>
                             <p>
@@ -123,15 +129,9 @@
 
                         <!-- サイドバーメニュー -->
                         <aside class="side-menu">
-                            <!-- <h2 class="archive_title">カテゴリ 一覧</h2> -->
                             <ul class="side-menu-li">
                                 <?php get_sidebar(); ?>
-                                <li class="cat-item cat-item-33"><a href="../html/column_more.html">インタビュー</a>
-                                </li>
-                                <li class="cat-item cat-item-34"><a href="../html/column_more.html">体験談</a>
-                                </li>
-                                <li class="cat-item cat-item-35"><a href=" ../html/column_more.html">取材日記</a>
-                                </li>
+
                             </ul>
                         </aside>
 

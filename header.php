@@ -19,10 +19,10 @@ $page_description = '徳島を旅するように味わう';
 
 if (is_post_type_archive('product') || is_tax('product_type')) {
     $page_tile = '商品一覧';
-    $img_path .= 'heade_kv1.jpg';
+    $img_path .= 'KV_syokuhin.png';
 } else if (is_singular('product')) {
     $page_tile = '商品詳細';
-    $img_path .= 'heade_kv1.jpg';
+    $img_path .= 'KV_syokuhin.png';
 } else if (is_tax('area')) {
     $page_tile = 'エリア検索';
     $img_path .= 'furikake.jpeg';

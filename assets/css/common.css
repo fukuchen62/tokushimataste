@@ -111,10 +111,14 @@ a img:hover {
     box-sizing: inherit;
 }
 
-
-
 header {
-    margin-bottom: 100px;
+    margin-bottom: 80px;
+}
+
+@media screen and (min-width:900px) {
+    header {
+        margin-bottom: 0px;
+    }
 }
 
 /*もっと見るボタン <a href="" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>*/
@@ -188,6 +192,7 @@ a.btn-border-shadow--color:before {
     margin: 0;
     padding: 0;
     list-style: none;
+    margin-left: 10px;
 }
 
 .breadcrumb li {
@@ -238,7 +243,7 @@ a.btn-border-shadow--color:before {
 }
 
 /* SP・TBでパンくず非表示 2022.10.19 aka */
-@media screen and (max-width:1023px) {
+@media screen and (max-width:900px) {
     .breadcrumb {
         display: none;
     }
@@ -293,9 +298,9 @@ a {
 .box_column {
     background-color: #EEEEF1;
     color: black;
-    font-size: 2rem;
+    font-size: 1.6rem;
     box-shadow: 5px 5px 0 #9e9d9c;
-    padding: 16px;
+    padding: 10px;
     text-align: centert;
     border-radius: 8px;
     line-height: 30px;
@@ -305,7 +310,17 @@ a {
     border: 2px solid #342201;
     transition: 0.6s;
     width: 300px;
-    height: 400px;
+    /* height: 400px; */
+}
+
+.box_column h3 {
+    font-size: 2rem;
+    height: 9rem;
+}
+
+.box_column img {
+    height: 215px;
+    object-fit: contain;
 }
 
 /* ============================ */
@@ -349,30 +364,25 @@ a {
 /* レシピ */
 /* ==================== */
 
-.recipe {
-    position: relative;
-    width: 320px;
-    height: 240px;
-    /*親要素にrelative*/
+.list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
 }
 
-.recipe p {
-    position: absolute;
-    /*重ねたい子要素にabsolute*/
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /*センター寄せの修正*/
-    color: #fff;
-    font-size: 2rem;
-    font-weight: 700;
-    margin: 0 !important;
-    /*文字がずれている場合や*/
-    padding: 0 !important;
-    /*文字が折り返される場合*/
-    color: #171B39;
-    display: inline-block;
-    background-color: rgba(250, 217, 241, 0.5);
+.list li {
+    width: 100%;
+    max-width: calc(33.33333% - 10px);
+    /* max-width: 320px; */
+    min-width: 300px;
+    height: auto;
+    margin: 0 auto;
+    opacity: 1;
+    transition: all .4s ease 0s;
+    /* margin-bottom: 40px; */
+    border-radius: 10px;
 }
 
 .recipe_box {
@@ -380,15 +390,23 @@ a {
     margin: 0 auto;
     max-width: 320px;
     min-width: 300px;
-    height: auto;
-    border: 2px darkorange solid;
-    border-radius: 10px;
+    background-color: #EEEEF1;
+    color: black;
+    font-size: 2rem;
+    box-shadow: 5px 5px 0px #9e9d9c;
+    padding: 16px;
+    text-align: centert;
+    border-radius: 8px;
+    line-height: 30px;
+    letter-spacing: 0.05em;
+    margin-bottom: 30px;
+    border: 2px solid #342201;
+    transition: 0.6s;
 }
 
 .recipe_box p {
     width: 98%;
     height: 6rem;
-    margin: 0 auto;
     margin: 10px;
     padding: 5px;
     text-align: left;

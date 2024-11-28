@@ -23,7 +23,6 @@
 /*以下変更 byぎみ
 ページングで表示するコンテンツのスタイル
  初期表示は非表示 */
-
 .list {
     display: flex;
     list-style: none;
@@ -42,16 +41,10 @@
     max-width: 320px;
 }
 
-body {
-    max-width: 1024px;
-    margin: 0 auto;
-    padding: 100px 0;
-}
-
 /* もっと見る */
 .recipe_container {
     width: 100%;
-    margin: 0 auto 80px;
+    margin: 0 auto;
     padding: 10px;
 }
 
@@ -72,7 +65,6 @@ body {
     margin: 0 auto;
     opacity: 1;
     transition: all .4s ease 0s;
-    overflow: hidden;
     margin-bottom: 40px;
     border-radius: 10px;
 }
@@ -90,23 +82,37 @@ body {
     margin: 0 auto;
     /* max-width: 320px;
     min-width: 300px; */
-    height: auto;
-    border: 2px darkorange solid;
-    border-radius: 10px;
+    background-color: #EEEEF1;
+    color: black;
+    font-size: 2rem;
+    box-shadow: 5px 5px 0px #9e9d9c;
+    padding: 16px;
+    text-align: centert;
+    border-radius: 8px;
+    line-height: 30px;
+    letter-spacing: 0.05em;
+    margin-bottom: 30px;
+    border: 2px solid #342201;
+    transition: 0.6s;
 }
 
 .recipe_box p {
     width: 98%;
     height: 6rem;
-    margin: 0 auto;
     margin: 10px;
     padding: 5px;
     text-align: left;
 }
 
+.recipe_box img {
+    height: 250px;
+    object-fit: fill;
+}
+
 .more {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 0px;
+    margin-bottom: 60px;
 }
 
 
@@ -165,9 +171,6 @@ ol {
 /* .recipe_info_user {
     display: inline;
 } */
-
-
-
 
 
 .recipe_material__item:first-of-type {

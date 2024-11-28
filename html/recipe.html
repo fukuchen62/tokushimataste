@@ -30,82 +30,85 @@
 <body>
 
     <main>
-        <section>
-            <div class="inner">
-                <!-- パンくずリスト -->
-                <ul class="breadcrumb">
-                    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                            <a itemprop="item" href="../html/index.html">
-                                <span itemprop="name">ホーム</span>
-                            </a>
-                            <meta itemprop="position" content="1" />
-                        </li>
+        <div class="inner">
+            <section>
+                <div class="inner">
+                    <!-- パンくずリスト -->
+                    <ul class="breadcrumb">
+                        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                <a itemprop="item" href="../html/index.html">
+                                    <span itemprop="name">ホーム</span>
+                                </a>
+                                <meta itemprop="position" content="1" />
+                            </li>
 
-                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                            <a itemprop="item" href="#">
-                                <span itemprop="name">アレンジレシピ</span>
-                            </a>
-                            <meta itemprop="position" content="2" />
+                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                <a itemprop="item" href="#">
+                                    <span itemprop="name">アレンジレシピ</span>
+                                </a>
+                                <meta itemprop="position" content="2" />
+                            </li>
+                        </ol>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+
+                <h2 class="ttl_box">アレンジレシピ</h2>
+
+                <section class="recipe_container">
+                    <h2 class="ttl_box">副菜</h2>
+
+                    <!-- レシピ一覧 -->
+                    <ul class="list">
+                        <li>
+                            <div class="recipe_box">
+                                <img src="../uploads/tsukemono.jpeg" alt="Image" class="img-fluid">
+                                <p>トロたく丼2行目のイメージ</p>
+                            </div>
                         </li>
-                    </ol>
-                </ul>
+                        <li>
+                            <div class="recipe_box">
+                                <img src="../uploads/tsukudani.jpeg" alt="Image" class="img-fluid">
+                                <p>海苔の佃煮パスタ</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="recipe_box">
+                                <img src="../uploads/tsukudani.jpeg" alt="Image" class="img-fluid">
+                                <p>レシピ名</p>
+                            </div>
+                        </li>
+                        <!-- </ul> -->
+                        <li>
+                            <div class="recipe_box">
+                                <img src="../uploads/tsukemono.jpeg" alt="Image" class="img-fluid">
+                                <p>無限おつまみ！たたききゅうりの梅ナムル</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="recipe_box">
+                                <img src="../uploads/tsukudani.jpeg" alt="Image" class="img-fluid">
+                                <p>レシピ名</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="recipe_box">
+                                <img src="../uploads/tsukudani.jpeg" alt="Image" class="img-fluid">
+                                <p>レシピ名</p>
+                            </div>
+                        </li>
+                        <!-- </ul> -->
+                    </ul>
+                </section>
+            </section>
+
+
+            <div class="more">
+                <a class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
             </div>
-        </section>
-
-        <section>
-            <!-- <div class="inner">
-                <h2 class="ttl_box">アレンジレシピ</h2> -->
-
-            <section class="recipe_container">
-                <h2 class="ttl_box">副菜</h2>
-
-                <!-- レシピ一覧 -->
-                <ul class="list">
-                    <li>
-                        <div class="recipe_box">
-                            <img src="../uploads/tsukemono.jpeg" alt="Image" class="img-fluid">
-                            <p>トロたく丼2行目のイメージ</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="recipe_box">
-                            <img src="../uploads/tsukudani.jpeg" alt="Image" class="img-fluid">
-                            <p>海苔の佃煮パスタ</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="recipe_box">
-                            <img src="../uploads/tsukudani.jpeg" alt="Image" class="img-fluid">
-                            <p>レシピ名</p>
-                        </div>
-                    </li>
-                    <!-- </ul> -->
-                    <li>
-                        <div class="recipe_box">
-                            <img src="../uploads/tsukemono.jpeg" alt="Image" class="img-fluid">
-                            <p>無限おつまみ！たたききゅうりの梅ナムル</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="recipe_box">
-                            <img src="../uploads/tsukudani.jpeg" alt="Image" class="img-fluid">
-                            <p>レシピ名</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="recipe_box">
-                            <img src="../uploads/tsukudani.jpeg" alt="Image" class="img-fluid">
-                            <p>レシピ名</p>
-                        </div>
-                    </li>
-                    <!-- </ul> -->
-                </ul>
-                </div>
-
-                <div class="morea">
-                    <a class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
-                </div>
             </section>
 
             <section class="recipe_container">
@@ -246,7 +249,8 @@
                     <a class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
                 </div>
             </section>
-            </div>
+        </div>
+
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>

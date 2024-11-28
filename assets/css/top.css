@@ -5,8 +5,13 @@ section+section {
 }
 
 /* このサイトについて */
+.inner {
+    padding: 0 2%
+}
 
 .aboutsite {
+    width: 90%;
+    margin: 0 auto;
     border: solid #FBB126;
     padding: 20px;
     border-radius: 15px;
@@ -34,7 +39,7 @@ section+section {
 
 
 .container {
-    margin: 30px 0px 50px 0px;
+    margin: 30px auto 50px auto;
 }
 
 /* spで改行しているものをなくす */

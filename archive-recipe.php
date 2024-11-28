@@ -40,19 +40,20 @@
                     <?php if ($the_query->have_posts()): ?>
                         <?php while ($the_query->have_posts()): ?>
                             <?php $the_query->the_post() ?>
+                            <a href="<?php the_permalink(); ?>">
+                                <li>
+                                    <div class="recipe">
+                                        <?php
+                                        $pic = get_field('pic1');
+                                        // $picが存在する場合のみURLを取得
+                                        $pic_url =  $pic['sizes']['medium'];
+                                        ?>
+                                        <img src="<?php echo $pic_url; ?>" alt="">
 
-                            <li>
-                                <div class="recipe">
-                                    <?php
-                                    $pic = get_field('pic1');
-                                    // $picが存在する場合のみURLを取得
-                                    $pic_url =  $pic['sizes']['medium'];
-                                    ?>
-                                    <img src="<?php echo $pic_url; ?>" alt="">
-
-                                    <p><?php the_title(); ?></p>
-                                </div>
-                            </li>
+                                        <p><?php the_title(); ?></p>
+                                    </div>
+                                </li>
+                            </a>
                         <?php endwhile; ?>
                     <?php endif; ?>
                 </ul>

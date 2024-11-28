@@ -397,3 +397,28 @@ a {
     box-shadow: 0 0 #fff;
     transform: translateY(1px);
 }
+
+/* 商品のイメージの大きさほか */
+
+.img-L {
+    float: left;
+    margin-right: 20px;
+    width: 640px;
+    height: 480px;
+}
+
+ul {
+    padding-left: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.last-update {
+    margin: 5px 0 20px;
+}
+
+.conetnt {
+    margin: 20px 0;
+}

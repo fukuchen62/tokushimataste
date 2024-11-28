@@ -9,7 +9,11 @@
 
 .ttl_box {
 	text-align: center;
+	margin: 0 auto;
 	margin-bottom: 32px;
+	border-bottom: dotted 5px DarkOrange;
+	;
+	width: fit-content;
 }
 
 .ttl_box span {
@@ -49,7 +53,7 @@ input[type="checkbox"] {
 	border: 2px solid;
 	border-radius: 2px;
 	/* background-color: #fff; */
-	margin-left: 20px;
+	/* margin-left: 20px; */
 }
 
 
@@ -79,8 +83,8 @@ input {
 	margin: 0 auto;
 	font-size: 2rem;
 	padding-top: 40px;
-	padding-left: 30px;
-	padding-right: 30px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 .inner_search h3 {
@@ -90,7 +94,7 @@ input {
 }
 
 .inner_search li {
-	padding: 10px;
+	/* padding: 10px; */
 	text-align: center;
 	border-radius: 15px;
 }
@@ -99,14 +103,59 @@ input {
 	margin-bottom: 60px;
 }
 
+/* チェックボックス・メディアクエリ */
+@media screen and (width<=500px) {
+	.inner_search ul {
+		display: flex;
+		align-items: baseline;
+		flex-direction: column;
+		gap: 20px;
+	}
 
-.inner_search ul {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	gap: 20px;
+	.is_area li {
+		margin: 0 auto;
+	}
+
+	.is_type li {
+		margin-left: 10%;
+	}
+
+	.is_taste li,
+	.is_allergy li {
+		margin-left: 35%;
+	}
 }
 
+@media screen and (width>500px) {
+	.inner_search ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		gap: 20px;
+	}
+
+	.inner_search {
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+
+	.is_allergy li {
+		margin-right: 30px;
+	}
+}
+
+@media screen and (width>1060px) {
+	.inner_search ul {
+		gap: 30px;
+	}
+
+	.is_allergy li {
+		margin-right: 0;
+	}
+
+}
+
+/* クリア検索ボタン */
 .clear_or_search {
 	width: 230px;
 	margin: 0 auto;
@@ -153,7 +202,7 @@ input {
 	transform: translateY(3px);
 	box-shadow: 0px 5px 3px rgba(0, 0, 128, 0);
 	transition: 0.2s ease-in-out;
-	-webkit-appearance: none;
+	appearance: none;
 }
 
 .submit_or_reset input {

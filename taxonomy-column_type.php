@@ -12,7 +12,7 @@
         <div class="inner">
             <!-- 見出し -->
             <h2 class="ttl_box">
-                <span class="ttl"><?php single_term_title('') ?></span><br>
+                <span class="ttl"><?php single_term_title(''); ?></span><br>
 
             </h2>
 

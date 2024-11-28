@@ -17,8 +17,11 @@ section+section {
     margin-bottom: 20px;
 }
 
+/* タイトル */
+
 .ttl_box {
     margin-bottom: 20px;
+    margin-left: 20px;
 }
 
 .ttl_box h2 {
@@ -27,6 +30,10 @@ section+section {
 
 .ttl_box p {
     margin-top: 10px;
+}
+
+.btn .btn-border-shadow .btn-border-shadow--color {
+    margin-top: 40px;
 }
 
 .container {

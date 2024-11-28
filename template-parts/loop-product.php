@@ -5,6 +5,7 @@ $pic_url = $pic['sizes']['large'];
 <img src="<?php echo $pic_url; ?>" alt="Image" class="img-fluid"><br>
 <a href="<?php the_permalink(); ?>" id="goods"><?php the_title() ?></a>
 <?php
+// タクソノミーから情報を取得したいので、wp_get_object_termsを活用する
 // 個々の投稿のIDとタクソノミーを引数、フィールドを名前に設定している。
 $area_term = wp_get_object_terms(
     get_the_ID(),

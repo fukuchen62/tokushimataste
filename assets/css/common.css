@@ -40,10 +40,10 @@
 } */
 
 /* 背景に和紙画像を入れるとしたらの場合の準備 */
-/*
+
 body {
     background-image: url(https://beiz.jp/images_S/japanese-paper/japanese-paper_00445.jpg);
-} */
+}
 
 /* ==================== */
 /* base */
@@ -296,96 +296,33 @@ a {
 /* レシピ */
 /* ==================== */
 
-
-/*以下変更 byぎみ
-ページングで表示するコンテンツのスタイル
- 初期表示は非表示 */
-
-.list {
-    display: flex;
-    list-style: none;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    gap: 5px 5px;
-    padding-left: 0;
-    /* ulのユーザーエージェントスタイル打消し */
+.recipe {
+    position: relative;
+    width: 320px;
+    height: 240px;
+    /*親要素にrelative*/
 }
 
-/* onクラス添付で画面に表示 */
-/* もとにもどす */
-.list li.on {
-    display: block;
-    max-width: 320px;
-}
-
-
-
-/* もっと見る */
-.recipe_container {
-    width: 100%;
-    margin: 0 auto 80px;
-    padding: 10px;
-}
-
-.list {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 0 auto;
-}
-
-.list li {
-    width: 100%;
-    max-width: calc(33.33333% - 10px);
-    /* max-width: 320px; */
-    min-width: 300px;
-    height: auto;
-    margin: 0 auto;
-    opacity: 1;
-    transition: all .4s ease 0s;
-    overflow: hidden;
-    margin-bottom: 40px;
-    border-radius: 10px;
-}
-
-.list li.is-hidden {
-    visibility: hidden;
-    opacity: 0;
-    height: 0;
-    margin: 0 10px;
-    padding: 0;
-}
-
-.recipe_box {
-    width: 100%;
-    margin: 0 auto;
-    /* max-width: 320px;
-    min-width: 300px; */
-    height: auto;
-    border: 2px darkorange solid;
-    border-radius: 10px;
-}
-
-.recipe_box p {
-    width: 98%;
-    height: 6rem;
-    margin: 0 auto;
-    margin: 10px;
-    padding: 5px;
-    text-align: left;
-}
-
-.img-fluid li {
-    letter-spacing: -1em;
-}
-
-.img-fluid li {
+.recipe p {
+    position: absolute;
+    /*重ねたい子要素にabsolute*/
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*センター寄せの修正*/
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 !important;
+    /*文字がずれている場合や*/
+    padding: 0 !important;
+    /*文字が折り返される場合*/
+    color: #171B39;
     display: inline-block;
-    width: 35px;
-    height: 35px;
-    text-align: center;
-    line-height: 35px;
-    border: 1px solid #0a26dd;
+    background-color: rgba(250, 217, 241, 0.5);
+}
+
+.img-fluid {
+    width: 100%;
+    height: auto;
 }

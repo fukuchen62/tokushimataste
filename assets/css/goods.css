@@ -1,25 +1,4 @@
-/* 商品名のボタン */
-#goods {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
-    text-decoration: none;
-    color: #000000;
-    font-size: 18px;
-    border-radius: 5px;
-    width: 250px;
-    height: 40px;
-    font-weight: bold;
-    border: 2px dashed #000000;
-    transition: 0.3s;
-    background-color: #fbb126;
-    cursor: pointer;
-}
-
-#goods:hover {
-    opacity: .5;
-}
+/* イメージの大きさほか */
 
 .img-L {
     float: left;
@@ -192,39 +171,6 @@ ul {
     border: 1px solid #FF9900;
 }
 
-/* ジャンル検索ボタン */
-.btn-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin: 20px 0 80px;
-}
-
-.btn-content li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
-    text-decoration: none;
-    color: #555555;
-    font-size: 18px;
-    border-radius: 20px;
-    width: 300px;
-    height: 40px;
-    font-weight: bold;
-    border: 2px solid #555555;
-    transition: 0.3s;
-    box-shadow: 0px 6px 0px -2px rgba(67, 145, 209, 1);
-    background-color: #f7eb99;
-}
-
-.btn-content li:hover {
-    box-shadow: 0 0 #fff;
-    transform: translateY(1px);
-}
-
-
-
 /*以下変更 byぎみ
  ページングで表示するコンテンツのスタイル
  初期表示は非表示 */
@@ -240,8 +186,115 @@ ul {
     /* ulのユーザーエージェントスタイル打消し */
 }
 
-body {
+/* body {
     max-width: 1024px;
     margin: 0 auto;
     padding: 100px 0;
+} */
+
+/* カードの別バージョン試作品 7-12 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /*   background-color: #eee; */
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+
+.l-wrapper {
+    margin: 3rem auto;
+    width: 320px;
+}
+
+.card {
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .16);
+    color: #212121;
+    text-decoration: none;
+}
+
+.card__header {
+    display: flex;
+
+    flex-wrap: wrap;
+}
+
+.card__title {
+    padding: 1rem 1rem 0;
+    font-size: 1.25rem;
+    order: 1;
+}
+
+.card__title1 {
+    padding: 1rem 1rem 0;
+    font-size: 1.0rem;
+    order: 1;
+}
+
+
+.card__thumbnail {
+    margin: 0;
+    order: 0;
+}
+
+.card__image {
+    width: 320px;
+    height: 240px;
+}
+
+.card__body {
+    padding: 1rem;
+}
+
+.card__text {
+    font-size: .75rem;
+}
+
+.card__text+.card__text {
+    margin-top: .5rem;
+}
+
+.card__text.-number {
+    text-align: right;
+}
+
+.card__footer {
+    padding: 1rem;
+    border-top: 1px solid #ddd;
+}
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color .3s ease-in-out;
+}
+
+.button.-compact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    text-decoration: none;
+    color: #000000;
+    font-size: 18px;
+    border-radius: 5px;
+    width: 250px;
+    height: 40px;
+    font-weight: bold;
+    border: 2px dashed #000000;
+    transition: 0.3s;
+    background-color: #fbb126;
+    cursor: pointer;
+}
+
+.button.-compact:hover,
+.button.-compact:focus {
+    opacity: .5;
 }

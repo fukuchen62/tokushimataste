@@ -8,7 +8,6 @@
                     <?php else: ?>
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/noimage.png" alt="">
                     <?php endif; ?>
-
                 </div>
                 <h3><?php the_title(); ?></h3>
 

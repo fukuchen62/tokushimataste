@@ -140,7 +140,7 @@ li {
 }
 
 p {
-    text-align: right;
+    text-align: reft;
 }
 
 dt {
@@ -155,11 +155,11 @@ ol {
     font-size: 20px;
 }
 
-/* SP・TBでパンくず非表示 */
-@media screen and (max-width:1023px) {
-    .breadcrumb {
-        display: none;
-    }
+.recipe_info_user__comment {
+    text-align: right;
+    font-size: 20px;
+    margin-right: 20px;
+
 }
 
 .recipe_material__item:first-of-type {

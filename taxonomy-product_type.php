@@ -1,7 +1,11 @@
 <?php get_header() ?>
 <main>
-    <?php get_template_part('template-parts/breadcrumb');
-    ?>
+    <div class="inner">
+        <?php //インナー入れておきました。何卒よろしくお願いします。
+        ?>
+        <?php get_template_part('template-parts/breadcrumb');
+        ?>
+    </div>
     <?php //動くパンくずリスト
     ?>
     <!-- <ul class="breadcrumb">

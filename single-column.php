@@ -18,11 +18,16 @@
                     <li class="article_col">
 
                         <div>
-                            <?php if (has_post_thumbnail()): ?>
-                                <?php the_post_thumbnail('medium'); ?>
-                            <?php else: ?>
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/noimage.png" alt="">
-                            <?php endif; ?>
+                            <?php //if (has_post_thumbnail()): 
+                            ?>
+                            <?php the_post_thumbnail('medium'); ?>
+                            <?php //else: 
+                            ?>
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/noimage.png" alt="">
+                            <?php //endif; 
+                            ?>
+                            <?php //the_content(); 
+                            ?>
                         </div>
                         <section class="section_col">
                             <h3 class="section_ttl">「収穫できるものは作物だけじゃない」半農らいふ</h3>
@@ -41,8 +46,10 @@
                                 「流れる波のように、今も昔も変わらないクラシックの旋律のように」と流浪クラシック ールロクラシックーと名付け、「先人の知恵と文化を、未来の子供たちに伝えたい」との想いで、2013年にプロジェクトを立ち上げて現在に至る。<br>
                             </p>
                         </section>
+                </ul>
 
-                        <section class="section_col">
+
+                <!-- <section class="section_col">
                             <h3 class="section_ttl">なぜ？今のスタイル？兼業農家</h3>
                             <img src="../uploads/miso.jpeg">
                             <p>田中さん：2人の趣味のサーフィンやランニングをしながら、ミコちゃんの家庭菜園から始まり、2人で農薬や除草剤に頼らない昔ながらの農法でお米作りを始め、近所の方に頂いたハーブのホーリーバジルの苗をきっかけにホーリーバジルの栽培から焙煎加工までするようになりました。<br>
@@ -111,33 +118,29 @@
                                 <p><a href="">担当者直通 TEL:090-4785-9510（田中）</a></p>
                                 <p><a href="">問い合わせフォーム:https://ruloclassic.com/contact/</a></p>
                             </div>
-                        </section>
+                        </section> -->
 
 
-                    </li>
+                </li>
 
 
-
-                    <li class="side_bar side_bar_col">
-
-                        <!-- カテゴリー一覧 -->
-                        <div class="category-list-outer">
-                            <div class="category-list">
-                                <h3>コラム一覧</h3>
-                            </div>
+                <!-- サイドバーメニュー -->
+                <li class="side_bar side_bar_col">
+                    <div class="category-list-outer">
+                        <div class="category-list">
+                            <h3>コラム一覧</h3>
                         </div>
+                    </div>
+                    <aside class="side-menu">
+                        <ul class="side-menu-li">
+                            <?php get_sidebar(); ?>
 
-                        <!-- サイドバーメニュー -->
-                        <aside class="side-menu">
-                            <ul class="side-menu-li">
-                                <?php get_sidebar(); ?>
+                        </ul>
+                    </aside>
 
-                            </ul>
-                        </aside>
+                </li>
 
-                    </li>
 
-                </ul>
 
 
 

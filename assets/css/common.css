@@ -230,6 +230,20 @@ a.btn-border-shadow--color:before {
     transform: translateY(-3px);
 }
 
+/* パンくずリスト(PC) */
+@media screen and (min-width:770px) {
+    .breadcrumb {
+        font-size: 16px;
+    }
+}
+
+/* SP・TBでパンくず非表示 2022.10.19 aka */
+@media screen and (max-width:1023px) {
+    .breadcrumb {
+        display: none;
+    }
+}
+
 /* お気に入りページで何も無いときの画像 */
 .img-none {
     margin: 0 auto;

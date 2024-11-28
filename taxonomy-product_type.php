@@ -1,7 +1,7 @@
 <?php get_header() ?>
 <main>
     <div class="inner">
-        <?php //インナー入れておきました。何卒よろしくお願いします。
+        <?php //インナー入れておきました。
         ?>
         <?php get_template_part('template-parts/breadcrumb');
         ?>
@@ -31,7 +31,7 @@
     <!-- ジャンル検索 -->
     <section id="btn-area" class="wrap">
         <div class="inner">
-            <?php //インナー入れておきました。何卒よろしくお願いします。
+            <?php //インナー入れておきました。
             ?>
             <!-- ジャンル検索ボタン -->
             <ul class="btn-content">
@@ -61,7 +61,7 @@
     </section>
     <div class="card-container">
         <div class="inner">
-            <?php //インナー入れておきました。何卒よろしくお願いします。
+            <?php //インナー入れておきました。
             ?>
             <ul class="page_list">
                 <?php if (have_posts()): ?>

@@ -178,7 +178,14 @@
                             <li>
                                 <a href="../html/column_detail.html">
                                     <div class="box_column">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/uploads/tennin (1).png" alt="コラムの写真">
+                                        <div>
+                                            <?php if (has_post_thumbnail()): ?>
+                                                <?php the_post_thumbnail('medium'); ?>
+                                            <?php else: ?>
+                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/noimage.png" alt="">
+                                            <?php endif; ?>
+
+                                        </div>
                                         <h3><?php the_title(); ?></h3>
                                         <!-- 長すぎて改行される問題 -->
                                         <?php

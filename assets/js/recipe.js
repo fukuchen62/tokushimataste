@@ -1,46 +1,146 @@
-// // Show the first four images
-// $("img:lt(4)").show();
+"use strict";
 
-// // When the gallery button is clicked
-// $("#gallery-btn").on('click', function (event) {
-//     // Prevent default behavior
-//     event.preventDefault();
-//     // All of the hidden images
-//     var $hidden = $("img:hidden");
-//     // Show the next four images
-//     $($hidden).slice(0, 4).fadeIn(800);
-//     // If the length of $hidden is 4 then hide the button
-//     if ($hidden.length == 4) {
-//         $(this).fadeOut();
-//     }
-// });
-
-// もっと見る１
+// もっと見る
 var show = 3; //最初に表示する件数
-var num = 3;  //clickごとに表示したい件数
-var contents = '.g1 li'; // 対象のlist
-$(contents + ':nth-child(n + ' + (show + 1) + ')').addClass('is-hidden');
-$('#btn1').on('click', function () {
-    $(contents + '.is-hidden').slice(0, num).removeClass('is-hidden');
-    if ($(contents + '.is-hidden').
-        length == 0) {
-        $('#btn1').fadeOut();
-    }
-});
-// 表示数＋num
-// show_g1 += num;
-// if (show_g1 >= num_g1) {
-// ボタン名はopenからcloseに変更
-// $('#btn2').text('閉じる').addClass('close');
-//         // 表示フラグを切り替える
-//     flag_show.g1 li = false;
-// }
 
-// } else {
-//４件目からを隠せる処理
-// $(contents + ':nth-child(n + ' + (show + 1) + ')').addClass('is-hidden');
-//     // ボタン名はもっと見るから閉じるに変更
-// $('#btn1').text('もっと見る').removeClass('close');
-//     // 表示フラグを切り替える
-// flag_show_g1 = true;
-// show_g1 = 3;
+let flag_show_g1 = true;              //true:隠す項目ある状態、false：全表示状態
+let flag_show_g2 = true;              //true:隠す項目ある状態、false：全表示状態
+let flag_show_g3 = true;             //true:隠す項目ある状態、false：全表示状態
+let flag_show_g4 = true;             //true:隠す項目ある状態、false：全表示状態
+
+
+$(document).ready(function () {
+    // 副菜の処理
+    var contents = '.g1 li'; // 対象のlist
+
+    // 4つ目からのカード型を非表示させる
+    jQuery(contents + ':nth-child(n + ' + (show + 1) + ')').addClass('is-hidden');
+
+    // 表示・隠すボタンのクリック処理
+    jQuery('#btn1').on('click', function () {
+
+        if (flag_show_g1) {
+            // 隠すカードを表示させる
+            jQuery(contents + ':nth-child(n + ' + (show + 1) + ')').removeClass('is-hidden');
+
+            // ボタン名はもっと見るから閉じるに変更
+            $('#btn1').text('とじる').addClass('close');
+            // 表示フラグを切り替える
+            flag_show_g1 = false;
+        } else {
+            //４件目からを隠せる処理
+            jQuery(contents + ':nth-child(n + ' + (show + 1) + ')').addClass('is-hidden');
+
+            // ボタン名はもっと見るから閉じるに変更
+            jQuery('#btn1').text('もっと見る').removeClass('close');
+            // 表示フラグを切り替える
+            flag_show_g1 = true;
+        }
+    });
+});
+
+
+$(document).ready(function () {
+
+    // メインディッシュの処理
+    var contents = '.g2 li'; // 対象のlist
+    // $(contents + ':nth-child(n + ' + (show + 1) + ')').addClass('is-hidden');
+
+    // 4つ目からのカード型を非表示させる
+    jQuery(contents + ':nth-child(n + ' + (show + 1) + ')').addClass('is-hidden');
+
+    // 表示・隠すボタンのクリック処理
+    jQuery('#btn2').on('click', function () {
+
+        if (flag_show_g2) {
+            // 隠すカードを表示させる
+            jQuery(contents + ':nth-child(n + ' + (show + 1) + ')').removeClass('is-hidden');
+
+            // ボタン名はもっと見るから閉じるに変更
+            jQuery('#btn2').text('とじる').addClass('close');
+
+            // 表示フラグを切り替える
+            flag_show_g2 = false;
+        } else {
+            //４件目からを隠せる処理
+            jQuery(contents + ':nth-child(n + ' + (show + 1) + ')').addClass('is-hidden');
+
+            // ボタン名はもっと見るから閉じるに変更
+            jQuery('#btn2').text('もっと見る').removeClass('close');
+            // 表示フラグを切り替える
+            flag_show_g2 = true;
+            // 表示数リセット
+            // show = 3;
+        }
+    });
+});
+
+$(document).ready(function () {
+
+    // 軽食の処理
+    var contents = '.g3 li'; // 対象のlist
+    // $(contents + ':nth-child(n + ' + (show + 1) + ')').addClass('is-hidden');
+
+    // 4つ目からのカード型を非表示させる
+    jQuery(contents + ':nth-child(n + ' + (show + 1) + ')').addClass('is-hidden');
+
+    // 表示・隠すボタンのクリック処理
+    jQuery('#btn3').on('click', function () {
+
+        if (flag_show_g3) {
+            // 隠すカードを表示させる
+            jQuery(contents + ':nth-child(n + ' + (show + 1) + ')').removeClass('is-hidden');
+
+            // ボタン名はもっと見るから閉じるに変更
+            jQuery('#btn3').text('とじる').addClass('close');
+
+            // 表示フラグを切り替える
+            flag_show_g3 = false;
+        } else {
+            //４件目からを隠せる処理
+            jQuery(contents + ':nth-child(n + ' + (show + 1) + ')').addClass('is-hidden');
+
+            // ボタン名はもっと見るから閉じるに変更
+            jQuery('#btn3').text('もっと見る').removeClass('close');
+            // 表示フラグを切り替える
+            flag_show_g3 = true;
+            // 表示数リセット
+            // show = 3;
+        }
+    });
+});
+
+$(document).ready(function () {
+
+    // その他の処理
+    var contents = '.g4 li'; // 対象のlist
+    // $(contents + ':nth-child(n + ' + (show + 1) + ')').addClass('is-hidden');
+
+    // 4つ目からのカード型を非表示させる
+    jQuery(contents + ':nth-child(n + ' + (show + 1) + ')').addClass('is-hidden');
+
+    // 表示・隠すボタンのクリック処理
+    jQuery('#btn4').on('click', function () {
+
+        if (flag_show_g4) {
+            // 隠すカードを表示させる
+            jQuery(contents + ':nth-child(n + ' + (show + 1) + ')').removeClass('is-hidden');
+
+            // ボタン名はもっと見るから閉じるに変更
+            jQuery('#btn4').text('とじる').addClass('close');
+
+            // 表示フラグを切り替える
+            flag_show_g4 = false;
+        } else {
+            //４件目からを隠せる処理
+            jQuery(contents + ':nth-child(n + ' + (show + 1) + ')').addClass('is-hidden');
+
+            // ボタン名はもっと見るから閉じるに変更
+            jQuery('#btn4').text('もっと見る').removeClass('close');
+            // 表示フラグを切り替える
+            flag_show_g4 = true;
+            // 表示数リセット
+            // show = 3;
+        }
+    });
+});

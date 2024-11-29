@@ -85,6 +85,10 @@ body {
     padding: 0;
 }
 
+.close {
+    background-color: aqua;
+}
+
 .recipe_box {
     width: 100%;
     margin: 0 auto;

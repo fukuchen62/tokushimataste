@@ -1,111 +1,90 @@
-/* body {
-    max-width: 1024px;
+@charset "UTF-8";
+
+.inner_gs {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.tittle_goods_single {
     margin: 0 auto;
-    padding: 100px 0;
-} */
-
-/* カードの別バージョン試作品 7-12 */
-/* * {
-    margin: 0;
-    padding: 0;
+    width: fit-content;
+    margin-top: 60px;
+    margin-bottom: 30px;
 }
 
-body {
-    line-height: 1.5;
-} */
+/* 画像とテーブルのフレックス */
+@media screen and (min-width: 770px) {
+    .goods_si_flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
 
-/* img {
-    max-width: 100%;
-    vertical-align: bottom;
+        .goods_pic {
+            width: 50%;
+        }
+
+        .goods_table {
+            width: 35%;
+        }
+
+    }
 }
 
-.l-wrapper {
-    margin: 3rem auto;
-    width: 320px;
+.goods_pic {
+    margin-bottom: 30px;
 }
 
-.card {
-    background-color: #fff;
-    box-shadow: 0 0 8px rgba(0, 0, 0, .16);
-    color: #212121;
-    text-decoration: none;
+/* 企業詳細のテーブル */
+.goods_table {
+    width: 80%;
+    font-size: 1.6rem;
+    margin: 0 auto;
 }
 
-.card__header {
-    display: flex;
-
-    flex-wrap: wrap;
+.goods_table tr {
+    border-bottom: solid 1px black;
 }
 
-.card__title {
-    padding: 1rem 1rem 0;
-    font-size: 1.25rem;
-    order: 1;
+.goods_table th,
+.goods_table {
+    padding: 10px;
 }
 
-.card__title1 {
-    padding: 1rem 1rem 0;
-    font-size: 1.0rem;
-    order: 1;
+.goods_table th {
+    font-size: 1.8rem;
 }
 
-
-.card__thumbnail {
-    margin: 0;
-    order: 0;
+.goods_table td {
+    padding-top: 10px;
+    font-weight: 600;
 }
 
-.card__image {
-    width: 320px;
-    height: 240px;
+.goods_si_flex {
+    margin-bottom: 60px;
 }
 
-.card__body {
-    padding: 1rem;
+/* 備考欄（要らないなら消す） */
+.memo_gs p,
+.memo_gs a {
+    background-color: bisque;
+    padding: 10px;
+    border-radius: 10px;
 }
 
-.card__text {
-    font-size: .75rem;
+.memo_gs h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    margin-left: 10px;
 }
 
-.card__text+.card__text {
-    margin-top: .5rem;
+.memo_gs {
+    margin-bottom: 30px;
 }
 
-.card__text.-number {
-    text-align: right;
+.memo_gs a {
+    font-size: 1.8rem;
 }
 
-.card__footer {
-    padding: 1rem;
-    border-top: 1px solid #ddd;
+.inner_gs {
+    padding-bottom: 30px;
 }
-
-.button {
-    display: inline-block;
-    text-decoration: none;
-    transition: background-color .3s ease-in-out;
-}
-
-.button.-compact {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
-    text-decoration: none;
-    color: #000000;
-    font-size: 18px;
-    border-radius: 5px;
-    width: 250px;
-    height: 40px;
-    font-weight: bold;
-    border: 2px dashed #000000;
-    transition: 0.3s;
-    background-color: #fbb126;
-    cursor: pointer;
-}
-
-.button.-compact:hover,
-.button.-compact:focus {
-    opacity: .5;
-} */

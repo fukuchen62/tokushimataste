@@ -32,70 +32,26 @@
 </head>
 
 <body>
-	<header>
-		<div class="inner">
-			<!-- キーワード検索 -->
-			<div class="contentupper">
-				<form id="form1" action="ご飯のお供サイトURL">
-					<input id="sbox1" name="s" type="text" placeholder="キーワードを入力" />
-					<input id="sbtn1" type="submit" value="検索" />
-				</form>
-			</div>
-			<!-- トップに飛ぶロゴ-->
-			<div class="contentlower">
-				<h1 class="logo">
-                    <a href="#">
-                        <img src="../assets/images/cat.jpg" alt="ヘッダーロゴ">
-                    </a>
-                </h1>
-				<!-- ナビ -->
-				<div class="h_nav sp-none">
-					<ul>
-						<li><a href="goods.html">商品一覧</a></li>
-						<li><a href="area.html.html">エリア検索</a></li>
-						<li><a href="research.html">詳細検索</a></li>
-						<li><a href="column.html.html">コラム</a></li>
-						<li><a href="maker.html">メーカー一覧</a></li>
-						<li><a href="recipe.html">アレンジレシピ</a></li>
-						<li><a href="favorite.html">お気に入り</a></li>
-					</ul>
-				</div>
 
-				<!-- hamberger ボタン -->
-				<div class="hamburger pc-none">
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-			</div>
-		</div>
-	</header>
 	<main>
-		<!-- キービジュアル -->
-		<section class="kv b-shadow">
-			<div class="inner">
-				<h2 class="kv-copy">
-					徳島の味！<br class="tb-none">
-					あなたのご飯のお友達<br class="tb-none">
-				</h2>
-			</div>
+		<div class="inner">
 
-		</section>
+			<!-- 詳細検索 -->
+			<section class="search_box">
 
-		<!-- 詳細検索 -->
-		<section class="search">
-			<div class="inner">
-				<!-- 見出し -->
 				<h2 class="ttl_box">
-					<span class="ttl">詳細検索</span><br></h2>
+					<span class="ttl">条件検索</span><br></h2>
 
 				<div class="check_box">
+					<div class="lets_check">
+						<h3>チェックしてみよう！</h3>
+					</div>
 					<form>
-						<section class="inner_search">
+						<section class="inner_search is_area">
 							<h3>エリア</h3>
 
 							<ul>
-								<li class="choice_item"><input type="checkbox" name="area" id="area1" value="県西" checked>
+								<li class="choice_item"><input type="checkbox" name="area" id="area1" value="県西">
 									<label for="area1">県西</label>
 								</li>
 								<li class="choice_item"><input type="checkbox" name="area" id="area2" value="県東">
@@ -107,9 +63,7 @@
 							</ul>
 						</section>
 
-						<section class="inner_search">
-
-
+						<section class="inner_search is_type">
 
 							<h3>お供のタイプ</h3>
 
@@ -136,8 +90,7 @@
 							</ul>
 						</section>
 
-						<section class="inner_search">
-
+						<section class="inner_search is_taste">
 
 							<h3>味覚</h3>
 							<ul>
@@ -159,7 +112,7 @@
 							</ul>
 						</section>
 
-						<section class="inner_search">
+						<section class="inner_search is_allergy">
 
 
 							<h3>アレルギー</h3>
@@ -192,19 +145,87 @@
 							</ul>
 						</section>
 
-						<div class="entryBtns">
-							<input type="reset" value="クリア">
-							<input type="submit" value="検索">
+						<div class="clear_or_search">
+							<input class="clear_btn" type="reset" value="クリア">
+							<input class="search_btn" type="submit" value="検索">
 						</div>
 					</form>
 				</div>
-			</div>
 
-		</section>
+				<div class="triangle_sc"></div>
+			</section>
 
-		<h2 class="ttl_box">
+			<section class="result_box">
+				<h2 class="ttl_box">
 					<span class="ttl">検索結果</span><br></h2>
 
+				<ul class="result_flex">
+
+					<li>
+
+						<a href="../html/column_detail.html">
+							<div class="box_syohin">
+								<img src="../uploads/nikumisoitame.jpg" alt="コラムの写真">
+								<h3>サブタイトルサブタイトル</h3>
+								<p>テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。</p>
+							</div>
+						</a>
+
+					</li>
+
+					<li>
+
+						<a href="../html/column_detail.html">
+							<div class="box_syohin">
+								<img src="../uploads/nikumisoitame.jpg" alt="コラムの写真">
+								<h3>サブタイトルサブタイトル</h3>
+								<p>テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。</p>
+							</div>
+						</a>
+
+					</li>
+
+					<li>
+
+						<a href="../html/column_detail.html">
+							<div class="box_syohin">
+								<img src="../uploads/nikumisoitame.jpg" alt="コラムの写真">
+								<h3>サブタイトルサブタイトル</h3>
+								<p>テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。</p>
+							</div>
+						</a>
+
+					</li>
+
+					<li>
+
+						<a href="../html/column_detail.html">
+							<div class="box_syohin">
+								<img src="../uploads/nikumisoitame.jpg" alt="コラムの写真">
+								<h3>サブタイトルサブタイトル</h3>
+								<p>テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。</p>
+							</div>
+						</a>
+
+					</li>
+
+					<li>
+
+						<a href="../html/column_detail.html">
+							<div class="box_syohin">
+								<img src="../uploads/nikumisoitame.jpg" alt="コラムの写真">
+								<h3>サブタイトルサブタイトル</h3>
+								<p>テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。</p>
+							</div>
+						</a>
+
+					</li>
+				</ul>
+			</section>
+		</div>
+
+
+	</main>
 </body>
 
 </html>

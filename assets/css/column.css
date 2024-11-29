@@ -1,4 +1,4 @@
-@charset "utf-8";
+0.0..@charset "utf-8";
 
 /* ==================== */
 /* section-base */
@@ -54,69 +54,7 @@
 	}
 }
 
-/* ==================== */
-/* パンくずリスト */
-/* ==================== */
 
-.breadcrumb {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
-.breadcrumb li {
-	position: relative;
-	display: inline-block;
-	/*横に並ぶように*/
-	list-style: none;
-	font-weight: bold;
-	/*太字*/
-	margin-right: 0.3em;
-}
-
-.breadcrumb li:after {
-	content: "";
-	position: absolute;
-	top: 7px;
-	right: -19px;
-	border-style: solid;
-	border-color: transparent;
-	border-left-color: #feebcc;
-	border-width: 7px 12px;
-	width: 0;
-	height: 0;
-}
-
-.breadcrumb li a {
-	display: inline-block;
-	padding: 0 7px;
-	height: 28px;
-	line-height: 28px;
-	text-decoration: none;
-	color: #9b9b9b;
-	background: #feebcc;
-	font-size: 13px;
-	border-radius: 20px;
-	transition: 0.3s;
-}
-
-.breadcrumb li a:hover {
-	transform: translateY(-3px);
-}
-
-/* パンくずリスト(PC) */
-@media screen and (min-width:770px) {
-	.breadcrumb {
-		font-size: 16px;
-	}
-}
-
-/* SP・TBでパンくず非表示 2022.10.19 aka */
-@media screen and (max-width:1023px) {
-	.breadcrumb {
-		display: none;
-	}
-}
 
 /* ==================== */
 /* column */
@@ -189,8 +127,6 @@
 	height: 400px;
 }
 
-/* p_list_categories */
-/* fukushima 2022-10-14 s */
 li.cat-item {
 	height: 40px;
 	border-bottom: 1px solid #000;

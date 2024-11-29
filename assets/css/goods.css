@@ -1,5 +1,94 @@
-/* 商品名のボタン */
-#goods {
+/* body {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 100px 0;
+} */
+
+/* カードの別バージョン試作品 7-12 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /*   background-color: #eee; */
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+
+.l-wrapper {
+    margin: 3rem auto;
+    width: 320px;
+}
+
+.card {
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .16);
+    color: #212121;
+    text-decoration: none;
+}
+
+.card__header {
+    display: flex;
+
+    flex-wrap: wrap;
+}
+
+.card__title {
+    padding: 1rem 1rem 0;
+    font-size: 1.25rem;
+    order: 1;
+}
+
+.card__title1 {
+    padding: 1rem 1rem 0;
+    font-size: 1.0rem;
+    order: 1;
+}
+
+
+.card__thumbnail {
+    margin: 0;
+    order: 0;
+}
+
+.card__image {
+    width: 320px;
+    height: 240px;
+}
+
+.card__body {
+    padding: 1rem;
+}
+
+.card__text {
+    font-size: .75rem;
+}
+
+.card__text+.card__text {
+    margin-top: .5rem;
+}
+
+.card__text.-number {
+    text-align: right;
+}
+
+.card__footer {
+    padding: 1rem;
+    border-top: 1px solid #ddd;
+}
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color .3s ease-in-out;
+}
+
+.button.-compact {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,231 +106,77 @@
     cursor: pointer;
 }
 
-#goods:hover {
+.button.-compact:hover,
+.button.-compact:focus {
     opacity: .5;
 }
 
-.img-L {
-    float: left;
-    margin-right: 20px;
-    width: 640px;
-    height: 480px;
-}
+/* さらに別パターンのテスト */
 
-ul {
-    padding-left: 0;
-}
-
-li {
-    list-style: none;
-}
-
-.last-update {
-    margin: 5px 0 20px;
-}
-
-.conetnt {
-    margin: 20px 0;
-}
-
-
-/* ページネーション */
-
-* {
+.pic-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
     box-sizing: border-box;
+    background-color: #f1f1f1;
 }
 
-ul {
-    list-style: none;
-}
-
-.page_list {
-    border-top: 1px solid #000;
-    margin-bottom: 20px;
-}
-
-.page_list li {
-    display: none;
-    padding: 20px 0;
-    border-bottom: 1px solid #000;
-}
-
-.page_list li.on {
-    display: block;
-}
-
-.pagination {
-    width: 70%;
-    margin: 0 auto 50px;
-    font-size: 14px;
+.wrapper {
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 5px;
-}
-
-.pagination .number {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 1rem;
+    padding: 1rem;
 }
 
-.pagination a {
+.card {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    text-align: center;
+    flex-direction: column;
+    flex-basis: 30%;
+    word-wrap: break-word;
+    background-color: #fff;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
     text-decoration: none;
-    cursor: pointer;
-    background-color: #ffffff;
-    border: solid 1px #1597CC;
-    border-radius: 5px;
-    padding: 10px 0;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease-in-out;
 }
 
-.pagination .number>a.active {
-    background-color: #1597CC;
-    color: #fff;
+.card-image-box {
+    overflow: hidden;
 }
 
-/* ページングで表示するコンテンツのスタイル
- 初期表示は非表示 */
-.page_list li {
-    display: none;
-    padding: 20px 0;
-    border-bottom: 1px solid #000;
-    max-width: 320px;
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* onクラス添付で画面に表示 */
-.page_list li.on {
-    display: block;
+
+.card-box {
+    padding: 1rem;
 }
 
-/* ページネーションの現在のページに「.active」クラスを付与して色を変える */
-
-.pagination .number>a.active {
-    background-color: #1597CC;
-    color: #fff;
-}
-
-/* ココから先は見た目のスタイルなのであまり重要ではありません。
-　　自由にデザインなど変更して貰えればと思います。 */
-
-.page_list {
-    border-top: 1px solid #000;
-    margin-bottom: 20px;
-}
-
-.page_list p {
-    margin: 0.3em 0;
-}
-
-.pagination {
-    width: 70%;
-    margin: 0 auto 50px;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-}
-
-.pagination .number {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 5px;
-}
-
-.pagination a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    background-color: #ffffff;
-    border: solid 1px #1597CC;
-    border-radius: 5px;
-    padding: 10px 0;
-}
-
-.img-fluid {
-    width: 320px;
-    height: 240px;
-}
-
-.img-fluid li {
-    letter-spacing: -1em;
-}
-
-.img-fluid li {
-    display: inline-block;
-    width: 35px;
-    height: 35px;
-    text-align: center;
-    line-height: 35px;
-    border: 1px solid #FF9900;
-}
-
-/* ジャンル検索ボタン */
-.btn-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin: 20px 0 80px;
-}
-
-.btn-content li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
-    text-decoration: none;
-    color: #555555;
-    font-size: 18px;
-    border-radius: 20px;
-    width: 300px;
-    height: 40px;
+.card-title {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
-    border: 2px solid #555555;
-    transition: 0.3s;
-    box-shadow: 0px 6px 0px -2px rgba(67, 145, 209, 1);
-    background-color: #f7eb99;
 }
 
-.btn-content li:hover {
-    box-shadow: 0 0 #fff;
-    transform: translateY(1px);
+.card-description {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
 }
 
-
-
-/*以下変更 byぎみ
- ページングで表示するコンテンツのスタイル
- 初期表示は非表示 */
-
-.page_list {
-    display: flex;
-    list-style: none;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    gap: 5px 5px;
-    padding-left: 0;
-    /* ulのユーザーエージェントスタイル打消し */
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-body {
-    max-width: 1024px;
-    margin: 0 auto;
-    padding: 100px 0;
+.card:hover img {
+    transform: scale(1.2);
 }

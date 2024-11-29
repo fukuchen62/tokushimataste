@@ -181,39 +181,41 @@
     </section>
 
     <!-- 詳細検索 -->
-    <form id="search-box" method="GET" action="<?php /*echo home_url('/')*/ ?>">
-        <!-- wp検索フォームに必要 -->
-        <input type="hidden" name="s" value="">
-        <section class="search">
-            <div class="inner">
-                <!-- 見出し -->
-                <h2 class="ttl_box">
-                    <span class="ttl">詳細検索</span><br>
-                </h2>
+    <section class="search">
+        <div class="inner">
+            <!-- 見出し -->
+            <h2 class="ttl_box">
+                <span class="ttl">詳細検索</span><br>
+            </h2>
 
-                <div class="check_box">
-                    <div section="inner_search">
+            <div class="check_box">
+                <form id="search-box" method="GET" action="<?php /*echo home_url('/')*/ ?>">
+                    <!-- wp検索フォームに必要 -->
+                    <input type="hidden" name="s" value="">
+
+                    <section class="inner_search">
+                        <h3>エリア</h3>
+
                         <ul>
-                            <li>
-                                <h3>エリア</h3>
-                            </li>
-                            <li><input type="checkbox" name="area" id="area1" value="県西" checked>
+                            <li class="choice_item"><input type="checkbox" name="area" id="area1" value="県西" checked>
                                 <label for="area1">県西</label>
                             </li>
-                            <li><input type="checkbox" name="area" id="area2" value="県東">
+                            <li class="choice_item"><input type="checkbox" name="area" id="area2" value="県東">
                                 <label for="area2">県東</label>
                             </li>
-                            <li><input type="checkbox" name="area" id="area3" value="県南">
+                            <li class="choice_item"><input type="checkbox" name="area" id="area3" value="県南">
                                 <label for="area3">県南</label>
                             </li>
                         </ul>
-                    </div>
+                    </section>
 
-                    <div section="inner_search">
+                    <section class="inner_search">
+
+
+
+                        <h3>お供のタイプ</h3>
+
                         <ul>
-                            <li>
-                                <h3>お供のタイプ</h3>
-                            </li>
                             <li>
                                 <input type="checkbox" name="otomoType" id="otomoType1" value="漬物・発酵食品">
                                 <label for="otomoType1">漬物・発酵食品</label>
@@ -234,13 +236,13 @@
                                 <label for="otomoType6">その他</label>
                             </li>
                         </ul>
-                    </div>
+                    </section>
 
-                    <div section="inner_search">
+                    <section class="inner_search">
+
+
+                        <h3>味覚</h3>
                         <ul>
-                            <li>
-                                <h3>味覚</h3>
-                            </li>
                             <li><input type="checkbox" name="taste" id="taste1" value="甘い">
                                 <label for="taste1">甘い</label>
                             </li>
@@ -257,14 +259,14 @@
                                 <label for="taste5">うま味</label>
                             </li>
                         </ul>
-                    </div>
+                    </section>
 
-                    <div section="inner_search">
+                    <section class="inner_search">
+
+
+                        <h3>アレルギー</h3>
+
                         <ul>
-                            <li>
-                                <h3>アレルギー</h3>
-                            </li>
-
                             <li><input type="checkbox" name="allergy" id="allergy1" value="えび">
                                 <label for="allergy1">えび</label>
                             </li>
@@ -289,21 +291,22 @@
                             <li><input type="checkbox" name="allergy" id="allergy8" value="落花生">
                                 <label for="allergy8">落花生</label>
                             </li>
-                            </li>
                         </ul>
-                    </div>
+                    </section>
 
                     <div class="entryBtns">
                         <input type="reset" value="クリア">
                         <input type="submit" value="検索">
                     </div>
-                </div>
+                </form>
             </div>
+        </div>
 
-        </section>
-    </form>
+    </section>
+
     <h2 class="ttl_box">
         <span class="ttl">検索結果</span><br>
     </h2>
+
 </main>
 <?php get_footer(); ?>

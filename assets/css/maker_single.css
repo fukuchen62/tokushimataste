@@ -177,3 +177,8 @@ img {
     margin-bottom: 5px;
     display: inline-block;
 }
+
+/* おススメ用に使っている共通カード */
+.card-title {
+    font-size: 2rem;
+}

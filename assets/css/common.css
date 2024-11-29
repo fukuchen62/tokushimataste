@@ -40,8 +40,8 @@
 } */
 
 /* 背景に和紙画像を入れるとしたらの場合の準備 */
-/*
-body {
+
+/* body {
     background-image: url(https://beiz.jp/images_S/japanese-paper/japanese-paper_00445.jpg);
 } */
 
@@ -83,6 +83,8 @@ img {
 
 a {
     display: block;
+    text-decoration: none;
+    /* text-decorationでリンク下線の除去 */
 }
 
 /* おまけ */
@@ -109,10 +111,14 @@ a img:hover {
     box-sizing: inherit;
 }
 
-
-
 header {
-    margin-bottom: 100px;
+    margin-bottom: 80px;
+}
+
+@media screen and (min-width:900px) {
+    header {
+        margin-bottom: 0px;
+    }
 }
 
 /*もっと見るボタン <a href="" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>*/
@@ -186,6 +192,7 @@ a.btn-border-shadow--color:before {
     margin: 0;
     padding: 0;
     list-style: none;
+    margin-left: 10px;
 }
 
 .breadcrumb li {
@@ -226,6 +233,20 @@ a.btn-border-shadow--color:before {
 
 .breadcrumb li a:hover {
     transform: translateY(-3px);
+}
+
+/* パンくずリスト(PC) */
+@media screen and (min-width:770px) {
+    .breadcrumb {
+        font-size: 16px;
+    }
+}
+
+/* SP・TBでパンくず非表示 2022.10.19 aka */
+@media screen and (max-width:900px) {
+    .breadcrumb {
+        display: none;
+    }
 }
 
 /* お気に入りページで何も無いときの画像 */
@@ -277,6 +298,53 @@ a {
 .box_column {
     background-color: #EEEEF1;
     color: black;
+    font-size: 1.6rem;
+    box-shadow: 5px 5px 0 #9e9d9c;
+    padding: 10px;
+    text-align: centert;
+    border-radius: 8px;
+    line-height: 30px;
+    letter-spacing: 0.05em;
+    margin-bottom: 30px;
+    /* おまけ用 */
+    border: 2px solid #342201;
+    transition: 0.6s;
+    width: 300px;
+    /* height: 400px; */
+}
+
+.box_column h3 {
+    font-size: 2rem;
+    height: 9rem;
+}
+
+.box_column img {
+    height: 215px;
+    object-fit: contain;
+}
+
+/* ============================ */
+/* 商品一覧、エリア一覧以外の商品カード */
+/* ============================ */
+
+a {
+    text-decoration: none;
+}
+
+/* 写真 */
+
+.box_syohin img {
+    width: 100%;
+    height: 140px;
+    text-align: center;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* コラムの枠 */
+.box_syohin {
+    background-color: #b5ec91;
+    color: black;
     font-size: 2rem;
     box-shadow: 5px 5px 0 #9e9d9c;
     padding: 16px;
@@ -296,38 +364,6 @@ a {
 /* レシピ */
 /* ==================== */
 
-
-/*以下変更 byぎみ
-ページングで表示するコンテンツのスタイル
- 初期表示は非表示 */
-
-.list {
-    display: flex;
-    list-style: none;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    gap: 5px 5px;
-    padding-left: 0;
-    /* ulのユーザーエージェントスタイル打消し */
-}
-
-/* onクラス添付で画面に表示 */
-/* もとにもどす */
-.list li.on {
-    display: block;
-    max-width: 320px;
-}
-
-
-
-/* もっと見る */
-.recipe_container {
-    width: 100%;
-    margin: 0 auto 80px;
-    padding: 10px;
-}
-
 .list {
     width: 100%;
     display: flex;
@@ -345,36 +381,245 @@ a {
     margin: 0 auto;
     opacity: 1;
     transition: all .4s ease 0s;
-    overflow: hidden;
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
     border-radius: 10px;
-}
-
-.list li.is-hidden {
-    visibility: hidden;
-    opacity: 0;
-    height: 0;
-    margin: 0 10px;
-    padding: 0;
 }
 
 .recipe_box {
     width: 100%;
     margin: 0 auto;
-    /* max-width: 320px;
-    min-width: 300px; */
-    height: auto;
-    border: 2px darkorange solid;
-    border-radius: 10px;
+    max-width: 320px;
+    min-width: 300px;
+    background-color: #EEEEF1;
+    color: black;
+    font-size: 2rem;
+    box-shadow: 5px 5px 0px #9e9d9c;
+    padding: 16px;
+    text-align: centert;
+    border-radius: 8px;
+    line-height: 30px;
+    letter-spacing: 0.05em;
+    margin-bottom: 30px;
+    border: 2px solid #342201;
+    transition: 0.6s;
 }
 
 .recipe_box p {
     width: 98%;
     height: 6rem;
-    margin: 0 auto;
     margin: 10px;
     padding: 5px;
     text-align: left;
+}
+
+.recipe_box img {
+    height: 250px;
+    object-fit: fill;
+}
+
+.img-fluid {
+    width: 100%;
+    height: auto;
+}
+
+/* 商品名のボタン */
+
+#goods {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    text-decoration: none;
+    color: #000000;
+    font-size: 18px;
+    border-radius: 5px;
+    width: 250px;
+    height: 40px;
+    font-weight: bold;
+    border: 2px dashed #000000;
+    transition: 0.3s;
+    background-color: #fbb126;
+    cursor: pointer;
+}
+
+#goods:hover {
+    opacity: .5;
+}
+
+/* ジャンル検索ボタン */
+.btn-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 20px 0 80px;
+}
+
+.btn-content li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    text-decoration: none;
+    color: #555555;
+    font-size: 18px;
+    border-radius: 20px;
+    width: 300px;
+    height: 40px;
+    font-weight: bold;
+    border: 2px solid #555555;
+    transition: 0.3s;
+    box-shadow: 0px 6px 0px -2px rgba(67, 145, 209, 1);
+    background-color: #f7eb99;
+}
+
+.btn-content li:hover {
+    box-shadow: 0 0 #fff;
+    transform: translateY(1px);
+}
+
+/* 商品のイメージの大きさほか */
+
+.img-L {
+    float: left;
+    margin-right: 20px;
+    width: 640px;
+    height: 480px;
+}
+
+ul {
+    padding-left: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.last-update {
+    margin: 5px 0 20px;
+}
+
+.conetnt {
+    margin: 20px 0;
+}
+
+/* ページネーション */
+
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+
+.pagination {
+    width: 70%;
+    margin: 0 auto 50px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.pagination .number {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.pagination a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #ffffff;
+    border: solid 1px #1597CC;
+    border-radius: 5px;
+    padding: 10px 0;
+}
+
+.pagination .number>a.active {
+    background-color: #1597CC;
+    color: #fff;
+}
+
+/* ページングで表示するコンテンツのスタイル
+ 初期表示は非表示 */
+.page_list li {
+    display: none;
+    padding: 20px 0;
+    /* border-bottom: 1px solid #000; */
+    max-width: 320px;
+}
+
+/* onクラス添付で画面に表示 */
+.page_list li.on {
+    display: block;
+}
+
+/* ページネーションの現在のページに「.active」クラスを付与して色を変える */
+
+.pagination .number>a.active {
+    background-color: #1597CC;
+    color: #fff;
+}
+
+/* ココから先は見た目のスタイルなのであまり重要ではありません。
+　　自由にデザインなど変更して貰えればと思います。 */
+
+.page_list {
+    /* border-top: 1px solid #000; */
+    margin-bottom: 20px;
+}
+
+.page_list p {
+    margin: 0.3em 0;
+}
+
+.pagination {
+    width: 70%;
+    margin: 0 auto 50px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.pagination .number {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.pagination a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #ffffff;
+    border: solid 1px #1597CC;
+    border-radius: 5px;
+    padding: 10px 0;
+}
+
+.img-fluid {
+    width: 320px;
+    height: 240px;
 }
 
 .img-fluid li {
@@ -387,5 +632,35 @@ a {
     height: 35px;
     text-align: center;
     line-height: 35px;
-    border: 1px solid #0a26dd;
+    border: 1px solid #FF9900;
+}
+
+/*以下変更 byぎみ
+ ページングで表示するコンテンツのスタイル
+ 初期表示は非表示 */
+
+.page_list {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 5px 5px;
+    padding-left: 0;
+    /* ulのユーザーエージェントスタイル打消し */
+}
+
+.page_list {
+    /* border-top: 1px solid #000; */
+    margin-bottom: 20px;
+}
+
+.page_list li {
+    display: none;
+    padding: 20px 0;
+    /* border-bottom: 1px solid #000; */
+}
+
+.page_list li.on {
+    display: block;
 }

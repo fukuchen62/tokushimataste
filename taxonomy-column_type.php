@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/reset.css" media="all">
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/common.css" media="all">
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/column.css" media="all">
-
 <?php get_header(); ?>
 
 <main>
@@ -16,7 +12,7 @@
         <div class="inner">
             <!-- 見出し -->
             <h2 class="ttl_box">
-                <span class="ttl"><?php single_term_title('') ?></span><br>
+                <span class="ttl"><?php single_term_title(''); ?></span><br>
 
             </h2>
 
@@ -41,6 +37,16 @@
 
 </main>
 
-<?php get_sidebar(); ?>
-<?php get_template_part('template-parts/pagination'); ?>
-<?php get_footer(); ?>
+<!-- サイドバーメニュー -->
+<li class="side_bar side_bar_col">
+    <div class="category-list-outer">
+        <div class="category-list">
+            <h3>コラム一覧</h3>
+        </div>
+    </div>
+    <aside class="side-menu">
+        <ul class="side-menu-li">
+            <?php get_sidebar(); ?>
+
+            <?php get_template_part('template-parts/pagination'); ?>
+            <?php get_footer(); ?>

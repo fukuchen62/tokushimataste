@@ -19,7 +19,7 @@
                 </li>
             </ul>
         </div>
-        <h2 class="area_box"><span class="ttl"><?php single_term_title(); ?></span></h2>
+        <h2 class="area_box"><span class="ttl"><?php single_term_title(); ?></span> <?php echo $post->count ?></h2>
 
 
         <?php //$area_slug = get_query_var('area');

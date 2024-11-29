@@ -1,4 +1,4 @@
-0.0..@charset "utf-8";
+@charset "utf-8";
 
 /* ==================== */
 /* section-base */
@@ -29,11 +29,6 @@
 	margin-bottom: 5px;
 }
 
-
-
-
-
-
 /* ---------- */
 /* tablet */
 @media(width>=700px) {
@@ -54,8 +49,6 @@
 	}
 }
 
-
-
 /* ==================== */
 /* column */
 /* ==================== */
@@ -75,14 +68,19 @@
 	}
 }
 
-
-.side_bar {
+.side-menu {
 	width: 300px;
 	position: sticky;
 	top: 20px;
 	margin: 0 auto;
 }
 
+/* .side_bar {
+	width: 300px;
+	position: sticky;
+	top: 20px;
+	margin: 0 auto;
+} */
 
 @media screen and (max-width: 1059px) {
 	.side_bar {

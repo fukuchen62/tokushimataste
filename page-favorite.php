@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="徳島を旅するように味わう">
     <meta name="keywords" content="徳島,おとも,ご飯のおとも,徳島の味">
-    <title>NOT FOUND</title>
+    <title>お気に入り</title>
 
     <!--リセットCSS-->
     <link rel="stylesheet" href="../assets/css/reset.css">
@@ -15,10 +15,10 @@
     <!-- headerCSSの読み込み -->
     <link rel="stylesheet" href="../assets/css/header.css">
     <link href="../assets/css/top.css" rel="stylesheet">
+    <link href="../assets/css/goods.css" rel="stylesheet">
     <!-- footer CSSの読み込み -->
     <link rel="stylesheet" href="../assets/css/footer.css">
-    <!-- error CSSの読み込み -->
-    <link rel="stylesheet" href="../assets/css/error.css">
+
     <!--Googleフォントの読み込み-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -84,26 +84,26 @@
 
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a itemprop="item" href="#">
-                        <span itemprop="name">404</span>
+                        <span itemprop="name">お気に入り</span>
                     </a>
                     <meta itemprop="position" content="2" />
                 </li>
         </ul>
         </ol>
 
-        <p style="text-align:center"><span class="marker">404エラー</span></p>
+        <h2 style="text-align:center">お気に入りリスト</h2>
         <!-- 登録物がないときは下記の文章を使用します -->
         <div class="img-none">
-            <img src="../uploads/404_04.jpg" alt="Image" class="img-none" style=" margin-top:14px;">
+            <img src="../uploads/404_01.jpg" alt="Image" class="img-none" style=" margin-top:14px;">
         </div>
         <div class="txt-none">
-            お探しのページは見つかりませんでした。<br>
-            URLが間違っているか、お探しのページが存在しません。
+            まだお気に入りがありません<br>
+            お気に入りの一品を探しに行きましょう!
         </div>
 
-        <ul class="flex">
+        <ul class="btn-content">
             <li>
-                <a href="../html/index.html" class="original-button2"><span>TOPへ戻る</span></a>
+                <a href="../html/goods.html" class=""><span>商品一覧ページへ</span></a>
             </li>
     </main>
 

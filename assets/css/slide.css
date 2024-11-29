@@ -38,16 +38,17 @@
 }
 
 .scroll-infinity__list--left1 {
-    animation: infinity-scroll-left 80s infinite linear 0.5s both;
+    animation: infinity-scroll-left 20s infinite linear 0.5s both;
 }
 
 .scroll-infinity__item1 {
-    width: calc(100vw / 6);
+    /* width: calc(100vw / 6); */
+
 }
 
 .scroll-infinity__item1>img {
     border-radius: 50%;
-    width: 100%;
+    width: 400%;
 }
 
 /* 別パターンのCSS下の方 */
@@ -73,7 +74,7 @@
 }
 
 .scroll-infinity__list--left {
-    animation: infinity-scroll-left 80s infinite linear 0.5s both;
+    animation: infinity-scroll-left 20s infinite linear 0.5s both;
 }
 
 .scroll-infinity__item {
@@ -81,5 +82,5 @@
 }
 
 .scroll-infinity__item>img {
-    width: 150%;
+    width: 400%;
 }

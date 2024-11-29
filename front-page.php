@@ -36,7 +36,7 @@
                         <?php
                         $args = [
                             'post_type'      => 'product', // カスタム投稿タイプ
-                            'posts_per_page' => 3,            // 表示する投稿数
+                            'posts_per_page' => 6,            // 表示する投稿数
                             'orderby'        => 'rand',       // ランダム順
                         ];
                         // WP_Queryのインスタンスを作成
@@ -45,12 +45,14 @@
                             <?php while ($the_query->have_posts()): $the_query->the_post() ?>
 
                                 <li class="scroll-infinity__item1">
-                                    <?php
-                                    $pic = get_field('pic1');
-                                    // $picが存在する場合のみURLを取得
-                                    $pic_url =  $pic['sizes']['thumbnail'];
-                                    ?>
-                                    <img src="<?php echo $pic_url; ?>" alt="">
+                                    <a href="<?php the_permalink(); ?>">
+                                        <?php
+                                        $pic = get_field('pic1');
+                                        // $picが存在する場合のみURLを取得
+                                        $pic_url =  $pic['sizes']['thumbnail'];
+                                        ?>
+                                        <img src="<?php echo $pic_url; ?>" alt="">
+                                    </a>
                                 </li>
                         <?php
                             endwhile;
@@ -76,17 +78,17 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/tokusima-map02.png" alt="エリア検索map">
 
                 <div class="kumo nishi">
-                    <a href="area.html">
+                    <a href="<?php echo home_url('/area/west/'); ?>">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kumo_nishi.png" alt="県西部">
                     </a>
                 </div>
                 <div class="kumo higashi">
-                    <a href="area.html">
+                    <a href="<?php echo home_url('/area/east/'); ?>">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kumo_higashi.png" alt="県東部">
                     </a>
                 </div>
                 <div class="kumo minami">
-                    <a href="area.html">
+                    <a href="<?php echo home_url('/area/south/'); ?>">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kumo_minami.png" alt="県南部">
                     </a>
                 </div>
@@ -122,14 +124,16 @@
                         if ($the_query->have_posts()): ?>
                             <?php while ($the_query->have_posts()): $the_query->the_post() ?>
                                 <li class="scroll-infinity__item">
-                                    <?php
-                                    $pic = get_field('pic1');
-                                    // $picが存在する場合のみURLを取得
-                                    $pic_url =  $pic['sizes']['thumbnail'];
-                                    ?>
-                                    <img src="<?php echo $pic_url; ?>" alt="">
-                                    <!-- <p><?php //the_field('company');
-                                            ?></p> -->
+                                    <a href="<?php the_permalink(); ?>">
+                                        <?php
+                                        $pic = get_field('pic1');
+                                        // $picが存在する場合のみURLを取得
+                                        $pic_url =  $pic['sizes']['thumbnail'];
+                                        ?>
+                                        <img src="<?php echo $pic_url; ?>" alt="">
+                                        <!-- <p><?php //the_field('company');
+                                                ?></p> -->
+                                    </a>
                                 </li>
                         <?php
                             endwhile;
@@ -173,7 +177,7 @@
                 if ($the_query->have_posts()): ?>
                     <?php while ($the_query->have_posts()): $the_query->the_post() ?>
                         <li>
-                            <a href="../html/column_detail.html">
+                            <a href="<?php the_permalink(); ?>">
                                 <div class="box_column">
                                     <div>
                                         <?php if (has_post_thumbnail()): ?>
@@ -221,7 +225,7 @@
                 <?php
                 $args = [
                     'post_type' => 'recipe', // メニューの投稿タイプ
-                    'post_per_page' => 3,
+                    'posts_per_page' => 3,
                     'orderby'        => 'rand',   // ランダム表示
                 ];
                 /*
@@ -237,18 +241,20 @@
                 if ($the_query->have_posts()): ?>
                     <?php while ($the_query->have_posts()): $the_query->the_post() ?>
                         <li>
-                            <div class="recipe_box">
-                                <?php
-                                $pic = get_field('pic1');
-                                // $picが存在する場合のみURLを取得
-                                $pic_url =  $pic['sizes']['medium'];
-                                ?>
-                                <img src="<?php echo $pic_url; ?>" alt="">
-                                <!-- <img src="../uploads/furikake.jpeg" alt="Image" class="img-fluid"> -->
+                            <a href="<?php the_permalink(); ?>">
+                                <div class="recipe_box">
+                                    <?php
+                                    $pic = get_field('pic1');
+                                    // $picが存在する場合のみURLを取得
+                                    $pic_url =  $pic['sizes']['medium'];
+                                    ?>
+                                    <img src="<?php echo $pic_url; ?>" alt="Image" class="img-fluid">
+                                    <!-- <img src="../uploads/furikake.jpeg" alt="Image" class="img-fluid"> -->
 
-                                <p><?php the_title(); ?></p>
+                                    <p><?php the_title(); ?></p>
 
-                            </div>
+                                </div>
+                            </a>
                         </li>
                 <?php endwhile;
                     wp_reset_postdata(); // リセット
@@ -259,23 +265,20 @@
 
         </div>
         <a href="<?php echo home_url('/recipe/') ?>" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
+    </div>
 
-
-        <!-- インスタ -->
-        <div class="inner">
-            <div class="inst_container">
-                <div class="inst_ttl">
-                    <h3>instagram</h3>
-                </div>
-                <ul class="inst_photo">
-                    <!-- ローカルで表示 -->
-                    <?php echo do_shortcode("[instagram-feed feed=2]"); ?>
-                    <!-- レンタルサーバで表示 -->
-                    <?php //echo do_shortcode("[instagram-feed feed=1]"); 
-                    ?>
-                </ul>
+    <!-- インスタ -->
+    <div class="inner">
+        <div class="inst_container">
+            <div class="inst_ttl">
+                <h3>instagram</h3>
             </div>
+            <ul class="inst_photo">
+
+                <?php echo do_shortcode("[instagram-feed feed=2]"); ?>
+            </ul>
         </div>
+    </div>
     </div>
 </main>
 

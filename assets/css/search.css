@@ -52,8 +52,6 @@ input[type="checkbox"] {
 	height: 15px;
 	border: 2px solid;
 	border-radius: 2px;
-	/* background-color: #fff; */
-	/* margin-left: 20px; */
 }
 
 
@@ -61,13 +59,13 @@ input[type="checkbox"] {
 /*詳細検索の背景の設定*/
 
 .check_box {
-	/* padding: 20px; */
 	padding-bottom: 0;
 }
 
 form {
 	background-color: beige;
 	padding-bottom: 40px;
+	border-radius: 0 0 10px 10px;
 
 }
 
@@ -90,17 +88,16 @@ input {
 .inner_search h3 {
 	font-weight: 600;
 	text-align: center;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 
 .inner_search li {
-	/* padding: 10px; */
 	text-align: center;
 	border-radius: 15px;
 }
 
 .check_box section {
-	margin-bottom: 60px;
+	margin-bottom: 20px;
 }
 
 /* チェックボックス・メディアクエリ */
@@ -164,6 +161,7 @@ input {
 .clear_or_search {
 	width: 230px;
 	margin: 0 auto;
+	margin-top: 60px;
 }
 
 .clear_or_search input {
@@ -223,7 +221,7 @@ input {
 	appearance: none;
 }
 
-
+/* チェックボックス下の三角形 */
 .triangle_sc {
 	width: 0;
 	height: 0;
@@ -237,6 +235,7 @@ input {
 	margin-top: 2px;
 }
 
+/* 検索結果 */
 .result_flex {
 	display: flex;
 	flex-wrap: wrap;

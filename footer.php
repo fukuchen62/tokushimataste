@@ -6,21 +6,21 @@
     <div class="footer_container">
         <ul class="footer_nav">
             <li>
-                <a href="<?php echo get_template_directory_uri('/contact/'); ?>">お問い合わせ</a>
+                <a href="<?php echo home_url('/contact/'); ?>">お問い合わせ</a>
             </li>
             <li>
-                <a href="<?php echo get_template_directory_uri('/about/'); ?>">このサイトについて</a>
+                <a href="<?php echo home_url('/about/'); ?>">このサイトについて</a>
             </li>
         </ul>
         <ul class="footer_nav">
             <li>
-                <a href="<?php echo get_template_directory_uri('/qa/'); ?>">Q&A</a>
+                <a href="<?php echo home_url('/qa/'); ?>">Q&A</a>
             </li>
             <li>
-                <a href="<?php echo get_template_directory_uri('/privacy/'); ?>">プライバシーポリシー・免責事項</a>
+                <a href="<?php echo home_url('/privacy/'); ?>">プライバシーポリシー・免責事項</a>
             </li>
             <li>
-                <a href="<?php echo get_template_directory_uri('/aboutsite/'); ?>">サイト制作にあたって</a>
+                <a href="<?php echo home_url('/aboutsite/'); ?>">サイト制作にあたって</a>
             </li>
         </ul>
     </div>

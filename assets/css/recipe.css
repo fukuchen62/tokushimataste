@@ -112,15 +112,15 @@ body {
 
 /* レシピ詳細 */
 
-.recipe_name img {
+/* .recipe_name img {
     width: 500px;
     height: 480px;
-}
+} */
 
 /*
 border-bottom に「dotted」を指定して点線にする
 */
-dt {
+/* dt {
     width: 15%;
     border-bottom: dotted 1px #ccc;
     padding: 6px 0;
@@ -151,7 +151,7 @@ dt {
     margin-left: 300px;
 } */
 
-ol {
+/* ol {
     font-size: 20px;
 }
 
@@ -178,4 +178,60 @@ ol {
     border-bottom: 1px solid #f2f2f2;
     font-size: 20px;
     line-height: 1.5;
+}  */
+
+
+
+/* レシピ個別 */
+
+/* ４枚つづりのslick画像 */
+.container_ms {
+    width: 100%;
+}
+
+.slider_ms {
+    margin-bottom: 10px;
+}
+
+img {
+    height: auto;
+    width: 100%;
+}
+
+.slick-prev {
+    transform: translateX(40px);
+    z-index: 100;
+    cursor: pointer;
+}
+
+.slick-next {
+    transform: translateX(-40px);
+    z-index: 100;
+    cursor: pointer;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: DimGray;
+}
+
+.thumbnail_img {
+    opacity: 0.3;
+    transition: opacity 0.3s linear;
+    cursor: pointer;
+}
+
+.thumbnail_ms .slick-current {
+    opacity: 1;
+}
+
+.ttl_rsp {
+    text-align: center;
+}
+
+/* 使ったお供 */
+.flex_use_goods {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }

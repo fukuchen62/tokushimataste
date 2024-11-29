@@ -1,15 +1,9 @@
-<!-- <link rel="stylesheet" href="<?php //echo get_template_directory_uri();
-                                    ?>/assets/css/reset.css" media="all"> -->
-<!-- <link rel="stylesheet" href="<?php //echo get_template_directory_uri();
-                                    ?>/assets/css/common.css" media="all"> -->
-
 <?php get_header(); ?>
 
 <main>
     <div class="inner">
         <!-- パンくずリスト -->
         <?php get_template_part('template-parts/breadcrumb'); ?>
-
 
         <h2 class="ttl_box"><span class="ttl">メーカーさん紹介</span></h2>
 
@@ -25,8 +19,16 @@
                 </li>
             </ul>
         </div>
+        <h2 class="area_box"><span class="ttl"><?php
+                                                if (is_tax()) {
+                                                    $term = get_queried_object(); // 現在のタクソノミータームを取得
+                                                    if ($term && isset($term->name)) {
+                                                        echo esc_html($term->name); // 現在のターム名を表示
+                                                    }
+                                                }
+                                                ?>
+            </span></h2>
 
-        <!-- <h2 class="area_box"><span class="ttl">県東部</span></h2> -->
 
         <?php //$area_slug = get_query_var('area');
         ?>
@@ -49,6 +51,7 @@
 </main>
 
 <!-- ページナビ -->
-<?php get_template_part('template-parts/pagination'); ?>
-
+<div class="page_example">
+    <?php get_template_part('template-parts/pagination'); ?>
+</div>
 <?php get_footer(); ?>

@@ -1,25 +1,26 @@
 <footer>
     <!-- トップページに戻るボタン -->
-    <p id="page-top"><a href="#">↑<br>TOP</a></p>
+    <p id="page-top"><a href="<?php echo home_url('/'); ?>"></a><img src="<?php echo get_template_directory_uri(); ?>/assets/images/topbutton.png" alt="topに戻る">
+        </a></p>
 
     <div class="footer_container">
         <ul class="footer_nav">
             <li>
-                <a href="">お問い合わせ</a>
+                <a href="<?php echo get_template_directory_uri('/contact/'); ?>">お問い合わせ</a>
             </li>
             <li>
-                <a href="">このサイトについて</a>
+                <a href="<?php echo get_template_directory_uri('/about/'); ?>">このサイトについて</a>
             </li>
         </ul>
         <ul class="footer_nav">
             <li>
-                <a href="">Ｑ＆Ａ</a>
+                <a href="<?php echo get_template_directory_uri('/qa/'); ?>">Q&A</a>
             </li>
             <li>
-                <a href="">プライバシーポリシー・免責事項</a>
+                <a href="<?php echo get_template_directory_uri('/privacy/'); ?>">プライバシーポリシー・免責事項</a>
             </li>
             <li>
-                <a href="">サイト制作にあたって</a>
+                <a href="<?php echo get_template_directory_uri('/aboutsite/'); ?>">サイト制作にあたって</a>
             </li>
         </ul>
     </div>
@@ -30,9 +31,6 @@
         </small>
     </p>
 </footer>
-
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="../assets/js/main.js"></script> -->
 
 <?php wp_footer(); ?>
 </body>

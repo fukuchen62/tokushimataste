@@ -38,6 +38,9 @@
     <aside class="side-menu">
         <ul class="side-menu-li">
             <?php get_sidebar(); ?>
-            <?php get_template_part('template-parts/pagination'); ?>
+        </ul>
+</li>
+<?php get_template_part('template-parts/pagination'); ?>
 
-            <?php get_footer(); ?>
+
+<?php get_footer(); ?>

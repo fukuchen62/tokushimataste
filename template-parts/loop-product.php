@@ -21,6 +21,19 @@ $product_type_term = wp_get_object_terms(
 <?php
 // 返値は配列で帰ってくるので、配列の最初の要素を出力する。
 ?>
-<p><?php echo $area_term[0];  ?></p>
-<p><?php echo $product_type_term[0];  ?></p>
-<p><?php the_field('introduction') ?></p>
+<p>
+    <?php
+    // タクソノミーを一つだけ指定していない場合は、表示しない
+    if (count($area_term) === 1):
+        echo $area_term[0];
+    endif;  ?>
+</p>
+<p>
+    <?php
+    if (count($product_type_term) === 1):
+        echo $product_type_term[0];
+    endif;  ?>
+</p>
+<!-- 不必要になりました。
+<p><?php /*the_field('introduction')*/ ?></p>
+-->

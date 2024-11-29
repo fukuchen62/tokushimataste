@@ -11,11 +11,11 @@
         <div id="btn-area" class="wrap">
             <ul class="btn-content">
                 <li id="east">
-                    <a href="<?php echo home_url('/area/east/'); ?>" class=""><span>県東</span></a>
+                    <a href="<?php echo home_url('/maker_type/m_east/'); ?>" class=""><span>県東</span></a>
                 </li>
-                <li id="west"><a href="<?php echo home_url('/area/west/'); ?>" class=""><span>県西</span></a>
+                <li id="west"><a href="<?php echo home_url('/maker_type/m_west/'); ?>" class=""><span>県西</span></a>
                 </li>
-                <li id="south"><a href="<?php echo home_url('/area/south/'); ?>" class=""><span>県南</span></a>
+                <li id="south"><a href="<?php echo home_url('/maker_type/m_south/'); ?>" class=""><span>県南</span></a>
                 </li>
             </ul>
         </div>

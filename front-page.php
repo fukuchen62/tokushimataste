@@ -45,12 +45,14 @@
                             <?php while ($the_query->have_posts()): $the_query->the_post() ?>
 
                                 <li class="scroll-infinity__item1">
-                                    <?php
-                                    $pic = get_field('pic1');
-                                    // $picが存在する場合のみURLを取得
-                                    $pic_url =  $pic['sizes']['thumbnail'];
-                                    ?>
-                                    <img src="<?php echo $pic_url; ?>" alt="">
+                                    <a href="<?php the_permalink(); ?>">
+                                        <?php
+                                        $pic = get_field('pic1');
+                                        // $picが存在する場合のみURLを取得
+                                        $pic_url =  $pic['sizes']['thumbnail'];
+                                        ?>
+                                        <img src="<?php echo $pic_url; ?>" alt="">
+                                    </a>
                                 </li>
                         <?php
                             endwhile;
@@ -122,14 +124,16 @@
                         if ($the_query->have_posts()): ?>
                             <?php while ($the_query->have_posts()): $the_query->the_post() ?>
                                 <li class="scroll-infinity__item">
-                                    <?php
-                                    $pic = get_field('pic1');
-                                    // $picが存在する場合のみURLを取得
-                                    $pic_url =  $pic['sizes']['thumbnail'];
-                                    ?>
-                                    <img src="<?php echo $pic_url; ?>" alt="">
-                                    <!-- <p><?php //the_field('company');
-                                            ?></p> -->
+                                    <a href="<?php the_permalink(); ?>">
+                                        <?php
+                                        $pic = get_field('pic1');
+                                        // $picが存在する場合のみURLを取得
+                                        $pic_url =  $pic['sizes']['thumbnail'];
+                                        ?>
+                                        <img src="<?php echo $pic_url; ?>" alt="">
+                                        <!-- <p><?php //the_field('company');
+                                                ?></p> -->
+                                    </a>
                                 </li>
                         <?php
                             endwhile;
@@ -173,7 +177,7 @@
                 if ($the_query->have_posts()): ?>
                     <?php while ($the_query->have_posts()): $the_query->the_post() ?>
                         <li>
-                            <a href="../html/column_detail.html">
+                            <a href="<?php the_permalink(); ?>">
                                 <div class="box_column">
                                     <div>
                                         <?php if (has_post_thumbnail()): ?>
@@ -237,18 +241,20 @@
                 if ($the_query->have_posts()): ?>
                     <?php while ($the_query->have_posts()): $the_query->the_post() ?>
                         <li>
-                            <div class="recipe_box">
-                                <?php
-                                $pic = get_field('pic1');
-                                // $picが存在する場合のみURLを取得
-                                $pic_url =  $pic['sizes']['medium'];
-                                ?>
-                                <img src="<?php echo $pic_url; ?>" alt="">
-                                <!-- <img src="../uploads/furikake.jpeg" alt="Image" class="img-fluid"> -->
+                            <a href="<?php the_permalink(); ?>">
+                                <div class="recipe_box">
+                                    <?php
+                                    $pic = get_field('pic1');
+                                    // $picが存在する場合のみURLを取得
+                                    $pic_url =  $pic['sizes']['medium'];
+                                    ?>
+                                    <img src="<?php echo $pic_url; ?>" alt="Image" class="img-fluid">
+                                    <!-- <img src="../uploads/furikake.jpeg" alt="Image" class="img-fluid"> -->
 
-                                <p><?php the_title(); ?></p>
+                                    <p><?php the_title(); ?></p>
 
-                            </div>
+                                </div>
+                            </a>
                         </li>
                 <?php endwhile;
                     wp_reset_postdata(); // リセット
@@ -269,7 +275,11 @@
             </div>
             <ul class="inst_photo">
 
-                <?php echo do_shortcode("[instagram-feed feed=2]"); ?>
+                <!-- レンタルサーバー用インスタ     -->
+                <?php echo do_shortcode("[instagram-feed feed=1]"); ?>
+                <!-- ローカル用インスタ     -->
+                <?php //echo do_shortcode("[instagram-feed feed=2]"); 
+                ?>
             </ul>
         </div>
     </div>

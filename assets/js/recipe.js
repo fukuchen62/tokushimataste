@@ -15,30 +15,32 @@
 //     }
 // });
 
-// もっと見る
-
+// もっと見る１
 var show = 3; //最初に表示する件数
 var num = 3;  //clickごとに表示したい件数
-var contents = '.list li'; // 対象のlist
+var contents = '.g1 li'; // 対象のlist
 $(contents + ':nth-child(n + ' + (show + 1) + ')').addClass('is-hidden');
-$('.more1').on('click', function () {
+$('#btn1').on('click', function () {
     $(contents + '.is-hidden').slice(0, num).removeClass('is-hidden');
-    if ($(contents + '.is-hidden').length == 0) {
-        $('.more1').fadeOut();
+    if ($(contents + '.is-hidden').
+        length == 0) {
+        $('#btn1').fadeOut();
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 });
+// 表示数＋num
+// show_g1 += num;
+// if (show_g1 >= num_g1) {
+// ボタン名はopenからcloseに変更
+// $('#btn2').text('閉じる').addClass('close');
+//         // 表示フラグを切り替える
+//     flag_show.g1 li = false;
+// }
+
+// } else {
+//４件目からを隠せる処理
+// $(contents + ':nth-child(n + ' + (show + 1) + ')').addClass('is-hidden');
+//     // ボタン名はもっと見るから閉じるに変更
+// $('#btn1').text('もっと見る').removeClass('close');
+//     // 表示フラグを切り替える
+// flag_show_g1 = true;
+// show_g1 = 3;

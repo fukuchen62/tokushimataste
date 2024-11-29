@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="徳島を旅するように味わう">
     <meta name="keywords" content="徳島,おとも,ご飯のおとも,徳島の味">
-    <title>NOT FOUND</title>
+    <title>このサイトについて</title>
 
     <!--リセットCSS-->
     <link rel="stylesheet" href="../assets/css/reset.css">
@@ -18,7 +18,7 @@
     <!-- footer CSSの読み込み -->
     <link rel="stylesheet" href="../assets/css/footer.css">
     <!-- error CSSの読み込み -->
-    <link rel="stylesheet" href="../assets/css/error.css">
+    <link rel="stylesheet" href="../assets/css/about.css">
     <!--Googleフォントの読み込み-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -84,27 +84,34 @@
 
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a itemprop="item" href="#">
-                        <span itemprop="name">404</span>
+                        <span itemprop="name">このサイトについて</span>
                     </a>
                     <meta itemprop="position" content="2" />
                 </li>
         </ul>
         </ol>
+        <br>
 
-        <p style="text-align:center"><span class="marker">404エラー</span></p>
-        <!-- 登録物がないときは下記の文章を使用します -->
-        <div class="img-none">
-            <img src="../uploads/404_04.jpg" alt="Image" class="img-none" style=" margin-top:14px;">
+        <h2>このサイトについて</h2>
+        <br>
+        <p>このサイトは、徳島県の食文化や特産品、地元で長く親しまれてきた味わいを紹介し、徳島県民や徳島県外の人に徳島の名産品の良さや多彩な味わいを伝えることで、食卓を彩る新しいアイデアを提供し知名度を向上することで、販売促進につなげることを目的として、チーム一丸となり作成しました。</p>
+        <h3 class="ttl_line2">サイトの使い方</h3>
+        <br>
+        <div class="box5-6">
+            <div class="box-title">エリア別検索</div>
+            徳島県の東部・西部・南部といったエリアで探したり、季節や体験のタイプなどの詳細な条件からご希望の体験を探すこともできます。また、気になる体験をお気に入り登録すれば、マイページからいつでも確認することができます。（ログイン不要）
         </div>
-        <div class="txt-none">
-            お探しのページは見つかりませんでした。<br>
-            URLが間違っているか、お探しのページが存在しません。
+        <br>
+        <div class="box5-6">
+            <div class="box-title">キーワード別検索</div>
+            サイト上部にある検索バーからキーワードを入力しお供をやメーカーを探すことができます。
+        </div>
+        <br>
+        <div class="box5-6">
+            <div class="box-title">詳細検索</div>
+            エリア・お供のタイプ・味覚・アレルギーなどの条件をテキストボックスにチェックを入れ、細かい条件での検索ができます。
         </div>
 
-        <ul class="flex">
-            <li>
-                <a href="../html/index.html" class="original-button2"><span>TOPへ戻る</span></a>
-            </li>
     </main>
 
     <footer>

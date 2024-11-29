@@ -164,14 +164,6 @@ if (is_post_type_archive('product') || is_tax('product_type')) {
                         </a>
                     </li>
                     <li>
-                        <a href="<?php echo home_url('/column/'); ?>">
-                            <div class="nav-sp-icon">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gnav_icon04.png" alt="icon04">
-                            </div>
-                            コラム
-                        </a>
-                    </li>
-                    <li>
                         <a href="<?php echo home_url('/maker_type/m_east/'); ?>">
                             <div class="nav-sp-icon">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gnav_icon05.png" alt="icon05">
@@ -179,6 +171,15 @@ if (is_post_type_archive('product') || is_tax('product_type')) {
                             メーカー紹介
                         </a>
                     </li>
+                    <li>
+                        <a href="<?php echo home_url('/column/'); ?>">
+                            <div class="nav-sp-icon">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gnav_icon04.png" alt="icon04">
+                            </div>
+                            コラム
+                        </a>
+                    </li>
+
                     <li>
                         <a href="<?php echo home_url('/recipe/'); ?>">
                             <div class="nav-sp-icon">
@@ -232,17 +233,18 @@ if (is_post_type_archive('product') || is_tax('product_type')) {
                         </a>
                     </li>
                     <li>
+                        <a href="<?php echo home_url('/maker_type/m_east'); ?>">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gohan_sample.png" alt="icon01">
+                            <span>メーカー様紹介</span>
+                        </a>
+                    </li>
+                    <li>
                         <a href="<?php echo home_url('/column/'); ?>">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gohan_sample.png" alt="">
                             <span>コラム</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="<?php echo home_url('/maker_type/m_east'); ?>">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gohan_sample.png" alt="icon01">
-                            <span>メーカー紹介</span>
-                        </a>
-                    </li>
+
                     <li>
                         <a href="<?php echo home_url('/recipe/'); ?>">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gohan_sample.png" alt="">

@@ -142,7 +142,7 @@ if (is_post_type_archive('product') || is_tax('product_type')) {
                     <li>
                         <a href="<?php echo home_url('/product_type/') . '/ferment/'; ?>">
                             <div class="nav-sp-icon">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gnav_icon01.png" alt="icon01">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/syouhin.png" alt="icon01">
                             </div>
                             商品一覧
                         </a>
@@ -150,7 +150,7 @@ if (is_post_type_archive('product') || is_tax('product_type')) {
                     <li>
                         <a href="<?php echo home_url('/area/east/'); ?>">
                             <div class="nav-sp-icon">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gnav_icon02.png" alt=" icon02">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/eria.png" alt=" icon02">
                             </div>
                             エリア検索
                         </a>
@@ -158,7 +158,7 @@ if (is_post_type_archive('product') || is_tax('product_type')) {
                     <li>
                         <a href="<?php echo home_url('/') . '?s='; ?>">
                             <div class="nav-sp-icon">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gnav_icon03.png" alt=" icon03">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/syousai.png" alt=" icon03">
                             </div>
                             詳細検索
                         </a>
@@ -166,7 +166,7 @@ if (is_post_type_archive('product') || is_tax('product_type')) {
                     <li>
                         <a href="<?php echo home_url('/maker_type/m_east/'); ?>">
                             <div class="nav-sp-icon">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gnav_icon05.png" alt="icon05">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/meka.png" alt="icon05">
                             </div>
                             メーカー紹介
                         </a>
@@ -174,7 +174,7 @@ if (is_post_type_archive('product') || is_tax('product_type')) {
                     <li>
                         <a href="<?php echo home_url('/column/'); ?>">
                             <div class="nav-sp-icon">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gnav_icon04.png" alt="icon04">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/koramu.png" alt="icon04">
                             </div>
                             コラム
                         </a>
@@ -183,7 +183,7 @@ if (is_post_type_archive('product') || is_tax('product_type')) {
                     <li>
                         <a href="<?php echo home_url('/recipe/'); ?>">
                             <div class="nav-sp-icon">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gnav_icon06.png" alt="icon06">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arennji.png" alt="icon06">
                             </div>
                             アレンジレシピ
                         </a>
@@ -191,7 +191,7 @@ if (is_post_type_archive('product') || is_tax('product_type')) {
                     <li>
                         <a href="<?php echo home_url('/mypage/'); ?>">
                             <div class="nav-sp-icon">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gnav_icon07.png" alt="icon07">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/okiniiri.png" alt="icon07">
                             </div>
                             お気に入り
                         </a>
@@ -216,45 +216,45 @@ if (is_post_type_archive('product') || is_tax('product_type')) {
 
                     <li>
                         <a href="<?php echo home_url('/product_type/') . '/ferment/'; ?>">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gohan_sample.png" alt="">
-                            <span>商品一覧</span>
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/syouhin.png" alt="">
+                            <!-- <span>商品一覧</span> -->
                         </a>
                     </li>
                     <li>
                         <a href="<?php echo home_url('/area/east/'); ?>">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gohan_sample.png" alt="">
-                            <span>エリア検索</span>
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/eria.png" alt="">
+                            <!-- <span>エリア検索</span> -->
                         </a>
                     </li>
                     <li>
                         <a href="<?php echo home_url('/') . '?s='; ?>">
-                            <img src=" <?php echo get_template_directory_uri(); ?>/assets/images/gohan_sample.png" alt="">
-                            <span>詳細検索</span>
+                            <img src=" <?php echo get_template_directory_uri(); ?>/assets/images/syousai.png" alt="">
+                            <!-- <span>詳細検索</span> -->
                         </a>
                     </li>
                     <li>
                         <a href="<?php echo home_url('/maker_type/m_east'); ?>">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gohan_sample.png" alt="icon01">
-                            <span>メーカー様紹介</span>
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/meka.png" alt="icon01">
+                            <!-- <span>メーカー様紹介</span> -->
                         </a>
                     </li>
                     <li>
                         <a href="<?php echo home_url('/column/'); ?>">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gohan_sample.png" alt="">
-                            <span>コラム</span>
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/koramu.png" alt="">
+                            <!-- <span>コラム</span> -->
                         </a>
                     </li>
 
                     <li>
                         <a href="<?php echo home_url('/recipe/'); ?>">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gohan_sample.png" alt="">
-                            <span>アレンジレシピ</span>
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arannji.png" alt="">
+                            <!-- <span>アレンジレシピ</span> -->
                         </a>
                     </li>
                     <li>
                         <a href="<?php echo home_url('/mypage/'); ?>">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gohan_sample.png" alt="">
-                            <span>お気に入り</span>
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/okiniiri.png" alt="">
+                            <!-- <span>お気に入り</span> -->
                         </a>
                     </li>
                 </ul>

@@ -1,117 +1,5 @@
 @charset "UTF-8";
 
-/* body {
-    max-width: 1024px;
-    margin: 0 auto;
-    padding: 100px 0;
-} */
-
-/* カードの別バージョン試作品 7-12 */
-/* * {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    line-height: 1.5;
-} */
-
-/* img {
-    max-width: 100%;
-    vertical-align: bottom;
-}
-
-.l-wrapper {
-    margin: 3rem auto;
-    width: 320px;
-}
-
-.card {
-    background-color: #fff;
-    box-shadow: 0 0 8px rgba(0, 0, 0, .16);
-    color: #212121;
-    text-decoration: none;
-}
-
-.card__header {
-    display: flex;
-
-    flex-wrap: wrap;
-}
-
-.card__title {
-    padding: 1rem 1rem 0;
-    font-size: 1.25rem;
-    order: 1;
-}
-
-.card__title1 {
-    padding: 1rem 1rem 0;
-    font-size: 1.0rem;
-    order: 1;
-}
-
-
-.card__thumbnail {
-    margin: 0;
-    order: 0;
-}
-
-.card__image {
-    width: 320px;
-    height: 240px;
-}
-
-.card__body {
-    padding: 1rem;
-}
-
-.card__text {
-    font-size: .75rem;
-}
-
-.card__text+.card__text {
-    margin-top: .5rem;
-}
-
-.card__text.-number {
-    text-align: right;
-}
-
-.card__footer {
-    padding: 1rem;
-    border-top: 1px solid #ddd;
-}
-
-.button {
-    display: inline-block;
-    text-decoration: none;
-    transition: background-color .3s ease-in-out;
-}
-
-.button.-compact {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
-    text-decoration: none;
-    color: #000000;
-    font-size: 18px;
-    border-radius: 5px;
-    width: 250px;
-    height: 40px;
-    font-weight: bold;
-    border: 2px dashed #000000;
-    transition: 0.3s;
-    background-color: #fbb126;
-    cursor: pointer;
-}
-
-.button.-compact:hover,
-.button.-compact:focus {
-    opacity: .5;
-} */
-
 .inner_gs {
     padding-left: 20px;
     padding-right: 20px;
@@ -176,7 +64,8 @@ body {
 }
 
 /* 備考欄（要らないなら消す） */
-.memo_gs p {
+.memo_gs p,
+.memo_gs a {
     background-color: bisque;
     padding: 10px;
     border-radius: 10px;
@@ -189,5 +78,13 @@ body {
 }
 
 .memo_gs {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
+}
+
+.memo_gs a {
+    font-size: 1.8rem;
+}
+
+.inner_gs {
+    padding-bottom: 30px;
 }

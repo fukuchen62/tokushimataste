@@ -206,7 +206,7 @@ a.btn-border-shadow--color:before {
     margin-right: 0.3em;
 }
 
-/* breadcrumbクラスの子孫の最後の子要素ではないaタグにコンテンツを生成しています */
+/* breadcrumbクラスの子孫の最後の子要素ではないaタグの末尾にコンテンツを生成しています */
 .breadcrumb span:not(:last-child)::after {
     /* .breadcrumb li:after { */
     content: "";

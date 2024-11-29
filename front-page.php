@@ -276,9 +276,10 @@
             <ul class="inst_photo">
 
                 <!-- レンタルサーバー用インスタ     -->
-                <?php echo do_shortcode("[instagram-feed feed=2]"); ?>
+                <?php echo do_shortcode("[instagram-feed feed=1]"); ?>
                 <!-- ローカル用インスタ     -->
-                <?php echo do_shortcode("[instagram-feed feed=2]"); ?>
+                <?php //echo do_shortcode("[instagram-feed feed=2]"); 
+                ?>
             </ul>
         </div>
     </div>

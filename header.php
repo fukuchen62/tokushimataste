@@ -247,7 +247,7 @@ if (is_post_type_archive('product') || is_tax('product_type')) {
 
                     <li>
                         <a href="<?php echo home_url('/recipe/'); ?>">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arannji.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arennji.png" alt="">
                             <!-- <span>アレンジレシピ</span> -->
                         </a>
                     </li>

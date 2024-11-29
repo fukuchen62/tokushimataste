@@ -167,15 +167,12 @@ ol {
     margin-right: 20px;
 }
 
-<<<<<<< HEAD
-=======
+<<<<<<< HEAD=======
 /* .recipe_info_user {
     display: inline;
 } */
 
->>>>>>> d9f216f23ccb26812d20f981fc431fd94f2a3e1a
-
-.recipe_material__item:first-of-type {
+>>>>>>>d9f216f23ccb26812d20f981fc431fd94f2a3e1a .recipe_material__item:first-of-type {
     border-top: 1px solid #f2f2f2;
 }
 
@@ -191,4 +188,58 @@ ol {
     border-bottom: 1px solid #f2f2f2;
     font-size: 20px;
     line-height: 1.5;
+}
+
+/* レシピ個別 */
+
+/* ４枚つづりのslick画像 */
+.container_ms {
+    width: 100%;
+}
+
+.slider_ms {
+    margin-bottom: 10px;
+}
+
+img {
+    height: auto;
+    width: 100%;
+}
+
+.slick-prev {
+    transform: translateX(40px);
+    z-index: 100;
+    cursor: pointer;
+}
+
+.slick-next {
+    transform: translateX(-40px);
+    z-index: 100;
+    cursor: pointer;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: DimGray;
+}
+
+.thumbnail_img {
+    opacity: 0.3;
+    transition: opacity 0.3s linear;
+    cursor: pointer;
+}
+
+.thumbnail_ms .slick-current {
+    opacity: 1;
+}
+
+.ttl_rsp {
+    text-align: center;
+}
+
+/* 使ったお供 */
+.flex_use_goods {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }

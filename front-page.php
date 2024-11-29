@@ -183,7 +183,7 @@
                                 <?php endif; ?>
 
                             </div>
-                            <h3 class="card-ttl"><?php the_title(); ?></h3>
+                            <h3><?php the_title(); ?></h3>
                             <!-- 長すぎて改行される問題 -->
                             <?php
                                     $trimmed_excerpt = wp_trim_words(get_the_excerpt(), 50, '...');

@@ -206,7 +206,8 @@ a.btn-border-shadow--color:before {
     margin-right: 0.3em;
 }
 
-.breadcrumb span:after {
+/* breadcrumbクラスの子孫の最後の子要素ではないaタグの末尾にコンテンツを生成しています */
+.breadcrumb span:not(:last-child)::after {
     /* .breadcrumb li:after { */
     content: "";
     position: absolute;
@@ -220,7 +221,7 @@ a.btn-border-shadow--color:before {
     height: 0;
 }
 
-.breadcrumb span a {
+.breadcrumb span {
     /* .breadcrumb li a { */
     display: inline-block;
     padding: 0 7px;
@@ -234,10 +235,11 @@ a.btn-border-shadow--color:before {
     transition: 0.3s;
 }
 
-.breadcrumb span a:hover {
-    /* .breadcrumb li a:hover { */
-    transform: translateY(-3px);
-}
+/* あんまりよくなかったのでコメントアウトしました */
+/* .breadcrumb span a:hover { */
+/* .breadcrumb li a:hover { */
+/* transform: translateY(-3px); */
+/* } */
 
 /* パンくずリスト(PC) */
 @media screen and (min-width:770px) {

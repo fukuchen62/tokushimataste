@@ -275,6 +275,9 @@
             </div>
             <ul class="inst_photo">
 
+                <!-- レンタルサーバー用インスタ     -->
+                <?php echo do_shortcode("[instagram-feed feed=2]"); ?>
+                <!-- ローカル用インスタ     -->
                 <?php echo do_shortcode("[instagram-feed feed=2]"); ?>
             </ul>
         </div>

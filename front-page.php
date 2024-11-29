@@ -36,7 +36,7 @@
                         <?php
                         $args = [
                             'post_type'      => 'product', // カスタム投稿タイプ
-                            'posts_per_page' => 3,            // 表示する投稿数
+                            'posts_per_page' => 6,            // 表示する投稿数
                             'orderby'        => 'rand',       // ランダム順
                         ];
                         // WP_Queryのインスタンスを作成
@@ -221,7 +221,7 @@
                 <?php
                 $args = [
                     'post_type' => 'recipe', // メニューの投稿タイプ
-                    'post_per_page' => 3,
+                    'posts_per_page' => 3,
                     'orderby'        => 'rand',   // ランダム表示
                 ];
                 /*
@@ -259,20 +259,20 @@
 
         </div>
         <a href="<?php echo home_url('/recipe/') ?>" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
+    </div>
 
-
-        <!-- インスタ -->
-        <div class="inner">
-            <div class="inst_container">
-                <div class="inst_ttl">
-                    <h3>instagram</h3>
-                </div>
-                <ul class="inst_photo">
-
-                    <?php echo do_shortcode("[instagram-feed feed=2]"); ?>
-                </ul>
+    <!-- インスタ -->
+    <div class="inner">
+        <div class="inst_container">
+            <div class="inst_ttl">
+                <h3>instagram</h3>
             </div>
+            <ul class="inst_photo">
+
+                <?php echo do_shortcode("[instagram-feed feed=2]"); ?>
+            </ul>
         </div>
+    </div>
     </div>
 </main>
 

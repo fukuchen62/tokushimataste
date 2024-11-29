@@ -9,9 +9,9 @@
                 <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
             <?php endif; ?>
             <h3><?php the_title(); ?></h3>
-            <p><?php the_field('address'); ?></p>
-            <p><?php the_field('tel'); ?></p>
-            <p><?php the_field('business_hours'); ?></p>
+            <p>住所:<?php the_field('address'); ?></p>
+            <p>TEL:<?php the_field('tel'); ?></p>
+            <p>営業時間：<?php the_field('business_hours'); ?></p>
             <!-- <p><?php
                     // 会社情報を取得
                     //$company_info = get_field('company_info');

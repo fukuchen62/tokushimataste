@@ -135,7 +135,7 @@ if (is_post_type_archive('product') || is_tax('product_type')) {
                     <li>
                         <a href="<?php echo home_url('/'); ?>">
                             <div class="nav-sp-logo">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="logo.png">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo2.png" alt="logo.png">
                             </div>
                         </a>
                     </li>

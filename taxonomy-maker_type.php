@@ -19,7 +19,15 @@
                 </li>
             </ul>
         </div>
-        <h2 class="area_box"><span class="ttl">県東部</span></h2>
+        <h2 class="area_box"><span class="ttl"><?php
+                                                if (is_tax()) {
+                                                    $term = get_queried_object(); // 現在のタクソノミータームを取得
+                                                    if ($term && isset($term->name)) {
+                                                        echo esc_html($term->name); // 現在のターム名を表示
+                                                    }
+                                                }
+                                                ?>
+            </span></h2>
 
 
         <?php //$area_slug = get_query_var('area');

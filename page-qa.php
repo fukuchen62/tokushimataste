@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="徳島を旅するように味わう">
     <meta name="keywords" content="徳島,おとも,ご飯のおとも,徳島の味">
-    <title>NOT FOUND</title>
+    <title>Q&A</title>
 
     <!--リセットCSS-->
     <link rel="stylesheet" href="../assets/css/reset.css">
@@ -18,7 +18,7 @@
     <!-- footer CSSの読み込み -->
     <link rel="stylesheet" href="../assets/css/footer.css">
     <!-- error CSSの読み込み -->
-    <link rel="stylesheet" href="../assets/css/error.css">
+    <link rel="stylesheet" href="../assets/css/qa.css">
     <!--Googleフォントの読み込み-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -84,26 +84,48 @@
 
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a itemprop="item" href="#">
-                        <span itemprop="name">404</span>
+                        <span itemprop="name">Q&A</span>
                     </a>
                     <meta itemprop="position" content="2" />
                 </li>
         </ul>
         </ol>
-
-        <p style="text-align:center"><span class="marker">404エラー</span></p>
-        <!-- 登録物がないときは下記の文章を使用します -->
-        <div class="img-none">
-            <img src="../uploads/404_04.jpg" alt="Image" class="img-none" style=" margin-top:14px;">
+        <br>
+        <div class="cp_qa01">
+            <dl>
+                <dt>ご飯のお供はどこで購入できますか？</dt>
+                <dd>ご飯のお供は、各公式サイトのホームページまたは
+                    スーパーやオンラインショップ、特産品を取り扱う店舗
+                    で購入することができます。
+                </dd>
+                <dt>掲載していただきたいのですが、費用はいくらかかりますか？</dt>
+                <dd>掲載費用はいただいておりません。その他の掲載に関してはお問い合わせページよりご連絡ください。</dd>
+                <dt>ご飯のお供の保存方法は？</dt>
+                <dd>ご飯のお供の保存方法は、冷蔵庫で保存するものや、常温で保存できるものがあります。開封後は早めに食べることをお勧めしますが、具体的な保存方法は商品ごとに異なる為、パッケージの指示を確認してください。</dd>
+                <dt>ご飯のお供の賞味期限はどのくらいですか？</dt>
+                <dd>ご飯の賞味期限は商品ごとによって異なりますが、
+                    一般的には数カ月から1年ほどです。開封後は早めに食べることを推薦します。</dd>
+                <dt>ご飯のお供のアレルギー情報はどこで確認できますか？</dt>
+                <dd>ご飯のお供のアレルギー情報は、サイト内の各商品詳細ページまたは
+                    商品のパッケージ、メーカーの公式ウェブサイトに記載されています。
+                    購入前に確認することをお勧めします。
+                </dd>
+                <dt>ご飯のお供の新商品情報はどこで確認できますか？</dt>
+                <dd>新商品情報は、メーカーの公式ウェブサイトやSNS、食品専門のニュースサイトなどで確認できます。また、店舗の新商品コーナーもチェックしてみてください。</dd>
+            </dl>
+            <br>
         </div>
-        <div class="txt-none">
-            お探しのページは見つかりませんでした。<br>
-            URLが間違っているか、お探しのページが存在しません。
+        <div class="container"></div>
+        <h2 class="heading10" data-en="Dear Manufacturer"><span>掲載されているメーカー様へ</span></h2>
+        <p>電話番号やイベント内容等に変更がある場合は、お問い合わせフォームよりお問い合わせください。確認後、ご連絡させていただきます。</p>
+        <br>
+        <h2 class="heading10" data-en="Under Consideration"><span>本サイトに掲載をご検討中のメーカー様へ</h2>
+        <p>お問い合わせフォームよりお問い合わせください。確認後、ご連絡させていただきます。</p>
         </div>
-
+        <br>
         <ul class="flex">
             <li>
-                <a href="../html/index.html" class="original-button2"><span>TOPへ戻る</span></a>
+                <a href="../html/contact.html" class="original-button3">お問い合わせ</a>
             </li>
     </main>
 

@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* body {
     max-width: 1024px;
     margin: 0 auto;
@@ -109,3 +111,83 @@ body {
 .button.-compact:focus {
     opacity: .5;
 } */
+
+.inner_gs {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.tittle_goods_single {
+    margin: 0 auto;
+    width: fit-content;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+/* 画像とテーブルのフレックス */
+@media screen and (min-width: 770px) {
+    .goods_si_flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        .goods_pic {
+            width: 50%;
+        }
+
+        .goods_table {
+            width: 35%;
+        }
+
+    }
+}
+
+.goods_pic {
+    margin-bottom: 30px;
+}
+
+/* 企業詳細のテーブル */
+.goods_table {
+    width: 80%;
+    font-size: 1.6rem;
+    margin: 0 auto;
+}
+
+.goods_table tr {
+    border-bottom: solid 1px black;
+}
+
+.goods_table th,
+.goods_table {
+    padding: 10px;
+}
+
+.goods_table th {
+    font-size: 1.8rem;
+}
+
+.goods_table td {
+    padding-top: 10px;
+    font-weight: 600;
+}
+
+.goods_si_flex {
+    margin-bottom: 60px;
+}
+
+/* 備考欄（要らないなら消す） */
+.memo_gs p {
+    background-color: bisque;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.memo_gs h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.memo_gs {
+    margin-bottom: 60px;
+}

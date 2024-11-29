@@ -135,8 +135,8 @@ input {
 	}
 
 	.inner_search {
-		padding-left: 10%;
-		padding-right: 10%;
+		padding-left: 20%;
+		padding-right: 20%;
 	}
 
 	.is_allergy li {
@@ -151,6 +151,11 @@ input {
 
 	.is_allergy li {
 		margin-right: 0;
+	}
+
+	.inner_search {
+		padding-left: 10%;
+		padding-right: 10%;
 	}
 
 }

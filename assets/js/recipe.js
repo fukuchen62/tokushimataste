@@ -39,12 +39,9 @@ $(document).ready(function () {
     });
 });
 
-
 $(document).ready(function () {
-
     // メインディッシュの処理
     var contents = '.g2 li'; // 対象のlist
-    // $(contents + ':nth-child(n + ' + (show + 1) + ')').addClass('is-hidden');
 
     // 4つ目からのカード型を非表示させる
     jQuery(contents + ':nth-child(n + ' + (show + 1) + ')').addClass('is-hidden');
@@ -57,8 +54,7 @@ $(document).ready(function () {
             jQuery(contents + ':nth-child(n + ' + (show + 1) + ')').removeClass('is-hidden');
 
             // ボタン名はもっと見るから閉じるに変更
-            jQuery('#btn2').text('とじる').addClass('close');
-
+            $('#btn2').text('とじる').addClass('close');
             // 表示フラグを切り替える
             flag_show_g2 = false;
         } else {
@@ -69,17 +65,13 @@ $(document).ready(function () {
             jQuery('#btn2').text('もっと見る').removeClass('close');
             // 表示フラグを切り替える
             flag_show_g2 = true;
-            // 表示数リセット
-            // show = 3;
         }
     });
 });
 
 $(document).ready(function () {
-
     // 軽食の処理
     var contents = '.g3 li'; // 対象のlist
-    // $(contents + ':nth-child(n + ' + (show + 1) + ')').addClass('is-hidden');
 
     // 4つ目からのカード型を非表示させる
     jQuery(contents + ':nth-child(n + ' + (show + 1) + ')').addClass('is-hidden');
@@ -92,8 +84,7 @@ $(document).ready(function () {
             jQuery(contents + ':nth-child(n + ' + (show + 1) + ')').removeClass('is-hidden');
 
             // ボタン名はもっと見るから閉じるに変更
-            jQuery('#btn3').text('とじる').addClass('close');
-
+            $('#btn3').text('とじる').addClass('close');
             // 表示フラグを切り替える
             flag_show_g3 = false;
         } else {
@@ -104,17 +95,13 @@ $(document).ready(function () {
             jQuery('#btn3').text('もっと見る').removeClass('close');
             // 表示フラグを切り替える
             flag_show_g3 = true;
-            // 表示数リセット
-            // show = 3;
         }
     });
 });
 
 $(document).ready(function () {
-
     // その他の処理
     var contents = '.g4 li'; // 対象のlist
-    // $(contents + ':nth-child(n + ' + (show + 1) + ')').addClass('is-hidden');
 
     // 4つ目からのカード型を非表示させる
     jQuery(contents + ':nth-child(n + ' + (show + 1) + ')').addClass('is-hidden');
@@ -127,8 +114,7 @@ $(document).ready(function () {
             jQuery(contents + ':nth-child(n + ' + (show + 1) + ')').removeClass('is-hidden');
 
             // ボタン名はもっと見るから閉じるに変更
-            jQuery('#btn4').text('とじる').addClass('close');
-
+            $('#btn4').text('とじる').addClass('close');
             // 表示フラグを切り替える
             flag_show_g4 = false;
         } else {
@@ -139,12 +125,9 @@ $(document).ready(function () {
             jQuery('#btn4').text('もっと見る').removeClass('close');
             // 表示フラグを切り替える
             flag_show_g4 = true;
-            // 表示数リセット
-            // show = 3;
         }
     });
 });
-
 
 // レシピ詳細slick
 

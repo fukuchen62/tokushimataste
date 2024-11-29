@@ -15,7 +15,7 @@
 					// var_dump($column_type);
 					// echo '<pre>';
 				?>
- 				<li class="cat-item cat-item-33">
+ 				<li class="cat-item">
  					<a href="<?php echo get_term_link($column_type); ?>"><?php echo $column_type->name; ?></a>
  				<?php endforeach ?>
  				<!-- <a href="#">インタビュー</a>

@@ -327,8 +327,8 @@ nav.nav-pc {
     }
 
     .header-container img {
-        width: 60px;
-        gap: 15px;
+        width: 80px;
+        /* gap: 15px; */
     }
 
     .pc-title-logo {

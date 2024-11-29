@@ -195,7 +195,8 @@ a.btn-border-shadow--color:before {
     margin-left: 10px;
 }
 
-.breadcrumb li {
+.breadcrumb span {
+    /* .breadcrumb li { */
     position: relative;
     display: inline-block;
     /*横に並ぶように*/
@@ -203,10 +204,16 @@ a.btn-border-shadow--color:before {
     font-weight: bold;
     /*太字*/
     margin-right: 0.3em;
+    /* margin-leftを追加して左右対称にしました */
+    /* 子孫要素か子要素かを指定してください */
+    margin-left: 0.3em;
 }
 
-.breadcrumb li:after {
-    content: "";
+/* 不必要かもしれません */
+/* breadcrumbクラスの子孫の最後の子要素ではないaタグの末尾にコンテンツを生成しています */
+/* .breadcrumb span:not(:last-child)::after { */
+/* .breadcrumb li:after { */
+/* content: "";
     position: absolute;
     top: 7px;
     right: -19px;
@@ -216,9 +223,10 @@ a.btn-border-shadow--color:before {
     border-width: 7px 12px;
     width: 0;
     height: 0;
-}
+} */
 
-.breadcrumb li a {
+.breadcrumb span {
+    /* .breadcrumb li a { */
     display: inline-block;
     padding: 0 7px;
     height: 28px;
@@ -226,14 +234,17 @@ a.btn-border-shadow--color:before {
     text-decoration: none;
     color: #9b9b9b;
     background: #feebcc;
-    font-size: 13px;
+    /* 文字が小さいと思いました */
+    /* font-size: 13px; */
     border-radius: 20px;
     transition: 0.3s;
 }
 
-.breadcrumb li a:hover {
-    transform: translateY(-3px);
-}
+/* あんまりよくなかったのでコメントアウトしました */
+/* .breadcrumb span a:hover { */
+/* .breadcrumb li a:hover { */
+/* transform: translateY(-3px); */
+/* } */
 
 /* パンくずリスト(PC) */
 @media screen and (min-width:770px) {
@@ -463,13 +474,21 @@ a {
     color: #555555;
     font-size: 18px;
     border-radius: 20px;
-    width: 300px;
+
+    /* width: 300px; */
+    /* パンくずのメディアクエリと合わせるために変更してみました。 */
+    width: 290px;
+
     height: 40px;
     font-weight: bold;
     border: 2px solid #555555;
     transition: 0.3s;
     box-shadow: 0px 6px 0px -2px rgba(67, 145, 209, 1);
     background-color: #f7eb99;
+
+    margin: 0px 5px 10px;
+    /* marginを適当に書いてみました。 */
+
 }
 
 .btn-content li:hover {

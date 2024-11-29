@@ -85,6 +85,10 @@ body {
     padding: 0;
 }
 
+.close {
+    background-color: aqua !important;
+}
+
 .recipe_box {
     width: 100%;
     margin: 0 auto;
@@ -109,76 +113,6 @@ body {
     margin-top: 20px;
 }
 
-
-/* レシピ詳細 */
-
-/* .recipe_name img {
-    width: 500px;
-    height: 480px;
-} */
-
-/*
-border-bottom に「dotted」を指定して点線にする
-*/
-/* dt {
-    width: 15%;
-    border-bottom: dotted 1px #ccc;
-    padding: 6px 0;
-}
-
-dd {
-    width: 15%;
-    border-bottom: dotted 1px #ccc;
-    padding: 6px 0;
-    text-align: center;
-}
-
-li {
-    border-bottom: dotted 1px #ccc;
-    padding: 6px 0;
-    margin-left: 20px;
-}
-
-p {
-    text-align: reft;
-}
-
-dt {
-    float: left;
-}
-
-/* dd {
-    margin-left: 300px;
-} */
-
-/* ol {
-    font-size: 20px;
-}
-
-.recipe_info_user__comment {
-    text-align: right;
-    font-size: 20px;
-    margin-right: 20px;
-}
-
-
-.recipe_material__item:first-of-type {
-    border-top: 1px solid #f2f2f2;
-}
-
-.recipe_material__item {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -ms-flex-align: center;
-    align-items: center;
-    width: 100%;
-    padding: 10px 40px;
-    border-bottom: 1px solid #f2f2f2;
-    font-size: 20px;
-    line-height: 1.5;
-}  */
 
 
 

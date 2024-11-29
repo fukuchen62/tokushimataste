@@ -42,16 +42,16 @@
                         // WP_Queryのインスタンスを作成
                         $the_query = new WP_Query($args);
                         if ($the_query->have_posts()): ?>
-                        <?php while ($the_query->have_posts()): $the_query->the_post() ?>
+                            <?php while ($the_query->have_posts()): $the_query->the_post() ?>
 
-                        <li class="scroll-infinity__item1">
-                            <?php
+                                <li class="scroll-infinity__item1">
+                                    <?php
                                     $pic = get_field('pic1');
                                     // $picが存在する場合のみURLを取得
                                     $pic_url =  $pic['sizes']['thumbnail'];
                                     ?>
-                            <img src="<?php echo $pic_url; ?>" alt="">
-                        </li>
+                                    <img src="<?php echo $pic_url; ?>" alt="">
+                                </li>
                         <?php
                             endwhile;
                             wp_reset_postdata(); // クエリをリセット
@@ -76,17 +76,17 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/tokusima-map02.png" alt="エリア検索map">
 
                 <div class="kumo nishi">
-                    <a href="area.html">
+                    <a href="<?php echo home_url('/area/west/'); ?>">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kumo_nishi.png" alt="県西部">
                     </a>
                 </div>
                 <div class="kumo higashi">
-                    <a href="area.html">
+                    <a href="<?php echo home_url('/area/east/'); ?>">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kumo_higashi.png" alt="県東部">
                     </a>
                 </div>
                 <div class="kumo minami">
-                    <a href="area.html">
+                    <a href="<?php echo home_url('/area/south/'); ?>">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kumo_minami.png" alt="県南部">
                     </a>
                 </div>
@@ -120,17 +120,17 @@
                         $the_query = new WP_Query($args);
 
                         if ($the_query->have_posts()): ?>
-                        <?php while ($the_query->have_posts()): $the_query->the_post() ?>
-                        <li class="scroll-infinity__item">
-                            <?php
+                            <?php while ($the_query->have_posts()): $the_query->the_post() ?>
+                                <li class="scroll-infinity__item">
+                                    <?php
                                     $pic = get_field('pic1');
                                     // $picが存在する場合のみURLを取得
                                     $pic_url =  $pic['sizes']['thumbnail'];
                                     ?>
-                            <img src="<?php echo $pic_url; ?>" alt="">
-                            <!-- <p><?php //the_field('company');
+                                    <img src="<?php echo $pic_url; ?>" alt="">
+                                    <!-- <p><?php //the_field('company');
                                             ?></p> -->
-                        </li>
+                                </li>
                         <?php
                             endwhile;
                             wp_reset_postdata(); // クエリをリセット
@@ -171,28 +171,28 @@
                 $the_query = new WP_Query($args);
 
                 if ($the_query->have_posts()): ?>
-                <?php while ($the_query->have_posts()): $the_query->the_post() ?>
-                <li>
-                    <a href="../html/column_detail.html">
-                        <div class="box_column">
-                            <div>
-                                <?php if (has_post_thumbnail()): ?>
-                                <?php the_post_thumbnail('medium'); ?>
-                                <?php else: ?>
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/noimage.png" alt="">
-                                <?php endif; ?>
+                    <?php while ($the_query->have_posts()): $the_query->the_post() ?>
+                        <li>
+                            <a href="../html/column_detail.html">
+                                <div class="box_column">
+                                    <div>
+                                        <?php if (has_post_thumbnail()): ?>
+                                            <?php the_post_thumbnail('medium'); ?>
+                                        <?php else: ?>
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/noimage.png" alt="">
+                                        <?php endif; ?>
 
-                            </div>
-                            <h3><?php the_title(); ?></h3>
-                            <!-- 長すぎて改行される問題 -->
-                            <?php
+                                    </div>
+                                    <h3><?php the_title(); ?></h3>
+                                    <!-- 長すぎて改行される問題 -->
+                                    <?php
                                     $trimmed_excerpt = wp_trim_words(get_the_excerpt(), 50, '...');
                                     echo '<p>' . esc_html($trimmed_excerpt) . '</p>';
                                     ?>
 
-                        </div>
-                    </a>
-                </li>
+                                </div>
+                            </a>
+                        </li>
                 <?php endwhile;
                     wp_reset_postdata(); // リセット
                 else :
@@ -235,21 +235,21 @@
                 $the_query = new WP_Query($args);
 
                 if ($the_query->have_posts()): ?>
-                <?php while ($the_query->have_posts()): $the_query->the_post() ?>
-                <li>
-                    <div class="recipe_box">
-                        <?php
+                    <?php while ($the_query->have_posts()): $the_query->the_post() ?>
+                        <li>
+                            <div class="recipe_box">
+                                <?php
                                 $pic = get_field('pic1');
                                 // $picが存在する場合のみURLを取得
                                 $pic_url =  $pic['sizes']['medium'];
                                 ?>
-                        <img src="<?php echo $pic_url; ?>" alt="">
-                        <!-- <img src="../uploads/furikake.jpeg" alt="Image" class="img-fluid"> -->
+                                <img src="<?php echo $pic_url; ?>" alt="">
+                                <!-- <img src="../uploads/furikake.jpeg" alt="Image" class="img-fluid"> -->
 
-                        <p><?php the_title(); ?></p>
+                                <p><?php the_title(); ?></p>
 
-                    </div>
-                </li>
+                            </div>
+                        </li>
                 <?php endwhile;
                     wp_reset_postdata(); // リセット
                 else :

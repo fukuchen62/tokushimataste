@@ -20,6 +20,13 @@
 
             <h2 class="ttl_box">
                 <h2 class="ttl_rsp"><?php the_field('recipe_name'); ?></h2>
+                <!-- ループ外 -->
+                <?php
+                global $wp_query;
+                $post_id = $wp_query->get_queried_object_id();
+                echo get_favorites_button($post_id);
+                ?>
+                <!-- / ループ外 -->
 
                 <!-- スライダー -->
                 <div class="container_rs">

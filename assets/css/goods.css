@@ -100,17 +100,28 @@
     color: #000000;
     font-size: 18px;
     border-radius: 5px;
-    width: 250px;
+    /* width: 250px; */
     height: 40px;
     font-weight: bold;
     border: 2px dashed #000000;
     transition: 0.3s;
     background-color: #fbb126;
-    cursor: pointer;
+
 }
 
 #goods:hover {
     opacity: .5;
+}
+
+.box_otomo {
+    border: solid #fbb126;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+.card_goods {
+    padding: 0 10px;
 }
 
 /* ジャンル検索ボタン */
@@ -295,6 +306,7 @@ ul {
 .img-fluid {
     width: 320px;
     height: 240px;
+    border-radius: 8px 8px 0 0;
 }
 
 .img-fluid li {

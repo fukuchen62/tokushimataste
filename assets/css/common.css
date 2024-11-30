@@ -342,9 +342,7 @@ a {
     text-decoration: none;
 }
 
-/* 写真 */
-
-.box_syohin img {
+/* .box_syohin img {
     width: 100%;
     height: 140px;
     text-align: center;
@@ -352,7 +350,6 @@ a {
     object-fit: cover;
 }
 
-/* 商品の枠 */
 .box_syohin {
     background-color: #b5ec91;
     color: black;
@@ -364,11 +361,58 @@ a {
     line-height: 30px;
     letter-spacing: 0.05em;
     margin-bottom: 30px;
-    /* おまけ用 */
     border: 2px solid #342201;
     transition: 0.6s;
     width: 300px;
     height: 400px;
+} */
+
+/* 商品名 */
+
+.box_syohin img {
+    width: 320px;
+    height: 240px;
+    border-radius: 8px 8px 0 0;
+    vertical-align: bottom;
+}
+
+.name_syokuhin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    text-decoration: none;
+    color: #000000;
+    font-size: 18px;
+    border-radius: 5px;
+    /* width: 250px; */
+    height: 40px;
+    font-weight: bold;
+    border: 2px dashed #000000;
+    transition: 0.3s;
+    background-color: #fbb126;
+    margin: 0 auto;
+}
+
+.name_syokuhin:hover {
+    opacity: .5;
+}
+
+.box_syohin {
+    border: solid #fbb126;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 320px;
+}
+
+.card_syokuhin p {
+    margin: 0.3em 0;
+    text-align: left;
+    color: #000;
+}
+
+.card_syokuhin {
+    padding: 0 10px;
 }
 
 /* ==================== */

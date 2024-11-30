@@ -262,18 +262,6 @@ li.cat-item a::after {
 	padding-left: 8px;
 }
 
-.article_col p {
-	margin-top: 30px;
-	margin-bottom: 30px;
-	font-weight: 500;
-	line-height: 2.0;
-}
-
-.contact_col p {
-	margin-top: 0;
-	margin-bottom: 0;
-	line-height: normal;
-}
 
 /* コラム幅寄せ */
 .column_list {

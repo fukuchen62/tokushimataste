@@ -66,7 +66,6 @@ h1 {
 
 h2 {
     font-size: 3rem;
-    /* margin-top: 40px; */
 }
 
 .ttl_h2 {
@@ -287,9 +286,7 @@ a {
     text-decoration: none;
 }
 
-/* 写真 */
-
-.column_list img {
+.box_column img {
     width: 100%;
     height: 140px;
     text-align: center;
@@ -297,41 +294,44 @@ a {
     object-fit: cover;
 }
 
-/* コラムタイトル */
-.column_list h3 {
-    font-size: 2rem;
-    font-weight: 300;
-    margin: 10px 0px 15px;
-    border-bottom: dashed 2px blue;
-}
-
-/* コラムの枠 */
 .box_column {
     background-color: #EEEEF1;
     color: black;
     font-size: 1.6rem;
-    box-shadow: 5px 5px 0 #9e9d9c;
-    padding: 10px;
+    box-shadow: 5px 5px #9b9b9c;
+    padding: 15px;
     text-align: centert;
     border-radius: 8px;
     line-height: 30px;
     letter-spacing: 0.05em;
     margin-bottom: 30px;
     /* おまけ用 */
-    border: 2px solid #342201;
-    transition: 0.6s;
+    border: 2px solid #9b9b9c;
     width: 300px;
-    /* height: 400px; */
+    height: 400px;
 }
 
-.box_column h3 {
-    font-size: 2rem;
-    height: 9rem;
+/* コラムタイトル */
+
+.column_sbtitle {
+    height: 60px;
+    border-bottom: dotted 2px #1404ec;
+    font-size: 1.8rem;
+    font-weight: 200;
+    display: grid;
+    place-content: center;
+    margin: 0;
+    text-align: center;
 }
 
-.box_column img {
-    height: 215px;
-    object-fit: contain;
+.box_column p {
+    margin-top: 5px;
+}
+
+.box_column:hover {
+    transform: translate(5px, 5px);
+    box-shadow: none;
+    transition: all 0.2s;
 }
 
 /* ============================ */

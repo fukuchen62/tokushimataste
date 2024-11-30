@@ -133,17 +133,17 @@ $(document).ready(function () {
 
 $(function () {
     // メイン画像のオプション
-    $(".slider_ms").slick({
+    $(".slider_rs").slick({
         autoplay: false, // 自動再生ON
         arrows: false, // 矢印非表示
-        asNavFor: ".thumbnail_ms", // サムネイルと同期
+        asNavFor: ".thumbnail_rs", // サムネイルと同期
 
     });
     // サムネイルのオプション
-    $(".thumbnail_ms").slick({
+    $(".thumbnail_rs").slick({
         slidesToShow: 3.5, // サムネイルの表示数
         arrows: true, // 矢印表示
-        asNavFor: ".slider_ms", // メイン画像と同期
+        asNavFor: ".slider_rs", // メイン画像と同期
         focusOnSelect: true, // サムネイルクリックを有効化
     });
 });

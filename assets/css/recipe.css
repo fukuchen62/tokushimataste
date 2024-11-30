@@ -45,7 +45,7 @@
 body {
     max-width: 1024px;
     margin: 0 auto;
-    padding: 100px 0;
+    /* padding: 100px 0; */
 }
 
 /* もっと見る */
@@ -113,14 +113,24 @@ body {
     margin-top: 20px;
 }
 
-/* レシピ個別 */
+/* ここからレシピ個別 */
+
+/* 外側すき間 */
+.inner {
+    padding: 20px;
+}
+
+/* タイトル */
+.ttl_rsp {
+    text-align: center;
+}
 
 /* ４枚つづりのslick画像 */
-.container_ms {
+.container_rs {
     width: 100%;
 }
 
-.slider_ms {
+.slider_rs {
     margin-bottom: 10px;
 }
 
@@ -146,23 +156,50 @@ img {
     color: DimGray;
 }
 
-.thumbnail_img {
+.thumbnail_rs_img {
     opacity: 0.3;
     transition: opacity 0.3s linear;
     cursor: pointer;
 }
 
-.thumbnail_ms .slick-current {
+.thumbnail_rs .slick-current {
     opacity: 1;
 }
 
-.ttl_rsp {
-    text-align: center;
+/* 材料と作り方 */
+.ingredient_rs p,
+.howtomake_rs p {
+    background-color: lightgray;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.ingredient_rs h2,
+.howtomake_rs h2 {
+    padding-left: 20px;
+}
+
+
+/* 備考（要らないなら消す） */
+.memo_rs p {
+    background-color: lightgray;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.memo_rs h3 {
+    font-size: 2rem;
+    padding: 20px;
 }
 
 /* 使ったお供 */
+
 .flex_use_goods {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+
+.goods_used {
+    text-align: center;
 }

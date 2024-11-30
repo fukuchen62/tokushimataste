@@ -191,42 +191,35 @@
             <form id="search-box" method="GET" action="<?php /*echo home_url('/')*/ ?>">
                 <!-- wp検索フォームに必要 -->
                 <input type="hidden" name="s" value="">
-                <!-- チェックしたものを検索した後も保持するための記述 ＷＥＢプログラマー養成科第13期生『〇（まる）』さんからお借りしました。-->
+                <!-- チェックしたものを検索した後も保持するための記述 ＷＥＢプログラマー養成科第13期生『〇（まる）』さんからお借りしました。ありがとうございます。-->
                 <?php
 
-                // 「エリアタイプ」のチェックを保持
+                // 「地域」のチェックを保持
                 $select_area = filter_input(INPUT_GET, "area", FILTER_DEFAULT, FILTER_REQUIRE_ARRAY) ?: [];
-                $checked["area"] = ["east" => "", "west" => "", "south" => ""];
+                $checked["area"] = ["west" => "", "east" => "", "south" => ""];
                 foreach ($select_area as $val) {
                     $checked["area"][$val] = " checked";
                 }
 
-                // 「体験タイプ」のチェックを保持
-                $select_event_type = filter_input(INPUT_GET, "event_type", FILTER_DEFAULT, FILTER_REQUIRE_ARRAY) ?: [];
-                $checked["event_type"] = ["daily" => "", "weekend" => "", "farm_stay" => ""];
+                // 「商品種別」のチェックを保持
+                $select_event_type = filter_input(INPUT_GET, "product_type", FILTER_DEFAULT, FILTER_REQUIRE_ARRAY) ?: [];
+                $checked["product_type"] = ["ferment" => "", "tsukudani" => "", "meat" => "", "furikake" => "", "spice" => "", "others" => ""];
                 foreach ($select_event_type as $val) {
-                    $checked["event_type"][$val] = " checked";
+                    $checked["product_type"][$val] = " checked";
                 }
 
-                // 「シーズン」のチェックを保持
-                $select_season = filter_input(INPUT_GET, "season", FILTER_DEFAULT, FILTER_REQUIRE_ARRAY) ?: [];
-                $checked["season"] = ["spring" => "", "summer" => "", "autumn" => "", "winter" => ""];
+                // 「味覚」のチェックを保持
+                $select_season = filter_input(INPUT_GET, "taste", FILTER_DEFAULT, FILTER_REQUIRE_ARRAY) ?: [];
+                $checked["taste"] = ["sweet" => "", "spicy" => "", "salty" => "", "bitter" => "", "umami" => ""];
                 foreach ($select_season as $val) {
-                    $checked["season"][$val] = " checked";
+                    $checked["taste"][$val] = " checked";
                 }
 
-                // 「野菜・果物・その他」のチェックを保持
-                $select_vege_type = filter_input(INPUT_GET, "vege_type", FILTER_DEFAULT, FILTER_REQUIRE_ARRAY) ?: [];
-                $checked["vege_type"] = ["vegetables" => "", "fruits" => "", "others" => ""];
+                // 「アレルギー」のチェックを保持
+                $select_vege_type = filter_input(INPUT_GET, "allergy", FILTER_DEFAULT, FILTER_REQUIRE_ARRAY) ?: [];
+                $checked["allergy"] = ["shrimp" => "", "crab" => "", "walnut" => "", "wheat" => "", "soba" => "", "egg" => "", "milk" => "", "peanut" => ""];
                 foreach ($select_vege_type as $val) {
-                    $checked["vege_type"][$val] = " checked";
-                }
-
-                // エリアのチェックを保持
-                $select_target = filter_input(INPUT_GET, "target", FILTER_DEFAULT, FILTER_REQUIRE_ARRAY) ?: [];
-                $checked["target"] = ["family" => "", "one_person" => "", "group" => ""];
-                foreach ($select_target as $val) {
-                    $checked["target"][$val] = " checked";
+                    $checked["allergy"][$val] = " checked";
                 }
 
 
@@ -235,13 +228,16 @@
                     <h3>エリア</h3>
 
                     <ul>
-                        <li class="choice_item"><input type="checkbox" name="area[]" id="area1" value="west" checked>
+                        <li class="choice_item">
+                            <input type="checkbox" name="area[]" id="area1" value="west" <?= $checked["area"]["west"] ?>>
                             <label for="area1">県西</label>
                         </li>
-                        <li class="choice_item"><input type="checkbox" name="area[]" id="area2" value="east">
+                        <li class="choice_item">
+                            <input type="checkbox" name="area[]" id="area2" value="east" <?= $checked["area"]["east"] ?>>
                             <label for="area2">県東</label>
                         </li>
-                        <li class="choice_item"><input type="checkbox" name="area[]" id="area3" value="south">
+                        <li class="choice_item">
+                            <input type="checkbox" name="area[]" id="area3" value="south" <?= $checked["area"]["south"] ?>>
                             <label for="area3">県南</label>
                         </li>
                     </ul>
@@ -255,22 +251,27 @@
 
                     <ul>
                         <li>
-                            <input type="checkbox" name="product_type[]" id="product_type1" value="ferment">
+                            <input type="checkbox" name="product_type[]" id="product_type1" value="ferment" <?= $checked["product_type"]["ferment"] ?>>
                             <label for="product_type1">漬物・発酵食品</label>
                         </li>
-                        <li><input type="checkbox" name="product_type[]" id="product_type2" value="tsukudani">
+                        <li>
+                            <input type="checkbox" name="product_type[]" id="product_type2" value="tsukudani" <?= $checked["product_type"]["tsukudani"] ?>>
                             <label for="product_type2">佃煮・海産物</label>
                         </li>
-                        <li><input type="checkbox" name="product_type[]" id="product_type3" value="meat">
+                        <li>
+                            <input type="checkbox" name="product_type[]" id="product_type3" value="meat" <?= $checked["product_type"]["meat"] ?>>
                             <label for="product_type3">肉・卵・大豆製品</label>
                         </li>
-                        <li><input type="checkbox" name="product_type[]" id="product_type4" value="furikake">
+                        <li>
+                            <input type="checkbox" name="product_type[]" id="product_type4" value="furikake" <?= $checked["product_type"]["furikake"] ?>>
                             <label for="product_type4">ふりかけ・混ぜご飯の素</label>
                         </li>
-                        <li><input type="checkbox" name="product_type[]" id="product_type5" value="spice">
+                        <li>
+                            <input type="checkbox" name="product_type[]" id="product_type5" value="spice" <?= $checked["product_type"]["spice"] ?>>
                             <label for="product_type5">薬味・シンプル調味料</label>
                         </li>
-                        <li><input type="checkbox" name="product_type[]" id="product_type6" value="others">
+                        <li>
+                            <input type="checkbox" name="product_type[]" id="product_type6" value="others" <?= $checked["product_type"]["others"] ?>>
                             <label for="product_type6">その他</label>
                         </li>
                     </ul>
@@ -281,19 +282,19 @@
 
                     <h3>味覚</h3>
                     <ul>
-                        <li><input type="checkbox" name="taste[]" id="taste1" value="sweet">
+                        <li><input type="checkbox" name="taste[]" id="taste1" value="sweet" <?= $checked["taste"]["sweet"] ?>>
                             <label for="taste1">甘い</label>
                         </li>
-                        <li><input type="checkbox" name="taste[]" id="taste2" value="spicy">
+                        <li><input type="checkbox" name="taste[]" id="taste2" value="spicy" <?= $checked["taste"]["spicy"] ?>>
                             <label for="taste2">辛い</label>
                         </li>
-                        <li><input type="checkbox" name="taste[]" id="taste3" value="salty">
+                        <li><input type="checkbox" name="taste[]" id="taste3" value="salty" <?= $checked["taste"]["salty"] ?>>
                             <label for="taste3">塩辛い</label>
                         </li>
-                        <li><input type="checkbox" name="taste[]" id="taste4" value="bitter">
+                        <li><input type="checkbox" name="taste[]" id="taste4" value="bitter" <?= $checked["taste"]["bitter"] ?>>
                             <label for="taste4">苦い</label>
                         </li>
-                        <li><input type="checkbox" name="taste[]" id="taste5" value="umami">
+                        <li><input type="checkbox" name="taste[]" id="taste5" value="umami" <?= $checked["taste"]["umami"] ?>>
                             <label for="taste5">うま味</label>
                         </li>
                     </ul>
@@ -305,28 +306,28 @@
                     <h3>アレルギー（選択されたものは除去されます）</h3>
 
                     <ul>
-                        <li><input type="checkbox" name="allergy[]" id="allergy1" value="shrimp">
+                        <li><input type="checkbox" name="allergy[]" id="allergy1" value="shrimp" <?= $checked["allergy"]["shrimp"] ?>>
                             <label for="allergy1">えび</label>
                         </li>
-                        <li><input type="checkbox" name="allergy[]" id="allergy2" value="crab">
+                        <li><input type="checkbox" name="allergy[]" id="allergy2" value="crab" <?= $checked["allergy"]["crab"] ?>>
                             <label for="allergy2">かに</label>
                         </li>
-                        <li><input type="checkbox" name="allergy[]" id="allergy3" value="walnut">
+                        <li><input type="checkbox" name="allergy[]" id="allergy3" value="walnut" <?= $checked["allergy"]["walnut"] ?>>
                             <label for="allergy3">くるみ</label>
                         </li>
-                        <li><input type="checkbox" name="allergy[]" id="allergy4" value="wheat">
+                        <li><input type="checkbox" name="allergy[]" id="allergy4" value="wheat" <?= $checked["allergy"]["wheat"] ?>>
                             <label for="allergy4">小麦</label>
                         </li>
-                        <li><input type="checkbox" name="allergy[]" id="allergy5" value="soba">
+                        <li><input type="checkbox" name="allergy[]" id="allergy5" value="soba" <?= $checked["allergy"]["soba"] ?>>
                             <label for="allergy5">そば</label>
                         </li>
-                        <li><input type="checkbox" name="allergy[]" id="allergy6" value="egg">
+                        <li><input type="checkbox" name="allergy[]" id="allergy6" value="egg" <?= $checked["allergy"]["egg"] ?>>
                             <label for="allergy6">卵</label>
                         </li>
-                        <li><input type="checkbox" name="allergy[]" id="allergy7" value="milk">
+                        <li><input type="checkbox" name="allergy[]" id="allergy7" value="milk" <?= $checked["allergy"]["milk"] ?>>
                             <label for="allergy7">乳</label>
                         </li>
-                        <li><input type="checkbox" name="allergy[]" id="allergy8" value="peanut">
+                        <li><input type="checkbox" name="allergy[]" id="allergy8" value="peanut" <?= $checked["allergy"]["peanut"] ?>>
                             <label for="allergy8">落花生</label>
                         </li>
                     </ul>

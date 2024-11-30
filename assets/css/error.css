@@ -1,3 +1,7 @@
+.inner {
+    margin: 0 15px;
+}
+
 .original-button2 {
     display: flex;
     align-items: center;
@@ -49,4 +53,13 @@ span.marker {
     background-repeat: no-repeat;
     background-position: left bottom;
     background-size: 100% 50%;
+}
+
+.txt-none {
+    font-size: 18px;
+    text-align: left;
+}
+
+.img-none {
+    margin-top: 30px;
 }

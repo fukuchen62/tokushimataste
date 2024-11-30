@@ -1,3 +1,7 @@
+.inner {
+    padding: 0 15px;
+}
+
 .qa-8 dt {
     font-size: 16px;
     margin-bottom: 1em;
@@ -32,6 +36,7 @@
     padding-top: 30px;
     font-size: 26px;
     border-bottom: 1px solid rgba(5, 62, 98, 1);
+    margin-bottom: 40px;
 }
 
 .heading10 span {

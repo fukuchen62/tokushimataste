@@ -1,3 +1,8 @@
+.inner {
+    padding: 0 15px;
+}
+
+
 .cp_qa01 dt {
     font-size: 16px;
     position: relative;
@@ -113,4 +118,8 @@ p {
     font-size: 40px;
     text-transform: uppercase;
     z-index: 1;
+}
+
+.container p {
+    text-align: left;
 }

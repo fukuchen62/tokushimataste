@@ -1,3 +1,7 @@
+.inner {
+    padding: 0 15px;
+}
+
 h3 {
     font-size: 30px;
 }
@@ -85,7 +89,7 @@ h2::after {
     position: relative;
     /* 配置(ここを基準に) */
     font-size: 16px;
-    margin-top: 5px;
+    margin-top: 30px;
     margin-bottom: 20px;
 }
 

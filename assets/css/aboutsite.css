@@ -1,15 +1,20 @@
+.inner {
+    padding: 0 15px;
+}
+
 h3:first-letter {
     font-size: 150%;
     color: #eb6100;
 }
 
 h3 {
-    font-size: 30px;
+    font-size: 28px;
+    margin: 30px 0 20px;
 }
 
 h2 {
     position: relative;
-    padding: 1.5rem 2rem;
+    padding: 1.5rem;
     border: 3px solid #d8d8d8;
     border-radius: 10px;
     background: #f9f9f9;
@@ -61,4 +66,5 @@ h2:after {
     font-size: 16px;
     /* フォントサイズ */
     padding-top: 10px;
+    margin: 30px 0 20px;
 }

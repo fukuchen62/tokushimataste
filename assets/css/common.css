@@ -192,6 +192,7 @@ a.btn-border-shadow--color:before {
     padding: 0;
     list-style: none;
     margin-left: 10px;
+    margin-bottom: 50px;
 }
 
 .breadcrumb span {

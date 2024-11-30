@@ -279,14 +279,14 @@ li {
 }
 
 /* ==================== */
-/* コラム */
+/* 紹介カード　メーカー*/
 /* ==================== */
 
 a {
     text-decoration: none;
 }
 
-.box_column img {
+.box_intro img {
     width: 100%;
     height: 140px;
     text-align: center;
@@ -294,7 +294,7 @@ a {
     object-fit: cover;
 }
 
-.box_column {
+.box_intro {
     background-color: #EEEEF1;
     color: black;
     font-size: 1.6rem;
@@ -311,11 +311,11 @@ a {
     height: 400px;
 }
 
-/* コラムタイトル */
+/* タイトル */
 
-.column_sbtitle {
+.intro_sbtitle {
     height: 60px;
-    border-bottom: dotted 2px #1404ec;
+    border-bottom: dotted 4px #1404ec;
     font-size: 1.8rem;
     font-weight: 200;
     display: grid;
@@ -324,11 +324,11 @@ a {
     text-align: center;
 }
 
-.box_column p {
+.box_intro p {
     margin-top: 5px;
 }
 
-.box_column:hover {
+.box_intro:hover {
     transform: translate(5px, 5px);
     box-shadow: none;
     transition: all 0.2s;
@@ -352,7 +352,7 @@ a {
     object-fit: cover;
 }
 
-/* コラムの枠 */
+/* 商品の枠 */
 .box_syohin {
     background-color: #b5ec91;
     color: black;

@@ -4,6 +4,31 @@ section+section {
     margin-top: 60px;
 }
 
+@media screen and (width>=700px) {
+    section+section {
+        margin-top: 100px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+}
+
+
+h2 {
+    width: fit-content;
+    padding: 1rem 0;
+    margin-bottom: 0.2rem;
+    background-image: linear-gradient(90deg, #b2d5de 0 25%, #ddcfb3 25% 50%, #b3ddb4 50% 75%, #ddbab3 75%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.8rem;
+    background-position: bottom;
+    color: #353535;
+    font-weight: bold;
+    font-size: 26px;
+    text-align: center;
+}
+
 /* このサイトについて */
 
 .aboutsite {
@@ -28,19 +53,23 @@ section+section {
 
 .ttl_box h2 {
     font-size: 24px;
+    /* DarkOrange; */
+
 }
+
+/* h2 {
+    width: fit-content;
+    border-bottom: dotted 5px #FBAE76;
+}
+ */
 
 .ttl_box p {
     margin-top: 10px;
 }
 
 
-.container {
-    margin: 30px auto 50px auto;
-}
-
 /* spで改行しているものをなくす */
-@media (width>=700px) {
+@media (width>=600px) {
     .tb-none {
         display: none;
     }
@@ -89,8 +118,12 @@ section+section {
     }
 }
 
-.scroll-infinity1 {
-    margin-bottom: 20px;
+.scroll-infinity__wrap1 {
+    margin: 30px 0 30px;
+}
+
+.scroll-infinity__wrap {
+    margin: 30px 0 30px;
 }
 
 .column_list {
@@ -151,6 +184,8 @@ section+section {
     top: 70%;
     right: 25%;
 }
+
+
 
 /* ==================== */
 /* インスタグラム */

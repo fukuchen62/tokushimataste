@@ -6,7 +6,7 @@ h3 {
     font-size: 30px;
 }
 
-
+/*
 h2 {
     position: relative;
     padding: 5px 40px 5px 40px;
@@ -37,7 +37,7 @@ h2::after {
     border: none;
     border-left: solid 40px transparent;
     border-bottom: solid 80px white;
-}
+} */
 
 
 .ttl_line2 {

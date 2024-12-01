@@ -20,7 +20,7 @@
                         <div>
                             <?php //if (has_post_thumbnail()):
                             ?>
-                            <?php //the_post_thumbnail('medium'); 
+                            <?php //the_post_thumbnail('medium');
                             ?>
                             <?php //else:
                             ?>
@@ -31,27 +31,27 @@
                             <?php the_content();
                             ?>
                         </div>
-
-                </ul>
-
+                    </li>
 
 
-                <!-- サイドバーメニュー -->
-                <li class="side_bar side_bar_col">
-                    <div class="category-list-outer">
-                        <div class="category-list">
-                            <h3>コラム一覧</h3>
+
+
+                    <!-- サイドバーメニュー -->
+                    <li class="side_bar side_bar_col side-menu">
+                        <div class="category-list-outer">
+                            <div class="category-list">
+                                <h3>コラム一覧</h3>
+                            </div>
                         </div>
-                    </div>
-                    <aside class="side-menu">
-                        <ul class="side-menu-li">
-                            <?php get_sidebar(); ?>
+                        <!-- <aside class="side-menu"> -->
+                        <!-- <ul class="side-menu-li"> -->
+                        <?php get_sidebar(); ?>
 
-                        </ul>
-                    </aside>
+                        <!-- </ul> -->
+                        <!-- </aside> -->
 
-                </li>
-
+                    </li>
+                </ul>
 
 
 

@@ -35,6 +35,14 @@
 <main>
     <h1 style="text-align: center; margin-bottom: 20px;"><?php the_title() ?></h1>
     <div class="inner">
+        <!-- お気に入りボタン追記12/1山口-->
+        <?php
+        global $wp_query;
+        $post_id = $wp_query->get_queried_object_id();
+        echo get_favorites_button($post_id);
+        ?>
+        <!-- お気に入りボタン追記 -->
+
         <?php //innerを入れておきました。
         ?>
         <?php $img = get_field('pic1');

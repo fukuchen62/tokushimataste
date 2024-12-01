@@ -5,7 +5,7 @@
         <?php get_template_part('template-parts/breadcrumb'); ?>
 
         <!-- エリア検索 -->
-        <h2 style="text-align: center;">お供の一覧表示</h2>
+        <h2 style="text-align: center;">お供の商品一覧表示</h2>
         <section id="btn-area" class="wrap">
             <!-- エリア検索ボタン -->
             <ul class="btn-content">
@@ -20,11 +20,11 @@
         </section>
 
 
-        <?php //$area_slug = get_query_var('area'); 
+        <?php //$area_slug = get_query_var('area');
         ?>
-        <?php //var_dump($area_slug); 
+        <?php //var_dump($area_slug);
         ?>
-        <?php //$area = get_term_by('slug', $area_slug, 'area'); 
+        <?php //$area = get_term_by('slug', $area_slug, 'area');
         ?>
 
         <div class="card-container">
@@ -39,9 +39,6 @@
                 <?php endif; ?>
             </ul>
         </div>
-
-        <!-- トップページに戻るボタン -->
-        <p id="page-top"><a href="#">↑<br>TOP</a></p>
 
 </main>
 <?php

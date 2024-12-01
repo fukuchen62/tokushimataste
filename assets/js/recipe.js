@@ -141,9 +141,11 @@ $(function () {
     });
     // サムネイルのオプション
     $(".thumbnail_rs").slick({
-        slidesToShow: 3.5, // サムネイルの表示数
+        slidesToShow: 3, // サムネイルの表示数
         arrows: true, // 矢印表示
         asNavFor: ".slider_rs", // メイン画像と同期
         focusOnSelect: true, // サムネイルクリックを有効化
+        adaptiveHeight: true,//サムネ中央寄せ
+        centerMode: true,//サムネ中央寄せ
     });
 });

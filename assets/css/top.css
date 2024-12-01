@@ -4,6 +4,7 @@ section+section {
     margin-top: 60px;
 }
 
+
 h2 {
     width: fit-content;
     padding: 1rem 0;
@@ -45,12 +46,6 @@ h2 {
     /* DarkOrange; */
 
 }
-
-/* h2 {
-    width: fit-content;
-    border-bottom: dotted 5px #FBAE76;
-}
- */
 
 .ttl_box p {
     margin-top: 10px;

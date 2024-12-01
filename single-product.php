@@ -53,7 +53,7 @@
                 'allergy',
                 array("fields" => "names")
             ); ?>
-            <p><?php if (is_null($allergy_term)): ?>
+            <p><?php if (!empty($allergy_term)): ?>
                     <?php echo implode(',', $allergy_term); ?>
                 <?php else: ?>
                     <?php print 'なし'; ?>

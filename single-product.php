@@ -14,6 +14,7 @@
             echo get_favorites_button($post_id);
             ?>
             <!-- お気に入りボタン追記 -->
+
             <div class="goods_si_flex">
                 <?php $img = get_field('pic1');
                 $img_url = $img['sizes']['large']; ?>
@@ -21,8 +22,6 @@
                 <img src="<?php echo $img_url; ?>" alt="Image" class="goods_pic">
                 <br>
                 <table class="goods_table">
-                    <h2 style="padding:15px ;  margin-top:0px; background:#e7d0ae">概要</h2>
-                    <p><?php the_field('introduction') ?></p>
                     <tr>
                         <th>価格</th>
                         <td><?php the_field('price') ?></td>
@@ -60,40 +59,56 @@
                         </td>
                     </tr>
                     <tr>
-                        <h2>原材料名</h2>
-                        <p>
+                        <th>原材料名</th>
+                        <td>
                             <?php the_field('raw_ｍaterials') ?>
-                        </p>
+                        </td>
                     </tr>
                     <tr>
-                        <h2>味</h2>
+                        <th>味</th>
                         <?php
                         $taste_term = wp_get_object_terms(
                             get_the_ID(),
                             'taste',
                             array("fields" => "names")
                         ); ?>
-                        <p>
+                        <td>
                             <?php echo $taste_term[0]; ?>
-                        </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>保存方法</th>
+                        <td><?php the_field('how_to_save') ?>
+                        </td>
                     </tr>
                 </table>
             </div>
             <section class="memo_gs">
                 <h3 class=>キャッチフレーズ</h3>
-                <p>・駐車場：あり ・トイレ：あり ・宿泊施設：なし ・道具の貸出：あり</p>
+                <p><?php
+                    the_field('catchphrase') ?></p>
             </section>
 
             <section class="memo_gs">
                 <h3 class=>商品概要</h3>
-                <p>上質の海苔を産することで知られる有明海その中でも優良な浜の上級品だけを厳選いたしました。香り良く焼きあげたその海苔に、甘・辛・ピリの三拍子そろった味付。良い海苔だけが持つ、歯切れの良さ、心地良い香味がお楽しみいただけます。 食べ応えのある大判８切サイズにカットして使い勝手の良い卓上容器に入っております。 おいしさと使いやすさで人気の、この卓上のりを化粧箱に詰めました。軽快なギフトですので、記念品や御中元・御歳暮
-                    慶事・仏事、その他各種御贈答に最適です。</p>
+                <p><?php the_field('introduction') ?></p>
             </section>
 
-            <section class="memo_gs">
-                <h3 class=>メーカーHP</h3>
-                <a href="">https://www.qlip.school/asp/newscat.asp?nc_id=239</a>
-            </section>
+            <!-- 会社のHPが登録されている場合は表示される -->
+            <?php //この投稿にメーカーidが登録されているかどうかを調べる
+            ?>
+            <?php if (!empty(get_field('maker_id'))): ?>
+                <?php $m_id = get_field('maker_id'); ?>
+                <?php //登録されたメーカーidにurlが登録されているかどうかを調べる
+                ?>
+                <?php if (!empty(get_field('url', $m_id))): ?>
+                    <section class="memo_gs">
+                        <h3 class=>メーカーHP</h3>
+                        <?php the_field('maker_id'); ?>
+                        <a href="<?php the_field('url', $m_id) ?>"><?php the_field('url', $m_id) ?></a>
+                    </section>
+                <?php endif; ?>
+            <?php endif; ?>
         </div>
     </div>
 </main>

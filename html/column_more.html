@@ -31,153 +31,115 @@
 
 </head>
 <body>
-	<header>
+	<main>
+		<div class="inner">
 
-		<div class="kv">
-			<!-- <img src="../uploads/header-designkanpu.jpg" alt=""> -->
+			<!--パンくずリスト-->
+			<?php get_template_part('template-parts/breadcrumb');
+        ?>
 
-			<p class="kv-copy">
-                    徳島の味！<br class="tb-none">
-                    あなたのご飯のお友達<br class="tb-none">
-            </p>
-		</div>
-	</header>
-	<!-- <div class="contentupper">
-                <form id="form1" action="ご飯のお供サイトURL">
-                    <input id="sbox1" name="s" type="text" placeholder="キーワードを入力" />
-                    <input id="sbtn1" type="submit" value="検索" />
-                </form> -->
-
-	<!-- パンくずリスト  -->
-	<ul class="breadcrumb">
-		<ol itemscope itemtype="https://schema.org/BreadcrumbList">
-			<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-				<a itemprop="item" href="../html/index.html">
-					<span itemprop="name">ホーム</span>
-				</a>
-				<meta itemprop="position" content="1" />
-			</li>
-
-			<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-				<a itemprop="item" href="../html/column.html">
-					<span itemprop="name">コラム</span>
-				</a>
-				<meta itemprop="position" content="2" />
-			</li>
-
-			<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-				<a itemprop="item" href="../html/column_more.html">
-					<span itemprop="name">インタビュー</span>
-				</a>
-				<meta itemprop="position" content="3" />
-			</li>
-	</ul>
-	</ol>
-
-	<!-- コラム -->
-	<main class="inner">
-		<section class="column">
 			<!-- 見出し -->
 			<h2 class="ttl_box">
-					<span class="ttl">インタビュー</span><br>
+                            <span class="ttl"><?php single_term_title(''); ?>インタビュー</span><br>
 
-				</h2>
+                        </h2>
 
-			<!-- コラム一覧 -->
-			<ul class="column_list">
-				<li>
-					<article>
-						<div class="box_column">
+			<div class="column_flex">
+				<!-- コラム -->
+				<section class="column" style="max-width: 700px;">
+
+
+
+					<!-- コラム一覧 -->
+					<?php if (have_posts()) : ?>
+					<ul class="column_list">
+						<?php while (have_posts()) : the_post(); ?>
+
+						<?php endwhile; ?>
+						<li>
+
 							<a href="../html/column_detail.html">
-								<div class="box__item">
+								<div class="box_intro">
 									<img src="../uploads/nikumisoitame.jpg" alt="コラムの写真">
-									<h3>サブタイトルサブタイトル</h3>
-									<p>
-								テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。
-							</p>
+									<h3 class="intro_sbtitle">サブタイトルサブタイトル</h3>
+									<p>このサイトは、徳島県の食文化や特産品、地元で長く親しまれてきた味わいを紹介し、徳島県民や徳島県外の人</p>
 								</div>
 							</a>
-						</div>
-					</article>
-				</li>
-				<li>
-					<article>
-						<a href="../html/column_detail.html">
-							<div class="box__item">
-								<img src="../uploads/nikumisoitame.jpg" alt="コラムの写真">
-								<h3>サブタイトルサブタイトル</h3>
-								<p>
-							テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。テキストは入ります。。。
 
+						</li>
+						<li>
 
-							</p>
-							</div>
-						</a>
-					</article>
-				</li>
-				<li>
-					<article>
-						<a href="../html/column_detail.html">
-							<div class="box__item">
-								<img src="../uploads/nikumisoitame.jpg" alt="コラムの写真">
-								<h3>サブタイトルサブタイトル</h3>
-								<p>
-								テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。
-
-						</div>
-						</a>
-						</article>
-					</li>
-					<li>
-						<article>
 							<a href="../html/column_detail.html">
-							<div class="box__item">
-							<img src="../uploads/nikumisoitame.jpg" alt="コラムの写真">
-							<h3>サブタイトルサブタイトル</h3>
-							<p>
-													テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。テキストは入ります。。。
-													。
-												</p>
-							</div>
-						</a>
-					</article>
-				</li>
-			</ul>
+								<div class="box_intro">
+									<img src="../uploads/nikumisoitame.jpg" alt="コラムの写真">
+									<h3 class="intro_sbtitle">サブタイトルサブタイトル</h3>
+									<p>このサイトは、徳島県の食文化や特産品、地元で長く親しまれてきた味わいを紹介し、徳島県民や徳島県外の人</p>
+								</div>
+							</a>
 
-			<!-- サービスのmoreボタン -->
-			<a href="#" class="more">サービス紹介</a>
-		</section>
-	</main>
+						</li>
+						<li>
 
-	<footer>
-		<div class="inner">
-			<!-- ロゴ画像 -->
-			<div class="logo sp-none">
-				<a href="#">
-					<img src="img/logo.png" alt="サイトロゴ">
-				</a>
+							<a href="../html/column_detail.html">
+								<div class="box_intro">
+									<img src="../uploads/nikumisoitame.jpg" alt="コラムの写真">
+									<h3 class="intro_sbtitle">サブタイトルサブタイトル</h3>
+									<p>このサイトは、徳島県の食文化や特産品、地元で長く親しまれてきた味わいを紹介し、徳島県民や徳島県外の人</p>
+								</div>
+							</a>
+
+						</li>
+						<li>
+
+							<a href="../html/column_detail.html">
+								<div class="box_intro">
+									<img src="../uploads/nikumisoitame.jpg" alt="コラムの写真">
+									<h3 class="intro_sbtitle">サブタイトルサブタイトル</h3>
+									<p>このサイトは、徳島県の食文化や特産品、地元で長く親しまれてきた味わいを紹介し、徳島県民や徳島県外の人</p>
+								</div>
+							</a>
+
+						</li>
+					</ul>
+
+					<?php endif; ?>
+
+
+
+				</section>
+
+
+
+
+
+
+
+				<!-- サイドバーメニュー -->
+				<div class="side_bar side_bar_col side-menu">
+					<div class="category-list-outer">
+						<div class="category-list">
+							<h3>コラム一覧</h3>
+						</div>
+					</div>
+
+					<ul class="side-menu-li">
+						<?php get_sidebar(); ?>
+						<li class="cat-item cat-item-33"><a href="../html/column_more.html">インタビュー</a>
+						</li>
+						<li class="cat-item cat-item-34"><a href="../html/column_more.html">体験談</a>
+						</li>
+						<li class="cat-item cat-item-35"><a href=" ../html/column_more.html">取材日記</a>
+						</li>
+					</ul>
+
+				</div>
+
 			</div>
 
-			<!-- ナビゲーション -->
-			<nav class="f_nav">
-				<ul>
-					<li><a href="#">HOME</a></li>
-					<li><a href="#">企業理念</a></li>
-					<li><a href="#">サービス紹介</a></li>
-					<li><a href="#">リクルート</a></li>
-					<li><a href="#">アクセス</a></li>
-				</ul>
-			</nav>
+			<?php get_template_part('template-parts/pagination'); ?>
+
 		</div>
-
-		<!-- コピーライト -->
-		<p class="f-copy">
-			<small>
-				Copyright © QLIP All Rights Reserved.
-			</small>
-		</p>
-
-	</footer>
+	</main>
 </body>
 
 </html>

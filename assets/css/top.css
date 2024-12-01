@@ -4,17 +4,6 @@ section+section {
     margin-top: 60px;
 }
 
-@media screen and (width>=700px) {
-    section+section {
-        margin-top: 100px;
-    }
-
-    h2 {
-        font-size: 32px;
-    }
-}
-
-
 h2 {
     width: fit-content;
     padding: 1rem 0;
@@ -130,7 +119,7 @@ h2 {
     padding-inline-start: 0px;
     flex-wrap: wrap;
     display: flex;
-    gap: 50px;
+    gap: 30px;
     justify-content: center;
 }
 
@@ -241,4 +230,19 @@ h2 {
 
 .banner img {
     max-width: 200px;
+}
+
+@media screen and (width>=700px) {
+    section+section {
+        margin-top: 100px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    .column_list {
+        gap: 50px;
+    }
+
 }

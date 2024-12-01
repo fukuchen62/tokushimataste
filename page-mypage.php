@@ -180,11 +180,6 @@
         <!-- コンテンツのサブタイトル -->
         <h2 class="sub__title2 mb20 bgPK"><i class="fa-solid fa-paw"></i> お気に入りした<br>アレンジレシピ</h2>
 
-        <!-- <div class="next__info tr2"><a href="">>>〇〇件</a></div> -->
-
-        <!-- ３つめのカテゴリ -->
-
-        <!-- 2つめのカテゴリ -->
         <div>
             <?php
             if (function_exists('get_user_favorites')) :

@@ -12,28 +12,57 @@
 <main>
     <!-- このサイトについて -->
     <div class="inner">
-        <div class="container aboutsite">
+        <section class="aboutsite">
             <h2>このサイトについて</h2>
             <p>
                 「徳島を旅するように味わう」<br>
                 徳島の名産品を使った「ご飯のおとも」を、あたかも徳島を旅するように味わえる体験として提供。各商品を作った人やメーカー様の想いをこのサイトを通じて知っていただけたらと思います。<br>
                 ご飯のおともを通じて、地元の生産者と消費者をつなぐ架け橋となり、食べるだけでなく、応援や共感を生むようなサイトになれば幸いです。
             </p>
-        </div>
-    </div>
+        </section>
 
 
-    <!-- 商品一覧 -->
-    <div class="inner">
-        <div class="container">
+
+        <!-- 商品一覧 -->
+        <section class="container">
             <div class="ttl_box">
-                <h2>ご飯のお供etc</h2>
+                <h2>ご飯のお供商品</h2>
                 <p>5種類の項目に分けてご案内します。</p>
             </div>
 
             <div class="scroll-infinity1">
                 <div class="scroll-infinity__wrap1">
                     <ul class="scroll-infinity__list scroll-infinity__list--left1">
+
+                        <?php
+                        $args = [
+                            'post_type'      => 'product', // カスタム投稿タイプ
+                            'posts_per_page' => 6,            // 表示する投稿数
+                            'orderby'        => 'rand',       // ランダム順
+                        ];
+                        // WP_Queryのインスタンスを作成
+                        $the_query = new WP_Query($args);
+                        if ($the_query->have_posts()): ?>
+                            <?php while ($the_query->have_posts()): $the_query->the_post() ?>
+
+                                <li class="scroll-infinity__item1">
+                                    <a href="<?php the_permalink(); ?>">
+                                        <?php
+                                        $pic = get_field('pic1');
+                                        // $picが存在する場合のみURLを取得
+                                        $pic_url =  $pic['sizes']['thumbnail'];
+                                        ?>
+                                        <img src="<?php echo $pic_url; ?>" alt="">
+                                    </a>
+                                </li>
+                        <?php
+                            endwhile;
+                            wp_reset_postdata(); // クエリをリセット
+                        endif;
+                        ?>
+                    </ul>
+                    <ul class="scroll-infinity__list scroll-infinity__list--left1">
+
                         <?php
                         $args = [
                             'post_type'      => 'product', // カスタム投稿タイプ
@@ -63,21 +92,21 @@
                     </ul>
                 </div>
             </div>
-        </div>
-        <a href="<?php echo home_url('/product_type/ferment') ?>" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
-    </div>
 
 
-    <!-- マップ検索 -->
-    <div class="inner area">
-        <div class="container">
+            <a href="<?php echo home_url('/product_type/ferment') ?>" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
+        </section>
+
+        <!-- マップ検索 -->
+        <section class="area">
             <div class="ttl_box">
                 <h2>徳島のご飯 お友達いろいろ！</h2>
                 <p>エリア別検索ができます。</p>
             </div>
             <div class="area_map">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/tokusima-map02.png" alt="エリア検索map">
-
+                <div>
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/tokusima-map02.png" alt="エリア検索map">
+                </div>
                 <div class="kumo nishi">
                     <a href="<?php echo home_url('/area/west/'); ?>">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kumo_nishi.png" alt="県西部">
@@ -97,16 +126,15 @@
             <div class="area_btn">
                 <a href="<?php echo home_url('/area/east/') ?>" class="btn btn-border-shadow btn-border-shadow--color">詳細検索は<br>こちらから！</a>
             </div>
-        </div>
-    </div>
+
+        </section>
 
 
-    <!-- メーカー -->
-    <div class="inner">
-        <div class="container">
+        <!-- メーカー -->
+        <section class="container">
             <div class="ttl_box">
-                <h2>メーカーさんご紹介</h2>
-                <p>徳島県内のメーカーさんです。</p>
+                <h2>メーカー様ご紹介</h2>
+                <p>徳島県内のメーカー様です。</p>
             </div>
             <div class="scroll-infinity1">
                 <div class="scroll-infinity__wrap1">
@@ -144,20 +172,19 @@
                     </ul>
                 </div>
             </div>
-        </div>
-        <div>
-            <a href="<?php echo home_url('/maker/') ?>" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
-        </div>
-    </div>
+            <div>
+                <a href="<?php echo home_url('/maker_type/m_east/') ?>" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
+            </div>
+        </section>
 
+        <!-- コラム -->
 
-    <!-- コラム -->
-    <div class="inner">
-        <div class="container">
+        <section class="container">
             <div class="ttl_box">
-                <h2>コラム特集</h2>
+                <h2>コラム</h2>
                 <p>インタビューや取材日記など紹介します。</p>
             </div>
+            <!-- このクラスがbox_introにしても崩れる -->
             <ul class="column_list">
                 <?php
                 $args = [
@@ -205,24 +232,21 @@
                 endif;
                 ?>
             </ul>
-        </div>
-        <div>
-            <a href="<?php echo home_url('/column/') ?>" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
-        </div>
-    </div>
 
-
-    <!-- アレンジレシピ -->
-
-    <div class="inner">
-        <div class="container">
-            <div class="ttl_box">
-                <div class="ttl_box">
-                    <h2>アレンジレシピ</h2>
-                    <p>ご飯のお供を利用したレシピです！</p>
-                </div>
+            <div>
+                <a href="<?php echo home_url('/column/') ?>" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
             </div>
-            <ul class="list">
+        </section>
+
+
+        <!-- アレンジレシピ -->
+        <section class="container recipe_container">
+            <div class="ttl_box">
+                <h2>アレンジレシピ</h2>
+                <p>🎵ごはんのお供を使ったアレンジレシピです🎶</p>
+            </div>
+
+            <ul class="page_list">
                 <?php
                 $args = [
                     'post_type' => 'recipe', // メニューの投稿タイプ
@@ -263,13 +287,14 @@
                     echo '<p>投稿が見つかりませんでした。</p>';
                 endif;
                 ?>
+                <div>
+                    <a href="<?php echo home_url('/recipe/') ?>" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
+                </div>
+            </ul>
+        </section>
 
-        </div>
-        <a href="<?php echo home_url('/recipe/') ?>" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
-    </div>
+        <!-- インスタ -->
 
-    <!-- インスタ -->
-    <div class="inner">
         <div class="inst_container">
             <div class="inst_ttl">
                 <h3>instagram</h3>
@@ -283,6 +308,7 @@
                 ?>
             </ul>
         </div>
+
     </div>
     </div>
 </main>

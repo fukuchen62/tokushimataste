@@ -316,7 +316,7 @@ a {
 
 .intro_sbtitle {
     height: 60px;
-    border-bottom: dotted 4px #1404ec;
+    border-bottom: solid #9b9b9c;
     font-size: 1.8rem;
     font-weight: 200;
     display: grid;

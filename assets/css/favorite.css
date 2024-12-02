@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+.explanation_fv {
+    margin-bottom: 100px;
+}
+
+.ttl_box_fv h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.favorite_box {
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 20px;
+    width: 330px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.favorite_box p {
+    margin: 10px;
+}
+
+.favorite_box img {
+    width: 300ox;
+    height: 300px;
+}

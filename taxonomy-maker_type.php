@@ -23,21 +23,13 @@
         </div>
         <h2 class="area_box"><span class="ttl"><?php single_term_title(); ?>検索結果</span><?php echo $wp_query->found_posts; ?>件</h2>
 
-
-        <?php //$area_slug = get_query_var('area');
-        ?>
-        <?php //var_dump($area_slug);
-        ?>
-        <?php //$area = get_term_by('slug', $area_slug, 'area');
-        ?>
-
         <div class="container">
             <ul class="maker_list">
                 <?php if (have_posts()): ?>
                     <?php while (have_posts()) : the_post(); ?>
-
-                        <?php get_template_part('template-parts/loop', 'maker'); ?>
-
+                        <li>
+                            <?php get_template_part('template-parts/loop', 'maker'); ?>
+                        </li>
                     <?php endwhile; ?>
                 <?php endif; ?>
             </ul>

@@ -106,7 +106,7 @@ a img:hover {
 
 @media screen and (min-width:900px) {
     .inner {
-        padding: 0px 20px 0;
+        padding: 0px 0px 20px;
     }
 }
 
@@ -235,15 +235,15 @@ a.btn-border-shadow--color:before {
 .breadcrumb span {
     /* .breadcrumb li a { */
     display: inline-block;
-    padding: 0 7px;
-    height: 28px;
-    line-height: 28px;
+    padding: 0;
+    /* height: 28px; */
+    /* line-height: 28px; */
     text-decoration: none;
-    color: #9b9b9b;
-    background: #feebcc;
+    color: dimgray;
+    /* background: #feebcc; */
     /* 文字が小さいと思いました */
     /* font-size: 13px; */
-    border-radius: 20px;
+    /* border-radius: 20px; */
     transition: 0.3s;
 }
 

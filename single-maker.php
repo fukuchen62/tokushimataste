@@ -152,12 +152,14 @@
                         <?php
                         // 投稿IDを取得
                         $post_id = get_the_ID(); // 現在の投稿IDを取得
+                        $maker_post = get_post($post_id);
+
 
                         // カスタムフィールド 'maker_id' に保存された投稿IDを取得
-                        $maker_id = get_post_meta($post_id, 'maker_id', true);
+                        //$maker_id = get_post_meta($post_id, 'maker_id', true);
 
                         // maker_id から投稿データを取得
-                        $maker_post = get_post($maker_id);
+                        //$maker_post = get_post($maker_id);
 
                         if ($maker_post) {
                             // 投稿タイトル (maker_title) を取得

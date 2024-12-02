@@ -244,7 +244,7 @@ img {
     font-size: 1.8rem;
     font-weight: 600;
     margin-bottom: 10px;
-    padding-left: 10px;
+    padding-left: 20px;
 }
 
 .memo p {
@@ -264,12 +264,21 @@ img {
 
 .flex_oneword {
     margin-top: 80px;
+    text-align: center;
+    /* 画像の真ん中寄せ */
 }
 
 .oneword h3 {
     border-left: solid 10px LightSkyBlue;
     font-weight: 600;
     margin: 20px;
+    text-align: left;
+    /* 画像でセンターにしたのを解除 */
+}
+
+.oneword p {
+    text-align: left;
+    /* 画像でセンターにしたのを解除 */
 }
 
 .oneword h3 span {
@@ -299,4 +308,8 @@ img {
 .rcmd_b3 span {
     margin-bottom: 5px;
     display: inline-block;
+}
+
+.flex_oneword img {
+    max-width: 500px;
 }

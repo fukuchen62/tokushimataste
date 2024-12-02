@@ -27,8 +27,8 @@
 }
 
 .scroll-infinity__wrap1 {
-    display: flex;
-    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, 100vw);
 }
 
 .scroll-infinity__list1 {
@@ -64,8 +64,8 @@
 }
 
 .scroll-infinity__wrap {
-    display: flex;
-    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, 100vw);
 }
 
 .scroll-infinity__list {

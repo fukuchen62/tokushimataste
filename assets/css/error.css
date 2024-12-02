@@ -57,7 +57,7 @@ span.marker {
 
 .txt-none {
     font-size: 18px;
-    text-align: left;
+    /* text-align: left; */
 }
 
 .img-none {

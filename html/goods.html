@@ -20,315 +20,177 @@
                 </p>
         </div>
 
-        <div id="spnav-box" class="header-inner spnav">
-            <div class="title pc-none">
-                <h1>
-                        <a href="#" class="logo">
-                        <img src="../uploads/cat.jpg" alt="ご飯のお供">
+    </header>
+    <main>
+        <div class="inner">
+            <ol class="breadcrumb">
+                <ul itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="../html/index.html">
+                            <span itemprop="name">ホーム</span>
                         </a>
-                    </h1>
-            </div>
-            <!-- spハンバーガー三本 -->
-            <div id="js-hamburger" class="hamburger nav-sp-drawr">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <!-- SP メニュー -->
-            <nav class="nav-sp header-container">
-                <ul class="nav-sp-menu">
-                    <li>
-                        <a href="#">
-                            <div class="nav-sp-logo">
-                                <img src="../uploads/cat.jpg" alt="ご飯のお供">
-                            </div>
-                        </a>
+                        <meta itemprop="position" content="1" />
                     </li>
-                    <li>
-                        <a href="goods.html">
-                            <div class="nav-sp-icon">
-                                <img src="../uploads/gohan_sample.png" alt="icon01">
-                            </div>
-                            商品一覧
+
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="#">
+                            <span itemprop="name">商品一覧</span>
                         </a>
-                    </li>
-                    <li>
-                        <a href="area.html.html">
-                            <div class="nav-sp-icon">
-                                <img src="../uploads/gohan_sample.png" alt="icon02">
-                            </div>
-                            エリア検索
-                        </a>
-                    </li>
-                    <li>
-                        <a href="research.html">
-                            <div class="nav-sp-icon">
-                                <img src="../uploads/gohan_sample.png" alt="icon03">
-                            </div>
-                            詳細検索
-                        </a>
-                    </li>
-                    <li>
-                        <a href="column.html.html">
-                            <div class="nav-sp-icon">
-                                <img src="../uploads/gohan_sample.png" alt="icon04">
-                            </div>
-                            コラム
-                        </a>
-                    </li>
-                    <li>
-                        <a href="maker.html">
-                            <div class="nav-sp-icon">
-                                <img src="../uploads/gohan_sample.png" alt="icon05">
-                            </div>
-                            メーカー紹介
-                        </a>
-                    </li>
-                    <li>
-                        <a href="recipe.html">
-                            <div class="nav-sp-icon">
-                                <img src="../uploads/gohan_sample.png" alt="icon06">
-                            </div>
-                            アレンジレシピ
-                        </a>
-                    </li>
-                    <li>
-                        <a href="favorite.html">
-                            <div class="nav-sp-icon">
-                                <img src="../uploads/gohan_sample.png" alt="icon07">
-                            </div>
-                            お気に入り
-                        </a>
+                        <meta itemprop="position" content="2" />
                     </li>
                 </ul>
-            </nav>
-        </div>
+            </ol>
 
-        <!-- <div id="pcnav-box" class="header-inner pcnav"> -->
-        <nav class="header-inner nav-pc">
 
-            <div class="nav-pc_logo">
-                <h1><a href="#" class="pc-title-logo1"><img src="../uploads/cat.jpg" alt="トップに飛ぶ"></a></h1>
+            <h2 style="text-align: center;">お供の一覧表示</h2>
+            <!-- ジャンル検索 -->
+            <section id="btn-area" class="wrap">
+                <!-- ジャンル検索ボタン -->
+                <ul class="btn-content">
+                    <li id="tsukemono">
+                        <a href="#" class=""><span>漬物・発酵食品</span></a>
+                    </li>
+                    <li id="daizu"><a href="#" class=""><span>肉・卵・大豆製品</span></a>
+                    </li>
+                    <li id="furikake"><a href="#" class=""><span>ふりかけ・混ぜご飯の素</span></a>
+                    </li>
+                    <li id="yakumi"><a href="#" class=""><span>薬味・シンプル調味料</span></a>
+                    </li>
+                    <li id="other"><a href="#" class=""><span>分類</span></a>
+                    </li>
+                    <li id="other"><a href="#" class=""><span>その他</span></a>
+                    </li>
+                </ul>
+            </section>
+            <div class="card-container">
+                <ul class="page_list">
+                    <li>
+                        <a href="goods_detail.html" class="box_otomo">
+                            <img src="../uploads/tsukemono.jpeg" alt="Image" class="img-fluid"><br>
+                            <div id="goods">ふりかけ・混ぜご飯の素</div>
+                            <div class="card_goods">
+                                <p>グルメ</p>
+                                <p>市内</p>
+                                <p>ご飯にかけても何にかけてもおいしいよ さあ、おなかいっぱいになるまでお食べぱいになるまでお食べ</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="goods_detail.html" class="box_otomo">
+                            <img src="../uploads/tsukudani.jpeg" alt="Image" class="img-fluid"><br>
+                            <div id="goods">Oh No 海苔</div>
+                            <div class="card_goods">
+                                <p>海苔</p>
+                                <p>小松島</p>
+                                <p>出汁の味が染みこんだソウルフード海苔</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="goods_detail.html" class="box_otomo">
+                            <img src="../uploads/tukemono.jpg" alt="Image" class="img-fluid"><br>
+                            <div id="goods">Oh No 海苔</div>
+                            <div class="card_goods">
+                                <p>漬物</p>
+                                <p>阿南</p>
+                                <p>カレーでもハヤシでもなんでもござれ</p>
+                            </div>
+                        </a>
+                    <li>
+                        <a href="goods_detail.html" class="box_otomo">
+                            <img src="../uploads/furikake.jpeg" alt="Image" class="img-fluid"><br>
+                            <div id="goods">こどものふりかけ</div>
+                            <div class="card_goods">
+                                <p>ふりかけ</p>
+                                <p>海部</p>
+                                <p>パッパッとかけて楽しもう</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="goods_detail.html" class="box_otomo">
+                            <img src="../uploads/miso.jpeg" alt="Image" class="img-fluid"><br>
+                            <div id="goods">翻訳こんにゃくお味噌味</div>
+                            <div class="card_goods">
+                                <p>味噌</p>
+                                <p>池田</p>
+                                <p>これを食べれば君も日本人</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="goods_detail.html" class="box_otomo">
+                            <img src="../uploads/miso.jpeg" alt="Image" class="img-fluid"><br>
+                            <div id="goods">沙漠の味噌漬け</div>
+                            <div class="card_goods">
+                                <p>薬味・シンプル調味料</p>
+                                <p>鳴門</p>
+                                <p>うずまきナルト御用達</p>
+                            </div>
+                        </a>
+                    <li>
+                        <h2>７のタイトル</h2>
+                        <p>７の記事７の記事７の記事７の記事７の記事７の記事７の記事７の記事７の記事７の記事</p>
+                    </li>
+                    <li>
+                        <h2>８のタイトル</h2>
+                        <p>８の記事８の記事８の記事８の記事８の記事８の記事８の記事８の記事８の記事８の記事</p>
+                    </li>
+                    <li>
+                        <h2>９のタイトル</h2>
+                        <p>９の記事９の記事９の記事９の記事９の記事９の記事９の記事９の記事９の記事９の記事</p>
+                    </li>
+                    <li>
+                        <h2>１０のタイトル</h2>
+                        <p>１０の記事１０の記事１０の記事１０の記事１０の記事１０の記事１０の記事１０の記事</p>
+                    </li>
+                    <li>
+                        <h2>１１のタイトル</h2>
+                        <p>１１の記事１１の記事１１の記事１１の記事１１の記事１１の記事１１の記事１１の記事</p>
+                    </li>
+                    <li>
+                        <h2>１２のタイトル</h2>
+                        <p>１２の記事１２の記事１２の記事１２の記事１２の記事１２の記事１２の記事１２の記事</p>
+                    </li>
+                    <li>
+                        <h2>１３のタイトル</h2>
+                        <p>１３の記事１３の記事１３の記事１３の記事１３の記事１３の記事１３の記事１３の記事</p>
+                    </li>
+                    <li>
+                        <h2>１４のタイトル</h2>
+                        <p>１４の記事１４の記事１４の記事１４の記事１４の記事１４の記事１４の記事１４の記事</p>
+                    </li>
+                    <li>
+                        <h2>１５のタイトル</h2>
+                        <p>１５の記事１５の記事１５の記事１５の記事１５の記事１５の記事１５の記事１５の記事</p>
+                    </li>
+                    <li>
+                        <h2>１６のタイトル</h2>
+                        <p>１６の記事１６の記事１６の記事１６の記事１６の記事１６の記事１６の記事１６の記事</p>
+                    </li>
+                    <li>
+                        <h2>１７のタイトル</h2>
+                        <p>１７の記事１７の記事１７の記事１７の記事１７の記事１７の記事１７の記事１７の記事</p>
+                    </li>
+                    <li>
+                        <h2>１８のタイトル</h2>
+                        <p>１８の記事１８の記事１８の記事１８の記事１８の記事１８の記事１８の記事１８の記事</p>
+                    </li>
+                    <li>
+                        <h2>１９のタイトル</h2>
+                        <p>１９の記事１９の記事１９の記事１９の記事１９の記事１９の記事１９の記事１９の記事</p>
+                    </li>
+                    <li>
+                        <h2>２０のタイトル</h2>
+                        <p>２０の記事２０の記事２０の記事２０の記事２０の記事２０の記事２０の記事２０の記事</p>
+                    </li>
+                </ul>
+
+                <ul class="pagination"></ul>
             </div>
 
-            <ul class="header-container">
-                <li>
-                    <a href="goods.html">
-                        <img src="../uploads/gohan_sample.png" alt="">
-                        <span>商品一覧</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="area.html.html">
-                        <img src="../uploads/gohan_sample.png" alt="">
-                        <span>エリア検索</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="research.html">
-                        <img src="../uploads/gohan_sample.png" alt="">
-                        <span>詳細検索</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="column.html.html">
-                        <img src="../uploads/gohan_sample.png" alt="">
-                        <span>コラム</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="maker.html">
-                        <img src="../uploads/gohan_sample.png" alt="icon01">
-                        <span>メーカー紹介</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="recipe.html">
-                        <img src="../uploads/gohan_sample.png" alt="">
-                        <span>アレンジレシピ</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="favorite.html">
-                        <img src="../uploads/gohan_sample.png" alt="">
-                        <span>お気に入り</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <!-- </div> -->
-    </header>
-    <main class="inner">
-
-
-        <ul class="breadcrumb">
-            <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <a itemprop="item" href="../html/index.html">
-                        <span itemprop="name">ホーム</span>
-                    </a>
-                    <meta itemprop="position" content="1" />
-                </li>
-
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <a itemprop="item" href="#">
-                        <span itemprop="name">商品一覧</span>
-                    </a>
-                    <meta itemprop="position" content="2" />
-                </li>
-        </ul>
-        </ol>
-
-        <h2 style="text-align: center;">お供の一覧表示</h2>
-        <!-- ジャンル検索 -->
-        <section id="btn-area" class="wrap">
-            <!-- ジャンル検索ボタン -->
-            <ul class="btn-content">
-                <li id="tsukemono">
-                    <a href="#" class=""><span>漬物・発酵食品</span></a>
-                </li>
-                <li id="daizu"><a href="#" class=""><span>肉・卵・大豆製品</span></a>
-                </li>
-                <li id="furikake"><a href="#" class=""><span>ふりかけ・混ぜご飯の素</span></a>
-                </li>
-                <li id="yakumi"><a href="#" class=""><span>薬味・シンプル調味料</span></a>
-                </li>
-                <li id="other"><a href="#" class=""><span>分類</span></a>
-                </li>
-                <li id="other"><a href="#" class=""><span>その他</span></a>
-                </li>
-            </ul>
-        </section>
-        <div class="card-container">
-            <ul class="page_list">
-                <li>
-                    <a href="goods_detail.html" class="box_otomo">
-                        <img src="../uploads/tsukemono.jpeg" alt="Image" class="img-fluid"><br>
-                        <div id="goods">ふりかけ・混ぜご飯の素</div>
-                        <div class="card_goods">
-                            <p>グルメ</p>
-                            <p>市内</p>
-                            <p>ご飯にかけても何にかけてもおいしいよ さあ、おなかいっぱいになるまでお食べぱいになるまでお食べ</p>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="goods_detail.html" class="box_otomo">
-                        <img src="../uploads/tsukudani.jpeg" alt="Image" class="img-fluid"><br>
-                        <div id="goods">Oh No 海苔</div>
-                        <div class="card_goods">
-                            <p>海苔</p>
-                            <p>小松島</p>
-                            <p>出汁の味が染みこんだソウルフード海苔</p>
-                        </div>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="goods_detail.html" class="box_otomo">
-                        <img src="../uploads/tukemono.jpg" alt="Image" class="img-fluid"><br>
-                        <div id="goods">Oh No 海苔</div>
-                        <div class="card_goods">
-                            <p>漬物</p>
-                            <p>阿南</p>
-                            <p>カレーでもハヤシでもなんでもござれ</p>
-                        </div>
-                    </a>
-                <li>
-                    <a href="goods_detail.html" class="box_otomo">
-                        <img src="../uploads/furikake.jpeg" alt="Image" class="img-fluid"><br>
-                        <div id="goods">こどものふりかけ</div>
-                        <div class="card_goods">
-                            <p>ふりかけ</p>
-                            <p>海部</p>
-                            <p>パッパッとかけて楽しもう</p>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="goods_detail.html" class="box_otomo">
-                        <img src="../uploads/miso.jpeg" alt="Image" class="img-fluid"><br>
-                        <div id="goods">翻訳こんにゃくお味噌味</div>
-                        <div class="card_goods">
-                            <p>味噌</p>
-                            <p>池田</p>
-                            <p>これを食べれば君も日本人</p>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="goods_detail.html" class="box_otomo">
-                        <img src="../uploads/miso.jpeg" alt="Image" class="img-fluid"><br>
-                        <div id="goods">沙漠の味噌漬け</div>
-                        <div class="card_goods">
-                            <p>薬味・シンプル調味料</p>
-                            <p>鳴門</p>
-                            <p>うずまきナルト御用達</p>
-                        </div>
-                    </a>
-                <li>
-                    <h2>７のタイトル</h2>
-                    <p>７の記事７の記事７の記事７の記事７の記事７の記事７の記事７の記事７の記事７の記事</p>
-                </li>
-                <li>
-                    <h2>８のタイトル</h2>
-                    <p>８の記事８の記事８の記事８の記事８の記事８の記事８の記事８の記事８の記事８の記事</p>
-                </li>
-                <li>
-                    <h2>９のタイトル</h2>
-                    <p>９の記事９の記事９の記事９の記事９の記事９の記事９の記事９の記事９の記事９の記事</p>
-                </li>
-                <li>
-                    <h2>１０のタイトル</h2>
-                    <p>１０の記事１０の記事１０の記事１０の記事１０の記事１０の記事１０の記事１０の記事</p>
-                </li>
-                <li>
-                    <h2>１１のタイトル</h2>
-                    <p>１１の記事１１の記事１１の記事１１の記事１１の記事１１の記事１１の記事１１の記事</p>
-                </li>
-                <li>
-                    <h2>１２のタイトル</h2>
-                    <p>１２の記事１２の記事１２の記事１２の記事１２の記事１２の記事１２の記事１２の記事</p>
-                </li>
-                <li>
-                    <h2>１３のタイトル</h2>
-                    <p>１３の記事１３の記事１３の記事１３の記事１３の記事１３の記事１３の記事１３の記事</p>
-                </li>
-                <li>
-                    <h2>１４のタイトル</h2>
-                    <p>１４の記事１４の記事１４の記事１４の記事１４の記事１４の記事１４の記事１４の記事</p>
-                </li>
-                <li>
-                    <h2>１５のタイトル</h2>
-                    <p>１５の記事１５の記事１５の記事１５の記事１５の記事１５の記事１５の記事１５の記事</p>
-                </li>
-                <li>
-                    <h2>１６のタイトル</h2>
-                    <p>１６の記事１６の記事１６の記事１６の記事１６の記事１６の記事１６の記事１６の記事</p>
-                </li>
-                <li>
-                    <h2>１７のタイトル</h2>
-                    <p>１７の記事１７の記事１７の記事１７の記事１７の記事１７の記事１７の記事１７の記事</p>
-                </li>
-                <li>
-                    <h2>１８のタイトル</h2>
-                    <p>１８の記事１８の記事１８の記事１８の記事１８の記事１８の記事１８の記事１８の記事</p>
-                </li>
-                <li>
-                    <h2>１９のタイトル</h2>
-                    <p>１９の記事１９の記事１９の記事１９の記事１９の記事１９の記事１９の記事１９の記事</p>
-                </li>
-                <li>
-                    <h2>２０のタイトル</h2>
-                    <p>２０の記事２０の記事２０の記事２０の記事２０の記事２０の記事２０の記事２０の記事</p>
-                </li>
-            </ul>
-
-            <ul class="pagination"></ul>
         </div>
-        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-        <script src="../assets/js/main.js"></script>
-        <script src="../assets/js/goods.js"></script>
     </main>
     <footer>
         <!-- トップページに戻るボタン -->
@@ -363,6 +225,8 @@
             </small>
         </p>
     </footer>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/goods.js"></script>
 </body>
 </html>

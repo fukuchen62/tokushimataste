@@ -101,6 +101,7 @@ a img:hover {
     max-width: 1024px;
     min-width: 320px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 *,
@@ -404,6 +405,7 @@ a {
     border-radius: 10px;
     cursor: pointer;
     width: 320px;
+
 }
 
 .card_syokuhin p {

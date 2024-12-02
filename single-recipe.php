@@ -43,83 +43,83 @@
                         $pic2 = get_post_meta($post_id, 'pic2', true);
                         ?>
                     </div>
-                    <<div class="slick_rs_img">
+                    <div class="slick_rs_img">
                         <?php
                         $post_id = get_the_ID(); // 現在の投稿IDを取得
                         $pic3 = get_post_meta($post_id, 'pic3', true);
                         ?>
-                </div>
-                <div class="slick_rs_img">
-                    <?php
-                    $post_id = get_the_ID(); // 現在の投稿IDを取得
-                    $pic4 = get_post_meta($post_id, 'pic4', true);
-                    ?>
-                </div>
-            </div>
-            <div class="thumbnail_rs">
-                <div class="thumbnail_rs_img">
-                    <?php
-                    $post_id = get_the_ID(); // 現在の投稿IDを取得
-                    $pic1 = get_post_meta($post_id, 'pic1', true);
-                    ?>
-                </div>
-                <div class="thumbnail_rs_img">
-                    <?php
-                    $post_id = get_the_ID(); // 現在の投稿IDを取得
-                    $pic2 = get_post_meta($post_id, 'pic2', true);
-                    ?>
-                </div>
-                <div class="thumbnail_rs_img">
-                    <?php
-                    $post_id = get_the_ID(); // 現在の投稿IDを取得
-                    $pic3 = get_post_meta($post_id, 'pic3', true);
-                    ?>
-                </div>
-                <div class="thumbnail_rs_img">
-                    <?php
-                    $post_id = get_the_ID(); // 現在の投稿IDを取得
-                    $pic4 = get_post_meta($post_id, 'pic4', true);
-                    ?>
-                </div>
-            </div>
-    </div>
-
-    <section class="memo_rs">
-        <h3>一言</h3>
-        <p>
-            <?php the_field('recipe_description'); ?>
-        </p>
-    </section>
-
-    <section class="ingredient_rs">
-        <h2>材料</h2>
-        <p>
-            <?php the_field('ingredient'); ?>
-        </p>
-    </section>
-
-    <section class="howtomake_rs">
-        <h2>作り方</h2>
-        <p>
-            <?php the_field('how_to_make'); ?>
-        </p>
-    </section>
-
-    <!-- idに紐づけた商品 -->
-    <section class="goods_used">
-        <h2>使ったお供</h2>
-        <ul class="flex_use_goods">
-            <li>
-                <a href="../html/column_detail.html">
-                    <div class="box_syohin">
-                        <img src="../uploads/nikumisoitame.jpg" alt="コラムの写真">
-                        <h3>サブタイトルサブタイトル</h3>
-                        <p>テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。</p>
                     </div>
-                </a>
-            </li>
-        </ul>
+                    <div class="slick_rs_img">
+                        <?php
+                        $post_id = get_the_ID(); // 現在の投稿IDを取得
+                        $pic4 = get_post_meta($post_id, 'pic4', true);
+                        ?>
+                    </div>
+                </div>
+                <div class="thumbnail_rs">
+                    <div class="thumbnail_rs_img">
+                        <?php
+                        $post_id = get_the_ID(); // 現在の投稿IDを取得
+                        $pic1 = get_post_meta($post_id, 'pic1', true);
+                        ?>
+                    </div>
+                    <div class="thumbnail_rs_img">
+                        <?php
+                        $post_id = get_the_ID(); // 現在の投稿IDを取得
+                        $pic2 = get_post_meta($post_id, 'pic2', true);
+                        ?>
+                    </div>
+                    <div class="thumbnail_rs_img">
+                        <?php
+                        $post_id = get_the_ID(); // 現在の投稿IDを取得
+                        $pic3 = get_post_meta($post_id, 'pic3', true);
+                        ?>
+                    </div>
+                    <div class="thumbnail_rs_img">
+                        <?php
+                        $post_id = get_the_ID(); // 現在の投稿IDを取得
+                        $pic4 = get_post_meta($post_id, 'pic4', true);
+                        ?>
+                    </div>
+                </div>
+            </div>
 
-        </div>
+            <section class="memo_rs">
+                <h2>一言</h2>
+                <div>
+                    <?php the_field('recipe_description'); ?>
+                </div>
+            </section>
+
+            <section class="ingredient_rs">
+                <h2>材料</h2>
+                <div>
+                    <?php the_field('ingredient'); ?>
+                </div>
+            </section>
+
+            <section class="howtomake_rs">
+                <h2>作り方</h2>
+                <div>
+                    <?php the_field('how_to_make'); ?>
+                </div>
+            </section>
+
+            <!-- idに紐づけた商品 -->
+            <section class="goods_used">
+                <h2>使ったお供</h2>
+                <ul class="flex_use_goods">
+                    <li>
+                        <a href="../html/column_detail.html">
+                            <div class="box_syohin">
+                                <img src="../uploads/nikumisoitame.jpg" alt="コラムの写真">
+                                <h3>サブタイトルサブタイトル</h3>
+                                <p>テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+    </div>
 </main>
 <?php get_footer(); ?>

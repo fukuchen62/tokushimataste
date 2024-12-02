@@ -41,8 +41,9 @@
     animation: infinity-scroll-left 20s infinite linear 0.5s both;
 }
 
+
 .scroll-infinity__item1 {
-    /* width: calc(100vw / 6); */
+    width: calc(100vw / 6);
 
 }
 

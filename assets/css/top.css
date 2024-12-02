@@ -159,18 +159,6 @@ h2 {
     height: auto;
 }
 
-/* .img-fluid li {
-    letter-spacing: -1em;
-}
-
-.img-fluid li {
-    display: inline-block;
-    width: 35px;
-    height: 35px;
-    text-align: center;
-    line-height: 35px;
-    border: 1px solid #0a26dd;
-} */
 
 /* コラム用のflex */
 
@@ -190,12 +178,15 @@ h2 {
     display: flex;
     gap: 20px;
     justify-content: center;
+    margin-bottom: 30px;
 }
 
 /* マップの雲 */
 
 .area_map {
     position: relative;
+    margin-bottom: 50px;
+
 }
 
 .area_btn {

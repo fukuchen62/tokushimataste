@@ -19,55 +19,52 @@ $page_description = '徳島を旅するように味わう';
 
 if (is_post_type_archive('product') || is_tax('product_type')) {
     $page_tile = '商品一覧';
-    $img_path .= 'KV_syokuhin.png';
+    $img_path .= 'H_syokuhin.png';
 } else if (is_singular('product')) {
     $page_tile = '商品詳細';
-    $img_path .= 'KV_syokuhin.png';
+    $img_path .= 'H_syokuhin.png';
 } else if (is_tax('area')) {
     $page_tile = 'エリア検索';
-    $img_path .= 'furikake.jpeg';
+    $img_path .= 'H_syokuhin.png';
 } else if (is_search()) {
     $page_tile = '詳細検索';
-    $img_path .= 'furikake.jpeg';
+    $img_path .= 'H_syokuhin.png';
 } else if (is_post_type_archive('column') || is_tax('column_type')) {
     $page_tile = 'コラム一覧';
-    $img_path .= 'furikake.jpeg';
+    $img_path .= 'H_koramu.png';
 } else if (is_singular('column')) {
     $page_tile = 'コラム詳細';
-    $img_path .= 'furikake.jpeg';
+    $img_path .= 'H_koramu.png';
 } else if (is_post_type_archive('maker') || is_tax('maker_type')) {
     $page_tile = 'メーカー一覧';
-    $img_path .= 'furikake.jpeg';
+    $img_path .= 'H_factory.png';
 } else if (is_singular('maker')) {
     $page_tile = 'メーカー詳細';
-    $img_path .= 'furikake.jpeg';
+    $img_path .= 'H_factory.png';
 } else if (is_post_type_archive('recipe') || is_tax('recipe_type')) {
     $page_tile = 'アレンジレシピ一覧';
-    $img_path .= 'furikake.jpeg';
+    $img_path .= 'H_reshipi.png';
 } else if (is_singular('recipe')) {
     $page_tile = 'アレンジレシピ詳細';
-    $img_path .= 'furikake.jpeg';
+    $img_path .= 'H_reshipi.png';
 } else if (is_page('mypage')) {
     $page_tile = 'お気に入り';
-    $img_path .= 'furikake.jpeg';
-} else if (is_page('q&a')) {
-    $page_tile = '商品詳細';
-    $img_path .= 'furikake.jpeg';
+    $img_path .= 'H_okiniiri.png';
 } else if (is_page('about')) {
     $page_tile = 'このサイトについて';
-    $img_path .= 'furikake.jpeg';
+    $img_path .= 'H_syokuhin.png';
 } else if (is_page('qa')) {
     $page_tile = 'Ｑ＆Ａ';
-    $img_path .= 'furikake.jpeg';
+    $img_path .= 'H_syokuhin.png';
 } else if (is_page('privacy')) {
     $page_tile = 'プライバシーポリシー・免責事項';
-    $img_path .= 'furikake.jpeg';
+    $img_path .= 'H_syokuhin.png';
 } else if (is_page('aboutsite')) {
     $page_tile = 'サイト制作にあたって';
-    $img_path .= 'heade_kv1.jpg';
+    $img_path .= 'H_syokuhin.png';
 } elseif (is_page('contact') || is_page('confirm') || is_page('thanks')) {
     $page_tile = 'お問合せ';
-    $img_path .= 'heade_kv1.jpg';
+    $img_path .= 'H_syokuhin.png';
 }
 ?>
 
@@ -135,7 +132,7 @@ if (is_post_type_archive('product') || is_tax('product_type')) {
                     <li>
                         <a href="<?php echo home_url('/'); ?>">
                             <div class="nav-sp-logo">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo2.png" alt="logo.png">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="logo.png">
                             </div>
                         </a>
                     </li>

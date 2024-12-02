@@ -351,3 +351,10 @@ ul {
 .page_list li.on {
     display: block;
 }
+
+
+/* area */
+/* お供の一覧表示 */
+.list_displayed_ot {
+    text-align: center;
+}

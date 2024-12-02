@@ -244,7 +244,7 @@ img {
     font-size: 1.8rem;
     font-weight: 600;
     margin-bottom: 10px;
-    padding-left: 10px;
+    padding-left: 20px;
 }
 
 .memo p {
@@ -299,4 +299,8 @@ img {
 .rcmd_b3 span {
     margin-bottom: 5px;
     display: inline-block;
+}
+
+.flex_oneword img {
+    max-width: 500px;
 }

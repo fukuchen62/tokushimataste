@@ -6,29 +6,34 @@
         <?php get_template_part('template-parts/breadcrumb'); ?>
 
 
-        <!-- コラム -->
-        <!-- <section class="column"> -->
-        <!-- <div class="inner"> -->
         <!-- 見出し -->
-        <h2 class="ttl_box">
+        <!-- <h2 class="ttl_box">
             <span class="ttl">コラム</span><br>
-        </h2>
+        </h2> -->
+        <!-- コラム無くても良いですか？ -->
 
-        <ul class="column_flex">
-            <li class="article_col">
+        <div class="column_flex">
+            <!-- コラム -->
+            <section class="column col_wid">
                 <!-- コラム一覧 -->
-                <?php if (have_posts()) : ?>
-                    <ul class="column_list">
+                <ul class="column_list">
+
+                    <?php if (have_posts()) : ?>
+
                         <?php while (have_posts()) : the_post(); ?>
+
                             <li>
-                                <?php get_template_part('template-parts/loop', 'column'); ?>
+                                <a href="<?php the_permalink(); ?>">
+                                    <div class="box_intro">
+                                        <?php get_template_part('template-parts/loop', 'column'); ?>
+                                    </div>
+                                </a>
                             </li>
                         <?php endwhile; ?>
-                    </ul>
-                <?php endif; ?>
+                    <?php endif; ?>
+                </ul>
+            </section>
 
-                <!-- </section> -->
-            </li>
 
 
             <!-- サイドバーメニュー -->
@@ -45,9 +50,12 @@
                 </aside>
             </li>
 
-        </ul>
+            </ul>
+        </div>
 
-        <?php get_template_part('template-parts/pagination'); ?>
     </div>
+    <?php get_template_part('template-parts/pagination'); ?>
+
+
 </main>
 <?php get_footer(); ?>

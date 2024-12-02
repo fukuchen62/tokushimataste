@@ -1,52 +1,43 @@
 <?php get_header(); ?>
 
 <main>
+    <div class="inner">
 
+        <!--パンくずリスト-->
+        <?php get_template_part('template-parts/breadcrumb');
+        ?>
 
-    <!--パンくずリスト-->
-    <?php get_template_part('template-parts/breadcrumb');
-    ?>
-
-    <!-- コラム -->
-    <section class="column">
-        <div class="inner">
-            <!-- 見出し -->
-            <h2 class="ttl_box">
-                <span class="ttl"><?php single_term_title(''); ?></span><br>
-
-            </h2>
-
-            <!-- コラム一覧 -->
-            <?php if (have_posts()) : ?>
+        <!-- 見出し -->
+        <h2 class="ttl_box">
+            <span class="ttl"><?php single_term_title(''); ?></span>
+        </h2>
+        <div class="column_flex">
+            <!-- コラム -->
+            <section class="column col_wid">
+                <!-- コラム一覧 -->
                 <ul class="column_list">
-                    <?php while (have_posts()) : the_post(); ?>
-                        <li>
-                            <?php get_template_part('template-parts/loop', 'column'); ?>
-                        </li>
-                    <?php endwhile; ?>
+
+                    <?php if (have_posts()) : ?>
+                        <?php while (have_posts()) : the_post(); ?>
+
+                            <li>
+                                <a href="<?php get_template_directory_uri(); ?>/html/column_detail.html">
+                                    <div class="box_intro">
+                                        <?php get_template_part('template-parts/loop', 'column'); ?>
+
+                                    </div>
+                                </a>
+                            </li>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
                 </ul>
-            <?php endif; ?>
+            </section>
 
-        </div>
-
-    </section>
-
-
-
-
-
-</main>
-
-<!-- サイドバーメニュー -->
-<li class="side_bar side_bar_col">
-    <div class="category-list-outer">
-        <div class="category-list">
-            <h3>コラム一覧</h3>
-        </div>
-    </div>
-    <aside class="side-menu">
-        <ul class="side-menu-li">
+            <!-- サイドバー -->
             <?php get_sidebar(); ?>
 
-            <?php get_template_part('template-parts/pagination'); ?>
-            <?php get_footer(); ?>
+        </div>
+        <?php get_template_part('template-parts/pagination'); ?>
+    </div>
+</main>
+<?php get_footer(); ?>

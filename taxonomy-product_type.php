@@ -3,8 +3,7 @@
     <?php get_template_part('template-parts/breadcrumb');
     ?>
 
-
-    <h2 style="text-align: center;">お供の一覧表示</h2>
+    <!-- <h2 style="text-align: center;">お供の一覧表示</h2> -->
     <!-- ジャンル検索 -->
     <section id="btn-area" class="wrap">
         <!-- ジャンル検索ボタン -->
@@ -21,19 +20,20 @@
             ]); ?>
 
             <?php foreach ($args as $key => $value): ?>
-                <?php // スラッグをforeach文でループさせる
-                ?>
-                <li id="<?php print $value ?>">
 
-                    <a href="<?php echo get_term_link(
+            <?php
+                // タクソノミーのタームを取得
+                $term = get_term_by('slug', $value, 'product_type');
+                ?>
+            <li id="<?php print $value ?>">
+                <a href="<?php echo get_term_link(
                                     // タクソノミーのリンクを取得
                                     get_term_by('slug', $value, 'product_type'),
                                     // タクソノミーの中から、スラッグを検索している
                                     'product_type'
                                 ) ?>" class="">
-                        <?php //とりあえず配列で取得して、要素が一つの配列を分解している
-                        ?>
-                        <span><?php echo implode(
+
+                    <span><?php echo implode(
                                     (get_terms(
                                         [
                                             'taxonomy' => 'product_type',
@@ -45,29 +45,29 @@
                                     )
                                     )
                                 ) ?>
-                        </span>
-                    </a>
-                </li>
-            <?php endforeach; ?>
+                        <!-- ターム毎の投稿件数 -->
+                        (<?php echo $term->count; ?>)
+                    </span>
+                </a>
+
             </li>
-            <!-- <li id="other">
-                    <a href="<?php /*echo get_term_link(get_term_by('slug', 'others', 'product_type'), 'product_type') */ ?>" class=""><span>その他</span></a>
-                </li> -->
+            <?php endforeach; ?>
         </ul>
     </section>
+
     <div class="card-container">
         <?php //インナー入れておきました。
         ?>
         <ul class="page_list">
             <?php if (have_posts()): ?>
-                <?php while (have_posts()): the_post(); ?>
-                    <li>
-                        <?php get_template_part('template-parts/loop', 'product'); ?>
-                    </li>
-                <?php endwhile; ?>
+            <?php while (have_posts()): the_post(); ?>
+            <?php get_template_part('template-parts/loop', 'product'); ?>
+            <?php endwhile; ?>
             <?php endif ?>
         </ul>
     </div>
+
+    <!-- ページネーション -->
     <?php get_template_part('template-parts/pagination'); ?>
 </main>
 

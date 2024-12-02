@@ -15,7 +15,7 @@ $.fn.clickToggle = function (a, b) {
 };
 
 $(document).ready(function () {
-    $(".awamaru").hide(); // 初期状態で非表示にします
+    $(".sudachi").hide(); // 初期状態で非表示にします
     $("#scroll").hide();// 初期状態で非表示にします
 
     $(window).scroll(function () {
@@ -26,14 +26,14 @@ $(document).ready(function () {
             scrollPercentRounded = Math.round(scrollPercent * 100);
 
         if (scrollPercentRounded > 90) {
-            $(".awamaru").show(); // 90%以上で要素を表示
-            $(".awamaru_commentbox").show(); // 90%以上で要素を表示
-            $(".awamaru_comment").show(); // 90%以上で要素を表示
+            $(".sudachi").show(); // 90%以上で要素を表示
+            $(".sudachi_commentbox").show(); // 90%以上で要素を表示
+            $(".sudachi_comment").show(); // 90%以上で要素を表示
             $("#scroll").show(); // 90%以上で要素を表示
         } else {
-            $(".awamaru").hide(); // 90%未満で要素を非表示
-            $(".awamaru_commentbox").hide(); // 90%未満で要素を非表示
-            $(".awamaru_comment").hide(); // 90%未満で要素を非表示
+            $(".sudachi").hide(); // 90%未満で要素を非表示
+            $(".sudachi_commentbox").hide(); // 90%未満で要素を非表示
+            $(".sudachi_comment").hide(); // 90%未満で要素を非表示
             $("#scroll").hide(); // 90%未満で要素を非表示
         }
     });
@@ -45,15 +45,15 @@ $(document).ready(function () {
 $(function () {
 
     // ボタンをクリックしたら発動
-    $('.awamaru').click(function () {
+    $('.sudachi').click(function () {
 
         // 連打で暴走しないようにstop()も設定
-        $('.awamaru_commentset').stop().slideToggle(-100);
+        $('.sudachi_commentset').stop().slideToggle(-100);
         // あわまるにクラス追加
-        $(".awamaru").toggleClass("is-active")
-        $(".awamaru_commentset").toggleClass("is-active")
+        $(".sudachi").toggleClass("is-active")
+        $(".sudachi_commentset").toggleClass("is-active")
         // alert("クリックされました");
-        $('awamaru_trivia').css({
+        $('sudachi_trivia').css({
             'display': 'block',
         });
     });
@@ -61,22 +61,22 @@ $(function () {
 
 
 
-$('.awamaru').clickToggle(function () {
+$('.sudachi').clickToggle(function () {
     //   // １回目のクリック
-    // $(".awamaru").animate({ "marginLeft": "+=60px", }, 500);
-    // $(".awamaru").animate({ "rotate": "0deg", }, 500);
+    // $(".sudachi").animate({ "marginLeft": "+=60px", }, 500);
+    // $(".sudachi").animate({ "rotate": "0deg", }, 500);
 
 
-    // $(".awamaru").animate({ "marginLeft": "-=60px", }, 500);
-    // $(".awamaru").animate({ "rotate": "45deg", }, 500);
+    // $(".sudachi").animate({ "marginLeft": "-=60px", }, 500);
+    // $(".sudachi").animate({ "rotate": "45deg", }, 500);
 
 }, function () {
     //   // ２回目のクリック
-    // $(".awamaru").animate({ "marginLeft": "-=60px", }, 500);
-    // $(".awamaru").animate({ "rotate": "45deg", }, 500);
+    // $(".sudachi").animate({ "marginLeft": "-=60px", }, 500);
+    // $(".sudachi").animate({ "rotate": "45deg", }, 500);
 
-    // $(".awamaru").animate({ "marginLeft": "+=60px", }, 500);
-    // $(".awamaru").animate({ "rotate": "0deg", }, 500);
+    // $(".sudachi").animate({ "marginLeft": "+=60px", }, 500);
+    // $(".sudachi").animate({ "rotate": "0deg", }, 500);
 });
 
 // トップへ戻る
@@ -178,7 +178,7 @@ let mames = [
 
 function msgOutput() {
     let r = Math.floor(Math.random() * mames.length);
-    document.getElementById("awamaru_comment").innerHTML = mames[r];
+    document.getElementById("sudachi_comment").innerHTML = mames[r];
 }
 
-document.getElementById("awamaru").addEventListener("click", msgOutput);
+document.getElementById("sudachi").addEventListener("click", msgOutput);

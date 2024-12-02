@@ -1,6 +1,6 @@
 /*＝＝＝豆知識＝＝＝ */
 
-/* あわまるの見た目・配置 */
+/* すだちくんの見た目・配置 */
 .sudachi {
     width: 90px;
     position: fixed;
@@ -60,7 +60,7 @@
     }
 }
 
-/* あわまるのセリフ */
+/* すだちくんのセリフ */
 .sudachi_comment {
     font-size: 14px;
     font-weight: bold;

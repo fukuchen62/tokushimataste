@@ -123,7 +123,14 @@
                     </a>
                 </div>
             </div>
+        </section>
+        <section>
+            <div class="ttl_box">
+                <h2>条件を指定してご飯のお供を探す！</h2>
+                <p>細かく条件を設定して調べられます。</p>
+            </div>
             <div class="area_btn">
+                <!-- クラス名これで合ってますか？↓↓↓ -->
                 <a href="<?php echo home_url('/area/east/') ?>" class="btn btn-border-shadow btn-border-shadow--color">詳細検索は<br>こちらから！</a>
             </div>
 
@@ -173,6 +180,7 @@
                 </div>
             </div>
             <div>
+                <!-- クラス名これで合ってますか？ -->
                 <a href="<?php echo home_url('/maker_type/m_east/') ?>" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
             </div>
         </section>
@@ -184,7 +192,6 @@
                 <h2>コラム</h2>
                 <p>インタビューや取材日記など紹介します。</p>
             </div>
-            <!-- このクラスがbox_introにしても崩れる -->
             <ul class="column_list">
                 <?php
                 $args = [
@@ -206,7 +213,7 @@
                     <?php while ($the_query->have_posts()): $the_query->the_post() ?>
                         <li>
                             <a href="<?php the_permalink(); ?>">
-                                <div class="box_column">
+                                <div class="box_intro">
                                     <div>
                                         <?php if (has_post_thumbnail()): ?>
                                             <?php the_post_thumbnail('medium'); ?>
@@ -216,7 +223,7 @@
 
                                     </div>
                                     <h3><?php the_title(); ?></h3>
-                                    <!-- 長すぎて改行される問題 -->
+                                    <!-- 50文字で切る -->
                                     <?php
                                     $trimmed_excerpt = wp_trim_words(get_the_excerpt(), 50, '...');
                                     echo '<p>' . esc_html($trimmed_excerpt) . '</p>';
@@ -294,23 +301,74 @@
         </section>
 
         <!-- インスタ -->
+        <section>
+            <div class="inst_container">
+                <div class="inst_ttl">
+                    <h3>instagram</h3>
+                </div>
+                <ul class="inst_photo">
 
-        <div class="inst_container">
-            <div class="inst_ttl">
-                <h3>instagram</h3>
+                    <!-- レンタルサーバー用インスタ     -->
+                    <?php echo do_shortcode("[instagram-feed feed=1]"); ?>
+                    <!-- ローカル用インスタ     -->
+                    <?php //echo do_shortcode("[instagram-feed feed=2]");
+                    ?>
+                </ul>
             </div>
-            <ul class="inst_photo">
-
-                <!-- レンタルサーバー用インスタ     -->
-                <?php echo do_shortcode("[instagram-feed feed=1]"); ?>
-                <!-- ローカル用インスタ     -->
-                <?php //echo do_shortcode("[instagram-feed feed=2]");
-                ?>
+        </section>
+        <!-- ダミーバナー広告あとで消す -->
+        <p style="text-align: center;">バナー広告</p>
+        <!-- ここにインナーいりますか＿ -->
+        <div class="inner">
+            <!-- ここにインナーいりますか＿ -->
+            <ul class="banner">
+                <li><a href=""><img src="<?php echo get_template_directory_uri(); ?>/uploads/banner_sample1.jpg" alt="バナー"></a></li>
+                <li><a href=""><img src="<?php echo get_template_directory_uri(); ?>/uploads/banner_sample2.jpg" alt="バナー"></a></li>
+                <li><a href=""><img src="<?php echo get_template_directory_uri(); ?>/uploads/banner_sample3.jpg" alt="バナー"></a></li>
             </ul>
+        </div>
+    </div>
+
+    <!-- すだちくん -->
+    <!-- js -->
+    <div class="sudachi_trivia foot_scroll">
+        <div class="sudachi_commentset fukidashi_animation">
+            <img class="sudachi_commentbox" src="<?php echo get_template_directory_uri(); ?>/assets/images/fukidashi_kai5.png" alt="すだちくん吹き出し">
+
+
+            <?php
+            $args = [
+                'post_type' => 'sudachikun', // メニューの投稿タイプ
+                'posts_per_page' => 1,
+                'orderby'        => 'rand',   // ランダム表示
+            ];
+            /*
+                            $taxquerysp = ['relation' => 'AND'];
+                            $taxquerysp[] = [
+                                'taxonomy' => 'menu',
+                                'terms' => $menu->slug,
+                                'field' => 'slug',
+                            ];
+                            */
+            $the_query = new WP_Query($args);
+
+            if ($the_query->have_posts()): ?>
+                <?php while ($the_query->have_posts()): $the_query->the_post() ?>
+                    <p id="sudachi_comment" class="sudachi_comment">
+                        <?php the_field('com'); ?></p>
+
+
+            <?php endwhile;
+                wp_reset_postdata(); // リセット
+            else :
+                echo '<p>投稿が見つかりませんでした。</p>';
+            endif;
+            ?>
         </div>
 
     </div>
-    </div>
+
+    <img id="sudachi" class="sudachi" src="<?php echo get_template_directory_uri(); ?>/assets/images/sudachi-kun1.png" alt="すだちくん">
 </main>
 
 <?php get_footer(); ?>

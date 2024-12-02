@@ -141,43 +141,46 @@
 
 
         <!-- idと紐づける -->
+        <!-- カード型class修正待ち -->
         <section class="rcmd_box">
             <h3 class="rcmd_b3"><span>オススメベスト３商品</span></h3>
             <ul class="rcmd_good">
                 <li>
-                    <a href="../html/column_detail.html">
-                        <div class="box_syohin">
-                            <img src="../uploads/nikumisoitame.jpg" alt="コラムの写真">
-                            <h3>サブタイトルサブタイトル</h3>
-                            <p>テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。</p>
+                    <a href="good_detail_ba.html" class="box_syohin">
+                        <img src="../uploads/nikumisoitame.jpg" alt="ご飯のお供">
+                        <h3 class="name_syokuhin">サブタイトルサブタイトル</h3>
+                        <div class="card_syokuhin">
+                            <p>グルメ</p>
+                            <p>市内</p>
+                            <p>ご飯にかけても何にかけてもおいしいよご飯にかけても何にかけてもおいしいよご飯にかけても何にかけてもおいしいよ</p>
                         </div>
                     </a>
                 </li>
-
                 <li>
-                    <a href="../html/column_detail.html">
-                        <div class="box_syohin">
-                            <img src="../uploads/nikumisoitame.jpg" alt="コラムの写真">
-                            <h3>サブタイトルサブタイトル</h3>
-                            <p>テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。</p>
+                    <a href="goods_detail.html" class="box_syohin">
+                        <img src="../uploads/furikake.jpeg" alt="ご飯のお供">
+                        <h3 class="name_syokuhin">サブタイトルサブタイトル</h3>
+                        <div class="card_syokuhin">
+                            <p>グルメ</p>
+                            <p>市内</p>
+                            <p>ご飯にかけても何にかけてもおいしいよ</p>
                         </div>
                     </a>
                 </li>
-
                 <li>
-                    <a href="../html/column_detail.html">
-                        <div class="box_syohin">
-                            <img src="../uploads/nikumisoitame.jpg" alt="コラムの写真">
-                            <h3>サブタイトルサブタイトル</h3>
-                            <p>テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。テキストは入ります。。。テキストが入ります。。。</p>
+                    <a href="good_detail_ba.html" class="box_syohin">
+                        <img src="../uploads/narazuke.jpeg" alt="ご飯のお供">
+                        <h3 class="name_syokuhin">サブタイトルサブタイトル</h3>
+                        <div class="card_syokuhin">
+                            <p>グルメ</p>
+                            <p>市内</p>
+                            <p>ご飯にかけても何にかけてもおいしいよ</p>
                         </div>
                     </a>
-
                 </li>
 
             </ul>
         </section>
-    </div>
     </div>
 </main>
 <?php get_footer(); ?>

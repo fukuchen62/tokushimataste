@@ -1,20 +1,28 @@
 @charset "UTF-8";
 
 footer {
+    width: 100%;
+    margin: 0 auto;
     background-color: #93b4df;
-    margin-top: 100px;
+    /* margin-top: 100px auto; */
     text-align: center;
 
 }
 
-.footer_nav {
-    text-align: left;
-    line-height: 200%;
+.footer_container {
+    width: 80%;
+    margin: 0px auto;
+    padding: 20px;
+    display: inline-block;
 }
 
-.footer_container {
-    padding: 20px 0;
-    display: inline-block;
+.footer_nav {
+    text-align: left;
+    /* line-height: 200%; */
+}
+
+.footer_nav li {
+    margin: 20px auto;
 }
 
 .footer_nav a {
@@ -49,7 +57,7 @@ footer {
     width: 8%;
     max-width: 60px;
     min-width: 50px;
-    z-index: 500;
+    z-index: 10;
 }
 
 #page-top img {

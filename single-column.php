@@ -8,7 +8,13 @@
 
         <!-- コラム -->
         <section class="column">
-
+            <!-- ループ外 -->
+            <?php
+            global $wp_query;
+            $post_id = $wp_query->get_queried_object_id();
+            echo get_favorites_button($post_id);
+            ?>
+            <!-- / ループ外 -->
             <!-- 見出し -->
             <h2 class="ttl_box ttl_cd"><span><?php the_title(); ?></span></h2>
 
@@ -17,24 +23,10 @@
                 <div class="article_col">
 
                     <div>
-                        <?php //if (has_post_thumbnail()):
-                        ?>
-                        <?php //the_post_thumbnail('medium');
-                        ?>
-                        <?php //else:
-                        ?>
-                        <!-- <img src="<?php //echo get_template_directory_uri();
-                                        ?>/assets/img/common/noimage.png" alt=""> -->
-                        <?php //endif;
-                        ?>
                         <?php the_content();
                         ?>
                     </div>
                 </div>
-
-
-
-
 
                 <!-- サイドメニュー -->
                 <?php get_sidebar(); ?>

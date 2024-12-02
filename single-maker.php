@@ -122,7 +122,7 @@
 
 
         <section class="memo">
-            <h3 class="fa-solid fa-leaf">備考</h3>
+            <h3>備考</h3>
             <p><?php the_field('memo') ?></p>
         </section>
 
@@ -147,6 +147,30 @@
             <ul class="rcmd_good">
                 <li>
                     <a href="good_detail_ba.html" class="box_syohin">
+
+                        <!-- ここから -->
+                        <?php
+                        // 投稿IDを取得
+                        $post_id = get_the_ID(); // 現在の投稿IDを取得
+
+                        // カスタムフィールド 'maker_id' に保存された投稿IDを取得
+                        $maker_id = get_post_meta($post_id, 'maker_id', true);
+
+                        // maker_id から投稿データを取得
+                        $maker_post = get_post($maker_id);
+
+                        if ($maker_post) {
+                            // 投稿タイトル (maker_title) を取得
+                            $maker_title = $maker_post->post_title;
+
+                            // 表示
+                            echo '<p>メーカー名: ' . esc_html($maker_title) . '</p>';
+                        } else {
+                            echo '<p>メーカー情報が見つかりません。</p>';
+                        }
+                        ?>
+
+                        <!-- ここまで -->
                         <img src="../uploads/nikumisoitame.jpg" alt="ご飯のお供">
                         <h3 class="name_syokuhin">サブタイトルサブタイトル</h3>
                         <div class="card_syokuhin">
@@ -178,7 +202,6 @@
                         </div>
                     </a>
                 </li>
-
             </ul>
         </section>
     </div>

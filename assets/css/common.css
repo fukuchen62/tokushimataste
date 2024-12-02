@@ -100,8 +100,14 @@ a img:hover {
 .inner {
     max-width: 1024px;
     min-width: 320px;
-    margin: 0 auto;
-    padding: 0 20px;
+    margin: 0 auto 40px;
+    padding: 50px 20px 0;
+}
+
+@media screen and (min-width:900px) {
+    .inner {
+        padding: 0px 20px 0;
+    }
 }
 
 *,
@@ -415,66 +421,4 @@ a {
 
 .card_syokuhin {
     padding: 0 10px;
-}
-
-/* ==================== */
-/* レシピ */
-/* ==================== */
-
-.list {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 0 auto;
-}
-
-.list li {
-    width: 100%;
-    max-width: calc(33.33333% - 10px);
-    /* max-width: 320px; */
-    min-width: 300px;
-    height: auto;
-    margin: 0 auto;
-    opacity: 1;
-    transition: all .4s ease 0s;
-    /* margin-bottom: 40px; */
-    border-radius: 10px;
-}
-
-.recipe_box {
-    width: 100%;
-    margin: 0 auto;
-    max-width: 320px;
-    min-width: 300px;
-    background-color: #EEEEF1;
-    color: black;
-    font-size: 2rem;
-    box-shadow: 5px 5px 0px #9e9d9c;
-    padding: 16px;
-    text-align: centert;
-    border-radius: 8px;
-    line-height: 30px;
-    letter-spacing: 0.05em;
-    margin-bottom: 30px;
-    border: 2px solid #342201;
-    transition: 0.6s;
-}
-
-.recipe_box p {
-    width: 98%;
-    height: 6rem;
-    margin: 10px;
-    padding: 5px;
-    text-align: left;
-}
-
-.recipe_box img {
-    height: 250px;
-    object-fit: fill;
-}
-
-.img-fluid {
-    width: 100%;
-    height: auto;
 }

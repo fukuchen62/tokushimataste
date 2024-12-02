@@ -170,18 +170,12 @@ function add_style_script()
             get_template_directory_uri() .
                 PATH . 'css/column.css',
         );
-    } elseif (is_post_type_archive('maker') || is_tax('maker_type') || is_singular('maker_type')) {
+    } elseif (is_post_type_archive('maker') || is_tax('maker_type') || is_singular('maker')) {
         //コラムリスト
         wp_enqueue_style(
             'my_maker_list_style',
             get_template_directory_uri() .
                 PATH . 'css/maker.css',
-        );
-    } elseif (is_singular('maker_type')) {
-        wp_enqueue_style(
-            'my_maker_style',
-            get_template_directory_uri() .
-                PATH . 'css/maker_single.css',
         );
         wp_enqueue_script(
             'my_maker_single',

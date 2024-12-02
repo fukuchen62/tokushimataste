@@ -246,6 +246,10 @@ li.cat-item a::after {
 		align-items: flex-start;
 		gap: 60px;
 	}
+
+	.col_wid {
+		width: 700px;
+	}
 }
 
 .section_col {

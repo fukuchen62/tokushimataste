@@ -30,178 +30,59 @@
 </head>
 <body>
 	<main>
-		<header>
 
-			<div class="kv">
-				<p class="kv-copy">
-			                    徳島の味！<br class="tb-none">
-			                    あなたのご飯の<br class="tb-none">
-			                    お友達<br class="tb-none">
-			            </p>
-			</div>
 
-			<div id="spnav-box" class="header-inner spnav">
-				<div class="title pc-none">
-					<h1>
-			                    <a href="#" class="logo">
-			                    <img src="../uploads/cat.jpg" alt="ご飯のお供">
-			                    </a>
-			                </h1>
-				</div>
-				<!-- spハンバーガー三本 -->
-				<div id="js-hamburger" class="hamburger nav-sp-drawr">
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-				<!-- SP メニュー -->
-				<nav class="nav-sp header-container">
-					<ul class="nav-sp-menu">
-						<li>
-							<a href="#">
-								<div class="nav-sp-logo">
-									<img src="../uploads/cat.jpg" alt="ご飯のお供">
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="goods.html">
-								<div class="nav-sp-icon">
-									<img src="../uploads/gohan_sample.png" alt="icon01">
-								</div>
-								商品一覧
-							</a>
-						</li>
-						<li>
-							<a href="area.html.html">
-								<div class="nav-sp-icon">
-									<img src="../uploads/gohan_sample.png" alt="icon02">
-								</div>
-								エリア検索
-							</a>
-						</li>
-						<li>
-							<a href="research.html">
-								<div class="nav-sp-icon">
-									<img src="../uploads/gohan_sample.png" alt="icon03">
-								</div>
-								詳細検索
-							</a>
-						</li>
-						<li>
-							<a href="column.html.html">
-								<div class="nav-sp-icon">
-									<img src="../uploads/gohan_sample.png" alt="icon04">
-								</div>
-								コラム
-							</a>
-						</li>
-						<li>
-							<a href="maker.html">
-								<div class="nav-sp-icon">
-									<img src="../uploads/gohan_sample.png" alt="icon05">
-								</div>
-								メーカー紹介
-							</a>
-						</li>
-						<li>
-							<a href="recipe.html">
-								<div class="nav-sp-icon">
-									<img src="../uploads/gohan_sample.png" alt="icon06">
-								</div>
-								アレンジレシピ
-							</a>
-						</li>
-						<li>
-							<a href="favorite.html">
-								<div class="nav-sp-icon">
-									<img src="../uploads/gohan_sample.png" alt="icon07">
-								</div>
-								お気に入り
-							</a>
-						</li>
-					</ul>
-				</nav>
-			</div>
-
-			<!-- <div id="pcnav-box" class="header-inner pcnav"> -->
-			<nav class="header-inner nav-pc">
-
-				<div class="nav-pc_logo">
-					<h1><a href="#" class="pc-title-logo1"><img src="../uploads/cat.jpg" alt="トップに飛ぶ"></a></h1>
-				</div>
-
-				<ul class="header-container">
-					<li>
-						<a href="goods.html">
-							<img src="../uploads/gohan_sample.png" alt="">
-							<span>商品一覧</span>
-						</a>
-					</li>
-					<li>
-						<a href="area.html.html">
-							<img src="../uploads/gohan_sample.png" alt="">
-							<span>エリア検索</span>
-						</a>
-					</li>
-					<li>
-						<a href="research.html">
-							<img src="../uploads/gohan_sample.png" alt="">
-							<span>詳細検索</span>
-						</a>
-					</li>
-					<li>
-						<a href="column.html.html">
-							<img src="../uploads/gohan_sample.png" alt="">
-							<span>コラム</span>
-						</a>
-					</li>
-					<li>
-						<a href="maker.html">
-							<img src="../uploads/gohan_sample.png" alt="icon01">
-							<span>メーカー紹介</span>
-						</a>
-					</li>
-					<li>
-						<a href="recipe.html">
-							<img src="../uploads/gohan_sample.png" alt="">
-							<span>アレンジレシピ</span>
-						</a>
-					</li>
-					<li>
-						<a href="favorite.html">
-							<img src="../uploads/gohan_sample.png" alt="">
-							<span>お気に入り</span>
-						</a>
-					</li>
-				</ul>
-			</nav>
-			<!-- </div> -->
-		</header>
 		<div class="inner">
 
 			<!--パンくずリスト-->
-			<?php get_template_part('template-parts/breadcrumb');
-        ?>
+			<ul class="breadcrumb">
+				<ol itemscope itemtype="https://schema.org/BreadcrumbList">
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+						<a itemprop="item" href="../html/index.html">
+							<span itemprop="name">ホーム</span>
+						</a>
+						<meta itemprop="position" content="1" />
+					</li>
+
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+						<a itemprop="item" href="../html/column.html">
+							<span itemprop=" name">コラム</span>
+						</a>
+						<meta itemprop="position" content="2" />
+					</li>
+
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+						<a itemprop="item" href="../html/column_more.html">
+							<span itemprop=" name">インタビュー</span>
+						</a>
+						<meta itemprop="position" content="3" />
+					</li>
+
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+						<a itemprop="item" href="../html/column_detail.html">
+							<span itemprop=" name">インタビュー詳細</span>
+						</a>
+						<meta itemprop="position" content="4" />
+					</li>
+				</ol>
+			</ul>
 
 			<!-- 見出し -->
 			<h2 class="ttl_box">
-                            <span class="ttl"><?php single_term_title(''); ?>インタビュー</span><br>
+		                            <span class="ttl">インタビュー</span>
 
-                        </h2>
+		                        </h2>
 
 			<div class="column_flex">
 				<!-- コラム -->
-				<section class="column" style="max-width: 700px;">
+				<section class="column col_wid">
 
 
 
 					<!-- コラム一覧 -->
-					<?php if (have_posts()) : ?>
-					<ul class="column_list">
-						<?php while (have_posts()) : the_post(); ?>
 
-						<?php endwhile; ?>
+					<ul class="column_list">
+
 						<li>
 
 							<a href="../html/column_detail.html">
@@ -248,16 +129,7 @@
 						</li>
 					</ul>
 
-					<?php endif; ?>
-
-
-
 				</section>
-
-
-
-
-
 
 
 				<!-- サイドバーメニュー -->
@@ -269,7 +141,6 @@
 					</div>
 
 					<ul class="side-menu-li">
-						<?php get_sidebar(); ?>
 						<li class="cat-item cat-item-33"><a href="../html/column_more.html">インタビュー</a>
 						</li>
 						<li class="cat-item cat-item-34"><a href="../html/column_more.html">体験談</a>
@@ -282,10 +153,11 @@
 
 			</div>
 
-			<?php get_template_part('template-parts/pagination'); ?>
+
 
 		</div>
 	</main>
+
 	<footer>
 		<!-- トップページに戻るボタン -->
 		<p id="page-top"><a href="#"></a><img src="../assets/images/topbutton.png" alt="topに戻る">

@@ -44,12 +44,30 @@ footer {
 /* トップに戻る */
 #page-top {
     position: fixed;
-    bottom: 100px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    /* line-height: 1; */
-    z-index: 99;
+    bottom: 80px;
+    right: 10px;
+    width: 8%;
+    max-width: 60px;
+    min-width: 50px;
+    z-index: 500;
+}
+
+#page-top img {
+    width: 100%;
+    margin: 0 auto;
+    /* max-width: 100px;
+    min-width: 80px;
+    z-index: 500; */
+}
+
+@media(width>=700px) {
+    #page-top {
+        position: fixed;
+        bottom: 80px;
+        right: 50px;
+        width: 5%;
+        max-width: 80px;
+    }
 }
 
 /* トップに戻る文字 */

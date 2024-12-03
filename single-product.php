@@ -22,10 +22,12 @@
                 <img src="<?php echo $img_url; ?>" alt="Image" class="goods_pic">
                 <br>
                 <table class="goods_table">
-                    <tr>
-                        <th>価格</th>
-                        <td><?php the_field('price') ?></td>
-                    </tr>
+                    <?php if (!empty(get_field('price'))): ?>
+                        <tr>
+                            <th>価格</th>
+                            <td><?php the_field('price') ?></td>
+                        </tr>
+                    <?php endif; ?>
                     <tr>
                         <th>アレルギー表示</th>
                         <?php
@@ -76,11 +78,14 @@
                             <?php echo $taste_term[0]; ?>
                         </td>
                     </tr>
-                    <tr>
-                        <th>保存方法</th>
-                        <td><?php the_field('how_to_save') ?>
-                        </td>
-                    </tr>
+                    <?php if (!empty(get_field('how_to_save'))): ?>
+                        <tr>
+                            <th>保存方法</th>
+                            <td>
+                                <?php the_field('how_to_save') ?>
+                            </td>
+                        </tr>
+                    <?php endif; ?>
                 </table>
             </div>
             <section class="memo_gs">
@@ -110,23 +115,36 @@
                     </section>
                 <?php endif; ?>
             <?php endif; ?>
-            <div class="box_maker">
-                <a href="<?php echo get_permalink($m_id); ?>">
-                    <div class="box_intro">
-                        <?php
-                        $pic = get_field('pic1', $m_id);
-                        $pic_url = $pic ? $pic['sizes']['medium_large'] : '';
-                        ?>
-                        <?php if ($pic_url): ?>
-                            <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
-                        <?php endif; ?>
-                        <h3><?php the_title(); ?></h3>
-                        <p>住所:<?php the_field('address', $m_id); ?></p>
-                        <p>TEL:<?php the_field('tel', $m_id); ?></p>
-                        <p>営業時間：<?php the_field('business_hours', $m_id); ?></p>
-                    </div>
-                </a>
-            </div>
+
+            <?php if (!empty(get_field('memo'))): ?>
+                <section class="memo_gs">
+                    <h3 class=>備考</h3>
+                    <p><?php the_field('memo') ?></p>
+                </section>
+            <?php endif ?>
+
+            <?php if (!empty(get_field('maker_id'))): ?>
+                <!-- 仮でタイトルを入れています。デザインを確認しておいてください。 -->
+                <h2 class="tittle_goods_single"><span>製造メーカー様紹介（仮）</span></h2>
+
+                <div class="box_maker">
+                    <a href="<?php echo get_permalink($m_id); ?>">
+                        <div class="box_intro">
+                            <?php
+                            $pic = get_field('pic1', $m_id);
+                            $pic_url = $pic ? $pic['sizes']['medium_large'] : '';
+                            ?>
+                            <?php if ($pic_url): ?>
+                                <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
+                            <?php endif; ?>
+                            <h3><?php the_title(); ?></h3>
+                            <p>住所:<?php the_field('address', $m_id); ?></p>
+                            <p>TEL:<?php the_field('tel', $m_id); ?></p>
+                            <p>営業時間：<?php the_field('business_hours', $m_id); ?></p>
+                        </div>
+                    </a>
+                </div>
+            <?php endif; ?>
         </div>
     </div>
 

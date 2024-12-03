@@ -177,9 +177,6 @@
 
                                     <!-- 商品名 -->
                                     <h3 class="name_syokuhin"><?php the_title(); ?></h3>
-                                    <!-- *///// -->
-                                    <!-- この下のクラスをどうするか -->
-                                    <!-- *桑村さんがいらないって言ったのでクラスごと消しました///// -->
                                 </a>
                             </div>
                         </li>
@@ -190,28 +187,6 @@
                 <?php endif; ?>
             </ul>
         </section>
-
-    </div>
-
-    <div>
-        <section class="rcmd_box">
-            <h3 class="rcmd_b3"><span>オススメベスト３商品</span></h3>
-            <ul class="rcmd_good">
-                <li>
-                    <div class="box_syohin">
-                        <
-                            <img src="../uploads/nikumisoitame.jpg" alt="ご飯のお供">
-                            <h3 class="name_syokuhin">サブタイトルサブタイトル</h3>
-                </li>
-            </ul>
-        </section>
-    </div>
-    </a>
-
-
-
-
-
 
     </div>
 </main>

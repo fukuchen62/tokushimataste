@@ -1,0 +1,382 @@
+@charset "UTF-8";
+
+.inner_gs {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.tittle_goods_single {
+    margin: 0 auto;
+    width: fit-content;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+/* 画像とテーブルのフレックス */
+@media screen and (min-width: 770px) {
+    .goods_si_flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        .goods_pic {
+            width: 50%;
+        }
+
+        .goods_table {
+            width: 35%;
+        }
+
+    }
+}
+
+.goods_pic {
+    margin-bottom: 30px;
+}
+
+/* 企業詳細のテーブル */
+.goods_table {
+    width: 80%;
+    font-size: 1.6rem;
+    margin: 0 auto;
+}
+
+.goods_table tr {
+    border-bottom: solid 1px black;
+}
+
+.goods_table th,
+.goods_table {
+    padding: 10px;
+}
+
+.goods_table th {
+    font-size: 1.8rem;
+}
+
+.goods_table td {
+    padding-top: 10px;
+    font-weight: 600;
+}
+
+.goods_si_flex {
+    margin-bottom: 60px;
+}
+
+/* 備考欄（要らないなら消す） */
+.memo_gs p,
+.memo_gs a {
+    background-color: bisque;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.memo_gs h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.memo_gs {
+    margin-bottom: 30px;
+}
+
+.memo_gs a {
+    font-size: 1.8rem;
+}
+
+.inner_gs {
+    padding-bottom: 30px;
+}
+
+/* 商品名のボタン */
+
+#goods {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.8rem;
+    border-radius: 5px;
+    /* width: 250px; */
+    height: 6rem;
+    font-weight: bold;
+    border: 2px dashed #000000;
+    transition: 0.3s;
+    background-color: #fbb126;
+}
+
+#goods:hover {
+    opacity: .5;
+}
+
+.box_otomo {
+    border: solid #fbb126;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+.card_goods {
+    padding: 10px 20px;
+}
+
+/* ジャンル検索ボタン */
+.btn-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 40px 0px;
+}
+
+.btn-content li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    text-decoration: none;
+    color: #555555;
+    font-size: 18px;
+    border-radius: 20px;
+
+    /* width: 300px; */
+    /* パンくずのメディアクエリと合わせるために変更してみました。 */
+    width: 290px;
+
+    height: 40px;
+    font-weight: bold;
+    border: 2px solid #555555;
+    transition: 0.3s;
+    box-shadow: 0px 6px 0px -2px rgba(67, 145, 209, 1);
+    background-color: #f7eb99;
+
+    margin: 0px 5px 10px;
+    /* marginを適当に書いてみました。 */
+
+}
+
+.btn-content li:hover {
+    box-shadow: 0 0 #fff;
+    transform: translateY(1px);
+}
+
+/* 商品のイメージの大きさほか */
+
+.img-L {
+    float: left;
+    margin-right: 20px;
+    width: 640px;
+    height: 480px;
+}
+
+ul {
+    padding-left: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.last-update {
+    margin: 5px 0 20px;
+}
+
+.conetnt {
+    margin: 20px 0;
+}
+
+/* ページネーション */
+
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+.pagination {
+    width: 70%;
+    margin: 0 auto 50px;
+    font-size: 1.6rem;
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px; */
+    text-align: center;
+}
+
+.pagination .number {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.pagination a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #ffffff;
+    border: solid 1px #1597CC;
+    border-radius: 5px;
+    padding: 10px 0;
+}
+
+/* ページネーションの現在のページに「.active」クラスを付与して色を変える */
+.pagination .number>a.active {
+    background-color: #1597CC;
+    color: #fff;
+}
+
+/* コンテナ全体のスタイル */
+.wp-pagenavi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+/* 現在のページ */
+.wp-pagenavi .current {
+    background-color: #333;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* ページリンク */
+.wp-pagenavi a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.wp-pagenavi a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* 前後のリンク */
+.wp-pagenavi .previouspostslink,
+.wp-pagenavi .nextpostslink {
+    font-weight: bold;
+}
+
+/* 非アクティブ状態のリンク (必要に応じて) */
+.wp-pagenavi .pages {
+    color: #666;
+    margin-right: 10px;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    .wp-pagenavi {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .wp-pagenavi a, .wp-pagenavi .current {
+        padding: 5px 8px;
+        font-size: 0.9rem;
+    }
+}
+
+/* ページングで表示するコンテンツのスタイル
+ 初期表示は非表示 */
+.page_list li {
+    display: none;
+    padding: 20px 0;
+    /* border-bottom: 1px solid #000; */
+    max-width: 320px;
+}
+
+/* onクラス添付で画面に表示 */
+.page_list li.on {
+    display: block;
+}
+
+
+
+/* ココから先は見た目のスタイルなのであまり重要ではありません。
+　　自由にデザインなど変更して貰えればと思います。 */
+
+.page_list {
+    /* border-top: 1px solid #000; */
+    margin-bottom: 20px;
+}
+
+.page_list p {
+    margin: 0.3em 0;
+}
+
+
+.img-fluid {
+    width: 320px;
+    height: 240px;
+    border-radius: 8px 8px 0 0;
+}
+
+.img-fluid li {
+    letter-spacing: -1em;
+}
+
+.img-fluid li {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    border: 1px solid #FF9900;
+}
+
+/*以下変更 byぎみ
+ ページングで表示するコンテンツのスタイル
+ 初期表示は非表示 */
+
+.page_list {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 5px 5px;
+    padding-left: 0;
+    /* ulのユーザーエージェントスタイル打消し */
+}
+
+.page_list {
+    /* border-top: 1px solid #000; */
+    margin-bottom: 20px;
+}
+
+.page_list li {
+    display: none;
+    padding: 20px 0;
+    /* border-bottom: 1px solid #000; */
+}
+
+.page_list li.on {
+    display: block;
+}
+
+
+/* area */
+/* お供の一覧表示 */
+.list_displayed_ot {
+    text-align: center;
+}

@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 section+section {
-    margin-top: 60px;
+    margin-top: 40px;
 }
 
 
@@ -16,6 +16,16 @@ h2 {
     color: #353535;
     font-weight: bold;
     font-size: 26px;
+    text-align: center;
+}
+
+.top h2 {
+    margin: 0px auto 40px;
+    text-align: center;
+}
+
+.top h2+p {
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -34,11 +44,15 @@ h2 {
     margin-bottom: 20px;
 }
 
+#aboutsite-text {
+    text-align: left;
+}
+
 /* タイトル */
 
 .ttl_box {
     margin-bottom: 20px;
-    margin-left: 20px;
+    /* margin-left: 20px; */
 }
 
 .ttl_box h2 {
@@ -137,7 +151,7 @@ h2 {
 
 .recipe_box {
     width: 100%;
-    margin: 0 auto;
+    margin: 10px auto;
     max-width: 300px;
     min-width: 300px;
     height: auto;
@@ -152,6 +166,11 @@ h2 {
     margin: 10px;
     padding: 5px;
     text-align: left;
+}
+
+.recipe_box img {
+    height: 200px;
+    object-fit: cover;
 }
 
 .img-fluid {
@@ -195,6 +214,7 @@ h2 {
 
 .kumo {
     width: 30%;
+    max-width: 200px;
     animation: floating-y 1.8s ease-in-out infinite alternate-reverse;
 }
 
@@ -210,20 +230,20 @@ h2 {
 
 .higashi {
     position: absolute;
-    top: 20%;
-    left: 50%;
+    top: 25%;
+    left: 52%;
 }
 
 .nishi {
     position: absolute;
-    top: 30%;
+    top: 33%;
     right: 60%;
 }
 
 .minami {
     position: absolute;
-    top: 70%;
-    right: 25%;
+    top: 62%;
+    right: 30%;
 }
 
 
@@ -241,9 +261,11 @@ h2 {
 .inst_ttl h3 {
     background-image: linear-gradient(90deg, rgb(241, 139, 199), rgb(134, 85, 158));
     width: 300px;
-    font-size: 1.6rem;
+    font-size: 2rem;
+    font-weight: 700;
     border-radius: 15px;
     display: inline-block;
+    padding: 10px;
 }
 
 .inst_ttl {
@@ -286,7 +308,7 @@ h2 {
 
 @media screen and (width>=700px) {
     section+section {
-        margin-top: 100px;
+        margin-top: 40px;
     }
 
     h2 {

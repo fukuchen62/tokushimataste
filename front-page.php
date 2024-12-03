@@ -1,27 +1,23 @@
 <?php get_header(); ?>
 
-
 <!-- <div class="contentupper">
-                <form id="form1" action="ご飯のお供サイトURL">
-                    <input id="sbox1" name="s" type="text" placeholder="キーワードを入力" />
-                    <input id="sbtn1" type="submit" value="検索" />
-                </form>
-            </div> -->
+    <form id="form1" action="ご飯のお供サイトURL">
+        <input id="sbox1" name="s" type="text" placeholder="キーワードを入力" />
+        <input id="sbtn1" type="submit" value="検索" />
+    </form>
+</div> -->
 
-
-<main>
+<main class="top">
     <!-- このサイトについて -->
     <div class="inner">
         <section class="aboutsite">
             <h2>このサイトについて</h2>
-            <p>
+            <p id="aboutsite-text">
                 「徳島を旅するように味わう」<br>
                 徳島の名産品を使った「ご飯のおとも」を、あたかも徳島を旅するように味わえる体験として提供。各商品を作った人やメーカー様の想いをこのサイトを通じて知っていただけたらと思います。<br>
                 ご飯のおともを通じて、地元の生産者と消費者をつなぐ架け橋となり、食べるだけでなく、応援や共感を生むようなサイトになれば幸いです。
             </p>
         </section>
-
-
 
         <!-- 商品一覧 -->
         <section class="container">
@@ -98,7 +94,7 @@
         </section>
 
         <!-- マップ検索 -->
-        <section class="area">
+        <section class="container">
             <div class="ttl_box">
                 <h2>徳島のご飯 お友達いろいろ！</h2>
                 <p>エリア別検索ができます。</p>
@@ -124,16 +120,15 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section class="container">
             <div class="ttl_box">
-                <h2>条件を指定してご飯のお供を探す！</h2>
+                <h2>条件指定でご飯のお供を探す！</h2>
                 <p>細かく条件を設定して調べられます。</p>
             </div>
-            <div class="area_btn">
+            <div class="area_btn1">
                 <!-- クラス名これで合ってますか？↓↓↓ 合っています-->
-                <a href="<?php echo home_url('/?s= /') ?>" class="btn btn-border-shadow btn-border-shadow--color">詳細検索は<br>こちらから！</a>
+                <a href="<?php echo home_url('/?s= /') ?>" class="btn btn-border-shadow btn-border-shadow--color">詳細検索</a>
             </div>
-
         </section>
 
 
@@ -209,13 +204,11 @@
                 </div>
             </div>
             <div>
-                <!-- クラス名これで合ってますか？ 合っています-->
                 <a href="<?php echo home_url('/maker_type/m_east/') ?>" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
             </div>
         </section>
 
         <!-- コラム -->
-
         <section class="container">
             <div class="ttl_box">
                 <h2>コラム</h2>
@@ -228,14 +221,6 @@
                     'posts_per_page' => 2,
                     'orderby'       => 'rand',   // ランダム表示
                 ];
-                /*
-                            $taxquerysp = ['relation' => 'AND'];
-                            $taxquerysp[] = [
-                                'taxonomy' => 'menu',
-                                'terms' => $menu->slug,
-                                'field' => 'slug',
-                            ];
-                            */
                 $the_query = new WP_Query($args);
 
                 if ($the_query->have_posts()): ?>
@@ -274,15 +259,14 @@
             </div>
         </section>
 
-
         <!-- アレンジレシピ -->
-        <section class="container recipe_container">
+        <section class="container">
             <div class="ttl_box">
                 <h2>アレンジレシピ</h2>
                 <p>🎵ごはんのお供を使ったアレンジレシピです🎶</p>
             </div>
 
-            <ul class="page_list">
+            <ul class="list">
                 <?php
                 $args = [
                     'post_type' => 'recipe', // メニューの投稿タイプ
@@ -323,10 +307,11 @@
                     echo '<p>投稿が見つかりませんでした。</p>';
                 endif;
                 ?>
-                <div>
-                    <a href="<?php echo home_url('/recipe/') ?>" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
-                </div>
+
             </ul>
+            <div>
+                <a href="<?php echo home_url('/recipe/') ?>" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
+            </div>
         </section>
 
         <!-- インスタ -->
@@ -346,7 +331,7 @@
             </div>
         </section>
         <!-- ダミーバナー広告あとで消す -->
-        <p style="text-align: center;">バナー広告</p>
+        <!-- <p style="text-align: center;">バナー広告</p> -->
 
         <div>
 
@@ -354,50 +339,11 @@
                 <li><a href=""><img src="<?php echo get_template_directory_uri(); ?>/uploads/banner_sample1.jpg" alt="バナー"></a></li>
                 <li><a href=""><img src="<?php echo get_template_directory_uri(); ?>/uploads/banner_sample2.jpg" alt="バナー"></a></li>
                 <li><a href=""><img src="<?php echo get_template_directory_uri(); ?>/uploads/banner_sample3.jpg" alt="バナー"></a></li>
+                <li><a href=""><img src="<?php echo get_template_directory_uri(); ?>/uploads/banner_sample3.jpg" alt="バナー"></a></li>
             </ul>
         </div>
     </div>
 
-    <!-- すだちくん -->
-    <!-- js -->
-    <div class="sudachi_trivia foot_scroll">
-        <div class="sudachi_commentset fukidashi_animation">
-            <img class="sudachi_commentbox" src="<?php echo get_template_directory_uri(); ?>/assets/images/fukidashi_kai5.png" alt="すだちくん吹き出し">
-
-
-            <?php
-            $args = [
-                'post_type' => 'sudachikun', // メニューの投稿タイプ
-                'posts_per_page' => 1,
-                'orderby'        => 'rand',   // ランダム表示
-            ];
-            /*
-                            $taxquerysp = ['relation' => 'AND'];
-                            $taxquerysp[] = [
-                                'taxonomy' => 'menu',
-                                'terms' => $menu->slug,
-                                'field' => 'slug',
-                            ];
-                            */
-            $the_query = new WP_Query($args);
-
-            if ($the_query->have_posts()): ?>
-                <?php while ($the_query->have_posts()): $the_query->the_post() ?>
-                    <p id="sudachi_comment" class="sudachi_comment">
-                        <?php the_field('com'); ?></p>
-
-
-            <?php endwhile;
-                wp_reset_postdata(); // リセット
-            else :
-                echo '<p>投稿が見つかりませんでした。</p>';
-            endif;
-            ?>
-        </div>
-
-    </div>
-
-    <img id="sudachi" class="sudachi" src="<?php echo get_template_directory_uri(); ?>/assets/images/sudachi-kun1.png" alt="すだちくん">
 </main>
 
 <?php get_footer(); ?>

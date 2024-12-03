@@ -106,7 +106,7 @@
             </section>
 
             <!-- idに紐づけた商品 -->
-            <section class="goods_used">
+            <!-- <section class="goods_used">
                 <h2>使ったお供</h2>
                 <ul class="flex_use_goods">
                     <li>
@@ -119,6 +119,55 @@
                         </a>
                     </li>
                 </ul>
+            </section> -->
+            <section class="rcmd_box">
+                <h3 class="rcmd_b3"><span>関連商品</span></h3>
+                <ul class="rcmd_good">
+                    <?php
+                    // 現在のレシピ投稿のカスタムフィールド 'product_id' を取得
+                    $product_ids = get_field('product_id');
+
+                    // $product_ids が配列か単一IDかをチェック
+                    if ($product_ids) {
+                        // 配列でない場合に配列化
+                        $product_ids = is_array($product_ids) ? $product_ids : [$product_ids];
+
+                        // WP_Queryの設定
+                        $args = [
+                            'post_type' => 'product',        // 商品のカスタム投稿タイプ
+                            'post__in' => $product_ids,     // 指定したIDに基づいて投稿を取得
+                            'posts_per_page' => -1,         // 全件取得
+                        ];
+
+                        $the_query = new WP_Query($args);
+
+                        if ($the_query->have_posts()):
+                            while ($the_query->have_posts()): $the_query->the_post(); ?>
+                                <li>
+                                    <div class="box_syohin">
+                                        <a href="<?php the_permalink(); ?>">
+                                            <!-- アイキャッチ画像 -->
+                                            <?php
+                                            $pic = get_field('pic1');
+                                            $pic_url = $pic ? $pic['sizes']['thumbnail'] : 'path/to/default/image.jpg';
+                                            ?>
+                                            <img src="<?php echo esc_url($pic_url); ?>" alt="関連商品">
+                                            <!-- 商品名 -->
+                                            <h3 class="name_syokuhin"><?php the_title(); ?></h3>
+                                        </a>
+                                    </div>
+                                </li>
+                            <?php endwhile;
+                            wp_reset_postdata();
+                        else: ?>
+                            <p>関連する商品が見つかりませんでした。</p>
+                        <?php endif;
+                    } else { ?>
+                        <p>関連する商品が登録されていません。</p>
+                    <?php } ?>
+                </ul>
+            </section>
+
 
     </div>
 </main>

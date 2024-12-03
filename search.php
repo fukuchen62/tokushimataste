@@ -2,60 +2,10 @@
 <?php get_header(); ?>
 <!-- ページのヘッダーを読み込む End-->
 <main>
-    <section class="section">
 
-        <!-- searchform.phpを読み込む -->
-        <?php get_search_form(); ?>
+    <!-- searchform.phpを読み込む -->
+    <?php get_search_form(); ?>
 
-
-        <div class="section_inner">
-            <div class="section_header">
-                <h1 class="heading heading-primary"><span>サイト内検索</span>SEARCH</h1>
-            </div>
-
-            <div class="section_body">
-                <ul class="foodList">
-                    <?php /*
-                    // メニューの投稿タイプ
-                    $args = [
-                        'post_type' => 'food',
-                        'post_per_page' => -1,
-                    ];
-                    $taxquerysp = ['relation' => 'AND'];
-                    $taxquerysp[] = [
-                        'taxonomy' => 'menu',
-                        'terms' => $menu->slug,
-                        'field' => 'slug',
-                    ];
-                    $args['tax_query'] = $taxqerysp;
-                    $the_query = new WP_Query($args);
-                    if ($the_query->have_posts()): ?>
-                        <div class="section_desc">
-                            <p><i class="fas fa-search"></i> 検索ワード「<?php the_search_query(); ?>」</p>
-                        </div>
-
-                        <div class="cardList">
-                            <?php while ($the_Query->have_posts()): $the_Query->the_post(); ?>
-                                <?php get_template_part('template-parts/loop', 'test'); ?>
-                            <?php endwhile; ?>
-                            <?php wp_reset_postdata() ?>
-                        </div>
-                    <?php else: ?>
-                        <div class="section_desc">
-                            <p>検索結果はありませんでした</p>
-                        </div>
-                    <?php endif; ?>
-
-                    <?php if (function_exists('wp_pagenavi')): ?>
-                        <div class="pagination">
-                            <?php wp_pagenavi(); ?>
-                        </div>
-                    <?php endif; */ ?>
-                </ul>
-            </div>
-
-        </div>
-    </section>
 
 
     <?php
@@ -171,31 +121,30 @@
         //     echo ('</pre>');
         // }
         ?>
-    <div class="card-container">
-        <div class="inner">
-            <?php //インナー入れておきました。
-            ?>
+    <div class="inner">
+        <div class="card-container">
+
+            <?php
+            ?><?php if ($the_query->have_posts()): ?>
+            <h2><?php echo $the_query->found_posts; ?>件見つかりました。</h2>
             <ul class="page_list">
-                <?php if ($the_query->have_posts()): ?>
-                    <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
-                        <li>
-                            <?php get_template_part('template-parts/loop', 'product'); ?>
-                        </li>
-                    <?php endwhile; ?>
-                    <?php wp_reset_postdata(); ?>
-                <?php else: ?>
-                    <div class="section_desc">
-                        <p>検索結果はありませんでした</p>
-                    </div>
-                <?php endif ?>
+                <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
+                    <?php get_template_part('template-parts/loop', 'product'); ?>
+                <?php endwhile; ?>
             </ul>
+            <?php wp_reset_postdata(); ?>
+        <?php else: ?>
+            <div class="section_desc">
+                <p>検索結果はありませんでした</p>
+            </div>
+        <?php endif ?>
         </div>
-        <!-- サブクエリを定義した時には、wp-pagenaviに反映させる -->
-        <?php if (function_exists('wp_pagenavi')) {
-            wp_pagenavi(['query' => $the_query]);
-        } ?>
-        <?php get_template_part('template-parts/pagination'); ?>
     </div>
+    <!-- サブクエリを定義した時には、wp-pagenaviに反映させる -->
+    <?php if (function_exists('wp_pagenavi')) {
+        wp_pagenavi(['query' => $the_query]);
+    } ?>
+    <?php get_template_part('template-parts/pagination'); ?>
 </main>
 <?php /*the_post_thumbnail('medium'); */ ?>
 <?php get_footer(); ?>

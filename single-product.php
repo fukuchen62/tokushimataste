@@ -110,13 +110,29 @@
                     </section>
                 <?php endif; ?>
             <?php endif; ?>
+            <div class="box_maker">
+                <a href="<?php echo get_permalink($m_id); ?>">
+                    <div class="box_intro">
+                        <?php
+                        $pic = get_field('pic1', $m_id);
+                        $pic_url = $pic ? $pic['sizes']['medium_large'] : '';
+                        ?>
+                        <?php if ($pic_url): ?>
+                            <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
+                        <?php endif; ?>
+                        <h3><?php the_title(); ?></h3>
+                        <p>住所:<?php the_field('address', $m_id); ?></p>
+                        <p>TEL:<?php the_field('tel', $m_id); ?></p>
+                        <p>営業時間：<?php the_field('business_hours', $m_id); ?></p>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
 
-
-    <div>
-        <!-- ここから山口実験追記 -->
-        <?php
+    <!-- <div> -->
+    <!-- ここから山口実験追記 -->
+    <?php /*
         // カスタムフィールド 'maker_id' に保存された投稿IDを取得
         $maker_id = get_field('maker_id');
 
@@ -134,9 +150,9 @@
 
             echo '<p>url: ' . esc_html(the_permalink($maker_id)) . '</p>';
             echo get_post_meta($maker_id, 'address', true);
-        }
-        ?>
-    </div>
+        }*/
+    ?>
+    <!-- </div> -->
 
 
 </main>

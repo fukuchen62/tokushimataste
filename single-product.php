@@ -150,25 +150,25 @@
 
     <!-- <div> -->
     <!-- ここから山口実験追記 -->
-    <?php /*
-        // カスタムフィールド 'maker_id' に保存された投稿IDを取得
-        $maker_id = get_field('maker_id');
+    <?php
+    //カスタムフィールド 'maker_id' に保存された投稿IDを取得
+    $maker_id = get_field('maker_id');
 
-        // maker_id から投稿データを取得
-        $maker_post = get_post($maker_id);
+    //maker_id から投稿データを取得
+    $maker_post = get_post($maker_id);
 
-        print_r($maker_post);
+    //print_r($maker_post);
 
-        if ($maker_post) {
-            // 投稿タイトル (maker_title) を取得
-            $maker_title = $maker_post->post_title;
+    if ($maker_post) {
+        //投稿タイトル (maker_title) を取得
+        $maker_title = $maker_post->post_title;
 
-            // 表示
-            echo '<p>メーカー名: ' . esc_html($maker_title) . '</p>';
+        //表示
+        echo '<p>メーカー名: ' . esc_html($maker_title) . '</p>';
 
-            echo '<p>url: ' . esc_html(the_permalink($maker_id)) . '</p>';
-            echo get_post_meta($maker_id, 'address', true);
-        }*/
+        echo '<p>url: ' . esc_html(the_permalink($maker_id)) . '</p>';
+        echo get_post_meta($maker_id, 'address', true);
+    }
     ?>
     <!-- </div> -->
 

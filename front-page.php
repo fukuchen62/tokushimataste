@@ -347,9 +347,9 @@
         </section>
         <!-- ダミーバナー広告あとで消す -->
         <p style="text-align: center;">バナー広告</p>
-        <!-- ここにインナーいりますか＿ -->
-        <div class="inner">
-            <!-- ここにインナーいりますか＿ -->
+
+        <div>
+
             <ul class="banner">
                 <li><a href=""><img src="<?php echo get_template_directory_uri(); ?>/uploads/banner_sample1.jpg" alt="バナー"></a></li>
                 <li><a href=""><img src="<?php echo get_template_directory_uri(); ?>/uploads/banner_sample2.jpg" alt="バナー"></a></li>

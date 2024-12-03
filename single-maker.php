@@ -139,8 +139,6 @@
             </section>
         </div>
 
-        <p>↓出力できたけどなんか微妙↓</p>
-
         <section class="rcmd_box">
             <h3 class="rcmd_b3"><span>オススメ商品</span></h3>
             <ul class="rcmd_good">
@@ -169,20 +167,24 @@
 
 
                                 <a href="<?php the_permalink(); ?>">
-                                    <div class="box_intro">
-                                        <!-- アイキャッチ画像 -->
-                                        <?php
-                                        $pic = get_field('pic1');
-                                        // $picが存在する場合のみURLを取得
-                                        $pic_url =  $pic['sizes']['thumbnail'];
-                                        ?>
-                                        <img src="<?php echo $pic_url; ?>" alt=" ご飯のお供">
 
-                                        <!-- 商品名 -->
-                                        <h3 class="intro_sbtitle"><?php the_title(); ?></h3>
+                                    <!-- アイキャッチ画像 -->
+                                    <?php
+                                    $pic = get_field('pic1');
+                                    // $picが存在する場合のみURLを取得
+                                    $pic_url =  $pic['sizes']['thumbnail'];
+                                    ?>
+                                    <img src="<?php echo $pic_url; ?>" alt=" ご飯のお供">
+
+                                    <!-- 商品名 -->
+                                    <h3 class="name_syokuhin"><?php the_title(); ?></h3>
+                                    <!-- *///// -->
+                                    <!-- この下のクラスをどうするか -->
+                                    <!-- *///// -->
+                                    <div class="card_syokuhin"></div>
 
 
-                                    </div>
+
                                 </a>
                         </li>
                     <?php endwhile;

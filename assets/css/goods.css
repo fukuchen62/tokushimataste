@@ -98,15 +98,14 @@
     line-height: 1;
     text-decoration: none;
     color: #000000;
-    font-size: 18px;
+    font-size: 1.8rem;
     border-radius: 5px;
     /* width: 250px; */
-    height: 40px;
+    height: 6rem;
     font-weight: bold;
     border: 2px dashed #000000;
     transition: 0.3s;
     background-color: #fbb126;
-
 }
 
 #goods:hover {
@@ -121,7 +120,7 @@
 }
 
 .card_goods {
-    padding: 0 10px;
+    padding: 10px 20px;
 }
 
 /* ジャンル検索ボタン */
@@ -198,15 +197,15 @@ ul {
     list-style: none;
 }
 
-
 .pagination {
     width: 70%;
     margin: 0 auto 50px;
-    font-size: 14px;
-    display: flex;
+    font-size: 1.6rem;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 5px;
+    justify-content: space-between;
+    gap: 5px; */
+    text-align: center;
 }
 
 .pagination .number {
@@ -232,9 +231,69 @@ ul {
     padding: 10px 0;
 }
 
+/* ページネーションの現在のページに「.active」クラスを付与して色を変える */
 .pagination .number>a.active {
     background-color: #1597CC;
     color: #fff;
+}
+
+/* コンテナ全体のスタイル */
+.wp-pagenavi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+/* 現在のページ */
+.wp-pagenavi .current {
+    background-color: #333;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* ページリンク */
+.wp-pagenavi a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.wp-pagenavi a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* 前後のリンク */
+.wp-pagenavi .previouspostslink,
+.wp-pagenavi .nextpostslink {
+    font-weight: bold;
+}
+
+/* 非アクティブ状態のリンク (必要に応じて) */
+.wp-pagenavi .pages {
+    color: #666;
+    margin-right: 10px;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    .wp-pagenavi {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .wp-pagenavi a, .wp-pagenavi .current {
+        padding: 5px 8px;
+        font-size: 0.9rem;
+    }
 }
 
 /* ページングで表示するコンテンツのスタイル
@@ -251,12 +310,7 @@ ul {
     display: block;
 }
 
-/* ページネーションの現在のページに「.active」クラスを付与して色を変える */
 
-.pagination .number>a.active {
-    background-color: #1597CC;
-    color: #fff;
-}
 
 /* ココから先は見た目のスタイルなのであまり重要ではありません。
 　　自由にデザインなど変更して貰えればと思います。 */
@@ -270,38 +324,6 @@ ul {
     margin: 0.3em 0;
 }
 
-.pagination {
-    width: 70%;
-    margin: 0 auto 50px;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-}
-
-.pagination .number {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 5px;
-}
-
-.pagination a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    background-color: #ffffff;
-    border: solid 1px #1597CC;
-    border-radius: 5px;
-    padding: 10px 0;
-}
 
 .img-fluid {
     width: 320px;

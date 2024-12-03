@@ -361,6 +361,13 @@ function my_pre_get_posts($query)
         $query->set('posts_per_page', 6);
         $query->set('post_status', 'publish');
     }
+
+    // 自作ページネーション用に全件を表示する
+    if ($query->is_tax('product_type')) {
+        $query->set('post_type', 'product');
+        $query->set('posts_per_page', 6);
+        $query->set('post_status', 'publish');
+    }
 }
 add_action('pre_get_posts', 'my_pre_get_posts');
 

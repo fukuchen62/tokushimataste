@@ -131,7 +131,7 @@
             </div>
             <div class="area_btn">
                 <!-- クラス名これで合ってますか？↓↓↓ -->
-                <a href="<?php echo home_url('/area/east/') ?>" class="btn btn-border-shadow btn-border-shadow--color">詳細検索は<br>こちらから！</a>
+                <a href="<?php echo home_url('/?s= /') ?>" class="btn btn-border-shadow btn-border-shadow--color">詳細検索は<br>こちらから！</a>
             </div>
 
         </section>
@@ -169,6 +169,35 @@
                                         <img src="<?php echo $pic_url; ?>" alt="">
                                         <!-- <p><?php //the_field('company');
                                                 ?></p> -->
+                                    </a>
+                                </li>
+                        <?php
+                            endwhile;
+                            wp_reset_postdata(); // クエリをリセット
+                        endif;
+                        ?>
+                    </ul>
+                    <ul class="scroll-infinity__list scroll-infinity__list--left1">
+
+                        <?php
+                        $args = [
+                            'post_type'      => 'maker', // カスタム投稿タイプ
+                            'posts_per_page' => 6,            // 表示する投稿数
+                            'orderby'        => 'rand',       // ランダム順
+                        ];
+                        // WP_Queryのインスタンスを作成
+                        $the_query = new WP_Query($args);
+                        if ($the_query->have_posts()): ?>
+                            <?php while ($the_query->have_posts()): $the_query->the_post() ?>
+
+                                <li class="scroll-infinity__item1">
+                                    <a href="<?php the_permalink(); ?>">
+                                        <?php
+                                        $pic = get_field('pic1');
+                                        // $picが存在する場合のみURLを取得
+                                        $pic_url =  $pic['sizes']['thumbnail'];
+                                        ?>
+                                        <img src="<?php echo $pic_url; ?>" alt="">
                                     </a>
                                 </li>
                         <?php

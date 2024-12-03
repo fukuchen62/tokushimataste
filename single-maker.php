@@ -162,8 +162,7 @@
                 if ($the_query->have_posts()):
                     while ($the_query->have_posts()): $the_query->the_post(); ?>
                         <li>
-                            <a href="good_detail_ba.html" class="box_syohin">
-
+                            <div class="box_syohin">
 
 
                                 <a href="<?php the_permalink(); ?>">
@@ -178,14 +177,8 @@
 
                                     <!-- 商品名 -->
                                     <h3 class="name_syokuhin"><?php the_title(); ?></h3>
-                                    <!-- *///// -->
-                                    <!-- この下のクラスをどうするか -->
-                                    <!-- *///// -->
-                                    <div class="card_syokuhin"></div>
-
-
-
                                 </a>
+                            </div>
                         </li>
                     <?php endwhile;
                     wp_reset_postdata();

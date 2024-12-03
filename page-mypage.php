@@ -54,7 +54,7 @@
                                     <!-- カード内情報 -->
                                     <?php
                                     $pic = get_field('pic1');
-                                    $pic_url = $pic ? $pic['sizes']['medium_large'] : '';
+                                    $pic_url = $pic ? $pic['sizes']['medium'] : '';
                                     ?>
                                     <?php if ($pic_url): ?>
                                         <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
@@ -79,6 +79,9 @@
                 </a>
             </div>
         </section>
+
+        <!-- 区切り線のhr -->
+        <hr>
 
         <!-- ２つ目のカテゴリのカード群 -->
         <section>
@@ -106,7 +109,7 @@
                             <?php if ($the_query->have_posts()) : ?>
                                 <?php while ($the_query->have_posts()) :  $the_query->the_post(); ?>
                                     <?php if (has_post_thumbnail()) : ?>
-                                        <?php the_post_thumbnail("medium"); ?>
+                                        <?php the_post_thumbnail("thumbnail"); ?>
                                     <?php else : ?>
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/noimage.png" alt="">
                                     <?php endif; ?>
@@ -129,6 +132,9 @@
                 </a>
             </div>
         </section>
+
+        <!-- 区切り線のhr -->
+        <hr>
 
         <!-- ３つ目のカテゴリのカード群 -->
         <section>

@@ -130,7 +130,7 @@
                 <p>細かく条件を設定して調べられます。</p>
             </div>
             <div class="area_btn">
-                <!-- クラス名これで合ってますか？↓↓↓ -->
+                <!-- クラス名これで合ってますか？↓↓↓ 合っています-->
                 <a href="<?php echo home_url('/?s= /') ?>" class="btn btn-border-shadow btn-border-shadow--color">詳細検索は<br>こちらから！</a>
             </div>
 
@@ -209,7 +209,7 @@
                 </div>
             </div>
             <div>
-                <!-- クラス名これで合ってますか？ -->
+                <!-- クラス名これで合ってますか？ 合っています-->
                 <a href="<?php echo home_url('/maker_type/m_east/') ?>" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
             </div>
         </section>

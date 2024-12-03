@@ -272,3 +272,10 @@ li.cat-item a::after {
 	flex-wrap: wrap;
 	justify-content: space-around;
 }
+
+/* おすすめ */
+.rmcd_col_flex {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}

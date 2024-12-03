@@ -109,12 +109,12 @@
                                             <!-- カード内情報 -->
                                             <?php
                                             $pic = get_field('pic1');
-                                            $pic_url = $pic ? $pic['sizes']['thumbnail'] : '';
+                                            $pic_url = $pic ? $pic['sizes']['medium'] : '';
                                             ?>
                                             <?php if ($pic_url): ?>
                                                 <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
                                             <?php endif; ?>
-                                            <p><?php the_field("product_name"); ?>
+                                            <p><?php the_field("recipe_name"); ?>
                                             </p>
                                             <p><?php //the_field("");
                                                 ?></p>

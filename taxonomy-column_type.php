@@ -21,7 +21,7 @@
                         <?php while (have_posts()) : the_post(); ?>
 
                             <li>
-                                <a href="<?php get_template_directory_uri(); ?>/html/column_detail.html">
+                                <a href="<?php the_permalink(); ?>">
                                     <div class="box_intro">
                                         <?php get_template_part('template-parts/loop', 'column'); ?>
 

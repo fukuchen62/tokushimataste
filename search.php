@@ -141,9 +141,10 @@
         </div>
     </div>
     <!-- サブクエリを定義した時には、wp-pagenaviに反映させる -->
-    <?php if (function_exists('wp_pagenavi')) {
-        wp_pagenavi(['query' => $the_query]);
-    } ?>
+    <?php //if (function_exists('wp_pagenavi')) {
+    // wp_pagenavi(['query' => $the_query]);
+    //}
+    ?>
     <?php get_template_part('template-parts/pagination'); ?>
 </main>
 <?php /*the_post_thumbnail('medium'); */ ?>
@@ -245,11 +246,6 @@
 
     /* ココから先は見た目のスタイルなのであまり重要ではありません。
 　　自由にデザインなど変更して貰えればと思います。 */
-
-    .page_list {
-        /* border-top: 1px solid #000; */
-        margin-bottom: 20px;
-    }
 
     .page_list p {
         margin: 0.3em 0;

@@ -244,7 +244,7 @@ function add_style_script()
         wp_enqueue_style(
             'my_mypage',
             get_template_directory_uri() .
-                PATH . 'css/goods.css'
+                PATH . 'css/favorite.css'
         );
     } elseif (is_page('about')) {
         // page-about.php

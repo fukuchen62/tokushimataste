@@ -326,7 +326,9 @@ a {
     height: 60px;
     border-bottom: solid #9b9b9c;
     font-size: 1.8rem;
-    font-weight: 200;
+    /* font-weight: 200; */
+    /* 山口追記 */
+    font-weight: bold;
     display: grid;
     place-content: center;
     margin: 0;

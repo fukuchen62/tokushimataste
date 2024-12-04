@@ -2,7 +2,7 @@
     <a href="<?php the_permalink(); ?>" class="box_otomo">
         <?php
         $pic = get_field('pic1');
-        $pic_url = $pic['sizes']['large'];
+        $pic_url = $pic['sizes']['medium'];
         ?>
         <img src="<?php echo $pic_url; ?>" alt="Image" class="img-fluid"><br>
         <div id="goods"><?php the_title() ?></div>

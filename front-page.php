@@ -236,7 +236,7 @@
                                         <?php endif; ?>
 
                                     </div>
-                                    <h3><?php the_title(); ?></h3>
+                                    <h3 class="intro_sbtitle"><?php the_title(); ?></h3>
                                     <!-- 50文字で切る -->
                                     <?php
                                     $trimmed_excerpt = wp_trim_words(get_the_excerpt(), 50, '...');

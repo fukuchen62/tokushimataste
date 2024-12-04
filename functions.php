@@ -185,7 +185,7 @@ function add_style_script()
             '',
             true
         );
-    } elseif (is_post_type_archive('recipe') || is_tax('recipe_type')) {
+    } elseif (is_post_type_archive('recipe') || is_tax('recipe_type') || is_singular('recipe')) {
         wp_enqueue_style(
             'my_recipe_list_style',
             get_template_directory_uri() .
@@ -198,12 +198,6 @@ function add_style_script()
             ['jquery'],
             '',
             true
-        );
-    } elseif (is_singular('recipe')) {
-        wp_enqueue_style(
-            'my_recipe_style',
-            get_template_directory_uri() .
-                PATH . 'css/recipe.css',
         );
     } elseif (is_post_type_archive('product') || is_tax('product_type') || is_tax('area')) {
         wp_enqueue_style(

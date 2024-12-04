@@ -132,10 +132,12 @@
                     <th>営業時間</th>
                     <td><?php the_field('business_hours') ?></td>
                 </tr>
-                <tr>
-                    <th>会社のHP</th>
-                    <td><?php the_field('url') ?></td>
-                </tr>
+                <?php if (!empty(get_field('url'))): ?>
+                    <tr>
+                        <th>会社のHP</th>
+                        <td><a href="<?php the_field('url') ?>"><?php the_field('url') ?></a></td>
+                    </tr>
+                <?php endif ?>
                 <tr>
                     <td colspan="2">
                         <p><small>※お問い合わせは営業時間内でお願いします。</small></p>

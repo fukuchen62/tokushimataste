@@ -146,7 +146,7 @@ function add_style_script()
         /*|| is_post_type_archive('classroom')*/) {
         //条件検索CSS
         wp_enqueue_style('my_search', get_template_directory_uri() . PATH . 'css/search.css');
-        // wp_enqueue_style('my_searchpopup_css', get_template_directory_uri() . PATH . 'css/searchpopup.css');
+        wp_enqueue_style('my_goods_css', get_template_directory_uri() . PATH . 'css/goods.css');
 
         // wp_enqueue_script(
         //     'my_searchpopup-js',
@@ -336,12 +336,12 @@ function my_pre_get_posts($query)
     //     return;
     // }
 
-    //search画面で、指定投稿タイプ
-    // if ($query->is_search() || is_post_type_archive('classroom')) {
-    //     $query->set('post_type', 'classroom');
-    //     $query->set('posts_per_page', 6);
-    //     return;
-    // }
+    // search画面で、指定投稿タイプ
+    if ($query->is_search()) {
+        $query->set('post_type', 'product');
+        $query->set('posts_per_page', 6);
+        $query->set('post_status', 'publish');
+    }
 
     // コラム記事または、コラムのタクソノミーの一覧画面
     // if ($query->is_post_type_archive('column') || $query->is_tax('column_type')) {

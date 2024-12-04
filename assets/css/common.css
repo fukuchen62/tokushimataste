@@ -330,7 +330,8 @@ a {
     display: grid;
     place-content: center;
     margin: 0;
-    text-align: center;
+    /* text-align: center; */
+    /* 12.4消しました */
 }
 
 .box_intro p {
@@ -519,7 +520,8 @@ a {
         gap: 5px;
     }
 
-    .wp-pagenavi a, .wp-pagenavi .current {
+    .wp-pagenavi a,
+    .wp-pagenavi .current {
         padding: 5px 8px;
         font-size: 0.9rem;
     }

@@ -415,3 +415,99 @@ function my_wpcf7_autop()
 add_action('widgets_init', function () {
     register_sidebar();
 });
+
+
+
+// パンくずリストの再構成をする
+add_action('bcn_after_fill', 'change_breadcrumbs');
+function change_breadcrumbs($bcnObj)
+{
+    $postBread = $bcnObj->trail[0];
+    $topBread = $bcnObj->trail[count($bcnObj->trail) - 1];
+    // 投稿詳細ページかどうか
+    if (is_singular('product')) {
+        // パンくずリストに「カテゴリーB」が含まれる場合、パンくずリストを作り直す
+        // $isHit = false;
+        // foreach ($bcnObj->trail as $bread) {
+        //     if ($bread->get_title() == "カテゴリーB") {
+        //         $isHit = true;
+        //         break;
+        //     }
+        // }
+
+        // if ($isHit) {
+        // 最初の要素(投稿タイトル)と最後の要素(TOPページ)を取得する
+
+
+        // パンくずリストをいったんすべて削除
+        array_splice($bcnObj->trail, 0);
+
+        // 投稿のカテゴリーのデータを取得
+        // $categories = get_the_category();
+        // $cat = null;
+        // foreach ($categories as $category) {
+        //     // カテゴリーB以外を取得
+        //     if ($category->taxonomy === "area") {
+        //         $cat = $category;
+        //         break;
+        //     }
+        // }
+
+        // パンくずリストに投稿タイトルを追加
+        array_push($bcnObj->trail, $postBread);
+
+
+        $p_single_slug = wp_get_post_terms(get_the_ID(), 'area');
+
+        // カテゴリーをパンくずリストに追加
+        // if ($cat) {
+        $breadcrumb = new bcn_breadcrumb(
+            $p_single_slug[0]->name,
+            null,
+            /*投稿タイプを指定する */
+            array('taxonomy'),
+            get_term_link($p_single_slug[0]->slug, 'area'),
+            null,
+            /*リンクをつける */
+            true
+        );
+        $bcnObj->add($breadcrumb);
+        // }
+
+        // パンくずリストにTOPページを追加
+        array_push($bcnObj->trail, $topBread);
+    } elseif (is_singular('maker')) {
+
+        // パンくずリストをいったんすべて削除
+        array_splice($bcnObj->trail, 0);
+        // パンくずリストに投稿タイトルを追加
+        array_push($bcnObj->trail, $postBread);
+
+
+        $m_single_slug = wp_get_post_terms(get_the_ID(), 'maker_type');
+
+        $breadcrumb = new bcn_breadcrumb(
+            $m_single_slug[0]->name,
+            null,
+            /*投稿タイプを指定する */
+            array('taxonomy'),
+            get_term_link($m_single_slug[0]->slug, 'maker_type'),
+            null,
+            /*リンクをつける */
+            true
+        );
+        $bcnObj->add($breadcrumb);
+
+        // パンくずリストにTOPページを追加
+        array_push($bcnObj->trail, $topBread);
+    }
+    // }
+    elseif (is_tax('maker_type') || is_tax('product_type') || is_tax('area')) {
+        // パンくずリストをいったんすべて削除
+        array_splice($bcnObj->trail, 0);
+        // パンくずリストに投稿タイトルを追加
+        array_push($bcnObj->trail, $postBread);
+        // パンくずリストにTOPページを追加
+        array_push($bcnObj->trail, $topBread);
+    }
+}

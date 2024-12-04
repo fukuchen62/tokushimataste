@@ -296,10 +296,14 @@ img {
     gap: 20px;
 }
 
+
+
 .rcmd_b3 {
     font-size: 2rem;
-    margin-top: 80px;
-    margin-bottom: 30px;
+    /* margin-top: 80px; */
+    /* margin-bottom: 30px; */
+    margin: 50px auto 30px;
+    /* 中央寄せ山口追記 */
     border-bottom: dotted 5px DarkOrange;
     ;
     width: fit-content;

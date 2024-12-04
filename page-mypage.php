@@ -11,10 +11,6 @@
             <p>Cookieの削除に伴いブックマークした情報も削除されます。</p>
         </div>
 
-        <p>元HTML</p>
-
-        <p>ここまで</p>
-
         <!-- １つ目のカテゴリのカード群 -->
         <section>
             <div class="ttl_box_fv">

@@ -1,39 +1,36 @@
 <footer>
-    <!-- すだちくん -->
-    <!-- js -->
-    <script>
-    // すだちくん配列
-    var mames = [];
-    </script>
-
-
     <div class="sudachi_trivia foot_scroll">
         <div class="sudachi_commentset fukidashi_animation">
             <img class="sudachi_commentbox" src="<?php echo get_template_directory_uri(); ?>/assets/images/fukidashi_kai5.png" alt="すだちくん吹き出し">
 
             <?php
+            $msgs;
             $args = [
                 'post_type' => 'sudachikun', // メニューの投稿タイプ
                 'posts_per_page' => -1,
                 'orderby'        => 'rand',   // ランダム表示
             ];
-
             $the_query = new WP_Query($args);
+            if ($the_query->have_posts()) {
+                while ($the_query->have_posts()) {
+                    $the_query->the_post();
+                    $msgs[] = get_field('com');
+                }
+            }
+            wp_reset_postdata();
+
             ?>
-            <?php if ($the_query->have_posts()): ?>
-            <script>
-            <?php while ($the_query->have_posts()): ?>
-            <?php $the_query->the_post() ?>
 
-            mames.push("<?php echo get_field('com'); ?>");
-
-            <?php endwhile; ?>
-            </script>
-            <?php wp_reset_postdata(); ?>
-            <?php endif; ?>
+            <!-- コメント出力 -->
+            <p id="sudachi_comment" class="sudachi_comment"></p>
         </div>
-        <p id="sudachi_comment" class="sudachi_comment"></p>
+
     </div>
+
+    <script>
+    mames = <?php echo json_encode($msgs); ?>;
+    console.log(mames[0]);
+    </script>
 
     <!-- すだちくん -->
     <div>

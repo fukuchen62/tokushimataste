@@ -76,7 +76,10 @@ if (is_post_type_archive('product') || is_tax('product_type')) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="<?php echo $page_description; ?>">
     <meta name="keywords" content="徳島,おとも,ご飯のおとも,徳島の味">
-
+    <script>
+    // すだちくん配列
+    var mames = [];
+    </script>
     <?php wp_head(); ?>
 </head>
 
@@ -84,31 +87,31 @@ if (is_post_type_archive('product') || is_tax('product_type')) {
     <?php wp_body_open(); ?>
     <header>
         <?php if (is_home()): ?>
-            <!-- トップページのKV -->
-            <div class="kv">
-                <!-- ブログインフォを改行するコード -->
-                <?php
+        <!-- トップページのKV -->
+        <div class="kv">
+            <!-- ブログインフォを改行するコード -->
+            <?php
                 $site_name = get_bloginfo('name');
                 // 改行を動的に挿入（任意のキーワードで分割する）
                 $site_name = str_replace('の味！', 'の味！<br class="tb-none">', $site_name);
                 $site_name = str_replace('ご飯の', 'ご飯の<br class="tb-none">', $site_name);
                 $site_name = str_replace('お友達', 'お友達<br class="tb-none">', $site_name);
                 ?>
-                <p class="kv-copy">
+            <p class="kv-copy">
                     <?php echo wp_kses_post($site_name); ?>
                 </p>
-            </div>
+        </div>
         <?php else: ?>
-            <!-- 下層ページのKV -->
-            <div class="kvsub">
-                <script>
-                    // 下層ページの帯の画像を設定
-                    $('.kvsub').css('background-image', 'url("<?php echo $img_path; ?>")');
-                </script>
-                <h2 class="kv-copy-sub">
+        <!-- 下層ページのKV -->
+        <div class="kvsub">
+            <script>
+            // 下層ページの帯の画像を設定
+            $('.kvsub').css('background-image', 'url("<?php echo $img_path; ?>")');
+            </script>
+            <h2 class="kv-copy-sub">
                     <?php echo $page_tile; ?>
                 </h2>
-            </div>
+        </div>
         <?php endif; ?>
 
         <!-- spnav -->

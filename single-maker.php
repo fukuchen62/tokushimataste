@@ -14,53 +14,77 @@
                 <div class="slider_ms">
                     <div class="slick_img">
                         <?php
-                        $post_id = get_the_ID(); // 現在の投稿IDを取得
-                        $pic1 = get_post_meta($post_id, 'pic1', true);
+                        $pic = get_field('pic1');
+                        $pic_url = $pic ? $pic['sizes']['thumbnail'] : '';
                         ?>
+                        <?php if ($pic_url): ?>
+                            <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
+                        <?php endif; ?>
                     </div>
                     <div class="slick_img">
                         <?php
-                        $post_id = get_the_ID(); // 現在の投稿IDを取得
-                        $pic2 = get_post_meta($post_id, 'pic2', true);
+                        $pic = get_field('pic2');
+                        $pic_url = $pic ? $pic['sizes']['thumbnail'] : '';
                         ?>
+                        <?php if ($pic_url): ?>
+                            <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
+                        <?php endif; ?>
                     </div>
                     <div class="slick_img">
                         <?php
-                        $post_id = get_the_ID(); // 現在の投稿IDを取得
-                        $pic3 = get_post_meta($post_id, 'pic3', true);
+                        $pic = get_field('pic3');
+                        $pic_url = $pic ? $pic['sizes']['thumbnail'] : '';
                         ?>
+                        <?php if ($pic_url): ?>
+                            <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
+                        <?php endif; ?>
                     </div>
                     <div class="slick_img">
                         <?php
-                        $post_id = get_the_ID(); // 現在の投稿IDを取得
-                        $pic4 = get_post_meta($post_id, 'pic4', true);
+                        $pic = get_field('pic4');
+                        $pic_url = $pic ? $pic['sizes']['thumbnail'] : '';
                         ?>
+                        <?php if ($pic_url): ?>
+                            <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
+                        <?php endif; ?>
                     </div>
                 </div>
                 <div class="thumbnail_ms">
                     <div class="thumbnail_img">
                         <?php
-                        $post_id = get_the_ID(); // 現在の投稿IDを取得
-                        $pic1 = get_post_meta($post_id, 'pic1', true);
+                        $pic = get_field('pic1');
+                        $pic_url = $pic ? $pic['sizes']['thumbnail'] : '';
                         ?>
+                        <?php if ($pic_url): ?>
+                            <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
+                        <?php endif; ?>
                     </div>
                     <div class="thumbnail_img">
                         <?php
-                        $post_id = get_the_ID(); // 現在の投稿IDを取得
-                        $pic2 = get_post_meta($post_id, 'pic2', true);
+                        $pic = get_field('pic2');
+                        $pic_url = $pic ? $pic['sizes']['thumbnail'] : '';
                         ?>
+                        <?php if ($pic_url): ?>
+                            <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
+                        <?php endif; ?>
                     </div>
                     <div class="thumbnail_img">
                         <?php
-                        $post_id = get_the_ID(); // 現在の投稿IDを取得
-                        $pic3 = get_post_meta($post_id, 'pic3', true);
+                        $pic = get_field('pic3');
+                        $pic_url = $pic ? $pic['sizes']['thumbnail'] : '';
                         ?>
+                        <?php if ($pic_url): ?>
+                            <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
+                        <?php endif; ?>
                     </div>
                     <div class="thumbnail_img">
                         <?php
-                        $post_id = get_the_ID(); // 現在の投稿IDを取得
-                        $pic4 = get_post_meta($post_id, 'pic4', true);
+                        $pic = get_field('pic4');
+                        $pic_url = $pic ? $pic['sizes']['thumbnail'] : '';
                         ?>
+                        <?php if ($pic_url): ?>
+                            <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>

@@ -13,7 +13,9 @@
             $post_id = $wp_query->get_queried_object_id();
             echo get_favorites_button($post_id);
             ?>
-            <!-- お気に入りボタン追記 -->
+            <!-- いいねボタン追記12/5山口 -->
+
+            <?php echo do_shortcode('[wp_ulike]'); ?>
 
             <div class="goods_si_flex">
                 <?php $img = get_field('pic1');
@@ -88,6 +90,7 @@
                     <?php endif; ?>
                 </table>
             </div>
+
             <section class="memo_gs">
                 <h3 class=>キャッチフレーズ</h3>
                 <p><?php
@@ -122,6 +125,7 @@
                     <p><?php the_field('memo') ?></p>
                 </section>
             <?php endif ?>
+
 
             <?php if (!empty(get_field('maker_id'))): ?>
                 <!-- 仮でタイトルを入れています。デザインを確認しておいてください。 -->

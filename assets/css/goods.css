@@ -121,6 +121,8 @@
 
 .card_goods {
     padding: 10px 20px;
+    text-align: center;
+    /* 12/4グッズカード型地域、分類中央寄せ追記山口 */
 }
 
 /* ジャンル検索ボタン */

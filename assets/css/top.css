@@ -160,12 +160,16 @@ h2 {
 }
 
 .recipe_box p {
-    width: 98%;
+    /* width: 98%; */
     height: 6rem;
     margin: 0 auto;
     margin: 10px;
     padding: 5px;
-    text-align: left;
+    /* text-align: left; */
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    /* 12/4レシピカード内フォント編集山口 */
 }
 
 .recipe_box img {

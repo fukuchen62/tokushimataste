@@ -169,6 +169,7 @@
         </div>
 
         <section class="rcmd_box">
+            <!-- ↑このクラスcssに記述無 -->
             <h3 class="rcmd_b3"><span>オススメ商品</span></h3>
             <ul class="rcmd_good">
 

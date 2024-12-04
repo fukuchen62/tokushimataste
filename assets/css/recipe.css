@@ -132,17 +132,23 @@
 
 /* ４枚つづりのslick画像 */
 .container_rs {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.slider_rs img {
+    /* margin-bottom: 10px; */
     width: 100%;
+    height: 400px;
+    object-fit: cover;
 }
 
-.slider_rs {
-    margin-bottom: 10px;
-}
 
-img {
+
+/* img {
     height: auto;
     width: 100%;
-}
+} */
 
 .slick-prev {
     transform: translateX(40px);

@@ -200,16 +200,16 @@ ul {
 /* ページングで表示するコンテンツのスタイル
  初期表示は非表示 */
 .page_list li {
-    display: none;
+    /* display: none; */
     padding: 20px 0;
     /* border-bottom: 1px solid #000; */
     max-width: 320px;
 }
 
 /* onクラス添付で画面に表示 */
-.page_list li.on {
-    display: block;
-}
+/* .page_list li.on { */
+/* display: block; */
+/* } */
 
 
 
@@ -266,14 +266,14 @@ ul {
 }
 
 .page_list li {
-    display: none;
+    /* display: none; */
     padding: 20px 0;
     /* border-bottom: 1px solid #000; */
 }
 
-.page_list li.on {
+/* .page_list li.on {
     display: block;
-}
+} */
 
 
 /* area */

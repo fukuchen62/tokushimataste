@@ -1,8 +1,11 @@
 // 自定義のJSの変数や関数などを記載してください。
 
 "use strict";
-//  ハンバーガーボタンがクリックされたら発動
 
+// すっだちくんの変数
+let msgnum = 0; //出力メッセージの項番
+
+//  ハンバーガーボタンがクリックされたら発動
 $(function () {
     $('.hamburger').click(function () {
         $('.hamburger, .nav-sp-drawr').toggleClass('active');
@@ -285,16 +288,21 @@ $(document).ready(function () {
             $("#scroll").hide(); // 90%未満で要素を非表示
         }
     });
+
+    // メッセージを指定タグに出力
+    $("#sudachi").click(function () {
+        if (msgnum > mames.length) {
+            msgnum = 0;     //リセット
+        }
+        $("#sudachi_comment").text(mames[msgnum]);
+        msgnum++;
+    });
 });
 
-
 // すだちくんを押すと吹き出しが出て、もう一度押すと２秒かけて消える
-
 $(function () {
-
     // ボタンをクリックしたら発動
     $('.sudachi').click(function () {
-
         // 連打で暴走しないようにstop()も設定
         $('.sudachi_commentset').stop().slideToggle(-100);
         // すだちくんにクラス追加
@@ -308,83 +316,9 @@ $(function () {
 });
 
 
-
-$('.sudachi').clickToggle(function () {
-    //   // １回目のクリック
-    // $(".sudachi").animate({ "marginLeft": "+=60px", }, 500);
-    // $(".sudachi").animate({ "rotate": "0deg", }, 500);
-
-
-    // $(".sudachi").animate({ "marginLeft": "-=60px", }, 500);
-    // $(".sudachi").animate({ "rotate": "45deg", }, 500);
-
-}, function () {
-    //   // ２回目のクリック
-    // $(".sudachi").animate({ "marginLeft": "-=60px", }, 500);
-    // $(".sudachi").animate({ "rotate": "45deg", }, 500);
-
-    // $(".sudachi").animate({ "marginLeft": "+=60px", }, 500);
-    // $(".sudachi").animate({ "rotate": "0deg", }, 500);
-});
-
-// トップへ戻る
-
-// $(function () {
-//     var topBtn = $('#scroll');
-//     topBtn.hide();
-//     //スクロールが5000に達したらボタン表示
-//     $(window).scroll(function () {
-//         if ($(this).scrollTop() > 4500) {
-//             topBtn.fadeIn();
-//         } else {
-//             topBtn.fadeOut();
-//         }
-//     });
-// });
-
 $('#scroll').click(function () {
     $('body, html').animate({ scrollTop: 0 }, 500);
 });
-
-// // ページトップボタン
-// $(function () {
-//     const pageTop = $("#page-top");
-//     pageTop.hide();
-//     $(window).scroll(function () {
-//         if ($(this).scrollTop() > 5500) {
-//             pageTop.fadeIn();
-//         } else {
-//             pageTop.fadeOut();
-//         }
-//     });
-//     pageTop.click(function () {
-//         $("body,html").animate(
-//             {
-//                 scrollTop: 0,
-//             },
-//             100
-//         );
-//         return false;
-//     });
-//     // フッター手前でストップ
-//     $("#page-top").hide();
-//     $(window).on("scroll", function () {
-//         let scrollHeight = $(document).height();
-//         let scrollPosition = $(window).height() + $(window).scrollTop();
-//         let footHeight = $("footer").innerHeight();
-//         if (scrollHeight - scrollPosition <= footHeight) {
-//             $("#page-top").css({
-//                 position: "absolute",
-//                 bottom: footHeight,
-//             });
-//         } else {
-//             $("#page-top").css({
-//                 position: "fixed",
-//                 bottom: "0",
-//             });
-//         }
-//     });
-// });
 
 
 // let mames = [
@@ -428,5 +362,3 @@ function msgOutput() {
     let r = Math.floor(Math.random() * mames.length);
     document.getElementById("sudachi_comment").innerHTML = mames[r];
 }
-
-document.getElementById("sudachi").addEventListener("click", msgOutput);

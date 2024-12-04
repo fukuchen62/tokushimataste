@@ -39,18 +39,18 @@
                         // WP_Queryのインスタンスを作成
                         $the_query = new WP_Query($args);
                         if ($the_query->have_posts()): ?>
-                        <?php while ($the_query->have_posts()): $the_query->the_post() ?>
+                            <?php while ($the_query->have_posts()): $the_query->the_post() ?>
 
-                        <li class="scroll-infinity__item1">
-                            <a href="<?php the_permalink(); ?>">
-                                <?php
+                                <li class="scroll-infinity__item1">
+                                    <a href="<?php the_permalink(); ?>">
+                                        <?php
                                         $pic = get_field('pic1');
                                         // $picが存在する場合のみURLを取得
-                                        $pic_url =  $pic['sizes']['thumbnail'];
+                                        $pic_url =  $pic['sizes']['medium'];
                                         ?>
-                                <img src="<?php echo $pic_url; ?>" alt="">
-                            </a>
-                        </li>
+                                        <img src="<?php echo $pic_url; ?>" alt="">
+                                    </a>
+                                </li>
                         <?php
                             endwhile;
                             wp_reset_postdata(); // クエリをリセット
@@ -68,18 +68,18 @@
                         // WP_Queryのインスタンスを作成
                         $the_query = new WP_Query($args);
                         if ($the_query->have_posts()): ?>
-                        <?php while ($the_query->have_posts()): $the_query->the_post() ?>
+                            <?php while ($the_query->have_posts()): $the_query->the_post() ?>
 
-                        <li class="scroll-infinity__item1">
-                            <a href="<?php the_permalink(); ?>">
-                                <?php
+                                <li class="scroll-infinity__item1">
+                                    <a href="<?php the_permalink(); ?>">
+                                        <?php
                                         $pic = get_field('pic1');
                                         // $picが存在する場合のみURLを取得
-                                        $pic_url =  $pic['sizes']['thumbnail'];
+                                        $pic_url =  $pic['sizes']['medium'];
                                         ?>
-                                <img src="<?php echo $pic_url; ?>" alt="">
-                            </a>
-                        </li>
+                                        <img src="<?php echo $pic_url; ?>" alt="">
+                                    </a>
+                                </li>
                         <?php
                             endwhile;
                             wp_reset_postdata(); // クエリをリセット
@@ -153,19 +153,19 @@
                         $the_query = new WP_Query($args);
 
                         if ($the_query->have_posts()): ?>
-                        <?php while ($the_query->have_posts()): $the_query->the_post() ?>
-                        <li class="scroll-infinity__item">
-                            <a href="<?php the_permalink(); ?>">
-                                <?php
+                            <?php while ($the_query->have_posts()): $the_query->the_post() ?>
+                                <li class="scroll-infinity__item">
+                                    <a href="<?php the_permalink(); ?>">
+                                        <?php
                                         $pic = get_field('pic1');
                                         // $picが存在する場合のみURLを取得
-                                        $pic_url =  $pic['sizes']['thumbnail'];
+                                        $pic_url =  $pic['sizes']['medium'];
                                         ?>
-                                <img src="<?php echo $pic_url; ?>" alt="">
-                                <!-- <p><?php //the_field('company');
+                                        <img src="<?php echo $pic_url; ?>" alt="">
+                                        <!-- <p><?php //the_field('company');
                                                 ?></p> -->
-                            </a>
-                        </li>
+                                    </a>
+                                </li>
                         <?php
                             endwhile;
                             wp_reset_postdata(); // クエリをリセット
@@ -183,18 +183,18 @@
                         // WP_Queryのインスタンスを作成
                         $the_query = new WP_Query($args);
                         if ($the_query->have_posts()): ?>
-                        <?php while ($the_query->have_posts()): $the_query->the_post() ?>
+                            <?php while ($the_query->have_posts()): $the_query->the_post() ?>
 
-                        <li class="scroll-infinity__item1">
-                            <a href="<?php the_permalink(); ?>">
-                                <?php
+                                <li class="scroll-infinity__item1">
+                                    <a href="<?php the_permalink(); ?>">
+                                        <?php
                                         $pic = get_field('pic1');
                                         // $picが存在する場合のみURLを取得
-                                        $pic_url =  $pic['sizes']['thumbnail'];
+                                        $pic_url =  $pic['sizes']['medium'];
                                         ?>
-                                <img src="<?php echo $pic_url; ?>" alt="">
-                            </a>
-                        </li>
+                                        <img src="<?php echo $pic_url; ?>" alt="">
+                                    </a>
+                                </li>
                         <?php
                             endwhile;
                             wp_reset_postdata(); // クエリをリセット
@@ -224,27 +224,27 @@
                 $the_query = new WP_Query($args);
 
                 if ($the_query->have_posts()): ?>
-                <?php while ($the_query->have_posts()): $the_query->the_post() ?>
-                <li>
-                    <a href="<?php the_permalink(); ?>">
-                        <div class="box_intro">
-                            <div>
-                                <?php if (has_post_thumbnail()): ?>
-                                <?php the_post_thumbnail('medium'); ?>
-                                <?php else: ?>
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/noimage.png" alt="">
-                                <?php endif; ?>
-                            </div>
-                            <h3 class="intro_sbtitle"><?php the_title(); ?></h3>
-                            <!-- 50文字で切る -->
-                            <?php
+                    <?php while ($the_query->have_posts()): $the_query->the_post() ?>
+                        <li>
+                            <a href="<?php the_permalink(); ?>">
+                                <div class="box_intro">
+                                    <div>
+                                        <?php if (has_post_thumbnail()): ?>
+                                            <?php the_post_thumbnail('medium'); ?>
+                                        <?php else: ?>
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/noimage.png" alt="">
+                                        <?php endif; ?>
+                                    </div>
+                                    <h3 class="intro_sbtitle"><?php the_title(); ?></h3>
+                                    <!-- 50文字で切る -->
+                                    <?php
                                     $trimmed_excerpt = wp_trim_words(get_the_excerpt(), 50, '...');
                                     echo '<p>' . esc_html($trimmed_excerpt) . '</p>';
                                     ?>
 
-                        </div>
-                    </a>
-                </li>
+                                </div>
+                            </a>
+                        </li>
                 <?php endwhile;
                     wp_reset_postdata(); // リセット
                 else :
@@ -283,23 +283,23 @@
                 $the_query = new WP_Query($args);
 
                 if ($the_query->have_posts()): ?>
-                <?php while ($the_query->have_posts()): $the_query->the_post() ?>
-                <li>
-                    <a href="<?php the_permalink(); ?>">
-                        <div class="recipe_box">
-                            <?php
+                    <?php while ($the_query->have_posts()): $the_query->the_post() ?>
+                        <li>
+                            <a href="<?php the_permalink(); ?>">
+                                <div class="recipe_box">
+                                    <?php
                                     $pic = get_field('pic1');
                                     // $picが存在する場合のみURLを取得
                                     $pic_url =  $pic['sizes']['medium'];
                                     ?>
-                            <img src="<?php echo $pic_url; ?>" alt="Image" class="img-fluid">
-                            <!-- <img src="../uploads/furikake.jpeg" alt="Image" class="img-fluid"> -->
+                                    <img src="<?php echo $pic_url; ?>" alt="Image" class="img-fluid">
+                                    <!-- <img src="../uploads/furikake.jpeg" alt="Image" class="img-fluid"> -->
 
-                            <p><?php the_title(); ?></p>
+                                    <p><?php the_title(); ?></p>
 
-                        </div>
-                    </a>
-                </li>
+                                </div>
+                            </a>
+                        </li>
                 <?php endwhile;
                     wp_reset_postdata(); // リセット
                 else :

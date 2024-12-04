@@ -421,3 +421,38 @@ function my_wpcf7_autop()
 add_action('widgets_init', function () {
     register_sidebar();
 });
+
+// いいねボタン追加山口
+// Ulike button output;
+if (!function_exists('get_the_ulike_btn')) {
+    function get_the_ulike_btn($post_id)
+    {
+        global $wp_ulike_class, $wp_user_IP;
+        $get_post_meta = get_post_meta($post_id, '_liked', true);
+        $get_like = $get_post_meta != '' ? $get_post_meta : 0;
+        $return_userID = $wp_ulike_class->get_reutrn_id();
+        $theme_class = wp_ulike_get_setting('wp_ulike_posts', 'theme');
+
+        $data = array(
+            "id" => $post_id, //Post ID
+            "user_id" => $return_userID, //User ID (if the user is guest, we save ip as user_id with "ip2long" function)
+            "user_ip" => $wp_user_IP, //User IP
+            "get_like" => $get_like, //Number Of Likes
+            "method" => 'likeThis', //JavaScript method
+            "setting" => 'wp_ulike_posts', //Setting Key
+            "type" => 'post', //Function type (post/process)
+            "table" => 'ulike', //posts table
+            "column" => 'post_id', //ulike table column name
+            "key" => '_liked', //meta key
+            "cookie" => 'liked-' //Cookie Name
+        );
+
+        //call wp_get_ulike function from class-ulike calss
+        $counter = $wp_ulike_class->wp_get_ulike($data);
+        $wp_ulike = '<div id="wp-ulike-' . $post_ID . '" class="wpulike ' . $theme_class . '">';
+        $wp_ulike .= '<div class="counter">' . $counter . '</div>';
+        $wp_ulike .= '</div>';
+        $wp_ulike .= $wp_ulike_class->get_liked_users($post_ID, 'ulike', 'post_id', 'wp_ulike_posts');
+        echo $wp_ulike;
+    }
+}

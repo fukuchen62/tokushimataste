@@ -354,9 +354,21 @@ function my_pre_get_posts($query)
     //     $query->set('post_type', 'product');
     //     $query->set('posts_per_page', -1);
     // }
-
+    // 自作ページネーション用に全件を表示する
+    if ($query->is_tax('maker_type')) {
+        $query->set('post_type', 'maker');
+        $query->set('posts_per_page', 6);
+        $query->set('post_status', 'publish');
+    }
     // 自作ページネーション用に全件を表示する
     if ($query->is_tax('area')) {
+        $query->set('post_type', 'product');
+        $query->set('posts_per_page', 6);
+        $query->set('post_status', 'publish');
+    }
+
+    // 自作ページネーション用に全件を表示する
+    if ($query->is_tax('product_type')) {
         $query->set('post_type', 'product');
         $query->set('posts_per_page', 6);
         $query->set('post_status', 'publish');

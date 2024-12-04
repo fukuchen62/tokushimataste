@@ -103,6 +103,11 @@
     text-align: left;
 }
 
+.recipe_box img {
+    height: 220px;
+    object-fit: cover;
+}
+
 .more {
     text-align: center;
     margin-top: 20px;

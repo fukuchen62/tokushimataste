@@ -121,7 +121,7 @@
                 </ul>
             </section> -->
             <section class="rcmd_box">
-                <h3 class="rcmd_b3"><span>関連商品</span></h3>
+                <h3 class="rcmd_b3">関連商品</h3>
                 <ul class="rcmd_good">
                     <?php
                     // 現在のレシピ投稿のカスタムフィールド 'product_id' を取得

@@ -52,19 +52,19 @@ if (is_post_type_archive('product') || is_tax('product_type')) {
     $img_path .= 'H_okiniiri.png';
 } else if (is_page('about')) {
     $page_tile = 'このサイトについて';
-    $img_path .= 'H_syokuhin.png';
+    $img_path .= 'konosaito.jpg';
 } else if (is_page('qa')) {
     $page_tile = 'Ｑ＆Ａ';
-    $img_path .= 'H_syokuhin.png';
+    $img_path .= 'qanda.jpg';
 } else if (is_page('privacy')) {
     $page_tile = 'プライバシーポリシー・免責事項';
-    $img_path .= 'H_syokuhin.png';
+    $img_path .= 'priavacy.jpg';
 } else if (is_page('aboutsite')) {
     $page_tile = 'サイト制作にあたって';
-    $img_path .= 'H_syokuhin.png';
+    $img_path .= 'saitoseisaku.jpg';
 } elseif (is_page('contact') || is_page('confirm') || is_page('thanks')) {
     $page_tile = 'お問合せ';
-    $img_path .= 'H_syokuhin.png';
+    $img_path .= 'inquiry.jpg';
 }
 ?>
 

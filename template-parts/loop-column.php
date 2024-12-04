@@ -6,6 +6,6 @@
 <h3 class="intro_sbtitle"><?php the_title(); ?></h3>
 
 <?php
-$trimmed_excerpt = wp_trim_words(get_the_excerpt(), 50, '...');
+$trimmed_excerpt = wp_trim_words(get_the_excerpt(), 60, '...');
 echo '<p>' . esc_html($trimmed_excerpt) . '</p>';
 ?>

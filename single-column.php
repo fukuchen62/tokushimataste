@@ -15,6 +15,9 @@
             echo get_favorites_button($post_id);
             ?>
             <!-- / ループ外 -->
+            <!-- いいねボタン -->
+            <?php echo do_shortcode('[wp_ulike]'); ?>
+            <!-- スライダー -->
             <!-- 見出し -->
             <h2 class="ttl_box ttl_cd"><span><?php the_title(); ?></span></h2>
 

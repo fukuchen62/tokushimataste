@@ -119,7 +119,7 @@ if (is_post_type_archive('product') || is_tax('product_type')) {
             <div class="title">
                 <h1>
                     <a href="<?php echo home_url('/'); ?>" class="logo">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="logo.png">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="logo.svg">
                     </a>
                 </h1>
             </div>
@@ -135,7 +135,7 @@ if (is_post_type_archive('product') || is_tax('product_type')) {
                     <li>
                         <a href="<?php echo home_url('/'); ?>">
                             <div class="nav-sp-logo">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="logo.png">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="logo.svg">
                             </div>
                         </a>
                     </li>
@@ -208,7 +208,7 @@ if (is_post_type_archive('product') || is_tax('product_type')) {
                         <div class="nav-pc_logo">
                             <h1>
                                 <a href="<?php echo home_url('/'); ?>" class="pc-title-logo">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="logo.png">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="logo.svg">
                                 </a>
                             </h1>
                         </div>

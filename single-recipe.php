@@ -26,6 +26,7 @@
             ?>
         </div>
         <!-- / ループ外 -->
+
         <h2 class="ttl_rcp"><?php the_field('recipe_name'); ?></h2>
 
         <!-- いいねボタン -->
@@ -37,7 +38,7 @@
                 <div>
                     <?php
                     $pic = get_field('pic1');
-                    $pic_url = $pic ? $pic['sizes']['thumbnail'] : '';
+                    $pic_url = $pic ? $pic['sizes']['medium'] : '';
                     ?>
                     <?php if ($pic_url): ?>
                         <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
@@ -46,7 +47,7 @@
                 <div>
                     <?php
                     $pic = get_field('pic2');
-                    $pic_url = $pic ? $pic['sizes']['thumbnail'] : '';
+                    $pic_url = $pic ? $pic['sizes']['medium'] : '';
                     ?>
                     <?php if ($pic_url): ?>
                         <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
@@ -55,7 +56,7 @@
                 <div>
                     <?php
                     $pic = get_field('pic3');
-                    $pic_url = $pic ? $pic['sizes']['thumbnail'] : '';
+                    $pic_url = $pic ? $pic['sizes']['medium'] : '';
                     ?>
                     <?php if ($pic_url): ?>
                         <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
@@ -64,7 +65,7 @@
                 <div>
                     <?php
                     $pic = get_field('pic4');
-                    $pic_url = $pic ? $pic['sizes']['thumbnail'] : '';
+                    $pic_url = $pic ? $pic['sizes']['medium'] : '';
                     ?>
                     <?php if ($pic_url): ?>
                         <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
@@ -75,7 +76,7 @@
                 <div class="thumbnail_rs_img">
                     <?php
                     $pic = get_field('pic1');
-                    $pic_url = $pic ? $pic['sizes']['thumbnail'] : '';
+                    $pic_url = $pic ? $pic['sizes']['medium'] : '';
                     ?>
                     <?php if ($pic_url): ?>
                         <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
@@ -84,7 +85,7 @@
                 <div class="thumbnail_rs_img">
                     <?php
                     $pic = get_field('pic2');
-                    $pic_url = $pic ? $pic['sizes']['thumbnail'] : '';
+                    $pic_url = $pic ? $pic['sizes']['medium'] : '';
                     ?>
                     <?php if ($pic_url): ?>
                         <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
@@ -93,7 +94,7 @@
                 <div class="thumbnail_rs_img">
                     <?php
                     $pic = get_field('pic3');
-                    $pic_url = $pic ? $pic['sizes']['thumbnail'] : '';
+                    $pic_url = $pic ? $pic['sizes']['medium'] : '';
                     ?>
                     <?php if ($pic_url): ?>
                         <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
@@ -102,7 +103,7 @@
                 <div class="thumbnail_rs_img">
                     <?php
                     $pic = get_field('pic4');
-                    $pic_url = $pic ? $pic['sizes']['thumbnail'] : '';
+                    $pic_url = $pic ? $pic['sizes']['medium'] : '';
                     ?>
                     <?php if ($pic_url): ?>
                         <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
@@ -163,7 +164,7 @@
                                         <!-- アイキャッチ画像 -->
                                         <?php
                                         $pic = get_field('pic1');
-                                        $pic_url = $pic ? $pic['sizes']['thumbnail'] : 'path/to/default/image.jpg';
+                                        $pic_url = $pic ? $pic['sizes']['medium'] : 'path/to/default/image.jpg';
                                         ?>
                                         <img src="<?php echo esc_url($pic_url); ?>" alt="関連商品">
                                         <!-- 商品名 -->

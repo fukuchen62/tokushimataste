@@ -244,6 +244,7 @@ img {
     border-radius: 20px;
 }
 
+/* 以下記載なしのため追記12/4山口 */
 .rcmd_b3 {
     font-size: 2rem;
     /* margin-top: 80px; */
@@ -258,4 +259,12 @@ img {
 .rcmd_b3 span {
     margin-bottom: 5px;
     display: inline-block;
+}
+
+/* オススメ商品 */
+.rcmd_good {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
 }

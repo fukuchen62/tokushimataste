@@ -16,7 +16,7 @@
                         <!-- <div class="slick_img">HTMLにはあるがcssに記載なし山口 -->
                         <?php
                         $pic = get_field('pic1');
-                        $pic_url = $pic ? $pic['sizes']['thumbnail'] : '';
+                        $pic_url = $pic ? $pic['sizes']['medium'] : '';
                         ?>
                         <?php if ($pic_url): ?>
                             <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
@@ -26,7 +26,7 @@
                         <!-- <div class="slick_img">HTMLにはあるがcssに記載なし山口 -->
                         <?php
                         $pic = get_field('pic2');
-                        $pic_url = $pic ? $pic['sizes']['thumbnail'] : '';
+                        $pic_url = $pic ? $pic['sizes']['medium'] : '';
                         ?>
                         <?php if ($pic_url): ?>
                             <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
@@ -36,7 +36,7 @@
                         <!-- <div class="slick_img">HTMLにはあるがcssに記載なし山口 -->
                         <?php
                         $pic = get_field('pic3');
-                        $pic_url = $pic ? $pic['sizes']['thumbnail'] : '';
+                        $pic_url = $pic ? $pic['sizes']['medium'] : '';
                         ?>
                         <?php if ($pic_url): ?>
                             <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
@@ -45,7 +45,7 @@
                     <div class="slick_img">
                         <?php
                         $pic = get_field('pic4');
-                        $pic_url = $pic ? $pic['sizes']['thumbnail'] : '';
+                        $pic_url = $pic ? $pic['sizes']['medium'] : '';
                         ?>
                         <?php if ($pic_url): ?>
                             <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
@@ -56,7 +56,7 @@
                     <div class="thumbnail_img"> <!-- こっちはある山口 -->
                         <?php
                         $pic = get_field('pic1');
-                        $pic_url = $pic ? $pic['sizes']['thumbnail'] : '';
+                        $pic_url = $pic ? $pic['sizes']['medium'] : '';
                         ?>
                         <?php if ($pic_url): ?>
                             <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
@@ -65,16 +65,16 @@
                     <div class="thumbnail_img">
                         <?php
                         $pic = get_field('pic2');
-                        $pic_url = $pic ? $pic['sizes']['thumbnail'] : '';
+                        $pic_url = $pic ? $pic['sizes']['medium'] : '';
                         ?>
                         <?php if ($pic_url): ?>
                             <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
                         <?php endif; ?>
                     </div>
-                    <div class="thumbnail_img">
+                    <div class="medium_img">
                         <?php
                         $pic = get_field('pic3');
-                        $pic_url = $pic ? $pic['sizes']['thumbnail'] : '';
+                        $pic_url = $pic ? $pic['sizes']['medium'] : '';
                         ?>
                         <?php if ($pic_url): ?>
                             <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
@@ -83,7 +83,7 @@
                     <div class="thumbnail_img">
                         <?php
                         $pic = get_field('pic4');
-                        $pic_url = $pic ? $pic['sizes']['thumbnail'] : '';
+                        $pic_url = $pic ? $pic['sizes']['medium'] : '';
                         ?>
                         <?php if ($pic_url): ?>
                             <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
@@ -159,7 +159,7 @@
             <?php
             $pic = get_field('pic1');
             // $picが存在する場合のみURLを取得
-            $pic_url =  $pic['sizes']['thumbnail'];
+            $pic_url =  $pic['sizes']['medium'];
             ?>
             <img src="<?php echo $pic_url; ?>" alt="">
             <section class=" oneword">
@@ -201,7 +201,7 @@
                                     <?php
                                     $pic = get_field('pic1');
                                     // $picが存在する場合のみURLを取得
-                                    $pic_url =  $pic['sizes']['thumbnail'];
+                                    $pic_url =  $pic['sizes']['medium'];
                                     ?>
                                     <img src="<?php echo $pic_url; ?>" alt=" ご飯のお供">
 

@@ -28,6 +28,7 @@
         <!-- / ループ外 -->
 
         <h2 class="ttl_rcp"><?php the_field('recipe_name'); ?></h2>
+        <?php echo do_shortcode('[custom_field:custom_field_name]'); ?>
 
         <!-- いいねボタン -->
         <?php echo do_shortcode('[wp_ulike]'); ?>

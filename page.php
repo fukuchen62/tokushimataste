@@ -1,8 +1,9 @@
 <?php get_header(); ?>
-<div class=inner>
-    <?php if (have_posts()): ?>
-        <?php while (have_posts()): the_post(); ?>
-            <main>
+<main>
+    <div class=inner>
+        <?php if (have_posts()): ?>
+            <?php while (have_posts()): the_post(); ?>
+
                 <section class="section">
                     <div class="section_inner">
                         <div class="section_header">
@@ -18,8 +19,9 @@
                         </div>
                     </div>
                 </section>
-            </main>
-        <?php endwhile; ?>
-    <?php endif; ?>
-</div>
+
+            <?php endwhile; ?>
+        <?php endif; ?>
+    </div>
+</main>
 <?php get_footer() ?>

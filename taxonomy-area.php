@@ -33,14 +33,15 @@
                 $term = get_term_by('slug', $value, 'area');
                 $url = get_term_link($term, 'area');
                 ?>
-                <li id="<?php print $value ?>">
-                    <a href="<?php echo $url; ?>" class="">
+                <a href="<?php echo $url; ?>" class="">
+                    <li id="<?php print $value ?>">
+
                         <span><?php echo implode($terms); ?>
                             <!-- ターム毎の投稿件数 -->
                             (<?php echo $term->count; ?>)
                         </span>
-                    </a>
-                </li>
+                    </li>
+                </a>
             <?php endforeach; ?>
         </ul>
     </section>
@@ -55,6 +56,7 @@
             <?php endif; ?>
         </ul>
     </div>
+
     <!-- ページネーション -->
     <?php get_template_part('template-parts/pagination'); ?>
 

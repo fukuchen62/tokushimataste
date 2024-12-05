@@ -7,10 +7,11 @@
 $(function () {
     $(".single-item").slick({
         autoplay: true,
+        autoplaySpeed: 5000,
         dots: true,
         fade: true,
         cssEase: "linear", //スライドの流れを等速
-        speed: 4000,
+        speed: 1000,
         arrows: true,
         pauseOnFocus: false,//フォーカスで一時停止
         pauseOnHover: false,//マウスホバーで一時停止

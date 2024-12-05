@@ -6,13 +6,14 @@ footer {
     background-color: #93b4df;
     /* margin-top: 100px auto; */
     text-align: center;
-    background: url('../images/footer.jpg') repeat center center;
+    background: url('../images/footer.png') repeat center center;
     background-size: contain;
+    padding-top: 40px;
 }
 
 @media screen and (max-width: 768px) {
     footer {
-        background: url('../images/footer.jpg') no-repeat center center;
+        background: url('../images/footer.png') no-repeat center center;
         background-size: cover;
     }
 }

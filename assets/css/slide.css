@@ -16,19 +16,67 @@
 
 /* 別パターンのCSS上の方 */
 
-@keyframes infinity-scroll-left1 {
+.scroll-infinity__wrap {
+    display: grid;
+    /* grid-template-columns: repeat(1, 100vw); */
+    overflow: hidden;
+    /* 表示領域外を隠す */
+}
+
+.scroll-infinity__list {
+    width: calc(100% * 10);
+    display: flex;
+    list-style: none;
+    padding: 0
+}
+
+.scroll-infinity__list--left {
+    /* animation: infinity-scroll-left 20s infinite linear 1s both; */
+    animation: infinity-scroll-left 15s linear infinite;
+}
+
+@media screen and (min-width:700px) {
+    .scroll-infinity__list--left {
+        animation: infinity-scroll-left 35s linear infinite;
+    }
+}
+
+
+/* 別パターンのCSS下の方 */
+@keyframes infinity-scroll-left {
     from {
         transform: translateX(0);
     }
 
     to {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
     }
 }
 
-.scroll-infinity__wrap1 {
+.scroll-infinity__item {
+    width: 250px;
+    margin-right: 10px;
+    border: 1px solid brown;
+    border-radius: 10px;
+}
+
+.scroll-infinity__item img {
+    width: 100%;
+    object-fit: fill;
+    border-radius: 10px;
+}
+
+
+/*
+.scroll-infinity__item1 img {
+    width: 300px;
+    margin-right: 10px;
+    object-fit: fill;
+}
+
+ .scroll-infinity__wrap1 {
     display: grid;
-    grid-template-columns: repeat(2, 100vw);
+    grid-template-columns: repeat(2, 400vw);
 }
 
 .scroll-infinity__list1 {
@@ -38,7 +86,7 @@
 }
 
 .scroll-infinity__list--left1 {
-    animation: infinity-scroll-left 20s infinite linear 0.5s both;
+    animation: infinity-scroll-left 20s infinite linear 3s both;
 }
 
 
@@ -46,7 +94,6 @@
     display: inline-block;
     width: 300px;
     height: 300px;
-
 }
 
 .scroll-infinity__item1>img {
@@ -54,8 +101,7 @@
     width: 400%;
 }
 
-/* 別パターンのCSS下の方 */
-@keyframes infinity-scroll-left {
+@keyframes infinity-scroll-left1 {
     from {
         transform: translateX(0);
     }
@@ -63,31 +109,4 @@
     to {
         transform: translateX(-100%);
     }
-}
-
-.scroll-infinity__wrap {
-    display: grid;
-    grid-template-columns: repeat(2, 100vw);
-}
-
-.scroll-infinity__list {
-    display: flex;
-    list-style: none;
-    padding: 0
-}
-
-.scroll-infinity__list--left {
-    animation: infinity-scroll-left 20s infinite linear 0.5s both;
-}
-
-.scroll-infinity__item {
-    width: calc(100vw / 6);
-}
-
-.scroll-infinity__item>img {
-    width: 400%;
-}
-
-.scroll-infinity__item1 img {
-    width: 200px;
-}
+} */

@@ -46,19 +46,27 @@
         </ul>
     </section>
 
-    <div class="card-container">
-        <ul class="page_list">
+    <!-- エリア検索結果表示ボタン -->
+    <div id="btn-area" class="wrap">
 
-            <?php if (have_posts()): ?>
-                <?php while (have_posts()) : the_post(); ?>
-                    <?php get_template_part('template-parts/loop', 'product'); ?>
-                <?php endwhile; ?>
-            <?php endif; ?>
-        </ul>
-    </div>
+        <h2 class="area_box"><span class="ttl"><?php single_term_title(); ?>&nbsp;検索結果</span><?php echo $wp_query->found_posts; ?>件</h2>
 
-    <!-- ページネーション -->
-    <?php get_template_part('template-parts/pagination'); ?>
+
+
+
+        <div class="card-container">
+            <ul class="page_list">
+
+                <?php if (have_posts()): ?>
+                    <?php while (have_posts()) : the_post(); ?>
+                        <?php get_template_part('template-parts/loop', 'product'); ?>
+                    <?php endwhile; ?>
+                <?php endif; ?>
+            </ul>
+        </div>
+
+        <!-- ページネーション -->
+        <?php get_template_part('template-parts/pagination'); ?>
 
 </main>
 

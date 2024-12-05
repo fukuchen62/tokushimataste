@@ -24,7 +24,7 @@
         }
 
         .goods_table {
-            width: 35%;
+            width: 45%;
         }
 
     }
@@ -45,13 +45,15 @@
     border-bottom: solid 1px black;
 }
 
-.goods_table th,
 .goods_table {
     padding: 10px;
 }
 
 .goods_table th {
     font-size: 1.8rem;
+    width: 125px;
+    padding-top: 10px;
+    /* アレルギーで改行する */
 }
 
 .goods_table td {
@@ -282,4 +284,16 @@ ul {
 /* お供の一覧表示 */
 .list_displayed_ot {
     text-align: center;
+}
+
+/* エリア検索の結果表示バー */
+/* エリア名 */
+.area_box {
+    text-align: center;
+    background-color: #AD2628;
+    padding: 5px;
+    border-radius: 20px;
+    color: #EEEEF1;
+    margin-bottom: 30px;
+    font-size: 24px;
 }

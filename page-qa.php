@@ -34,21 +34,21 @@
                 echo '<p>投稿が見つかりませんでした。</p>';
             endif;
                 ?>
-
-
-                <div class="container"></div>
-                <h2 class="heading10" data-en="Dear Manufacturer"><span>掲載されているメーカー様へ</span></h2>
-                <p>電話番号やイベント内容等に変更がある場合は、お問い合わせフォームよりお問い合わせください。確認後、ご連絡させていただきます。</p>
-                <br>
-                <h2 class="heading10" data-en="Under Consideration"><span>本サイトに掲載をご検討中のメーカー様へ</h2>
-                <p>お問い合わせフォームよりお問い合わせください。確認後、ご連絡させていただきます。</p>
         </div>
-        <br>
+
+        <div class="container">
+            <h2 class="heading10" data-en="Dear Manufacturer"><span>掲載されているメーカー様へ</span></h2>
+            <p>電話番号やイベント内容等に変更がある場合は、お問い合わせフォームよりお問い合わせください。確認後、ご連絡させていただきます。</p>
+            <br>
+            <h2 class="heading10" data-en="Under Consideration"><span>本サイトに掲載をご検討中のメーカー様へ</h2>
+            <p>お問い合わせフォームよりお問い合わせください。確認後、ご連絡させていただきます。</p>
+        </div>
+
         <ul class="flex">
             <li>
                 <a href="<?php echo home_url('/contact/'); ?>" class="original-button3">お問い合わせ</a>
             </li>
         </ul>
-    </div>
+
 </main>
 <?php get_footer(); ?>

@@ -128,7 +128,7 @@
 
             <?php if (!empty(get_field('maker_id'))): ?>
                 <!-- 仮でタイトルを入れています。デザインを確認しておいてください。 -->
-                <h2 class="tittle_goods_single"><span>製造メーカー様紹介（仮）</span></h2>
+                <h2 class="tittle_goods_single"><span>製造メーカー様紹介</span></h2>
 
                 <div class="box_maker">
                     <a href="<?php echo get_permalink($m_id); ?>">

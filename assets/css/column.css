@@ -185,48 +185,6 @@ li.cat-item a::after {
 
 }
 
-.wp-pagenavi {
-	clear: both;
-	text-align: center;
-}
-
-.wp-pagenavi a,
-.wp-pagenavi span {
-	color: #795A3C;
-	/* background-color: #FFF1DA; */
-	background-color: #FFF;
-	border: 1px solid #DBC9AA;
-	/* padding: 8px 15px; */
-	padding: 8px 12px;
-	margin: 0 2px;
-	/* margin: 2px 2px; */
-	white-space: nowrap;
-	/* -moz-border-radius: 3px; */
-	-moz-border-radius: 50%;
-	/* -webkit-border-radius: 3px; */
-	-webkit-border-radius: 50%;
-	/* border-radius: 3px; */
-	border-radius: 50%;
-	-webkit-transition: 0.2s ease-in-out;
-	-moz-transition: 0.2s ease-in-out;
-	-o-transition: 0.2s ease-in-out;
-	transition: 0.2s ease-in-out;
-	text-align: center;
-	text-decoration: none;
-}
-
-.wp-pagenavi a:hover {
-	color: #FFF;
-	background-color: #A09D71;
-	border-color: #999;
-}
-
-.wp-pagenavi span.current {
-	color: #FFF;
-	background-color: #FFC24B;
-	border-color: #FFC24B;
-	font-weight: bold;
-}
 
 
 /* ============================= */

@@ -156,7 +156,8 @@
                 </section>
 
                 <div class="clear_or_search">
-                    <input class="clear_btn" type="reset" value="クリア">
+                    <?php $url = home_url('/') . '?s='; ?>
+                    <input class="clear_btn" type="reset" value="クリア" onclick="resetForm('<?php echo $url; ?>')">
                     <input class="search_btn" type="submit" value="検索">
                 </div>
             </form>

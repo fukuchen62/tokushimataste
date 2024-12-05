@@ -32,12 +32,12 @@
 
 .scroll-infinity__list--left {
     /* animation: infinity-scroll-left 20s infinite linear 1s both; */
-    animation: infinity-scroll-left 15s linear infinite;
+    animation: infinity-scroll-left 20s linear infinite;
 }
 
 @media screen and (min-width:700px) {
     .scroll-infinity__list--left {
-        animation: infinity-scroll-left 35s linear infinite;
+        animation: infinity-scroll-left1 35s linear infinite;
     }
 }
 
@@ -49,12 +49,22 @@
     }
 
     to {
-        transform: translateX(-50%);
+        transform: translateX(-10%);
+    }
+}
+
+@keyframes infinity-scroll-left1 {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-10%);
     }
 }
 
 .scroll-infinity__item {
-    width: 250px;
+    width: 220px;
     margin-right: 10px;
     border: 1px solid brown;
     border-radius: 10px;

@@ -1,6 +1,9 @@
 <!-- 詳細検索 -->
 <section class="search">
     <div class="inner">
+        <?php get_template_part('template-parts/breadcrumb');
+        ?>
+
         <!-- 見出し -->
         <h2 class="ttl_box">
             <span class="ttl">詳細検索</span><br>

@@ -43,10 +43,10 @@ if (is_post_type_archive('product') || is_tax('product_type')) {
     $img_path .= 'obi3.png';
 } else if (is_post_type_archive('recipe') || is_tax('recipe_type')) {
     $page_tile = 'アレンジレシピ一覧';
-    $img_path .= 'obi4.jpg';
+    $img_path .= 'obi6.jpg';
 } else if (is_singular('recipe')) {
     $page_tile = 'アレンジレシピ詳細';
-    $img_path .= 'obi4.jpg';
+    $img_path .= 'obi6.jpg';
 } else if (is_page('mypage')) {
     $page_tile = 'お気に入り';
     $img_path .= 'obi5.jpg';

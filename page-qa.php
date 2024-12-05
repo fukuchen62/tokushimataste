@@ -46,7 +46,7 @@
         <br>
         <ul class="flex">
             <li>
-                <a href="../html/contact.html" class="original-button3">お問い合わせ</a>
+                <a href="<?php echo home_url('/contact/'); ?>" class="original-button3">お問い合わせ</a>
             </li>
         </ul>
     </div>

@@ -51,8 +51,6 @@
                                             <?php endif; ?>
                                             <p><?php the_field("product_name"); ?>
                                             </p>
-                                            <p><?php //the_field("");
-                                                ?></p>
                                         </div>
                                     </a>
                                 </li>
@@ -112,8 +110,7 @@
                                             <?php endif; ?>
                                             <p><?php the_field("recipe_name"); ?>
                                             </p>
-                                            <p><?php //the_field("");
-                                                ?></p>
+
                                         </div>
                                     </a>
                                 </li>

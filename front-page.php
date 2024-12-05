@@ -26,14 +26,14 @@
                 <p>5種類の項目に分けてご案内します。</p>
             </div>
 
-            <div class="scroll-infinity1">
-                <div class="scroll-infinity__wrap1">
-                    <ul class="scroll-infinity__list scroll-infinity__list--left1">
+            <div class="scroll-infinity">
+                <div class="scroll-infinity__wrap">
+                    <ul class="scroll-infinity__list scroll-infinity__list--left">
 
                         <?php
                         $args = [
                             'post_type'      => 'product', // カスタム投稿タイプ
-                            'posts_per_page' => 6,            // 表示する投稿数
+                            'posts_per_page' => 10,            // 表示する投稿数
                             'orderby'        => 'rand',       // ランダム順
                         ];
                         // WP_Queryのインスタンスを作成
@@ -41,55 +41,37 @@
                         if ($the_query->have_posts()): ?>
                             <?php while ($the_query->have_posts()): $the_query->the_post() ?>
 
-                                <li class="scroll-infinity__item1">
+                                <li class="scroll-infinity__item">
                                     <a href="<?php the_permalink(); ?>">
                                         <?php
                                         $pic = get_field('pic1');
                                         // $picが存在する場合のみURLを取得
-                                        $pic_url =  $pic['sizes']['medium'];
+                                        $pic_url =  $pic['sizes']['large'];
                                         ?>
                                         <img src="<?php echo $pic_url; ?>" alt="">
                                     </a>
                                 </li>
-                        <?php
-                            endwhile;
-                            wp_reset_postdata(); // クエリをリセット
-                        endif;
-                        ?>
-                    </ul>
-                    <ul class="scroll-infinity__list scroll-infinity__list--left1">
-
-                        <?php
-                        $args = [
-                            'post_type'      => 'product', // カスタム投稿タイプ
-                            'posts_per_page' => 6,            // 表示する投稿数
-                            'orderby'        => 'rand',       // ランダム順
-                        ];
-                        // WP_Queryのインスタンスを作成
-                        $the_query = new WP_Query($args);
-                        if ($the_query->have_posts()): ?>
+                            <?php endwhile; ?>
                             <?php while ($the_query->have_posts()): $the_query->the_post() ?>
-
-                                <li class="scroll-infinity__item1">
+                                <li class="scroll-infinity__item">
                                     <a href="<?php the_permalink(); ?>">
                                         <?php
                                         $pic = get_field('pic1');
                                         // $picが存在する場合のみURLを取得
-                                        $pic_url =  $pic['sizes']['medium'];
+                                        $pic_url =  $pic['sizes']['large'];
                                         ?>
                                         <img src="<?php echo $pic_url; ?>" alt="">
                                     </a>
                                 </li>
+                            <?php endwhile; ?>
                         <?php
-                            endwhile;
                             wp_reset_postdata(); // クエリをリセット
                         endif;
                         ?>
                     </ul>
+
                 </div>
             </div>
-
-
             <a href="<?php echo home_url('/product_type/ferment') ?>" class="btn btn-border-shadow btn-border-shadow--color">もっと見る</a>
         </section>
 
@@ -138,14 +120,14 @@
                 <h2>メーカー様ご紹介</h2>
                 <p>徳島県内のメーカー様です。</p>
             </div>
-            <div class="scroll-infinity1">
-                <div class="scroll-infinity__wrap1">
-                    <ul class="scroll-infinity__list scroll-infinity__list--left1">
+            <div class="scroll-infinity">
+                <div class="scroll-infinity__wrap">
+                    <ul class="scroll-infinity__list scroll-infinity__list--left">
 
                         <?php
                         $args = [
                             'post_type'      => 'maker', // カスタム投稿タイプ
-                            'posts_per_page' => 6,            // 表示する投稿数
+                            'posts_per_page' => 10,            // 表示する投稿数
                             'orderby'        => 'rand',       // ランダム順
                         ];
 
@@ -159,44 +141,30 @@
                                         <?php
                                         $pic = get_field('pic1');
                                         // $picが存在する場合のみURLを取得
-                                        $pic_url =  $pic['sizes']['medium'];
+                                        $pic_url =  $pic['sizes']['large'];
                                         ?>
                                         <img src="<?php echo $pic_url; ?>" alt="">
                                         <!-- <p><?php //the_field('company');
                                                 ?></p> -->
                                     </a>
                                 </li>
-                        <?php
-                            endwhile;
-                            wp_reset_postdata(); // クエリをリセット
-                        endif;
-                        ?>
-                    </ul>
-                    <ul class="scroll-infinity__list scroll-infinity__list--left1">
+                            <?php endwhile; ?>
 
-                        <?php
-                        $args = [
-                            'post_type'      => 'maker', // カスタム投稿タイプ
-                            'posts_per_page' => 6,            // 表示する投稿数
-                            'orderby'        => 'rand',       // ランダム順
-                        ];
-                        // WP_Queryのインスタンスを作成
-                        $the_query = new WP_Query($args);
-                        if ($the_query->have_posts()): ?>
                             <?php while ($the_query->have_posts()): $the_query->the_post() ?>
-
-                                <li class="scroll-infinity__item1">
+                                <li class="scroll-infinity__item">
                                     <a href="<?php the_permalink(); ?>">
                                         <?php
                                         $pic = get_field('pic1');
                                         // $picが存在する場合のみURLを取得
-                                        $pic_url =  $pic['sizes']['medium'];
+                                        $pic_url =  $pic['sizes']['large'];
                                         ?>
                                         <img src="<?php echo $pic_url; ?>" alt="">
+                                        <!-- <p><?php //the_field('company');
+                                                ?></p> -->
                                     </a>
                                 </li>
+                            <?php endwhile; ?>
                         <?php
-                            endwhile;
                             wp_reset_postdata(); // クエリをリセット
                         endif;
                         ?>

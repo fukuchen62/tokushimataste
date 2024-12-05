@@ -22,7 +22,6 @@
                 $img_url = $img['sizes']['large']; ?>
 
                 <img src="<?php echo $img_url; ?>" alt="Image" class="goods_pic">
-                <br>
                 <table class="goods_table">
                     <?php if (!empty(get_field('price'))): ?>
                         <tr>

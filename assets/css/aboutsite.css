@@ -63,7 +63,7 @@ h2:after {
 
 /*上にだけ太線*/
 .box2-3 {
-    padding: 1em;
+    padding: 5px;
     /*内側余白*/
     border-top: solid 5px #F7C16E;
     /*線の種類・太さ・色*/

@@ -49,7 +49,8 @@
                                             <?php if ($pic_url): ?>
                                                 <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
                                             <?php endif; ?>
-                                            <p><?php the_field("product_name"); ?>
+
+                                            <p><?php the_title(); ?>
                                             </p>
                                         </div>
                                     </a>

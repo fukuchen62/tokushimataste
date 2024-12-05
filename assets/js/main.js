@@ -362,3 +362,11 @@ function msgOutput() {
     let r = Math.floor(Math.random() * mames.length);
     document.getElementById("sudachi_comment").innerHTML = mames[r];
 }
+
+/**
+ * 詳細検索画面をリロードする
+ */
+function resetForm(url) {
+    // ホームページにリダイレクト
+    window.location.href = url;
+}

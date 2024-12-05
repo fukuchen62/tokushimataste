@@ -43,6 +43,7 @@ footer {
 
 .footer_nav a {
     font-size: 1.6rem;
+    font-weight: bolder;
 }
 
 @media(width>=700px) {

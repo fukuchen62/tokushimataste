@@ -128,14 +128,14 @@ function add_style_script()
                 PATH . 'css/slide.css'
         );
         // JSファイルを読み込む
-        /*wp_enqueue_script(
+        wp_enqueue_script(
             'my_top',
             get_template_directory_uri() .
                 PATH . 'js/top.js',
             ['jquery'],
             '',
             true
-        );*/
+        );
     } elseif (is_404()) {
         wp_enqueue_style(
             'my_error404',

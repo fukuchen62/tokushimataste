@@ -1,13 +1,17 @@
 @charset "UTF-8";
 
 .kv {
-    width: 100%;
-    /* height: calc(100vh - 110px); */
-    height: calc(100vh);
-    background-image: url(../images/KV_syokuhin.png);
-    background-size: cover;
-    background-position: center center;
+    display: none;
     position: relative;
+    background-color: lightgoldenrodyellow;
+}
+
+.slick-img img {
+    /* width: 1024px; */
+    width: 100%;
+    margin: 0 auto;
+    height: calc(100vh - 110px);
+    object-fit: cover;
 }
 
 .kvsub {
@@ -248,7 +252,7 @@ nav.nav-sp {
 .header-container {
     max-width: 1024px;
     margin: 0px auto;
-    padding: 20px;
+    /* padding: 0 20px; */
     /* background-color: #dbb62e; */
 
 }
@@ -257,7 +261,7 @@ nav.nav-pc {
     display: none;
     width: 100%;
     text-align: center;
-    margin-top: 15px;
+    /* margin-top: 15px; */
 }
 
 .pcnav {
@@ -267,7 +271,10 @@ nav.nav-pc {
 
 @media screen and (min-width:900px) {
     .kv {
+        display: block;
+        width: calc(100%);
         height: calc(100vh - 110px);
+        overflow: hidden;
     }
 
     .kvsub {
@@ -300,9 +307,9 @@ nav.nav-pc {
 
     .fixed {
         position: fixed;
-        top: -20px;
+        top: 0px;
         left: 0;
-        padding-top: 20px;
+        /* padding-top: 20px; */
         padding-bottom: 10px;
         margin: 0 auto;
         opacity: 1.0;
@@ -328,7 +335,7 @@ nav.nav-pc {
     }
 
     .header-container li:first-child img {
-        width: 100px;
+        width: 80px;
         /* gap: 15px; */
     }
 
@@ -342,12 +349,12 @@ nav.nav-pc {
     }
 
     .pc-title-logo img {
-        width: 100px;
+        width: 80px;
     }
 
     nav-pc_logo a {
         display: inline-block;
-        width: 100px;
+        width: 80px;
     }
 
     /* .title_logo {
@@ -365,7 +372,7 @@ nav.nav-pc {
     nav.nav-pc li span {
         display: block;
         font-size: 1.4rem;
-        margin-top: 4px;
+        /* margin-top: 4px; */
     }
 
     nav.nav-pc li a:hover:before {

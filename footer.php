@@ -45,7 +45,8 @@
 
     <!-- フッター画像 -->
     <!-- <div class="footer-wrapper">
-        <img class="footer_mb_ill" src="<?php echo get_template_directory_uri() . '/assets/images/footer.jpg'; ?>" alt="">
+        <img class="footer_mb_ill" src="<?php //echo get_template_directory_uri() . '/assets/images/footer.svg'; 
+                                        ?>" alt="">
     </div> -->
 
     <div class="footer_container">

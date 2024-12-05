@@ -43,7 +43,9 @@
 
 
 .scroll-infinity__item1 {
-    width: calc(100vw / 6);
+    display: inline-block;
+    width: 300px;
+    height: 300px;
 
 }
 
@@ -84,4 +86,8 @@
 
 .scroll-infinity__item>img {
     width: 400%;
+}
+
+.scroll-infinity__item1 img {
+    width: 200px;
 }

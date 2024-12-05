@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 251.22 251.64">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        stroke-width: 0px;
+      }
+
+      .cls-1, .cls-6 {
+        fill: #000;
+      }
+
+      .cls-2 {
+        fill: #1bbc26;
+      }
+
+      .cls-3 {
+        fill: #eda20f;
+      }
+
+      .cls-6 {
+        font-family: KaiseiOpti-Bold, 'Kaisei Opti';
+        font-size: 39px;
+        font-weight: 700;
+      }
+
+      .cls-4 {
+        fill: #ffff64;
+      }
+
+      .cls-5 {
+        fill: #eddc0f;
+      }
+
+      .cls-7 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 4.91px;
+      }
+    </style>
+  </defs>
+  <g id="_レイヤー_3" data-name="レイヤー 3">
+    <ellipse class="cls-5" cx="125.61" cy="80.3" rx="72.86" ry="59.74"/>
+    <ellipse class="cls-1" cx="105.02" cy="62.45" rx="6.13" ry="7.91"/>
+    <ellipse class="cls-1" cx="143.83" cy="62.45" rx="6.13" ry="7.91"/>
+    <polyline class="cls-7" points="107.3 77.52 124.03 89.1 140.43 77.52"/>
+    <circle class="cls-3" cx="175.01" cy="76.11" r="3.08"/>
+    <circle class="cls-3" cx="174.24" cy="90.24" r="3.08"/>
+    <circle class="cls-3" cx="185.77" cy="68.36" r="3.08"/>
+    <circle class="cls-3" cx="187.1" cy="85.43" r="3.08"/>
+    <circle class="cls-3" cx="182.59" cy="100.72" r="3.08"/>
+    <ellipse class="cls-2" cx="123.91" cy="26.83" rx="8.68" ry="3.19"/>
+    <rect class="cls-2" x="122.99" y="9.09" width="1.75" height="17.74"/>
+    <path class="cls-2" d="M140.17,16.27c-6.65,3.71-16.26-.82-16.26-.82,0,0,1.19-10.55,7.84-14.27,6.65-3.71,12.93,2.67,16.26.82s-1.19,10.55-7.84,14.27Z"/>
+  </g>
+  <g id="_レイヤー_2" data-name="レイヤー 2">
+    <ellipse class="cls-4" cx="125.61" cy="179.3" rx="125.61" ry="72.34"/>
+    <text id="_アレンジ_レシピ" data-name="アレンジ レシピ" class="cls-6" transform="translate(50.34 174.36)"><tspan x="0" y="0">アレンジ</tspan><tspan x="19.5" y="46.8">レシピ</tspan></text>
+  </g>
+</svg>

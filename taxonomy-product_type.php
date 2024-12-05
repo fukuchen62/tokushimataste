@@ -38,16 +38,16 @@
                 // urlを取得
                 $url = get_term_link($term);
                 ?>
+                <a href="<?php echo $url; ?>" class="">
+                    <li id="<?php print $value ?>">
 
-                <li id="<?php print $value ?>">
-                    <a href="<?php echo $url; ?>" class="">
 
                         <span><?php echo implode($terms); ?>
                             <!-- ターム毎の投稿件数 -->
                             (<?php echo $term->count; ?>)
                         </span>
-                    </a>
-                </li>
+                    </li>
+                </a>
             <?php endforeach; ?>
         </ul>
     </section>

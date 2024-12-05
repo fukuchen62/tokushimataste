@@ -49,7 +49,7 @@
     <!-- エリア検索結果表示ボタン -->
     <div id="btn-area" class="wrap">
 
-        <h2 class="area_box"><span class="ttl"><?php single_term_title(); ?>検索結果</span><?php echo $wp_query->found_posts; ?>件</h2>
+        <h2 class="area_box"><span class="ttl"><?php single_term_title(); ?>&nbsp;検索結果</span><?php echo $wp_query->found_posts; ?>件</h2>
 
 
 

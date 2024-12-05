@@ -80,3 +80,7 @@ h2:after {
 .card_about {
     margin-top: 70px;
 }
+
+section+section {
+    margin: 20px;
+}

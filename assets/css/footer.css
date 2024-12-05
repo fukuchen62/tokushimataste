@@ -19,11 +19,18 @@ footer {
 }
 
 .footer_container {
-    width: 80%;
+
     margin: 0px auto;
     padding: 20px;
     display: inline-block;
 }
+
+@media screen and (width>=700px) {
+    .footer_container {
+        width: 80%;
+    }
+}
+
 
 .footer_nav {
     text-align: left;

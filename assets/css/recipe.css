@@ -187,9 +187,10 @@
 .memo_rs,
 .ingredient_rs,
 .howtomake_rs {
+    margin: 0 auto;
     margin-bottom: 30px;
     max-width: 800px;
-    margin: 0 auto;
+
 }
 
 .memo_rs div,

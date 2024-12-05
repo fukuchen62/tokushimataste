@@ -24,7 +24,7 @@
         }
 
         .goods_table {
-            width: 35%;
+            width: 45%;
         }
 
     }
@@ -45,13 +45,15 @@
     border-bottom: solid 1px black;
 }
 
-.goods_table th,
 .goods_table {
     padding: 10px;
 }
 
 .goods_table th {
     font-size: 1.8rem;
+    width: 125px;
+    padding-top: 10px;
+    /* アレルギーで改行する */
 }
 
 .goods_table td {

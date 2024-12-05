@@ -5,9 +5,9 @@
         ?>
 
         <!-- 見出し -->
-        <h2 class="ttl_box">
+        <!-- <h2 class="ttl_box">
             <span class="ttl">詳細検索</span><br>
-        </h2>
+        </h2> -->
 
         <div class="check_box">
             <form id="search-box" method="GET" action="<?php /*echo home_url('/')*/ ?>">

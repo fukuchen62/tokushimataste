@@ -267,3 +267,8 @@ li.cat-item a::after {
 		display: none;
 	}
 }
+
+.wp-block-image {
+	width: 400px;
+	margin: 20px;
+}

@@ -92,66 +92,81 @@
                 </div>
             </div>
 
-            <div class="table_ms">
-                <ul>
-                    <li class="flex_oneword">
-                        <div class=" oneword">
-                            <p>一言</p>
-                            <?php the_field('catchphrase') ?>
-                        </div>
-                    </li>
-                    <li>
-                        <!-- <th>代表者名</th> -->
-                        <?php the_field('name') ?>
-                    </li>
-                    <li>
-                        <!-- <th>会社概要</th> -->
-                        <?php the_field('company_info') ?>
-                    </li>
-                    <li>
-                        <!-- <th>郵便番号</th> -->
-                        <?php echo '〒' . get_field('post_code'); ?>
-                    </li>
-                    <li>
-                        <!-- <th>住所</th> -->
-                        <?php the_field('address') ?>
-                    </li>
-                    <li>
-                        <!-- <th>電話番号</th> -->
-                        <?php echo 'TEL:' . get_field('tel') ?>
-                    </li>
-                    <li>
-                        <!-- <th>FAX</th> -->
-                        <?php echo 'FAX:' . get_field('fax') ?>
-                    </li>
-                    <li>
-                        <!-- <th>EMail</th> -->
-                        <?php echo 'E-mail:' . get_field('email') ?>
-                    </li>
-                    <li>
-                        <!-- <th>営業時間</th> -->
-                        <?php the_field('business_hours') ?>
-                    </li>
-                    <?php if (!empty(get_field('url'))): ?>
-                        <li>
-                            <!-- <th>会社のHP</th> -->
-                            <a href="<?php the_field('url') ?>"><?php the_field('url') ?></a>
-                        </li>
-                    <?php endif ?>
-                    <li>
-                        <td colspan="2">
-                            <p><small>※お問い合わせは営業時間内でお願いします。</small></p>
-                    </li>
-                </ul>
-            </div>
+
+
+            <table class="table_ms">
+                <tr>
+                    <th>会社名</th>
+                    <td><?php the_field('company') ?></td>
+                </tr>
+                <tr>
+                    <th>フリガナ</th>
+                    <td><?php the_field('phonetic') ?></td>
+                </tr>
+                <tr>
+                    <th>代表者名</th>
+                    <td><?php the_field('name') ?></td>
+                </tr>
+                <tr>
+                    <th>会社概要</th>
+                    <td><?php the_field('company_info') ?></td>
+                </tr>
+                <tr>
+                    <th>郵便番号</th>
+                    <td><?php the_field('post_code') ?></td>
+                </tr>
+                <tr>
+                    <th>住所</th>
+                    <td><?php the_field('address') ?></td>
+                </tr>
+                <tr>
+                    <th>電話番号</th>
+                    <td><?php the_field('tel') ?></td>
+                </tr>
+                <tr>
+                    <th>FAX</th>
+                    <td><?php the_field('fax') ?></td>
+                </tr>
+                <tr>
+                    <th>EMail</th>
+                    <td><?php the_field('email') ?></td>
+                </tr>
+                <tr>
+                    <th>営業時間</th>
+                    <td><?php the_field('business_hours') ?></td>
+                </tr>
+                <?php if (!empty(get_field('url'))): ?>
+                    <tr>
+                        <th>会社のHP</th>
+                        <td><a href="<?php the_field('url') ?>"><?php the_field('url') ?></a></td>
+                    </tr>
+                <?php endif ?>
+                <tr>
+                    <td colspan="2">
+                        <p><small>※お問い合わせは営業時間内でお願いします。</small></p>
+                    </td>
+                </tr>
+            </table>
         </div>
+
 
         <section class="memo">
             <h3>備考</h3>
             <p><?php the_field('memo') ?></p>
         </section>
 
-
+        <div class="flex_oneword">
+            <?php
+            $pic = get_field('pic1');
+            // $picが存在する場合のみURLを取得
+            $pic_url =  $pic['sizes']['medium'];
+            ?>
+            <img src="<?php echo $pic_url; ?>" alt="">
+            <section class=" oneword">
+                <h3><span>メーカーさんから一言</span></h3>
+                <p><?php the_field('catchphrase') ?></p>
+            </section>
+        </div>
 
         <section class="rcmd_box">
             <!-- ↑このクラスcssに記述無 -->
@@ -203,6 +218,6 @@
             </ul>
         </section>
 
-
+    </div>
 </main>
 <?php get_footer(); ?>

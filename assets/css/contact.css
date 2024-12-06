@@ -198,3 +198,13 @@ textarea {
     box-shadow: 0px 7px 3px rgba(25, 25, 112, 1);
     appearance: none;
 }
+
+.heading heading-primary {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.section body p {
+    margin-bottom: 10px;
+    text-align: center;
+}

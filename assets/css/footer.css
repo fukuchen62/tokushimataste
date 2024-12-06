@@ -95,16 +95,7 @@ footer {
     }
 }
 
-/* トップに戻る文字 */
-#page-top a {
-    text-decoration: none;
-    color: #fff;
-    /* width: 80%;
-    height: 80%; */
-    display: block;
-    opacity: 0.9;
-    transition: all .6s ease;
-}
+
 
 /* 以下すだちくんの設定 */
 /*＝＝＝豆知識＝＝＝ */

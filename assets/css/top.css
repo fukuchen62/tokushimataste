@@ -34,9 +34,10 @@ h2 {
 .aboutsite {
     width: 90%;
     margin: 0 auto;
-    border: solid #FBB126;
+    /* border: solid #FBB126; */
     padding: 20px;
-    border-radius: 15px;
+    border-radius: 30px;
+    box-shadow: 0 0 6px 1px #FBB126, 0 0 6px 1px #FBB126 inset;
 }
 
 .aboutsite h2 {

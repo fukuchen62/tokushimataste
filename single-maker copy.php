@@ -96,19 +96,19 @@
 
             <table class="table_ms">
                 <tr>
-                    <!-- <th>会社名</th> -->
+                    <th>会社名</th>
                     <td><?php the_field('company') ?></td>
                 </tr>
                 <tr>
-                    <!-- <th>フリガナ</th> -->
+                    <th>フリガナ</th>
                     <td><?php the_field('phonetic') ?></td>
                 </tr>
                 <tr>
-                    <!-- <th>代表者名</th> -->
+                    <th>代表者名</th>
                     <td><?php the_field('name') ?></td>
                 </tr>
                 <tr>
-                    <!-- <th>会社概要</th> -->
+                    <th>会社概要</th>
                     <td><?php the_field('company_info') ?></td>
                 </tr>
                 <tr>

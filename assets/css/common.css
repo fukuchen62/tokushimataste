@@ -42,6 +42,7 @@
 /* 背景に和紙画像を入れるとしたらの場合の準備 */
 body {
     background: url('../images/footer.png') repeat-x center bottom;
+    background-size: auto 250px;
 }
 
 /* ==================== */

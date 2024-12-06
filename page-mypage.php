@@ -128,7 +128,7 @@
     <!-- end favorites -->
         </section>
         <!-- 区切り線のhr -->
-        <hr>
+        <!-- <hr> -->
 
     </div>
 </main>

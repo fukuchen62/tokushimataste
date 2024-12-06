@@ -299,7 +299,41 @@ h2 {
 
 /* バナー */
 
-.banner {
+.banner-item {
+    height: 110px;
+    width: 170px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F8F3E0;
+    box-shadow: 4px 4px 0px #A9A9A9;
+    transition: 0.3s all;
+    margin: 30px;
+    padding: 10px;
+}
+
+.banner-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto;
+    margin-top: 150px;
+}
+
+
+@media screen and (min-width: 770px) {
+    .banner-wrap {
+        max-width: 1200px;
+        width: 100%;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+}
+
+/* .banner {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -311,7 +345,7 @@ h2 {
 
 .banner img {
     max-width: 200px;
-}
+} */
 
 @media screen and (width>=700px) {
     section+section {

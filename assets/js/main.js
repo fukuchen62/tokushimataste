@@ -370,3 +370,21 @@ function resetForm(url) {
     // ホームページにリダイレクト
     window.location.href = url;
 }
+
+
+// --------------------------
+// スクロールしたらフェードイン
+// --------------------------
+// $(function () {
+//     $(window).scroll(function () {
+//         const windowHeight = $(window).height();
+//         const scroll = $(window).scrollTop();
+
+//         $('.fade').each(function () {
+//             const targetPosition = $(this).offset().top;
+//             if (scroll > targetPosition - windowHeight + 100) {
+//                 $(this).addClass("is-fadein");
+//             }
+//         });
+//     });
+// });

@@ -81,7 +81,7 @@
 /* ページネーション代用/
 /* ==================== */
 
-.page_example li {
+/* .page_example li {
     display: inline-block;
     height: 40px;
     line-height: 40px;
@@ -117,7 +117,8 @@
     text-decoration: none;
     background-color: #1597CC;
     border-radius: 5px;
-}
+} */
+/* ↑12/5コメントアウト山口 */
 
 /* メーカー個別ページ */
 
@@ -186,11 +187,14 @@ img {
     margin: 0 auto;
 }
 
-.table_ms tr {
+.table_ms li {
     border-bottom: solid 1px black;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
-.table_ms th,
+/* ↑追記山口 */
+
 .table_ms td {
     padding: 10px;
 }
@@ -233,7 +237,7 @@ img {
 }
 
 .container_ms {
-    margin-bottom: 60px;
+    /* margin-bottom: 60px; */
 }
 
 /* 備考欄 */
@@ -250,7 +254,7 @@ img {
 
 .memo p {
     border-radius: 10px;
-    padding: 20px;
+    /* padding: 20px; */
     background-color: beige;
 }
 
@@ -259,14 +263,15 @@ img {
     .flex_oneword {
         display: flex;
         justify-content: space-around;
-        gap: 60px;
+        /* gap: 60px; */
     }
 }
 
 .flex_oneword {
     margin-top: 80px;
-    text-align: center;
+    /* text-align: center; */
     /* 画像の真ん中寄せ */
+    /* 12/6コメントアウト山口 */
 }
 
 .oneword h3 {

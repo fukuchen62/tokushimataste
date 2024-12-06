@@ -8,7 +8,7 @@ $(function () {
     $(".single-item").slick({
         autoplay: true,
         autoplaySpeed: 5000,
-        dots: true,
+        // dots: true,
         fade: true,
         cssEase: "linear", //スライドの流れを等速
         speed: 1000,

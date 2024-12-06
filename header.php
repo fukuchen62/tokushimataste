@@ -15,7 +15,7 @@ $page_tile = '';
 //ページタイトル
 $img_path = get_template_directory_uri('') . '/assets/images/';
 //ページデスクリプション
-$page_description = '徳島を旅するように味わう';
+$page_description = '徳島の名産品を使ったご飯のおともで、徳島の豊かな味わいをあなたの食卓へ。徳島を旅するような味わいをお届けします。';
 
 if (is_post_type_archive('product') || is_tax('product_type')) {
     $page_tile = '商品一覧';

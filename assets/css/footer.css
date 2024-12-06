@@ -3,11 +3,11 @@
 footer {
     width: 100%;
     margin: 0 auto;
-    background-color: #93b4df;
+    /* background-color: #93b4df; */
     /* margin-top: 100px auto; */
     text-align: center;
-    background: url('../images/footer.png') repeat center center;
-    background-size: contain;
+    /* background: url('../images/footer.png') repeat center center; */
+    /* background-size: contain; */
     padding-top: 40px;
 }
 

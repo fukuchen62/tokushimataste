@@ -40,10 +40,9 @@
 } */
 
 /* 背景に和紙画像を入れるとしたらの場合の準備 */
-
-/* body {
-    background-image: url(https://beiz.jp/images_S/japanese-paper/japanese-paper_00445.jpg);
-} */
+body {
+    background: url('../images/footer.png') repeat-x center bottom;
+}
 
 /* ==================== */
 /* base */

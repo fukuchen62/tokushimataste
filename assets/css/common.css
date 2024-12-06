@@ -318,6 +318,8 @@ a {
     border: 2px solid #9b9b9c;
     width: 300px;
     height: 400px;
+    /* 12/6追記山口 */
+    overflow: hidden;
 }
 
 /* タイトル */

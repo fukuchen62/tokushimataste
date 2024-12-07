@@ -411,10 +411,10 @@ function my_wpcf7_autop()
     return false;
 }
 
-// サイドバー追加山口
-add_action('widgets_init', function () {
-    register_sidebar();
-});
+// // サイドバー追加山口
+// add_action('widgets_init', function () {
+//     register_sidebar();
+// });
 
 
 

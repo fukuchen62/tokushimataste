@@ -252,9 +252,10 @@ input {
 	margin-bottom: 50px;
 }
 
+/* innerの内余白ではなく、外余白に追加 */
 @media screen and (max-width:1064px) and (min-width:900px) {
-	.inner {
-		padding: 0px 20px;
+	#search_box {
+		margin: 0px 20px;
 	}
 }
 

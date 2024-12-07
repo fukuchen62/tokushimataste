@@ -11,17 +11,17 @@
             <ul class="btn-content">
                 <a href="<?php echo home_url('/maker_type/m_east/'); ?>" class="">
                     <li id="east">
-                        <span>県東部</span>
+                        <span>県東</span>
                     </li>
                 </a>
                 <a href="<?php echo home_url('/maker_type/m_west/'); ?>" class="">
                     <li id="west">
-                        <span>県西部</span>
+                        <span>県西</span>
                     </li>
                 </a>
                 <a href="<?php echo home_url('/maker_type/m_south/'); ?>" class="">
                     <li id="south">
-                        <span>県南部</span>
+                        <span>県南</span>
                     </li>
                 </a>
             </ul>

@@ -18,7 +18,7 @@
 
                 // 「地域」のチェックを保持
                 $select_area = filter_input(INPUT_GET, "area", FILTER_DEFAULT, FILTER_REQUIRE_ARRAY) ?: [];
-                $checked["area"] = ["east" => "", "west" => "", "south" => ""];
+                $checked["area"] = ["west" => "", "east" => "", "south" => ""];
                 foreach ($select_area as $val) {
                     $checked["area"][$val] = " checked";
                 }
@@ -51,16 +51,16 @@
 
                     <ul>
                         <li class="choice_item">
-                            <input type="checkbox" name="area[]" id="area1" value="east" <?= $checked["area"]["east"] ?>>
-                            <label for="area1">県東部</label>
+                            <input type="checkbox" name="area[]" id="area1" value="west" <?= $checked["area"]["west"] ?>>
+                            <label for="area1">県西</label>
                         </li>
                         <li class="choice_item">
-                            <input type="checkbox" name="area[]" id="area2" value="west" <?= $checked["area"]["west"] ?>>
-                            <label for="area2">県西部</label>
+                            <input type="checkbox" name="area[]" id="area2" value="east" <?= $checked["area"]["east"] ?>>
+                            <label for="area2">県東</label>
                         </li>
                         <li class="choice_item">
                             <input type="checkbox" name="area[]" id="area3" value="south" <?= $checked["area"]["south"] ?>>
-                            <label for="area3">県南部</label>
+                            <label for="area3">県南</label>
                         </li>
                     </ul>
                 </section>

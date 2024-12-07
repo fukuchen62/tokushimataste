@@ -17,16 +17,7 @@
             ?>
         </h2>
 
-        <!-- mypageブックマーク用ループ外 -->
-        <div>
-            <?php
-            global $wp_query;
-            $post_id = $wp_query->get_queried_object_id();
-            echo get_favorites_button($post_id);
-            ?>
-        </div>
 
-        <!-- / ループ外 -->
 
         <h2 class="ttl_rcp"><?php the_field('recipe_name'); ?></h2>
 

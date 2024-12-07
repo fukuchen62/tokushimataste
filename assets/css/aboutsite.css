@@ -54,8 +54,9 @@ h2:after {
 
 /*手書き風*/
 .box3-5 {
-    padding: 2em;
+    padding: 1em;
     /*内側余白*/
+    /* 余白狭くした山口 */
     border-radius: 30px 60px/60px 30px;
     border: solid 8px #ccc7be;
     font-size: 16px;

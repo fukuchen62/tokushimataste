@@ -24,6 +24,14 @@
         <!-- いいねボタン -->
         <?php echo do_shortcode('[wp_ulike]'); ?>
 
+        <!-- お気に入りループ外 -->
+        <?php
+        global $wp_query;
+        $post_id = $wp_query->get_queried_object_id();
+        echo get_favorites_button($post_id);
+        ?>
+        <!-- / お気に入りループ外 -->
+
         <!-- スライダー -->
         <div class="container_rs">
             <div class="slider_rs">

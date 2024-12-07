@@ -18,7 +18,6 @@
         <div class="sub-inner">
             <div class="container_ms">
                 <div class="slider_ms">
-
                     <?php
                     $pic = get_field('pic1');
                     $pic_url = $pic ? $pic['sizes']['large'] : '';
@@ -29,7 +28,6 @@
                         </div>
                     <?php endif; ?>
 
-
                     <?php
                     $pic = get_field('pic2');
                     $pic_url = $pic ? $pic['sizes']['large'] : '';
@@ -39,7 +37,6 @@
                             <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
                         </div>
                     <?php endif; ?>
-
 
                     <?php
                     $pic = get_field('pic3');

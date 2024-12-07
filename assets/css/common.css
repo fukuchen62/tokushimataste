@@ -68,6 +68,10 @@ h2 {
     font-size: 3rem;
 }
 
+h3 {
+    font-size: 2.5rem;
+}
+
 .ttl_h2 {
     margin-top: 40px;
 }
@@ -626,11 +630,11 @@ a {
 } */
 
 /* プラグイン */
-.goods_plugins_pc {
+.fav_plugins_pc {
     display: none;
 }
 
-.goods_plugins_sp {
+.fav_plugins_sp {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -640,7 +644,7 @@ a {
 }
 
 @media screen and (min-width:900px) {
-    .goods_plugins_pc {
+    .fav_plugins_pc {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
@@ -648,10 +652,10 @@ a {
         justify-content: center;
         gap: 10px;
         position: absolute;
-        right: 50px;
+        right: 100px;
     }
 
-    .goods_plugins_sp {
+    .fav_plugins_sp {
         display: none;
         align-items: center;
         flex-wrap: wrap;

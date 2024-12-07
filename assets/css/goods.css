@@ -34,15 +34,26 @@
     margin-bottom: 30px;
 }
 
+/* プラグイン */
+.goods_plugins {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+    gap: 10px;
+}
+
 /* 企業詳細のテーブル */
 .goods_table {
-    width: 80%;
+    width: 100%;
     font-size: 1.6rem;
     margin: 0 auto;
 }
 
 .goods_table tr {
     border-bottom: solid 1px black;
+
 }
 
 .goods_table {
@@ -51,14 +62,14 @@
 
 .goods_table th {
     font-size: 1.8rem;
-    width: 125px;
-    padding-top: 10px;
+    width: 100px;
+    vertical-align: middle;
     /* アレルギーで改行する */
 }
 
 .goods_table td {
-    padding-top: 10px;
     font-weight: 600;
+    vertical-align: middle;
 }
 
 .goods_si_flex {

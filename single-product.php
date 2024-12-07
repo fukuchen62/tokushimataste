@@ -1,22 +1,23 @@
 <?php get_header(); ?>
 <main>
     <div class="inner">
+        <?php get_template_part('template-parts/breadcrumb');
+        ?>
         <div class="inner_gs">
-            <?php get_template_part('template-parts/breadcrumb');
-            ?>
 
             <h2 class="tittle_goods_single"><span><?php the_title() ?></span></h2>
 
-            <!-- お気に入りボタン追記12/1山口-->
-            <?php
-            global $wp_query;
-            $post_id = $wp_query->get_queried_object_id();
-            echo get_favorites_button($post_id);
-            ?>
-            <!-- いいねボタン追記12/5山口 -->
+            <div class="goods_plugins">
+                <!-- お気に入りボタン追記12/1山口-->
+                <?php
+                global $wp_query;
+                $post_id = $wp_query->get_queried_object_id();
+                echo get_favorites_button($post_id);
+                ?>
+                <!-- いいねボタン追記12/5山口 -->
 
-            <?php echo do_shortcode('[wp_ulike]'); ?>
-
+                <?php echo do_shortcode('[wp_ulike]'); ?>
+            </div>
             <div class="goods_si_flex">
                 <?php $img = get_field('pic1');
                 $img_url = $img['sizes']['large']; ?>
@@ -113,7 +114,7 @@
                         <h3 class=>メーカーHP</h3>
                         <?php //the_field('maker_id');
                         ?>
-                        <a href="<?php the_field('url', $m_id) ?>"><?php the_field('url', $m_id) ?></a>
+                        <a href="<?php the_field('url', $m_id) ?>" target="_blank"><?php the_field('url', $m_id) ?></a>
                     </section>
                 <?php endif; ?>
             <?php endif; ?>

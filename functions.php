@@ -296,10 +296,10 @@ function my_custom_title($title)
 {
     if (is_search()) {
         // 条件検索ページ
-        $title = '条件検索' . '-' . get_bloginfo('name');
-    } elseif (is_post_type_archive('column') || is_tax('column_type')) {
+        $title = '詳細検索' . '-' . get_bloginfo('name');
+    } elseif (is_post_type_archive('column') || is_tax('column_type') || is_singular('column')) {
         // コラム一覧、コラム詳細ページ
-        $title = 'コラム記事' . '-' . get_bloginfo('name');
+        // $title = 'コラム記事' . '-' . get_bloginfo('name');
     }
     // 変更したタイトルを返す
     return $title;

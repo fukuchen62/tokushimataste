@@ -3,7 +3,7 @@
 
 
 <main>
-    <div class="inner">
+    <div class="inner sub-inner">
         <!-- パンくずリスト -->
         <?php get_template_part('template-parts/breadcrumb'); ?>
 

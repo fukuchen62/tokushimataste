@@ -102,6 +102,7 @@ a img:hover {
     min-width: 320px;
     margin: 0 auto 40px;
     padding: 50px 20px 0;
+    position: relative;
 }
 
 @media screen and (min-width:900px) {
@@ -625,7 +626,11 @@ a {
 } */
 
 /* プラグイン */
-.goods_plugins {
+.goods_plugins_pc {
+    display: none;
+}
+
+.goods_plugins_sp {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -634,6 +639,29 @@ a {
     gap: 10px;
 }
 
+@media screen and (min-width:900px) {
+    .goods_plugins_pc {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        justify-content: center;
+        gap: 10px;
+        position: absolute;
+        right: 50px;
+    }
+
+    .goods_plugins_sp {
+        display: none;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        justify-content: center;
+        gap: 10px;
+        position: absolute;
+        right: 50px;
+    }
+}
 
 @media screen and (min-width:900px) {
     .sub-inner {

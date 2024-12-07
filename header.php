@@ -28,12 +28,6 @@ if (is_post_type_archive('product') || is_tax('product_type')) {
     $img_path .= 'obi1.png';
 } else if (is_search()) {
     $page_tile = '詳細検索';
-    $img_path .= 'obi1.png';
-} else if (is_post_type_archive('column') || is_tax('column_type')) {
-    $page_tile = 'コラム一覧';
-    $img_path .= 'obi2.png';
-} else if (is_singular('column')) {
-    $page_tile = 'コラム詳細';
     $img_path .= 'obi2.png';
 } else if (is_post_type_archive('maker') || is_tax('maker_type')) {
     $page_tile = 'メーカー一覧';
@@ -41,15 +35,21 @@ if (is_post_type_archive('product') || is_tax('product_type')) {
 } else if (is_singular('maker')) {
     $page_tile = 'メーカー詳細';
     $img_path .= 'obi3.png';
+} else if (is_post_type_archive('column') || is_tax('column_type')) {
+    $page_tile = 'コラム一覧';
+    $img_path .= 'obi4.png';
+} else if (is_singular('column')) {
+    $page_tile = 'コラム詳細';
+    $img_path .= 'obi4.png';
 } else if (is_post_type_archive('recipe') || is_tax('recipe_type')) {
     $page_tile = 'アレンジレシピ一覧';
-    $img_path .= 'obi6.jpg';
+    $img_path .= 'obi5.png';
 } else if (is_singular('recipe')) {
     $page_tile = 'アレンジレシピ詳細';
-    $img_path .= 'obi6.jpg';
+    $img_path .= 'obi5.png';
 } else if (is_page('mypage')) {
     $page_tile = 'お気に入り';
-    $img_path .= 'obi5.jpg';
+    $img_path .= 'obi6.png';
 } else if (is_page('about')) {
     $page_tile = 'このサイトについて';
     $img_path .= 'konosaito.jpg';

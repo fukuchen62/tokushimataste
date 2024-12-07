@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+/* ４枚つづりのslick画像 */
+.container_ms {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.slider_ms {
+    margin-bottom: 10px;
+}
+
+.slick-prev {
+    transform: translateX(40px);
+    z-index: 100;
+    cursor: pointer;
+}
+
+.slick-next {
+    transform: translateX(-40px);
+    z-index: 100;
+    cursor: pointer;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: DimGray;
+}
+
+.thumbnail_img {
+    opacity: 0.3;
+    transition: opacity 0.3s linear;
+    cursor: pointer;
+}
+
+
+.thumbnail_ms .slick-current .thumbnail_img {
+    opacity: 1;
+}
+
+@media screen and (min-width: 900px) {
+    .container_ms {
+        width: 60%;
+    }
+}

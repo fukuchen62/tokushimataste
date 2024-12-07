@@ -77,49 +77,6 @@
     gap: 40px;
 }
 
-/* ==================== */
-/* ページネーション代用/
-/* ==================== */
-
-/* .page_example li {
-    display: inline-block;
-    height: 40px;
-    line-height: 40px;
-    width: 40px;
-    text-align: center;
-    border: 1px #ccc solid;
-    border-radius: 5px / 5px;
-    text-align: center;
-    margin: 20px 0;
-}
-
-.page_example {
-    text-align: center;
-}
-
-.page_example .pre {
-    background-color: #ccc;
-    color: #333;
-}
-
-.page_example .this {
-    background-color: #777;
-    color: #fff;
-}
-
-.page_example li a {
-    display: block;
-    text-decoration: none;
-}
-
-.page_example li a:hover {
-    color: #fff;
-    text-decoration: none;
-    background-color: #1597CC;
-    border-radius: 5px;
-} */
-/* ↑12/5コメントアウト山口 */
-
 /* メーカー個別ページ */
 
 /* 企業名 */
@@ -142,16 +99,17 @@
 /* ４枚つづりのslick画像 */
 .container_ms {
     width: 100%;
+    margin: 0 auto;
 }
 
 .slider_ms {
     margin-bottom: 10px;
 }
 
-/* img {
+img {
     height: auto;
     width: 100%;
-} */
+}
 
 .slick-prev {
     transform: translateX(40px);
@@ -176,66 +134,16 @@
     cursor: pointer;
 }
 
+
 .thumbnail_ms .slick-current .thumbnail_img {
     opacity: 1;
 }
 
-
-/* 企業詳細のテーブル
- */
-.table_ms {
-    width: 80%;
-    font-size: 1.6rem;
-    margin: 0 auto;
-}
-
-.table_ms li {
-    border-bottom: solid 1px black;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-/* ↑追記山口 */
-
-.table_ms td {
-    padding: 10px;
-}
-
-.table_ms th {
-    font-size: 1.8rem;
-}
-
-.table_ms td {
-    font-weight: 600;
-}
-
-.table_ms td p small {
-    color: tomato;
-    font-weight: normal;
-}
-
-
-.container_ms {
-    width: 60%;
-    margin: 0 auto;
-}
-
 @media screen and (min-width: 900px) {
-    /* .flex_ms {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 10px;
-    } */
 
-    /* .container_ms {
-        width: 50%;
-    } */
-
-    /* .table_ms {
-        width: 50%;
-    } */
-
+    .container_ms {
+        width: 60%;
+    }
 }
 
 .inner_ms {
@@ -245,22 +153,13 @@
     margin-bottom: 30px;
 }
 
-.container_ms {
-    /* margin-bottom: 60px; */
+.info {
+    margin: 40px auto;
 }
 
 /* 備考欄 */
-.memo h3 {
-    font-size: 1.8rem;
-    font-weight: 600;
-    margin: 40px auto 10px;
-    /* padding-left: 20px; */
-}
-
-.memo p {
+.info p {
     border-radius: 10px;
-    /* padding: 20px; */
-    /* background-color: beige; */
 }
 
 /* 企業さんから一言 */
@@ -327,8 +226,8 @@
 }
 
 .info-company {
-    width: 100%;
-    margin: 20px auto;
+    /* width: 100%; */
+    margin: 20px;
     padding: 20px;
     border: 2px olive dotted;
     border-radius: 10px;
@@ -351,7 +250,7 @@
     text-align: center;
 }
 
-.memo table {
+.info table {
     width: 100%;
     margin: 20px auto;
     font-size: 1.6rem;
@@ -366,7 +265,7 @@
     /* 角からはみ出す内容を隠す */
 }
 
-.memo th {
+.info th {
     width: 20%;
     min-width: 120px;
     max-width: 300px;
@@ -374,8 +273,13 @@
     text-align: center;
 }
 
+.info th, .info td {
+    border: 1px dotted olive;
+    padding: 15px;
+}
+
 @media screen and (max-width: 600px) {
-    .memo th, .memo td {
+    .info th, .info td {
         display: block;
         /* 各セルをブロック要素に */
         width: 100%;
@@ -384,17 +288,13 @@
     }
 }
 
-.memo th, .memo td {
-    border: 1px dotted olive;
-    padding: 10px;
-}
-
 .note {
     color: red;
     font-size: 1.4rem;
 }
 
 .others {
+    margin: 20px auto;
     border: 2px olive dotted;
     border-radius: 10px;
     padding: 20px;

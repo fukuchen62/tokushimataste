@@ -77,49 +77,6 @@
     gap: 40px;
 }
 
-/* ==================== */
-/* ページネーション代用/
-/* ==================== */
-
-/* .page_example li {
-    display: inline-block;
-    height: 40px;
-    line-height: 40px;
-    width: 40px;
-    text-align: center;
-    border: 1px #ccc solid;
-    border-radius: 5px / 5px;
-    text-align: center;
-    margin: 20px 0;
-}
-
-.page_example {
-    text-align: center;
-}
-
-.page_example .pre {
-    background-color: #ccc;
-    color: #333;
-}
-
-.page_example .this {
-    background-color: #777;
-    color: #fff;
-}
-
-.page_example li a {
-    display: block;
-    text-decoration: none;
-}
-
-.page_example li a:hover {
-    color: #fff;
-    text-decoration: none;
-    background-color: #1597CC;
-    border-radius: 5px;
-} */
-/* ↑12/5コメントアウト山口 */
-
 /* メーカー個別ページ */
 
 /* 企業名 */
@@ -138,95 +95,9 @@
     margin-bottom: 5px;
 }
 
-
-/* ４枚つづりのslick画像 */
-.container_ms {
-    width: 100%;
-}
-
-.slider_ms {
-    margin-bottom: 10px;
-}
-
 img {
     height: auto;
     width: 100%;
-}
-
-.slick-prev {
-    transform: translateX(40px);
-    z-index: 100;
-    cursor: pointer;
-}
-
-.slick-next {
-    transform: translateX(-40px);
-    z-index: 100;
-    cursor: pointer;
-}
-
-.slick-prev:before,
-.slick-next:before {
-    color: DimGray;
-}
-
-.thumbnail_img {
-    opacity: 0.3;
-    transition: opacity 0.3s linear;
-    cursor: pointer;
-}
-
-.thumbnail_ms .slick-current {
-    opacity: 1;
-}
-
-/* 企業詳細のテーブル */
-.table_ms {
-    width: 80%;
-    font-size: 1.6rem;
-    margin: 0 auto;
-}
-
-.table_ms li {
-    border-bottom: solid 1px black;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-/* ↑追記山口 */
-
-.table_ms td {
-    padding: 10px;
-}
-
-.table_ms th {
-    font-size: 1.8rem;
-}
-
-.table_ms td {
-    font-weight: 600;
-}
-
-.table_ms td p small {
-    color: tomato;
-    font-weight: normal;
-}
-
-@media screen and (min-width: 770px) {
-    .flex_ms {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 10px;
-
-        .container_ms {
-            width: 50%;
-        }
-
-        .table_ms {
-            width: 35%;
-        }
-    }
 }
 
 .inner_ms {
@@ -236,26 +107,13 @@ img {
     margin-bottom: 30px;
 }
 
-.container_ms {
-    /* margin-bottom: 60px; */
+.info {
+    margin: 40px auto;
 }
 
 /* 備考欄 */
-.memo {
-    margin-top: 80px;
-}
-
-.memo h3 {
-    font-size: 1.8rem;
-    font-weight: 600;
-    margin-bottom: 10px;
-    padding-left: 20px;
-}
-
-.memo p {
+.info p {
     border-radius: 10px;
-    /* padding: 20px; */
-    background-color: beige;
 }
 
 /* 企業さんから一言 */
@@ -290,7 +148,6 @@ img {
 .oneword h3 span {
     font-size: 2.5rem;
     padding-left: 10px;
-
 }
 
 
@@ -320,5 +177,80 @@ img {
 
 .flex_oneword img {
     max-width: 500px;
+}
 
+.info-company {
+    /* width: 100%; */
+    margin: 20px;
+    padding: 20px;
+    border: 2px olive dotted;
+    border-radius: 10px;
+    font-size: 1.8rem;
+    line-height: 3rem;
+}
+
+@media screen and (min-width:678px) {
+    .info-company {
+        margin: 60px auto 40px;
+    }
+}
+
+.catchphrase {
+    width: 100%;
+    margin: 20px auto;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 3rem;
+    text-align: center;
+}
+
+.info table {
+    width: 100%;
+    margin: 20px auto;
+    font-size: 1.6rem;
+    border: 2px olive dotted;
+    /* border-collapse: collapse; */
+    border-radius: 10px;
+    border-collapse: separate;
+    /* 枠線をセルごとに独立 */
+    border-spacing: 0;
+    /* セル間の余白をなくす */
+    overflow: hidden;
+    /* 角からはみ出す内容を隠す */
+}
+
+.info th {
+    width: 20%;
+    min-width: 120px;
+    max-width: 300px;
+    background-color: blanchedalmond;
+    text-align: center;
+}
+
+.info th, .info td {
+    border: 1px dotted olive;
+    padding: 15px;
+}
+
+@media screen and (max-width: 600px) {
+    .info th, .info td {
+        display: block;
+        /* 各セルをブロック要素に */
+        width: 100%;
+        /* 幅をテーブル全体に揃える */
+        max-width: none;
+    }
+}
+
+.note {
+    color: red;
+    font-size: 1.4rem;
+}
+
+.others {
+    margin: 20px auto;
+    border: 2px olive dotted;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
 }

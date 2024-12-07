@@ -5,153 +5,153 @@
         <!-- パンくずリスト-->
         <?php get_template_part('template-parts/breadcrumb');
         ?>
-        <!-- <div class="inner_ms"> -->
+
         <h2 class="tittle_ms"><span><?php the_field('company') ?></span></h2>
 
-
-        <div class="flex_ms">
-            <div class="container_ms">
-                <div class="slider_ms">
-                    <div>
-                        <!-- <div class="slick_img">HTMLにはあるがcssに記載なし山口 -->
-                        <?php
-                        $pic = get_field('pic1');
-                        $pic_url = $pic ? $pic['sizes']['medium'] : '';
-                        ?>
-                        <?php if ($pic_url): ?>
-                            <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
-                        <?php endif; ?>
-                    </div>
-                    <div>
-                        <!-- <div class="slick_img">HTMLにはあるがcssに記載なし山口 -->
-                        <?php
-                        $pic = get_field('pic2');
-                        $pic_url = $pic ? $pic['sizes']['medium'] : '';
-                        ?>
-                        <?php if ($pic_url): ?>
-                            <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
-                        <?php endif; ?>
-                    </div>
-                    <div>
-                        <!-- <div class="slick_img">HTMLにはあるがcssに記載なし山口 -->
-                        <?php
-                        $pic = get_field('pic3');
-                        $pic_url = $pic ? $pic['sizes']['medium'] : '';
-                        ?>
-                        <?php if ($pic_url): ?>
-                            <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
-                        <?php endif; ?>
-                    </div>
-                    <div class="slick_img">
-                        <?php
-                        $pic = get_field('pic4');
-                        $pic_url = $pic ? $pic['sizes']['medium'] : '';
-                        ?>
-                        <?php if ($pic_url): ?>
-                            <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
-                        <?php endif; ?>
-                    </div>
-                </div>
-                <div class="thumbnail_ms">
-                    <div class="thumbnail_img"> <!-- こっちはある山口 -->
-                        <?php
-                        $pic = get_field('pic1');
-                        $pic_url = $pic ? $pic['sizes']['medium'] : '';
-                        ?>
-                        <?php if ($pic_url): ?>
-                            <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
-                        <?php endif; ?>
-                    </div>
-                    <div class="thumbnail_img">
-                        <?php
-                        $pic = get_field('pic2');
-                        $pic_url = $pic ? $pic['sizes']['medium'] : '';
-                        ?>
-                        <?php if ($pic_url): ?>
-                            <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
-                        <?php endif; ?>
-                    </div>
-                    <div class="medium_img">
-                        <?php
-                        $pic = get_field('pic3');
-                        $pic_url = $pic ? $pic['sizes']['medium'] : '';
-                        ?>
-                        <?php if ($pic_url): ?>
-                            <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
-                        <?php endif; ?>
-                    </div>
-                    <div class="thumbnail_img">
-                        <?php
-                        $pic = get_field('pic4');
-                        $pic_url = $pic ? $pic['sizes']['medium'] : '';
-                        ?>
-                        <?php if ($pic_url): ?>
-                            <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
-                        <?php endif; ?>
-                    </div>
-                </div>
-            </div>
-
-            <div class="table_ms">
-                <ul>
-                    <li class="flex_oneword">
-                        <div class=" oneword">
-                            <p>一言</p>
-                            <?php the_field('catchphrase') ?>
-                        </div>
-                    </li>
-                    <li>
-                        <!-- <th>代表者名</th> -->
-                        <?php the_field('name') ?>
-                    </li>
-                    <li>
-                        <!-- <th>会社概要</th> -->
-                        <?php the_field('company_info') ?>
-                    </li>
-                    <li>
-                        <!-- <th>郵便番号</th> -->
-                        <?php echo '〒' . get_field('post_code'); ?>
-                    </li>
-                    <li>
-                        <!-- <th>住所</th> -->
-                        <?php the_field('address') ?>
-                    </li>
-                    <li>
-                        <!-- <th>電話番号</th> -->
-                        <?php echo 'TEL:' . get_field('tel') ?>
-                    </li>
-                    <li>
-                        <!-- <th>FAX</th> -->
-                        <?php echo 'FAX:' . get_field('fax') ?>
-                    </li>
-                    <li>
-                        <!-- <th>EMail</th> -->
-                        <?php echo 'E-mail:' . get_field('email') ?>
-                    </li>
-                    <li>
-                        <!-- <th>営業時間</th> -->
-                        <?php the_field('business_hours') ?>
-                    </li>
-                    <?php if (!empty(get_field('url'))): ?>
-                        <li>
-                            <!-- <th>会社のHP</th> -->
-                            <a href="<?php the_field('url') ?>"><?php the_field('url') ?></a>
-                        </li>
-                    <?php endif ?>
-                    <li>
-                        <td colspan="2">
-                            <p><small>※お問い合わせは営業時間内でお願いします。</small></p>
-                    </li>
-                </ul>
+        <!-- キャッチフレーズ -->
+        <div class="catchphrase sub-inner">
+            <div class="oneword">
+                <?php the_field('catchphrase') ?>
             </div>
         </div>
 
-        <section class="memo">
-            <h3>備考</h3>
-            <p><?php the_field('memo') ?></p>
+        <div class="sub-inner">
+            <div class="container_ms">
+                <div class="slider_ms">
+
+                    <?php
+                    $pic = get_field('pic1');
+                    $pic_url = $pic ? $pic['sizes']['large'] : '';
+                    ?>
+                    <?php if ($pic_url): ?>
+                        <div>
+                            <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
+                        </div>
+                    <?php endif; ?>
+
+
+                    <?php
+                    $pic = get_field('pic2');
+                    $pic_url = $pic ? $pic['sizes']['large'] : '';
+                    ?>
+                    <?php if ($pic_url): ?>
+                        <div>
+                            <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
+                        </div>
+                    <?php endif; ?>
+
+
+                    <?php
+                    $pic = get_field('pic3');
+                    $pic_url = $pic ? $pic['sizes']['large'] : '';
+                    ?>
+                    <?php if ($pic_url): ?>
+                        <div>
+                            <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
+                        </div>
+                    <?php endif; ?>
+
+                    <?php
+                    $pic = get_field('pic4');
+                    $pic_url = $pic ? $pic['sizes']['large'] : '';
+                    ?>
+                    <?php if ($pic_url): ?>
+                        <div>
+                            <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
+                        </div>
+                    <?php endif; ?>
+                </div>
+
+                <!--以下はサムネイル画像 -->
+                <div class="thumbnail_ms">
+                    <?php
+                    $pic = get_field('pic1');
+                    $pic_url = $pic ? $pic['sizes']['thumbnail'] : '';
+                    ?>
+                    <?php if ($pic_url): ?>
+                        <div class="thumbnail_img">
+                            <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
+                        </div>
+                    <?php endif; ?>
+
+                    <?php
+                    $pic = get_field('pic2');
+                    $pic_url = $pic ? $pic['sizes']['thumbnail'] : '';
+                    ?>
+                    <?php if ($pic_url): ?>
+                        <div class="thumbnail_img">
+                            <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
+                        </div>
+                    <?php endif; ?>
+
+                    <?php
+                    $pic = get_field('pic3');
+                    $pic_url = $pic ? $pic['sizes']['thumbnail'] : '';
+                    ?>
+                    <?php if ($pic_url): ?>
+                        <div class="thumbnail_img">
+                            <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
+                        </div>
+                    <?php endif; ?>
+
+                    <?php
+                    $pic = get_field('pic4');
+                    $pic_url = $pic ? $pic['sizes']['thumbnail'] : '';
+                    ?>
+                    <?php if ($pic_url): ?>
+                        <div class="thumbnail_img">
+                            <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
+                        </div>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </div>
+
+        <!-- 会社紹介 -->
+        <div class="sub-inner">
+            <div class="info-company">
+                <?php the_field('company_info') ?>
+            </div>
+        </div>
+
+        <!-- メーカーの基本情報 -->
+        <section class="info sub-inner">
+            <h3>メーカーの基本情報</h3>
+            <table>
+                <tr>
+                    <th>住所</th>
+                    <td><?php the_field('address') ?></td>
+                </tr>
+                <tr>
+                    <th>電話番号</th>
+                    <td><?php echo get_field('tel') ?></td>
+                </tr>
+                <tr>
+                    <th>FAX</th>
+                    <td><?php echo  get_field('fax') ?></td>
+                </tr>
+
+                <tr>
+                    <th>営業時間</th>
+                    <td><?php the_field('business_hours') ?></td>
+                </tr>
+                <tr>
+                    <th>会社のHP</th>
+                    <td><a href="<?php the_field('url') ?>"><?php the_field('url') ?></a></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="note">
+                        ※お問い合わせは営業時間内でお願いします。
+                </tr>
+            </table>
         </section>
 
-
+        <section class="info sub-inner">
+            <h3>その他情報</h3>
+            <div class="others">
+                <p><?php the_field('memo') ?></p>
+            </div>
+        </section>
 
         <section class="rcmd_box">
             <!-- ↑このクラスcssに記述無 -->

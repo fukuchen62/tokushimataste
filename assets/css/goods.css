@@ -177,6 +177,17 @@
     transform: translateY(1px);
 }
 
+/* 検索結果の改行 */
+.br-sp {
+    display: none;
+}
+
+@media(width<=500px) {
+    .br-sp {
+        display: inline-block;
+    }
+}
+
 /* エリア検索の結果表示バー */
 /* エリア名 */
 .area_box {
@@ -199,6 +210,8 @@
     }
 
 }
+
+
 
 /* 商品のイメージの大きさほか */
 

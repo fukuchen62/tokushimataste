@@ -13,7 +13,7 @@
 
                 <section class="recipe_container g<?php echo $key + 1; ?>">
 
-                    <h2 class="ttl_box"><a href="<?php echo get_term_link($recipe_type); ?>"><?php echo $recipe_type->name; ?>
+                    <h2 class="ttl_box"><?php echo $recipe_type->name; ?>
                         </a></h2>
 
                     <ul class="list">

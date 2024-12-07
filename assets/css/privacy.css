@@ -14,9 +14,10 @@
     margin-right: .4em;
 }
 
-.qa-8 dt::before {
+/* ・を消す　12/7佐々木 */
+/* .qa-8 dt::before {
     content: "・";
-}
+} */
 
 .qa-8 dd {
     font-size: 16px;
@@ -26,9 +27,10 @@
     color: #333333;
 }
 
-.qa-8 dd::before {
+/* ・を消す　12/7佐々木 */
+/* .qa-8 dd::before {
     content: "・";
-}
+} */
 
 .heading10 {
     text-align: center;

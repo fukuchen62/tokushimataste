@@ -4,10 +4,20 @@
         <?php get_template_part('template-parts/breadcrumb');
         ?>
         <div class="inner_gs">
+            <div class="goods_plugins_pc">
+                <!-- お気に入りボタン追記12/1山口-->
+                <?php
+                global $wp_query;
+                $post_id = $wp_query->get_queried_object_id();
+                echo get_favorites_button($post_id);
+                ?>
+                <!-- いいねボタン追記12/5山口 -->
 
+                <?php echo do_shortcode('[wp_ulike]'); ?>
+            </div>
             <h2 class="tittle_goods_single"><span><?php the_title() ?></span></h2>
 
-            <div class="goods_plugins">
+            <div class="goods_plugins_sp">
                 <!-- お気に入りボタン追記12/1山口-->
                 <?php
                 global $wp_query;

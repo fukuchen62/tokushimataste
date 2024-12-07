@@ -28,8 +28,8 @@
     </div>
 
     <script>
-    mames = <?php echo json_encode($msgs); ?>;
-    console.log(mames[0]);
+        mames = <?php echo json_encode($msgs); ?>;
+        console.log(mames[0]);
     </script>
 
     <!-- すだちくん -->
@@ -43,11 +43,12 @@
         </a>
     </p>
 
-    <!-- フッター画像 -->
-    <!-- <div class="footer-wrapper">
-        <img class="footer_mb_ill" src="<?php //echo get_template_directory_uri() . '/assets/images/footer.svg'; 
-                                        ?>" alt="">
-    </div> -->
+    <!-- 走るキャレクタ -->
+    <div class="demo_stage">
+        <div class="demo_wrap" data-order="left">
+            <span class="demo_item anime"></span>
+        </div>
+    </div>
 
     <div class="footer_container">
         <ul class="footer_nav">

@@ -633,3 +633,10 @@ a {
     justify-content: center;
     gap: 10px;
 }
+
+
+@media screen and (min-width:900px) {
+    .sub-inner {
+        padding: 0 40px;
+    }
+}

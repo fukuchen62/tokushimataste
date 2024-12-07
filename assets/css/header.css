@@ -349,12 +349,12 @@ nav.nav-pc {
     }
 
     .header-container li:first-child img {
-        width: 80px;
+        width: 90px;
         /* gap: 15px; */
     }
 
     .header-container li:nth-child(n+2) img {
-        width: 70px;
+        width: 90px;
         /* gap: 15px; */
     }
 

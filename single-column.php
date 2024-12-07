@@ -9,11 +9,15 @@
         <!-- コラム -->
         <section class="column">
             <!-- いいねボタン -->
-            <?php echo do_shortcode('[wp_ulike]'); ?>
+            <div class="fav_plugins_pc">
+                <?php echo do_shortcode('[wp_ulike]'); ?>
+            </div>
             <!-- スライダー -->
             <!-- 見出し -->
             <h2 class="ttl_box ttl_cd"><span><?php the_title(); ?></span></h2>
-
+            <div class="fav_plugins_sp">
+                <?php echo do_shortcode('[wp_ulike]'); ?>
+            </div>
             <!-- コラム一覧 -->
             <div class="single_col_flex">
                 <div class="article_col">

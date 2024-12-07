@@ -196,6 +196,24 @@ li.cat-item a::after {
 	margin-bottom: 50px;
 }
 
+/* プラグインのメディアクエリ */
+@media screen and (min-width:1060px) {
+	.fav_plugins_pc {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		margin: 0 auto;
+		justify-content: center;
+		gap: 10px;
+		position: absolute;
+		right: 100px;
+	}
+
+	.fav_plugins_sp {
+		display: none;
+	}
+}
+
 @media screen and (min-width: 1060px) {
 	.single_col_flex {
 		display: flex;

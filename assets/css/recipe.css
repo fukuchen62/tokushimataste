@@ -134,6 +134,24 @@
     text-align: center;
 }
 
+/* プラグインのメディアクエリ */
+@media screen and (min-width:900px) {
+    .fav_plugins_pc {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        justify-content: center;
+        gap: 10px;
+        position: absolute;
+        right: 100px;
+    }
+
+    .fav_plugins_sp {
+        display: none;
+    }
+}
+
 /* ４枚つづりのslick画像 */
 .container_rs {
     width: 50%;

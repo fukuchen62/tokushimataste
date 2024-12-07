@@ -34,14 +34,22 @@
     margin-bottom: 30px;
 }
 
-/* プラグイン */
-.goods_plugins {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    justify-content: center;
-    gap: 10px;
+/* プラグインのメディアクエリ */
+@media screen and (min-width:900px) {
+    .fav_plugins_pc {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        justify-content: center;
+        gap: 10px;
+        position: absolute;
+        right: 100px;
+    }
+
+    .fav_plugins_sp {
+        display: none;
+    }
 }
 
 /* 企業詳細のテーブル */

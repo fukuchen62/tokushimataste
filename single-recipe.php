@@ -6,32 +6,43 @@
         <?php get_template_part('template-parts/breadcrumb'); ?>
 
         <!-- カスタム投稿のターム名を出力 -->
-        <h2>
+        <!-- <h2> -->
+        <?php
+        // $terms = get_the_terms($post->ID, 'recipe_type');
+        // if ($terms):
+        //     foreach ($terms as $term):
+        //         echo $term->name; //ターム名
+        //     endforeach;
+        // endif;
+        ?>
+        <!-- </h2> -->
+
+        <div class="fav_plugins_pc">
+            <!-- いいねボタン -->
+            <?php echo do_shortcode('[wp_ulike]'); ?>
+
+            <!-- お気に入りループ外 -->
             <?php
-            $terms = get_the_terms($post->ID, 'recipe_type');
-            if ($terms):
-                foreach ($terms as $term):
-                    echo $term->name; //ターム名
-                endforeach;
-            endif;
+            global $wp_query;
+            $post_id = $wp_query->get_queried_object_id();
+            echo get_favorites_button($post_id);
             ?>
-        </h2>
-
-
+            <!-- / お気に入りループ外 -->
+        </div>
 
         <h2 class="ttl_rcp"><?php the_field('recipe_name'); ?></h2>
+        <div class="fav_plugins_sp">
+            <!-- いいねボタン -->
+            <?php echo do_shortcode('[wp_ulike]'); ?>
 
-        <!-- いいねボタン -->
-        <?php echo do_shortcode('[wp_ulike]'); ?>
-
-        <!-- お気に入りループ外 -->
-        <?php
-        global $wp_query;
-        $post_id = $wp_query->get_queried_object_id();
-        echo get_favorites_button($post_id);
-        ?>
-        <!-- / お気に入りループ外 -->
-
+            <!-- お気に入りループ外 -->
+            <?php
+            global $wp_query;
+            $post_id = $wp_query->get_queried_object_id();
+            echo get_favorites_button($post_id);
+            ?>
+            <!-- / お気に入りループ外 -->
+        </div>
         <!-- スライダー -->
         <div class="container_rs">
             <div class="slider_rs">

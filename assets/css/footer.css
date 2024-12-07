@@ -16,9 +16,8 @@ footer {
 }
 
 .footer_container {
-
     margin: 0px auto;
-    padding: 20px;
+    padding: 0 20px;
     display: inline-block;
 }
 
@@ -330,7 +329,9 @@ footer {
     background-position: 0 0;
     background-repeat: no-repeat;
     display: block;
-    position: relative;
+    position: absolute;
+    bottom: 20px;
+
 }
 
 /* .demo_item.anime {
@@ -346,21 +347,28 @@ footer {
 .demo_stage {
     position: relative;
     width: 100%;
-    height: 165px;
-    top: 140px;
+    /* height: 165px; */
+    top: 130px;
     display: block;
 }
 
 .demo_wrap {
     display: block;
     position: absolute;
-    top: 120px;
+    top: 170px;
     animation-fill-mode: forwards;
     animation-timing-function: linear;
-    animation-duration: 15s;
+    animation-duration: 5s;
     animation-iteration-count: 1;
     margin-right: -25px;
     /* transform: scaleX(-1); */
+}
+
+@media screen and (min-width:900px) {
+    .demo_wrap {
+        top: 120px;
+        animation-duration: 15s;
+    }
 }
 
 .demo_wrap[data-order="left"] {

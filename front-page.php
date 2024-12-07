@@ -117,8 +117,8 @@
         <!-- メーカー -->
         <section class="container">
             <div class="ttl_box">
-                <h2>メーカー様ご紹介</h2>
-                <p>徳島県内のメーカー様です。</p>
+                <h2>メーカー紹介</h2>
+                <p>徳島県内のメーカーです。</p>
             </div>
             <div class="scroll-infinity">
                 <div class="scroll-infinity__wrap">
@@ -300,13 +300,34 @@
         <!-- ダミーバナー広告あとで消す -->
         <!-- <p style="text-align: center;">バナー広告</p> -->
 
-        <div>
-            <ul class="banner">
-                <li><a href=""><img src="<?php echo get_template_directory_uri(); ?>/uploads/banner_sample1.jpg" alt="バナー"></a></li>
-                <li><a href=""><img src="<?php echo get_template_directory_uri(); ?>/uploads/banner_sample2.jpg" alt="バナー"></a></li>
-                <li><a href=""><img src="<?php echo get_template_directory_uri(); ?>/uploads/banner_sample3.jpg" alt="バナー"></a></li>
-                <li><a href=""><img src="<?php echo get_template_directory_uri(); ?>/uploads/banner_sample3.jpg" alt="バナー"></a></li>
-            </ul>
+        <div class="banner">
+            <div class="banner-wrap fade is-fadein">
+                <div class="banner-item">
+                    <a href="https://awa-nolife.com/" target="_blank">
+
+                        <img src="https://awa-nolife.com/wp-content/themes/awa_nolife/assets/img/logo/logo.png" alt="あわ農">
+                    </a>
+                </div>
+
+                <div class="banner-item">
+                    <a href="https://awa-roadstation.jp/" target="_blank">
+                        <img src="	https://awa-roadstation.jp/assets/images/site_logo/logo.png" alt="まるっと道の駅">
+                    </a>
+                </div>
+
+                <div class="banner-item">
+                    <a href="https://kisyanotabi.com/" target="_blank">
+                        <img src="https://awa-nolife.com/wp-content/themes/awa_nolife/assets/img/top/kisyatabi_ico.png" alt="とくしま汽車の旅">
+                    </a>
+                </div>
+
+                <div class="banner-item">
+                    <a href="https://tks-navi.com/" target="_blank">
+                        <img src="	https://tks-navi.com/wp-content/themes/tks-navi/assets/images/logo.png.webp" alt="こども食堂ナビ">
+                    </a>
+                </div>
+            </div>
+
         </div>
     </div>
 

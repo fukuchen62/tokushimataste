@@ -8,13 +8,6 @@
 
         <!-- コラム -->
         <section class="column">
-            <!-- ループ外 -->
-            <?php
-            global $wp_query;
-            $post_id = $wp_query->get_queried_object_id();
-            echo get_favorites_button($post_id);
-            ?>
-            <!-- / ループ外 -->
             <!-- いいねボタン -->
             <?php echo do_shortcode('[wp_ulike]'); ?>
             <!-- スライダー -->

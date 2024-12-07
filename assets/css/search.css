@@ -132,8 +132,8 @@ input {
 	}
 
 	.inner_search {
-		padding-left: 20%;
-		padding-right: 20%;
+		padding-left: 10%;
+		padding-right: 10%;
 	}
 
 	.is_allergy li {
@@ -141,7 +141,7 @@ input {
 	}
 }
 
-@media screen and (width>1060px) {
+@media screen and (width>900px) {
 	.inner_search ul {
 		gap: 30px;
 	}
@@ -250,4 +250,10 @@ input {
 
 .result_box {
 	margin-bottom: 50px;
+}
+
+@media screen and (max-width:1064px) and (min-width:900px) {
+	.inner {
+		padding: 0px 20px;
+	}
 }

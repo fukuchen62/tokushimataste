@@ -643,7 +643,7 @@ a {
     gap: 10px;
 }
 
-@media screen and (min-width:900px) {
+/* @media screen and (min-width:900px) {
     .fav_plugins_pc {
         display: flex;
         align-items: center;
@@ -665,7 +665,7 @@ a {
         position: absolute;
         right: 50px;
     }
-}
+} */
 
 @media screen and (min-width:900px) {
     .sub-inner {

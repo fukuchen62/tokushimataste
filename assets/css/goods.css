@@ -507,3 +507,14 @@ img {
     height: auto;
     width: 100%;
 }
+
+.goods_pic {
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 900px) {
+    .goods_pic {
+        width: 60%;
+    }
+}

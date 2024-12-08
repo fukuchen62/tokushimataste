@@ -326,9 +326,11 @@ footer {
 /* フッターの移動アニメ */
 .demo_item {
     width: 300px;
-    height: 180px;
+    height: 120px;
     border-radius: 10px;
-    background-image: url(../images/back-to-school.gif);
+    /* background-image: url(../images/back-to-school.gif); */
+    /* background-image: url(../images/chef.webp); */
+    background-image: url(../images/naninoseru.svg);
     background-size: 100% 100%;
     background-position: 0 0;
     background-repeat: no-repeat;
@@ -352,8 +354,8 @@ footer {
 .demo_stage {
     position: absolute;
     width: 100%;
-    height: 150px;
-    bottom: 0px;
+    height: 120px;
+    bottom: 50px;
     display: block;
     /* border: 1px red solid; */
 }

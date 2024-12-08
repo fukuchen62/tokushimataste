@@ -71,13 +71,13 @@
             </li>
         </ul>
     </div>
-    <!-- コピーライト -->
-    <p class="f-copy">
-        <small>
-            Copyright © 株式会社QLIPプログラミングスクール All Rights Reserved.
-        </small>
-    </p>
 </footer>
+<!-- コピーライト -->
+<div class="f-copy">
+    <small>
+        Copyright © 株式会社QLIPプログラミングスクール All Rights Reserved.
+    </small>
+</div>
 
 <?php wp_footer(); ?>
 </body>

@@ -1,7 +1,3 @@
-.inner {
-    margin: 0 15px;
-}
-
 .original-button2 {
     display: flex;
     align-items: center;
@@ -62,4 +58,30 @@ span.marker {
 
 .img-none {
     margin-top: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .img-none img {
+        width: 60vw;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.inner-sub {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+
+.error {
+    margin: 0 auto;
+}
+
+.error img {
+    max-width: 100%;
+    height: auto;
 }

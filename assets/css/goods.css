@@ -4,9 +4,7 @@
     padding-left: 20px;
     padding-right: 20px;
 } */
-.sub-inner {
-    padding-bottom: 30px;
-}
+
 
 .tittle_goods_single {
     margin: 0 auto;
@@ -285,7 +283,7 @@ ul {
 }
 
 
-.img-fluid {
+/* .img-fluid {
     width: 320px;
     height: 240px;
     border-radius: 8px 8px 0 0;
@@ -302,7 +300,7 @@ ul {
     text-align: center;
     line-height: 35px;
     border: 1px solid #FF9900;
-}
+} */
 
 /*以下変更 byぎみ
  ページングで表示するコンテンツのスタイル
@@ -334,6 +332,9 @@ ul {
     display: block;
 } */
 
+.box_maker {
+    padding-bottom: 30px;
+}
 
 /* area */
 /* お供の一覧表示 */
@@ -361,4 +362,148 @@ ul {
         height: auto;
         opacity: 0.2;
     }
+}
+
+
+
+/* メーカーと共通 */
+.catchphrase {
+    width: 100%;
+    margin: 20px auto;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 3rem;
+    text-align: center;
+}
+
+
+@media screen and (min-width: 770px) {
+    .flex_oneword {
+        display: flex;
+        justify-content: space-around;
+        /* gap: 60px; */
+    }
+}
+
+.flex_oneword {
+    margin-top: 80px;
+    /* text-align: center; */
+    /* 画像の真ん中寄せ */
+    /* 12/6コメントアウト山口 */
+}
+
+.oneword h3 {
+    border-left: solid 10px LightSkyBlue;
+    font-weight: 600;
+    margin: 20px;
+    text-align: left;
+    /* 画像でセンターにしたのを解除 */
+}
+
+.oneword p {
+    text-align: left;
+    /* 画像でセンターにしたのを解除 */
+}
+
+.oneword h3 span {
+    font-size: 2.5rem;
+    padding-left: 10px;
+}
+
+.flex_oneword img {
+    max-width: 500px;
+}
+
+.info {
+    margin: 40px auto;
+}
+
+/* 備考欄 */
+.info p {
+    border-radius: 10px;
+}
+
+.info-company {
+    /* width: 100%; */
+    margin: 20px;
+    padding: 20px;
+    border: 2px olive dotted;
+    border-radius: 10px;
+    font-size: 1.8rem;
+    line-height: 3rem;
+}
+
+@media screen and (min-width:678px) {
+    .info-company {
+        margin: 60px auto 40px;
+    }
+}
+
+.info table {
+    width: 100%;
+    margin: 20px auto;
+    font-size: 1.6rem;
+    border: 2px olive dotted;
+    /* border-collapse: collapse; */
+    border-radius: 10px;
+    border-collapse: separate;
+    /* 枠線をセルごとに独立 */
+    border-spacing: 0;
+    /* セル間の余白をなくす */
+    overflow: hidden;
+    /* 角からはみ出す内容を隠す */
+}
+
+.info th {
+    width: 20%;
+    min-width: 120px;
+    max-width: 300px;
+    background-color: blanchedalmond;
+    text-align: center;
+}
+
+.info th,
+.info td {
+    border: 1px dotted olive;
+    padding: 15px;
+}
+
+@media screen and (max-width: 600px) {
+
+    .info th,
+    .info td {
+        display: block;
+        /* 各セルをブロック要素に */
+        width: 100%;
+        /* 幅をテーブル全体に揃える */
+        max-width: none;
+    }
+}
+
+.rcmd_good {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.rcmd_b3 {
+    font-size: 2rem;
+    /* margin-top: 80px; */
+    /* margin-bottom: 30px; */
+    margin: 50px auto 30px;
+    /* 中央寄せ山口追記 */
+    border-bottom: dotted 5px DarkOrange;
+    ;
+    width: fit-content;
+}
+
+.rcmd_b3 span {
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+img {
+    height: auto;
+    width: 100%;
 }

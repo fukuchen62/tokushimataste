@@ -224,19 +224,25 @@ function add_style_script()
             get_template_directory_uri() .
                 PATH . 'css/goods.css',
         );
-        wp_enqueue_script(
-            'my_product',
-            get_template_directory_uri() .
-                PATH . 'js/goods.js',
-            ['jquery'],
-            '',
-            true
-        );
     } elseif (is_singular('product')) {
         wp_enqueue_style(
             'my_product_style',
             get_template_directory_uri() .
                 PATH . 'css/goods.css',
+        );
+        //slider.css
+        wp_enqueue_style(
+            'my_product_slider_style',
+            get_template_directory_uri() .
+                PATH . 'css/slider-sub.css',
+        );
+        wp_enqueue_script(
+            'my_product_slider',
+            get_template_directory_uri() .
+                PATH . 'js/slider.js',
+            ['jquery'],
+            '',
+            true
         );
     } elseif (is_page('contact') || is_page('confirm') || is_page('thanks')) {
         wp_enqueue_style(

@@ -141,9 +141,10 @@
         </div>
 
         <!-- 商品の基本情報 -->
-        <section class="sub-inner">
+        <section class="info sub-inner">
             <h3>商品の基本情報</h3>
-            <table class="goods_table">
+            <!-- <table class="goods_table"> -->
+            <table>
                 <?php if (!empty(get_field('price'))): ?>
                     <tr>
                         <th>価格</th>
@@ -225,7 +226,7 @@
         </section> -->
 
         <?php if (!empty(get_field('memo'))): ?>
-            <section class="memo_gs">
+            <section class="memo_gs sub-inner">
                 <h3 class=>備考</h3>
                 <p><?php the_field('memo') ?></p>
             </section>
@@ -239,7 +240,7 @@
             <?php //登録されたメーカーidにurlが登録されているかどうかを調べる
             ?>
             <?php if (!empty(get_field('url', $m_id))): ?>
-                <section class="memo_gs">
+                <section class="memo_gs sub-inner">
                     <h3 class=>メーカーHP</h3>
                     <?php //the_field('maker_id');
                     ?>
@@ -250,8 +251,9 @@
 
 
         <?php if (!empty(get_field('maker_id'))): ?>
-            <h2 class="tittle_goods_single"><span>製造メーカー紹介</span></h2>
-
+            <div class="sub-inner">
+                <h2 class="tittle_goods_single"><span>製造メーカー紹介</span></h2>
+            </div>
             <div class="box_maker">
                 <a href="<?php echo get_permalink($m_id); ?>">
                     <div class="box_intro">
@@ -269,6 +271,7 @@
                     </div>
                 </a>
             </div>
+
         <?php endif; ?>
 
     </div>

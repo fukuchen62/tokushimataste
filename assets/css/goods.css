@@ -340,3 +340,25 @@ ul {
 .list_displayed_ot {
     text-align: center;
 }
+
+/* キャラの基本設定 */
+.layer-in img {
+    width: 100px;
+    height: auto;
+}
+
+@media screen and (min-width:768px) {
+    .layer-in {
+        position: absolute;
+        top: 0px;
+        right: -70px;
+        z-index: -1;
+    }
+
+    /* キャラの基本設定 */
+    .layer-in img {
+        width: 700px;
+        height: auto;
+        opacity: 0.2;
+    }
+}

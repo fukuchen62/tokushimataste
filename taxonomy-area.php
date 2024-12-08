@@ -4,6 +4,12 @@
     <!-- パンくずリスト -->
     <?php get_template_part('template-parts/breadcrumb'); ?>
 
+    <div class="layer">
+        <div class="layer-in">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/bg_area_katuchara.png" alt="お米キャラクター">
+        </div>
+    </div>
+
     <!-- エリア検索 -->
     <!-- <h2 style="text-align: center;">お供の商品一覧表示</h2> -->
     <section id="btn-area" class="wrap">

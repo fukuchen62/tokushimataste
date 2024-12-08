@@ -5,6 +5,12 @@
         <!-- パンくずリスト -->
         <?php get_template_part('template-parts/breadcrumb'); ?>
 
+        <div class="layer">
+            <div class="layer-in">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/bg_recipe_yuzuchara.png" alt="ゆずキャラクター">
+            </div>
+        </div>
+
         <?php
         $recipe_type_terms = get_terms(['taxonomy' => 'recipe_type']);
         if (!empty($recipe_type_terms)): ?>

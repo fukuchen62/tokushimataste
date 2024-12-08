@@ -132,6 +132,8 @@
 /* タイトル */
 .ttl_rcp {
     text-align: center;
+    margin: 30px;
+    /* 12/8追記山口 */
 }
 
 /* プラグインのメディアクエリ */
@@ -298,4 +300,84 @@
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 20px;
+}
+
+/* 追加12・7 山口*/
+.catchphrase {
+    width: 100%;
+    margin: 20px auto;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 3rem;
+    text-align: center;
+}
+
+.info-company {
+    /* width: 100%; */
+    margin: 20px;
+    padding: 20px;
+    border: 2px rgb(255, 201, 6) dotted;
+    border-radius: 10px;
+    font-size: 1.8rem;
+    line-height: 3rem;
+}
+
+@media screen and (min-width:678px) {
+    .info-company {
+        margin: 60px auto 40px;
+    }
+}
+
+.info table {
+    width: 100%;
+    margin: 20px auto;
+    font-size: 1.6rem;
+    border: 2px rgb(255, 201, 6) dotted;
+    /* border-collapse: collapse; */
+    border-radius: 10px;
+    border-collapse: separate;
+    /* 枠線をセルごとに独立 */
+    border-spacing: 0;
+    /* セル間の余白をなくす */
+    overflow: hidden;
+    /* 角からはみ出す内容を隠す */
+}
+
+.info th {
+    width: 20%;
+    min-width: 120px;
+    max-width: 300px;
+    background-color: blanchedalmond;
+    text-align: center;
+}
+
+.info th,
+.info td {
+    border: 1px dotted rgb(255, 201, 6);
+    padding: 15px;
+}
+
+@media screen and (max-width: 600px) {
+
+    .info th,
+    .info td {
+        display: block;
+        /* 各セルをブロック要素に */
+        width: 100%;
+        /* 幅をテーブル全体に揃える */
+        max-width: none;
+    }
+}
+
+.note {
+    color: red;
+    font-size: 1.4rem;
+}
+
+.others {
+    margin: 20px auto;
+    border: 2px rgb(255, 201, 6)dotted;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
 }

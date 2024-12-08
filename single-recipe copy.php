@@ -5,6 +5,18 @@
         <!--パンくずリスト-->
         <?php get_template_part('template-parts/breadcrumb'); ?>
 
+        <!-- カスタム投稿のターム名を出力 -->
+        <!-- <h2> -->
+        <?php
+        // $terms = get_the_terms($post->ID, 'recipe_type');
+        // if ($terms):
+        //     foreach ($terms as $term):
+        //         echo $term->name; //ターム名
+        //     endforeach;
+        // endif;
+        ?>
+        <!-- </h2> -->
+
         <div class="fav_plugins_pc">
             <!-- いいねボタン -->
             <?php echo do_shortcode('[wp_ulike]'); ?>
@@ -17,6 +29,7 @@
             ?>
             <!-- / お気に入りループ外 -->
         </div>
+
         <h2 class="ttl_rcp"><?php the_field('recipe_name'); ?></h2>
         <div class="fav_plugins_sp">
             <!-- いいねボタン -->
@@ -30,157 +43,106 @@
             ?>
             <!-- / お気に入りループ外 -->
         </div>
-
-
-
-        <div class="sub-inner">
-            <div class="container_ms">
-                <div class="slider_ms">
+        <!-- スライダー -->
+        <div class="container_rs">
+            <div class="slider_rs">
+                <div>
                     <?php
                     $pic = get_field('pic1');
-                    $pic_url = $pic ? $pic['sizes']['large'] : '';
+                    $pic_url = $pic ? $pic['sizes']['medium'] : '';
                     ?>
                     <?php if ($pic_url): ?>
-                        <div>
-                            <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
-                        </div>
-                    <?php endif; ?>
-
-                    <?php
-                    $pic = get_field('pic2');
-                    $pic_url = $pic ? $pic['sizes']['large'] : '';
-                    ?>
-                    <?php if ($pic_url): ?>
-                        <div>
-                            <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
-                        </div>
-                    <?php endif; ?>
-
-                    <?php
-                    $pic = get_field('pic3');
-                    $pic_url = $pic ? $pic['sizes']['large'] : '';
-                    ?>
-                    <?php if ($pic_url): ?>
-                        <div>
-                            <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
-                        </div>
-                    <?php endif; ?>
-
-                    <?php
-                    $pic = get_field('pic4');
-                    $pic_url = $pic ? $pic['sizes']['large'] : '';
-                    ?>
-                    <?php if ($pic_url): ?>
-                        <div>
-                            <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
-                        </div>
+                        <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
                     <?php endif; ?>
                 </div>
-
-                <!--以下はサムネイル画像 -->
-                <div class="thumbnail_ms">
-                    <?php
-                    $pic = get_field('pic1');
-                    $pic_url = $pic ? $pic['sizes']['thumbnail'] : '';
-                    ?>
-                    <?php if ($pic_url): ?>
-                        <div class="thumbnail_img">
-                            <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
-                        </div>
-                    <?php endif; ?>
-
+                <div>
                     <?php
                     $pic = get_field('pic2');
-                    $pic_url = $pic ? $pic['sizes']['thumbnail'] : '';
+                    $pic_url = $pic ? $pic['sizes']['medium'] : '';
                     ?>
                     <?php if ($pic_url): ?>
-                        <div class="thumbnail_img">
-                            <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
-                        </div>
+                        <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
                     <?php endif; ?>
-
+                </div>
+                <div>
                     <?php
                     $pic = get_field('pic3');
-                    $pic_url = $pic ? $pic['sizes']['thumbnail'] : '';
+                    $pic_url = $pic ? $pic['sizes']['medium'] : '';
                     ?>
                     <?php if ($pic_url): ?>
-                        <div class="thumbnail_img">
-                            <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
-                        </div>
+                        <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
                     <?php endif; ?>
-
+                </div>
+                <div>
                     <?php
                     $pic = get_field('pic4');
-                    $pic_url = $pic ? $pic['sizes']['thumbnail'] : '';
+                    $pic_url = $pic ? $pic['sizes']['medium'] : '';
                     ?>
                     <?php if ($pic_url): ?>
-                        <div class="thumbnail_img">
-                            <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
-                        </div>
+                        <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
+                    <?php endif; ?>
+                </div>
+            </div>
+            <div class="thumbnail_rs">
+                <div class="thumbnail_rs_img">
+                    <?php
+                    $pic = get_field('pic1');
+                    $pic_url = $pic ? $pic['sizes']['medium'] : '';
+                    ?>
+                    <?php if ($pic_url): ?>
+                        <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
+                    <?php endif; ?>
+                </div>
+                <div class="thumbnail_rs_img">
+                    <?php
+                    $pic = get_field('pic2');
+                    $pic_url = $pic ? $pic['sizes']['medium'] : '';
+                    ?>
+                    <?php if ($pic_url): ?>
+                        <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
+                    <?php endif; ?>
+                </div>
+                <div class="thumbnail_rs_img">
+                    <?php
+                    $pic = get_field('pic3');
+                    $pic_url = $pic ? $pic['sizes']['medium'] : '';
+                    ?>
+                    <?php if ($pic_url): ?>
+                        <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
+                    <?php endif; ?>
+                </div>
+                <div class="thumbnail_rs_img">
+                    <?php
+                    $pic = get_field('pic4');
+                    $pic_url = $pic ? $pic['sizes']['medium'] : '';
+                    ?>
+                    <?php if ($pic_url): ?>
+                        <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
                     <?php endif; ?>
                 </div>
             </div>
         </div>
 
-        <!-- レシピ詳細説明 -->
-        <div class="sub-inner">
-            <div class="info-company">
-                <?php the_field('recipe_description') ?>
+        <section class="memo_rs">
+            <h2>一言</h2>
+            <div>
+                <?php the_field('recipe_description'); ?>
             </div>
-        </div>
-        <!-- レシピ内容 -->
-        <section class="info sub-inner">
-
-            <table>
-                <tr>
-                    <th>材料</th>
-                    <td><?php the_field('ingredient') ?></td>
-                </tr>
-                <tr>
-                    <th>作り方</th>
-                    <td><?php echo get_field('how_to_make') ?></td>
-                </tr>
-                <!-- <tr>
-                    <th>FAX</th>
-                    <td><?php echo  get_field('fax') ?></td>
-                </tr>
-
-                <tr>
-                    <th>営業時間</th>
-                    <td><?php the_field('business_hours') ?></td>
-                </tr>
-                <tr>
-                    <th>会社のHP</th>
-                    <td><a href="<?php the_field('url') ?>"><?php the_field('url') ?></a></td>
-                </tr> -->
-                <!-- <tr>
-                    <td colspan="2" class="note">
-                        ※お問い合わせは営業時間内でお願いします。
-                </tr> -->
-            </table>
         </section>
 
-        <?php if (get_field('memo')) : ?>
-            <section class="info sub-inner">
-                <h3>その他情報</h3>
-                <div class="others">
-                    <p><?php the_field('memo'); ?></p>
-                </div>
-            </section>
-        <?php endif; ?>
+        <section class="ingredient_rs">
+            <h2>材料</h2>
+            <div>
+                <?php the_field('ingredient'); ?>
+            </div>
+        </section>
 
-        <!-- カスタム投稿のターム名を出力 -->
-        <!-- <h2> -->
-        <?php
-        // $terms = get_the_terms($post->ID, 'recipe_type');
-        // if ($terms):
-        //     foreach ($terms as $term):
-        //         echo $term->name; //ターム名
-        //     endforeach;
-        // endif;
-        ?>
-        <!-- </h2> -->
-
+        <section class="howtomake_rs">
+            <h2>作り方</h2>
+            <div>
+                <?php the_field('how_to_make'); ?>
+            </div>
+        </section>
 
         <!-- idに紐づけた商品 -->
 

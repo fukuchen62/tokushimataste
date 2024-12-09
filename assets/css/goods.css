@@ -342,6 +342,17 @@ ul {
     text-align: center;
 }
 
+/* 親*/
+.layer {
+    position: relative;
+}
+
+.layer-in {
+    position: absolute;
+    top: -84px;
+    right: 250px;
+}
+
 /* キャラの基本設定 */
 .layer-in img {
     width: 100px;
@@ -351,7 +362,7 @@ ul {
 @media screen and (min-width:768px) {
     .layer-in {
         position: absolute;
-        top: 0px;
+        top: -40px;
         right: -70px;
         z-index: -1;
     }

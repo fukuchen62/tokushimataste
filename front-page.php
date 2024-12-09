@@ -296,8 +296,7 @@
                 </ul>
             </div>
         </section>
-        <!-- ダミーバナー広告あとで消す -->
-        <!-- <p style="text-align: center;">バナー広告</p> -->
+        <!-- バナー広告 -->
 
         <div class="banner">
             <div class="banner-wrap fade is-fadein">

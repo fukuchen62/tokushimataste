@@ -29,109 +29,125 @@
 
         <div class="catchphrase sub-inner">
             <div class="oneword">
-                <?php the_field('catchphrase') ?>
+                <?php if (!empty(the_field('catchphrase'))): ?>
+                    <?php the_field('catchphrase') ?>
+                <?php endif; ?>
             </div>
         </div>
 
         <div class="sub-inner">
-            <div class="container_ms">
-                <div class="slider_ms">
+            <?php if (!empty(get_field('pic2')) || !empty(get_field('pic3')) || !empty(get_field('pic4'))): ?>
+                <div class="container_ms">
+                    <div class="slider_ms">
 
-                    <!-- 画像とテーブルのフレックス -->
-                    <!-- <div class="goods_si_flex"> -->
+                        <!-- 画像とテーブルのフレックス -->
+                        <!-- <div class="goods_si_flex"> -->
 
-                    <?php
-                    $pic = get_field('pic1');
-                    $pic_url = $pic ? $pic['sizes']['large'] : '';
-                    ?>
-                    <?php if ($pic_url): ?>
-                        <div>
-                            <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
-                        </div>
-                    <?php endif; ?>
+                        <?php
+                        $pic = get_field('pic1');
+                        $pic_url = $pic ? $pic['sizes']['large'] : '';
+                        ''
+                        ?>
+                        <?php if ($pic_url): ?>
+                            <div>
+                                <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
+                            </div>
+                        <?php endif; ?>
 
-                    <?php
-                    $pic = get_field('pic2');
-                    $pic_url = $pic ? $pic['sizes']['large'] : '';
-                    ?>
-                    <?php if ($pic_url): ?>
-                        <div>
-                            <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
-                        </div>
-                    <?php endif; ?>
+                        <?php
+                        $pic = get_field('pic2');
+                        $pic_url = $pic ? $pic['sizes']['large'] : '';
+                        ?>
+                        <?php if ($pic_url): ?>
+                            <div>
+                                <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
+                            </div>
+                        <?php endif; ?>
 
-                    <?php
-                    $pic = get_field('pic3');
-                    $pic_url = $pic ? $pic['sizes']['large'] : '';
-                    ?>
-                    <?php if ($pic_url): ?>
-                        <div>
-                            <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
-                        </div>
-                    <?php endif; ?>
+                        <?php
+                        $pic = get_field('pic3');
+                        $pic_url = $pic ? $pic['sizes']['large'] : '';
+                        ?>
+                        <?php if ($pic_url): ?>
+                            <div>
+                                <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
+                            </div>
+                        <?php endif; ?>
 
-                    <?php
-                    $pic = get_field('pic4');
-                    $pic_url = $pic ? $pic['sizes']['large'] : '';
-                    ?>
-                    <?php if ($pic_url): ?>
-                        <div>
-                            <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
-                        </div>
-                    <?php endif; ?>
-                </div>
+                        <?php
+                        $pic = get_field('pic4');
+                        $pic_url = $pic ? $pic['sizes']['large'] : '';
+                        ?>
+                        <?php if ($pic_url): ?>
+                            <div>
+                                <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
+                            </div>
+                        <?php endif; ?>
 
-                <!--以下はサムネイル画像 -->
-                <div class="thumbnail_ms">
-                    <?php
-                    $pic = get_field('pic1');
-                    $pic_url = $pic ? $pic['sizes']['thumbnail'] : '';
-                    ?>
-                    <?php if ($pic_url): ?>
-                        <div class="thumbnail_img">
-                            <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
-                        </div>
-                    <?php endif; ?>
+                    </div>
 
-                    <?php
-                    $pic = get_field('pic2');
-                    $pic_url = $pic ? $pic['sizes']['thumbnail'] : '';
-                    ?>
-                    <?php if ($pic_url): ?>
-                        <div class="thumbnail_img">
-                            <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
-                        </div>
-                    <?php endif; ?>
+                    <!--以下はサムネイル画像 -->
+                    <div class="thumbnail_ms">
+                        <?php
+                        $pic = get_field('pic1');
+                        $pic_url = $pic ? $pic['sizes']['thumbnail'] : '';
+                        ?>
+                        <?php if ($pic_url): ?>
+                            <div class="thumbnail_img">
+                                <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
+                            </div>
+                        <?php endif; ?>
 
-                    <?php
-                    $pic = get_field('pic3');
-                    $pic_url = $pic ? $pic['sizes']['thumbnail'] : '';
-                    ?>
-                    <?php if ($pic_url): ?>
-                        <div class="thumbnail_img">
-                            <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
-                        </div>
-                    <?php endif; ?>
+                        <?php
+                        $pic = get_field('pic2');
+                        $pic_url = $pic ? $pic['sizes']['thumbnail'] : '';
+                        ?>
+                        <?php if ($pic_url): ?>
+                            <div class="thumbnail_img">
+                                <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
+                            </div>
+                        <?php endif; ?>
 
-                    <?php
-                    $pic = get_field('pic4');
-                    $pic_url = $pic ? $pic['sizes']['thumbnail'] : '';
-                    ?>
-                    <?php if ($pic_url): ?>
-                        <div class="thumbnail_img">
-                            <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
-                        </div>
-                    <?php endif; ?>
+                        <?php
+                        $pic = get_field('pic3');
+                        $pic_url = $pic ? $pic['sizes']['thumbnail'] : '';
+                        ?>
+                        <?php if ($pic_url): ?>
+                            <div class="thumbnail_img">
+                                <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
+                            </div>
+                        <?php endif; ?>
+
+                        <?php
+                        $pic = get_field('pic4');
+                        $pic_url = $pic ? $pic['sizes']['thumbnail'] : '';
+                        ?>
+                        <?php if ($pic_url): ?>
+                            <div class="thumbnail_img">
+                                <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
+                            </div>
+                        <?php endif; ?>
 
 
-
-
-                    <?php /*$img = get_field('pic1');
+                        <?php /*$img = get_field('pic1');
                     $img_url = $img['sizes']['large'];*/ ?>
-                    <!-- <img src="<?php /*echo $img_url;*/ ?>" alt="Image" class="goods_pic"> -->
+                        <!-- <img src="<?php /*echo $img_url;*/ ?>" alt="Image" class="goods_pic"> -->
 
+                    </div>
                 </div>
-            </div>
+
+            <?php else: ?>
+                <?php
+                $pic = get_field('pic1');
+                $pic_url = $pic ? $pic['sizes']['large'] : '';
+                ''
+                ?>
+                <?php if ($pic_url): ?>
+                    <div class="goods_pic">
+                        <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
+                    </div>
+                <?php endif; ?>
+            <?php endif; ?>
         </div>
 
         <div class="sub-inner">
@@ -264,10 +280,10 @@
                         <?php if ($pic_url): ?>
                             <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
                         <?php endif; ?>
-                        <h3><?php the_title(); ?></h3>
-                        <p>住所:<?php the_field('address', $m_id); ?></p>
+                        <h3 class="intro_sbtitle"><?php the_field('company', $m_id); ?></h3>
+                        <p><?php the_field('address', $m_id); ?></p>
                         <p>TEL:<?php the_field('tel', $m_id); ?></p>
-                        <p>営業時間：<?php the_field('business_hours', $m_id); ?></p>
+                        <p><?php the_field('business_hours', $m_id); ?></p>
                     </div>
                 </a>
             </div>

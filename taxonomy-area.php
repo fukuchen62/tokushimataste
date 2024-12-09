@@ -20,7 +20,7 @@
                 'fields' => 'slugs',
                 // 投稿がないタクソノミーも表示させる
                 'hide_empty' => false,
-                // その他を最後に回す（wordpressの設定を使うことができました。）
+                // その他を最後に回す
                 "orderby" => "slug"
             ]); ?>
 

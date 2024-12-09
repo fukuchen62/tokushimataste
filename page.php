@@ -8,7 +8,7 @@
                     <div class="section_inner">
                         <div class="section_header">
                             <h2 class="heading heading-primary"><span>
-                                    <?php //the_title(); 
+                                    <?php the_title();
                                     ?></span></h2>
                         </div>
 

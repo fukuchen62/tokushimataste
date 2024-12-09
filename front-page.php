@@ -97,10 +97,10 @@
                 </div>
                 <div class="kumo minami">
                     <a href="<?php echo home_url('/area/south/'); ?>">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kumo_minami.png" alt="県南部">
+                        <img src=" alt=" 県南部">
                     </a>
                 </div>
-            </div>
+            </div><?php echo get_template_directory_uri(); ?>/assets/images/kumo_minami.png"
         </section>
         <section class="container">
             <div class="ttl_box">
@@ -108,7 +108,6 @@
                 <p>細かく条件を設定して調べられます。</p>
             </div>
             <div class="area_btn1">
-                <!-- クラス名これで合ってますか？↓↓↓ 合っています-->
                 <a href="<?php echo home_url('/?s= /') ?>" class="btn btn-border-shadow btn-border-shadow--color">詳細検索</a>
             </div>
         </section>
@@ -344,8 +343,8 @@
                     </a>
                 </div>
                 <div class="banner-item">
-                    <a href="https://tuttoku.com/" target="_blank">
-                        <img src="https://tuttoku.com/assets/images/fishing_tokushima_logo.svg" alt="釣っとく">
+                    <a href="https://www.naruto-cycle.com/" target="_blank">
+                        <img src="https://www.naruto-cycle.com/wp-content/themes/naruto_cycle/assets/img/header_log_svg.svg" alt="鳴門サイクル">
                     </a>
                 </div>
             </div>

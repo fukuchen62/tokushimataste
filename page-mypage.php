@@ -5,6 +5,12 @@
     <div class="inner">
         <!-- パンくずリスト -->
         <?php get_template_part("template-parts/breadcrumb"); ?>
+        <div class="layer">
+            <div class="layer-in">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/bg_mypage_misochara.png" alt="みそキャラクター">
+            </div>
+        </div>
+
         <div class="explanation_fv">
             <p>このマイページでは、本サイトにて紹介した『商品』『アレンジレシピ』『コラム』をブックマークして参照することができます。</p>
             <p>ブックマークにはCookieを使用しています。</p>

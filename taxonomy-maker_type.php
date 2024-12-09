@@ -5,7 +5,11 @@
         <!-- パンくずリスト -->
         <?php get_template_part('template-parts/breadcrumb'); ?>
 
-
+        <div class="layer">
+            <div class="layer-in">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/bg_maker_imochara.png" alt="いもキャラクター">
+            </div>
+        </div>
         <!-- エリア検索ボタン -->
         <div id="btn-area" class="wrap">
             <ul class="btn-content">

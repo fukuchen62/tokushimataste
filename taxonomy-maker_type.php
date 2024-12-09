@@ -14,16 +14,17 @@
                         <span>県東部</span>
                     </li>
                 </a>
-                <a href="<?php echo home_url('/maker_type/m_west/'); ?>" class="">
-                    <li id="west">
-                        <span>県西部</span>
-                    </li>
-                </a>
                 <a href="<?php echo home_url('/maker_type/m_south/'); ?>" class="">
                     <li id="south">
                         <span>県南部</span>
                     </li>
                 </a>
+                <a href="<?php echo home_url('/maker_type/m_west/'); ?>" class="">
+                    <li id="west">
+                        <span>県西部</span>
+                    </li>
+                </a>
+
             </ul>
         </div>
         <h2 class="area_box"><span class="ttl"><?php single_term_title(); ?>&nbsp;検索結果</span><?php echo $wp_query->found_posts; ?>件</h2>

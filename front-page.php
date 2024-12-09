@@ -96,11 +96,10 @@
                     </a>
                 </div>
                 <div class="kumo minami">
-                    <a href="<?php echo home_url('/area/south/'); ?>">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kumo_minami.png" alt="県南部">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kumo_minami.png" alt="県南部">
                     </a>
                 </div>
-            </div>
+            </div><?php echo get_template_directory_uri(); ?>/assets/images/kumo_minami.png"
         </section>
         <section class="container">
             <div class="ttl_box">
@@ -108,7 +107,6 @@
                 <p>細かく条件を設定して調べられます。</p>
             </div>
             <div class="area_btn1">
-                <!-- クラス名これで合ってますか？↓↓↓ 合っています-->
                 <a href="<?php echo home_url('/?s= /') ?>" class="btn btn-border-shadow btn-border-shadow--color">詳細検索</a>
             </div>
         </section>
@@ -297,37 +295,57 @@
                 </ul>
             </div>
         </section>
-        <!-- ダミーバナー広告あとで消す -->
-        <!-- <p style="text-align: center;">バナー広告</p> -->
+        <!-- バナー広告 -->
 
         <div class="banner">
             <div class="banner-wrap fade is-fadein">
+                <div class="banner-item">
+                    <a href="https://kisyanotabi.com/" target="_blank">
+                        <img src="https://awa-nolife.com/wp-content/themes/awa_nolife/assets/img/top/kisyatabi_ico.png" alt="とくしま汽車の旅">
+                    </a>
+                </div>
                 <div class="banner-item">
                     <a href="https://awa-nolife.com/" target="_blank">
 
                         <img src="https://awa-nolife.com/wp-content/themes/awa_nolife/assets/img/logo/logo.png" alt="あわ農">
                     </a>
                 </div>
-
-                <div class="banner-item">
-                    <a href="https://awa-roadstation.jp/" target="_blank">
-                        <img src="	https://awa-roadstation.jp/assets/images/site_logo/logo.png" alt="まるっと道の駅">
-                    </a>
-                </div>
-
-                <div class="banner-item">
-                    <a href="https://kisyanotabi.com/" target="_blank">
-                        <img src="https://awa-nolife.com/wp-content/themes/awa_nolife/assets/img/top/kisyatabi_ico.png" alt="とくしま汽車の旅">
-                    </a>
-                </div>
-
                 <div class="banner-item">
                     <a href="https://tks-navi.com/" target="_blank">
-                        <img src="	https://tks-navi.com/wp-content/themes/tks-navi/assets/images/logo.png.webp" alt="こども食堂ナビ">
+                        <img src="https://tks-navi.com/wp-content/themes/tks-navi/assets/images/logo.png.webp" alt="こども食堂">
+                    </a>
+                </div>
+                <div class="banner-item">
+                    <a href="https://awawannavi.com/" target="_blank">
+                        <img src="https://awawannavi.com/wp-content/themes/awa_wannavi/assets/img/common/AwAwanlogo.svg" alt="アワワンナビ">
                     </a>
                 </div>
             </div>
+        </div>
 
+        <div class="banner">
+            <div class="banner-wrap fade is-fadein">
+                <div class="banner-item">
+                    <a href="https://awa-onsen.com/" target="_blank">
+                        <img src="https://awa-onsen.com/wp-content/themes/awa_onsen/assets/images/logo.svg" alt="阿波温泉ナビ">
+                    </a>
+                </div>
+                <div class="banner-item">
+                    <a href="https://tokunarainavi.com/" target="_blank">
+                        <img src="https://tokunarainavi.com/wp-content/themes/tokunarainavi/assets/images/rogo.png" alt="徳島習い事ナビ">
+                    </a>
+                </div>
+                <div class="banner-item">
+                    <a href="https://awa-roadstation.jp/" target="_blank">
+                        <img src="https://awa-roadstation.jp/assets/images/site_logo/logo.png" alt="まるっと道の駅">
+                    </a>
+                </div>
+                <div class="banner-item">
+                    <a href="https://www.naruto-cycle.com/" target="_blank">
+                        <img src="https://www.naruto-cycle.com/wp-content/themes/naruto_cycle/assets/img/header_log_svg.svg" alt="鳴門サイクル">
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 

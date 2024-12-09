@@ -52,15 +52,15 @@
                     <ul>
                         <li class="choice_item">
                             <input type="checkbox" name="area[]" id="area1" value="west" <?= $checked["area"]["west"] ?>>
-                            <label for="area1">県西</label>
+                            <label for="area1">県西部</label>
                         </li>
                         <li class="choice_item">
                             <input type="checkbox" name="area[]" id="area2" value="east" <?= $checked["area"]["east"] ?>>
-                            <label for="area2">県東</label>
+                            <label for="area2">県東部</label>
                         </li>
                         <li class="choice_item">
                             <input type="checkbox" name="area[]" id="area3" value="south" <?= $checked["area"]["south"] ?>>
-                            <label for="area3">県南</label>
+                            <label for="area3">県南部</label>
                         </li>
                     </ul>
                 </section>

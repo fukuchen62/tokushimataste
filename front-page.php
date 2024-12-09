@@ -295,54 +295,54 @@
                 </ul>
             </div>
         </section>
-        <!-- バナー広告 -->
 
-        <div class="banner">
+        <!-- バナー広告 -->
+        <div class="banner mt80">
             <div class="banner-wrap fade is-fadein">
                 <div class="banner-item">
                     <a href="https://kisyanotabi.com/" target="_blank">
-                        <img src="https://awa-nolife.com/wp-content/themes/awa_nolife/assets/img/top/kisyatabi_ico.png" alt="とくしま汽車の旅">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/images/banner7.png'; ?>" alt="とくしま汽車の旅">
                     </a>
                 </div>
                 <div class="banner-item">
                     <a href="https://awa-nolife.com/" target="_blank">
 
-                        <img src="https://awa-nolife.com/wp-content/themes/awa_nolife/assets/img/logo/logo.png" alt="あわ農">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/images/banner6.png'; ?>" alt="あわ農">
                     </a>
                 </div>
                 <div class="banner-item">
                     <a href="https://tks-navi.com/" target="_blank">
-                        <img src="https://tks-navi.com/wp-content/themes/tks-navi/assets/images/logo.png.webp" alt="こども食堂">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/images/banner1.webp'; ?>" alt="こども食堂">
                     </a>
                 </div>
                 <div class="banner-item">
                     <a href="https://awawannavi.com/" target="_blank">
-                        <img src="https://awawannavi.com/wp-content/themes/awa_wannavi/assets/img/common/AwAwanlogo.svg" alt="アワワンナビ">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/images/banner4.svg'; ?>" alt="アワワンナビ">
                     </a>
                 </div>
-            </div>
+                <!-- </div>
         </div>
 
         <div class="banner">
-            <div class="banner-wrap fade is-fadein">
+            <div class="banner-wrap fade is-fadein"> -->
                 <div class="banner-item">
                     <a href="https://awa-onsen.com/" target="_blank">
-                        <img src="https://awa-onsen.com/wp-content/themes/awa_onsen/assets/images/logo.svg" alt="阿波温泉ナビ">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/images/banner5.svg'; ?>" alt="阿波温泉ナビ">
                     </a>
                 </div>
                 <div class="banner-item">
                     <a href="https://tokunarainavi.com/" target="_blank">
-                        <img src="https://tokunarainavi.com/wp-content/themes/tokunarainavi/assets/images/rogo.png" alt="徳島習い事ナビ">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/images/banner2.png'; ?>" alt="徳島習い事ナビ">
                     </a>
                 </div>
-                <div class="banner-item">
+                <div class="banner-item naruto">
                     <a href="https://awa-roadstation.jp/" target="_blank">
-                        <img src="https://awa-roadstation.jp/assets/images/site_logo/logo.png" alt="まるっと道の駅">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/images/banner3.png'; ?>" alt="まるっと道の駅">
                     </a>
                 </div>
-                <div class="banner-item">
+                <div class="banner-item naruto">
                     <a href="https://www.naruto-cycle.com/" target="_blank">
-                        <img src="https://www.naruto-cycle.com/wp-content/themes/naruto_cycle/assets/img/header_log_svg.svg" alt="鳴門サイクル">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/images/banner8.png'; ?>" alt="鳴門サイクル">
                     </a>
                 </div>
             </div>
@@ -352,3 +352,4 @@
 </main>
 
 <?php get_footer(); ?>
+https://www.naruto-cycle.com/wp-content/themes/naruto_cycle/assets/img/header_log_svg.svg

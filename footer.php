@@ -34,7 +34,7 @@
 
     <!-- すだちくん -->
     <div>
-        <img id="sudachi" class="sudachi" src="<?php echo get_template_directory_uri(); ?>/assets/images/sudachi-kun1.png" alt="すだちくん">
+        <img id="sudachi" class="sudachi" src="<?php echo get_template_directory_uri(); ?>/assets/images/sudachi_shonin.png" alt="すだちくん">
     </div>
 
     <!-- トップページに戻るボタン -->

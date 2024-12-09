@@ -280,7 +280,7 @@
                         <?php if ($pic_url): ?>
                             <img src="<?php echo esc_url($pic_url); ?>" alt="<?php the_title_attribute(); ?>" class="img-fluid">
                         <?php endif; ?>
-                        <h3><?php the_field('company', $m_id); ?></h3>
+                        <h3 class="intro_sbtitle"><?php the_field('company', $m_id); ?></h3>
                         <p><?php the_field('address', $m_id); ?></p>
                         <p>TEL:<?php the_field('tel', $m_id); ?></p>
                         <p><?php the_field('business_hours', $m_id); ?></p>

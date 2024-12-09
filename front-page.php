@@ -96,10 +96,11 @@
                     </a>
                 </div>
                 <div class="kumo minami">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kumo_minami.png" alt="県南部">
+                    <a href="<?php echo home_url('/area/south/'); ?>">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kumo_minami.png" alt="県南部">
                     </a>
                 </div>
-            </div><?php echo get_template_directory_uri(); ?>/assets/images/kumo_minami.png"
+            </div>
         </section>
         <section class="container">
             <div class="ttl_box">

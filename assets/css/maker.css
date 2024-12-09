@@ -227,13 +227,16 @@ img {
     text-align: center;
 }
 
-.info th, .info td {
+.info th,
+.info td {
     border: 1px dotted olive;
     padding: 15px;
 }
 
 @media screen and (max-width: 600px) {
-    .info th, .info td {
+
+    .info th,
+    .info td {
         display: block;
         /* 各セルをブロック要素に */
         width: 100%;
@@ -253,4 +256,38 @@ img {
     border-radius: 10px;
     padding: 20px;
     background-color: #fff;
+}
+
+/* エリアのキャラ */
+/* 親*/
+.layer {
+    position: relative;
+}
+
+.layer-in {
+    position: absolute;
+    top: -84px;
+    right: 250px;
+}
+
+/* キャラの基本設定 */
+.layer-in img {
+    width: 100px;
+    height: auto;
+}
+
+@media screen and (min-width:768px) {
+    .layer-in {
+        position: absolute;
+        top: -120px;
+        right: -20px;
+        z-index: -1;
+    }
+
+    /* キャラの基本設定 */
+    .layer-in img {
+        width: 700px;
+        height: auto;
+        opacity: 0.2;
+    }
 }

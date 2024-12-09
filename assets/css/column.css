@@ -291,6 +291,18 @@ li.cat-item a::after {
 	margin: 20px;
 }
 
+
+/* 親*/
+.layer {
+	position: relative;
+}
+
+.layer-in {
+	position: absolute;
+	top: -5px;
+	right: -10px;
+}
+
 /* キャラの基本設定 */
 .layer-in img {
 	width: 100px;

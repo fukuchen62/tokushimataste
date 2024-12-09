@@ -4,6 +4,11 @@
     <?php get_template_part('template-parts/breadcrumb');
     ?>
 
+    <div class="layer-g">
+        <div class="layer-in-g">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/bg_goods_okome01chara.png" alt="お米キャラクター">
+        </div>
+    </div>
     <!-- <h2 style="text-align: center;">お供の一覧表示</h2> -->
     <!-- ジャンル検索 -->
     <section id="btn-area" class="wrap">

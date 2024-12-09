@@ -6,7 +6,7 @@
 
     <div class="layer">
         <div class="layer-in">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/bg_area_katuchara.png" alt="お米キャラクター">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/bg_area_katuchara.png" alt="カツキャラクター">
         </div>
     </div>
 

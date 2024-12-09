@@ -99,7 +99,7 @@
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kumo_minami.png" alt="県南部">
                     </a>
                 </div>
-            </div><?php echo get_template_directory_uri(); ?>/assets/images/kumo_minami.png"
+            </div>
         </section>
         <section class="container">
             <div class="ttl_box">
@@ -320,11 +320,7 @@
                         <img src="<?php echo get_template_directory_uri() . '/assets/images/banner4.svg'; ?>" alt="アワワンナビ">
                     </a>
                 </div>
-                <!-- </div>
-        </div>
 
-        <div class="banner">
-            <div class="banner-wrap fade is-fadein"> -->
                 <div class="banner-item">
                     <a href="https://awa-onsen.com/" target="_blank">
                         <img src="<?php echo get_template_directory_uri() . '/assets/images/banner5.svg'; ?>" alt="阿波温泉ナビ">
@@ -335,14 +331,14 @@
                         <img src="<?php echo get_template_directory_uri() . '/assets/images/banner2.png'; ?>" alt="徳島習い事ナビ">
                     </a>
                 </div>
-                <div class="banner-item naruto">
+                <div class="banner-item">
                     <a href="https://awa-roadstation.jp/" target="_blank">
                         <img src="<?php echo get_template_directory_uri() . '/assets/images/banner3.png'; ?>" alt="まるっと道の駅">
                     </a>
                 </div>
-                <div class="banner-item naruto">
+                <div class="banner-item">
                     <a href="https://www.naruto-cycle.com/" target="_blank">
-                        <img src="<?php echo get_template_directory_uri() . '/assets/images/banner8.png'; ?>" alt="鳴門サイクル">
+                        <img id="naruto" src="<?php echo get_template_directory_uri() . '/assets/images/banner8.png'; ?>" alt="鳴門サイクル">
                     </a>
                 </div>
             </div>
@@ -352,4 +348,3 @@
 </main>
 
 <?php get_footer(); ?>
-https://www.naruto-cycle.com/wp-content/themes/naruto_cycle/assets/img/header_log_svg.svg

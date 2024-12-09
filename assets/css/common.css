@@ -95,6 +95,12 @@ a img:hover {
     opacity: 0.5;
 }
 
+a:hover {
+    /* opacity: 0.5; */
+    color: red;
+    font-weight: 300;
+}
+
 /* flexかけるところにこのclass名をつけると楽 */
 .flex {
     display: flex;

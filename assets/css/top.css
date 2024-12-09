@@ -300,14 +300,14 @@ h2 {
 /* バナー */
 .banner img {
     width: 100%;
+    max-width: 120px;
     height: 80px;
     object-fit: contain;
 }
 
 .banner-item {
-    height: 100px;
+    height: 80px;
     width: 42%;
-    max-width: 210px;
     border-radius: 30px;
     display: flex;
     justify-content: center;
@@ -337,13 +337,14 @@ h2 {
 
 @media screen and (min-width: 600px) {
     .banner-item {
-        width: 30%;
+        width: 40%;
     }
 }
 
 @media screen and (min-width: 800px) {
     .banner-item {
         width: 22%;
+        /* max-width: 210px; */
     }
 }
 
@@ -376,12 +377,11 @@ h2 {
 
 }
 
-.naruto img {
+img#naruto {
     width: 80%;
     margin: 0 auto;
-    border-radius: 20px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    ;
 }

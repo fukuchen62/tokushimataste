@@ -214,11 +214,7 @@
                         array("fields" => "names")
                     ); ?>
                     <td>
-                        <?php if (!empty($taste_term)): ?>
-                            <?php echo implode(',', $taste_term); ?>
-                        <?php else: ?>
-                            <?php print '登録されていません'; ?>
-                        <?php endif; ?>
+                        <?php echo $taste_term[0]; ?>
                     </td>
                 </tr>
                 <?php if (!empty(get_field('how_to_save'))): ?>

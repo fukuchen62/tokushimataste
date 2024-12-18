@@ -143,12 +143,15 @@
             </table>
         </section>
 
-        <section class="info sub-inner">
-            <h3>その他情報</h3>
-            <div class="others">
-                <p><?php the_field('memo') ?></p>
-            </div>
-        </section>
+        <?php if (get_field('memo')): ?>
+            <section class="info sub-inner">
+                <h3>その他情報</h3>
+                <div class="others">
+                    <p><?php the_field('memo') ?></p>
+                </div>
+            </section>
+        <?php endif; ?>
+
 
         <section class="rcmd_box">
             <!-- ↑このクラスcssに記述無 -->

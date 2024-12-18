@@ -334,6 +334,8 @@ ul {
 
 .box_maker {
     padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
 }
 
 /* area */

@@ -19,39 +19,29 @@
 
                     <?php if (have_posts()) : ?>
 
-                        <?php while (have_posts()) : the_post(); ?>
+                    <?php while (have_posts()) : the_post(); ?>
 
-                            <li>
-                                <a href="<?php the_permalink(); ?>">
-                                    <div class="box_intro">
-                                        <?php get_template_part('template-parts/loop', 'column'); ?>
-                                    </div>
-                                </a>
-                            </li>
-                        <?php endwhile; ?>
+                    <li>
+                        <a href="<?php the_permalink(); ?>">
+                            <div class="box_intro">
+                                <?php get_template_part('template-parts/loop', 'column'); ?>
+                            </div>
+                        </a>
+                    </li>
+                    <?php endwhile; ?>
                     <?php endif; ?>
                 </ul>
             </section>
 
-
-
             <!-- サイドバーメニュー -->
-            <li class="side_bar side_bar_col side-menu">
-                <!-- <div class="category-list-outer">
-                <div class="category-list">
-                    <h3>コラム一覧</h3>
-                </div>
-            </div> -->
+            <div class="side_bar side_bar_col side-menu">
                 <aside>
-                    <ul class="side-menu-li">
+                    <div class="side-menu-li">
                         <?php get_sidebar(); ?>
-                    </ul>
+                    </div>
                 </aside>
-            </li>
-
-            </ul>
+            </div>
         </div>
-
     </div>
     <?php get_template_part('template-parts/pagination'); ?>
 

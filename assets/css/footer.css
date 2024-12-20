@@ -46,11 +46,6 @@ footer {
     font-weight: bolder;
 }
 
-.footer_nav a {
-    font-size: 1.8rem;
-    font-weight: bolder;
-}
-
 .footer_nav a::before {
     content: "\e2eb";
     /* Font Awesomeのユーザーアイコン */

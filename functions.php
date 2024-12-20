@@ -1,7 +1,7 @@
 <?php
 // 福島　追加　消さないでください
 // 開発モードで公開するときは、trueにしてください。
-define('IS_DEV', true);
+define('IS_DEV', false);
 
 // 管理バーを非表示させる
 // add_filter('show_admin_bar', '__return_false');
